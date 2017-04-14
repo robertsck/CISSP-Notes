@@ -1,5 +1,5 @@
 #+COLUMNS: %25ITEM %CISSP_MONTH(Month) %TAGS
-#+SETUPFILE:  ~/git/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE:  setup/theme-bigblow-local.setup
 
 
 * CISSP Forum :noexport:
