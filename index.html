@@ -1,0 +1,3157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-04-14 Fri 16:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Chris Roberts" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge6b671e">1. Chapter 1 - Security and Risk Management</a>
+<ul>
+<li><a href="#org39b20eb">1.1. Fundamental Principles of Security</a>
+<ul>
+<li><a href="#org83ea6a0">1.1.1. AIC Triad:</a></li>
+<li><a href="#org9fd4797">1.1.2. Risk Definitions:</a></li>
+<li><a href="#org2d4fe08">1.1.3. Control Types:</a></li>
+<li><a href="#org01e3182">1.1.4. Defense in Depth - layered</a></li>
+<li><a href="#org9fc3941">1.1.5. Control Functionalities:</a></li>
+</ul>
+</li>
+<li><a href="#org56161a4">1.2. Security Frameworks</a>
+<ul>
+<li><a href="#orgfd038f6">1.2.1. Security Program Development:</a></li>
+<li><a href="#orgd803cb0">1.2.2. Enterprise Architecture Development:</a></li>
+<li><a href="#org9428c6f">1.2.3. Security Controls Development:</a></li>
+<li><a href="#org31f928c">1.2.4. Process Management Development:</a></li>
+<li><a href="#orgc593731">1.2.5. Security Program Lifecycle</a></li>
+<li><a href="#org0b8156f">1.2.6. Functionality vs. Security</a></li>
+</ul>
+</li>
+<li><a href="#orgf919526">1.3. Crime Laws</a>
+<ul>
+<li><a href="#orgdec218a">1.3.1. Computer-assisted - crime could take place even without a computer</a></li>
+<li><a href="#orga1c4f33">1.3.2. Computer-targeted - crime could not take place</a></li>
+<li><a href="#org6bfac77">1.3.3. Computer is incidental - computer just happened to be involved</a></li>
+</ul>
+</li>
+<li><a href="#org15305cc">1.4. Complexities:</a>
+<ul>
+<li><a href="#org1f7537c">1.4.1. Evolution of attacks</a></li>
+<li><a href="#orgacd198f">1.4.2. International issues</a></li>
+<li><a href="#org275b1a2">1.4.3. Types of Legal Systems</a></li>
+</ul>
+</li>
+<li><a href="#orgdb81750">1.5. Intellectual Property</a>
+<ul>
+<li><a href="#orga0a033f">1.5.1. International Protection of Intellectual Property</a></li>
+<li><a href="#orga233767">1.5.2. Software Piracy</a></li>
+</ul>
+</li>
+<li><a href="#org48f52fa">1.6. Privacy</a>
+<ul>
+<li><a href="#org14cf24c">1.6.1. Definitions</a></li>
+<li><a href="#orgb00fa0a">1.6.2. Increasing Need for Privacy Laws</a></li>
+<li><a href="#org60f7fb0">1.6.3. Laws, Directives and Regulations</a></li>
+<li><a href="#orge38b457">1.6.4. Employee Privacy Issues</a></li>
+<li><a href="#org965a42c">1.6.5. Additional Material</a></li>
+</ul>
+</li>
+<li><a href="#orgfe5817f">1.7. Data Breaches</a>
+<ul>
+<li><a href="#org26ba41e">1.7.1. Verizon Data Breach Report: </a></li>
+<li><a href="#org526c307">1.7.2. Reporting</a></li>
+<li><a href="#org4850ec8">1.7.3. US Laws pertaining to data breaches</a></li>
+<li><a href="#orgd7ae95e">1.7.4. Other Nation's Laws</a></li>
+</ul>
+</li>
+<li><a href="#orgd0ce29d">1.8. Policies, Standards, Baselines, Guidelines and Procedures</a>
+<ul>
+<li><a href="#org6fa1c0f">1.8.1. Policy - high level of requirement - typically should have a 3-5 year life</a></li>
+<li><a href="#org580ceb6">1.8.2. Standards</a></li>
+<li><a href="#orgccbb5b8">1.8.3. Baselines</a></li>
+<li><a href="#org5c602c1">1.8.4. Guidelines</a></li>
+<li><a href="#org9c47d7b">1.8.5. Procedures</a></li>
+<li><a href="#orgd033ee1">1.8.6. Implementation</a></li>
+</ul>
+</li>
+<li><a href="#org77c6937">1.9. Risk Management</a>
+<ul>
+<li><a href="#org6ec3430">1.9.1. InfoSec risk types</a></li>
+<li><a href="#org264600b">1.9.2. Risk Assessment Additional Readings:</a></li>
+<li><a href="#orgad7c705">1.9.3. Holistic</a></li>
+<li><a href="#org71f4268">1.9.4. Information Systems Risk Management Policy</a></li>
+<li><a href="#org1926594">1.9.5. Process</a></li>
+<li><a href="#orgf4ad7a7">1.9.6. Threat Modeling</a></li>
+<li><a href="#org510f632">1.9.7. Vulnerabilities</a></li>
+<li><a href="#org073272a">1.9.8. Information</a></li>
+<li><a href="#org3594600">1.9.9. Processes</a></li>
+<li><a href="#org060222f">1.9.10. People</a></li>
+<li><a href="#org1abe416">1.9.11. Threats</a></li>
+<li><a href="#org97a2b27">1.9.12. Attacks</a></li>
+<li><a href="#orgc1f75aa">1.9.13. Reduction Analysis</a></li>
+</ul>
+</li>
+<li><a href="#orgd92e51f">1.10. Risk Assessment and Analysis</a>
+<ul>
+<li><a href="#orgcbd2438">1.10.1. Identifying risks</a></li>
+<li><a href="#org61e578a">1.10.2. Generic process (NIST)</a></li>
+<li><a href="#orgacf53c3">1.10.3. Facilitated Risk Analysis Process (FRAP)</a></li>
+<li><a href="#orge775ec1">1.10.4. OCTAVE</a></li>
+<li><a href="#orgf0d91bb">1.10.5. AS/NZS 4360</a></li>
+<li><a href="#org907026d">1.10.6. ISO/IEC 27005</a></li>
+<li><a href="#org88f7db9">1.10.7. Failure Modes and Effect Analysis (FMEA)</a></li>
+<li><a href="#org6f1231a">1.10.8. Fault tree analysis</a></li>
+<li><a href="#orgba4483f">1.10.9. Central Computing and Teecmmunications Agency Risk Analysis and Management Method (CRAMM)</a></li>
+<li><a href="#org667ce18">1.10.10. Difference:</a></li>
+<li><a href="#org1d446e2">1.10.11. Approaches</a></li>
+<li><a href="#org7ce2b67">1.10.12. Quantitative</a></li>
+<li><a href="#org6420f9c">1.10.13. Qualitative</a></li>
+<li><a href="#org50d7546">1.10.14. Control Selection</a></li>
+<li><a href="#org3faa69c">1.10.15. Risk terms:</a></li>
+<li><a href="#org88986d8">1.10.16. Handling Risk:</a></li>
+<li><a href="#org59318e2">1.10.17. Outsourcing</a></li>
+</ul>
+</li>
+<li><a href="#orgd069126">1.11. Risk Management Frameworks</a>
+<ul>
+<li><a href="#org648cddb">1.11.1. Categorize Information Systems</a></li>
+<li><a href="#orga27878e">1.11.2. Select Security Controls</a></li>
+<li><a href="#org4fdaef7">1.11.3. Implement Security Controls</a></li>
+<li><a href="#org2987396">1.11.4. Assess Security Controls</a></li>
+<li><a href="#orgcb6e314">1.11.5. Authorize Information Systems</a></li>
+<li><a href="#org81008e3">1.11.6. Monitor Security Controls</a></li>
+</ul>
+</li>
+<li><a href="#orgd54634f">1.12. Business Continuity and Disaster Recovery</a>
+<ul>
+<li><a href="#orga0dec8b">1.12.1. Standards and Best Practices</a></li>
+<li><a href="#org8d106f3">1.12.2. Making BCM Part of teh Enterprise Security Program</a></li>
+<li><a href="#org3f32848">1.12.3. BCP Project Components</a></li>
+<li><a href="#orgad74efe">1.12.4. Scope of the Project</a></li>
+<li><a href="#org0f8ef08">1.12.5. BCP Policy</a></li>
+<li><a href="#orgde20a20">1.12.6. Project Management</a></li>
+<li><a href="#org8874e08">1.12.7. BCP Requirements</a></li>
+<li><a href="#orgbb4ec30">1.12.8. Business Impact Analysis</a></li>
+<li><a href="#org703df99">1.12.9. Interdependencies</a></li>
+</ul>
+</li>
+<li><a href="#org32a055e">1.13. Personnel Security</a>
+<ul>
+<li><a href="#orgc94f072">1.13.1. Hiring Practices</a></li>
+<li><a href="#org5d130a9">1.13.2. Termination</a></li>
+<li><a href="#org308bc9f">1.13.3. Security-Awareness Training</a></li>
+<li><a href="#org1f419fd">1.13.4. Degree or Certification?</a></li>
+</ul>
+</li>
+<li><a href="#org3b9cb97">1.14. Security Governance</a>
+<ul>
+<li><a href="#org425fdd5">1.14.1. Metrics</a></li>
+</ul>
+</li>
+<li><a href="#org4a2420d">1.15. Ethics</a>
+<ul>
+<li><a href="#org97e3b39">1.15.1. The Computer Ethics Institute</a></li>
+<li><a href="#org7ac4a67">1.15.2. The Internet Architecture Board</a></li>
+<li><a href="#orge3a7359">1.15.3. Corporate Ethics Programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgcdd64b1">2. Chapter 2 - Asset Security</a>
+<ul>
+<li><a href="#org47bea52">2.1. Information Life Cycle</a>
+<ul>
+<li><a href="#orgf96bcab">2.1.1. Acquisition</a></li>
+<li><a href="#orgdc26b08">2.1.2. Used</a></li>
+<li><a href="#org39f9b04">2.1.3. Archival</a></li>
+<li><a href="#org1248ff6">2.1.4. Disposal</a></li>
+</ul>
+</li>
+<li><a href="#org2b8888d">2.2. Information Classification</a>
+<ul>
+<li><a href="#orgaaf69c4">2.2.1. Classifications Levels</a></li>
+<li><a href="#org68bfe12">2.2.2. Classifications Controls</a></li>
+</ul>
+</li>
+<li><a href="#org6ab0cea">2.3. Layers of Responsibility</a>
+<ul>
+<li><a href="#org82c1336">2.3.1. Executive Management</a></li>
+<li><a href="#org20a0360">2.3.2. Data Owner</a></li>
+<li><a href="#org60887f4">2.3.3. Data Custodian</a></li>
+<li><a href="#org765f62c">2.3.4. System Owner</a></li>
+<li><a href="#org9692528">2.3.5. Security Administrator</a></li>
+<li><a href="#org51e2889">2.3.6. Supervisor</a></li>
+<li><a href="#org54a7ef7">2.3.7. Change Control Analyst</a></li>
+<li><a href="#orgbf0e785">2.3.8. Data Analyst</a></li>
+<li><a href="#orgf0086e2">2.3.9. User</a></li>
+<li><a href="#org96ed72e">2.3.10. Auditor</a></li>
+<li><a href="#org0207af3">2.3.11. Why so many roles?</a></li>
+</ul>
+</li>
+<li><a href="#org98f8da8">2.4. Retention Policies</a>
+<ul>
+<li><a href="#org7b6f76f">2.4.1. Developing a Retention Policy</a></li>
+</ul>
+</li>
+<li><a href="#org1885571">2.5. Protecting Privacy</a>
+<ul>
+<li><a href="#org8b95335">2.5.1. Data Owners</a></li>
+<li><a href="#orgffa5969">2.5.2. Data Processors</a></li>
+<li><a href="#orgf737a56">2.5.3. Data Remanence</a></li>
+<li><a href="#orgdde7ecb">2.5.4. Limits on Collection</a></li>
+</ul>
+</li>
+<li><a href="#orgaabdb7e">2.6. Protecting Assets</a>
+<ul>
+<li><a href="#org3bc2af8">2.6.1. Data Security Controls</a></li>
+<li><a href="#orgccf0935">2.6.2. Media Controls</a></li>
+</ul>
+</li>
+<li><a href="#org9c803c5">2.7. Data Leakage</a>
+<ul>
+<li><a href="#orgdd9fa35">2.7.1. Data Leakage Prevention</a></li>
+</ul>
+</li>
+<li><a href="#org8b77d28">2.8. Protecting Other Assets</a>
+<ul>
+<li><a href="#org47a5f7c">2.8.1. Protecting Mobile Devices</a></li>
+<li><a href="#org02444ea">2.8.2. Paper Records</a></li>
+<li><a href="#orgb48230f">2.8.3. Safes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgda940cd">3. Chapter 3 - Security Engineering</a>
+<ul>
+<li><a href="#org91ad893">3.1. System Architecture</a>
+<ul>
+<li><a href="#org66dd64c">3.1.1. ISO/IEC 42010:2011 - System Architecture Standard. Establishes a shared vocabulary</a></li>
+</ul>
+</li>
+<li><a href="#org2274394">3.2. Computer Architecture</a>
+<ul>
+<li><a href="#org4125e4d">3.2.1. The Central Processing Unit</a></li>
+<li><a href="#orgb6f5ab2">3.2.2. Multiprocessing</a></li>
+<li><a href="#org0a06a54">3.2.3. Memory Types</a></li>
+<li><a href="#orgdcea5a2">3.2.4. Buffer Overflow Resources</a></li>
+<li><a href="#org7dcd5d9">3.2.5. Memory Protection Techniques</a></li>
+<li><a href="#orgc36c2d6">3.2.6. Memory Leaks</a></li>
+</ul>
+</li>
+<li><a href="#org87a66aa">3.3. Operating Systems</a>
+<ul>
+<li><a href="#org92b8638">3.3.1. Process Management</a></li>
+<li><a href="#org5fdf51e">3.3.2. Memory Management</a></li>
+<li><a href="#org8db1417">3.3.3. Input/Output Device Management</a></li>
+<li><a href="#org0b3e202">3.3.4. CPU Architecture Integration</a></li>
+<li><a href="#org91cd88b">3.3.5. Operating System Architectures</a></li>
+<li><a href="#org7bb8bc6">3.3.6. Virtual Machines</a></li>
+</ul>
+</li>
+<li><a href="#org0b4da7b">3.4. System Security Architecture</a>
+<ul>
+<li><a href="#orga1a55b7">3.4.1. Security Policy</a></li>
+<li><a href="#orga9c5da3">3.4.2. Security Architecture Requirements</a></li>
+</ul>
+</li>
+<li><a href="#orgd8abd22">3.5. Security Models</a>
+<ul>
+<li><a href="#org8cc17b7">3.5.1. Bell-LaPadula Model</a></li>
+<li><a href="#orgeef7230">3.5.2. Biba Model</a></li>
+<li><a href="#org0b3259d">3.5.3. Clark-Wilson Model</a></li>
+<li><a href="#orgf866238">3.5.4. Noninterference Model</a></li>
+<li><a href="#orga1952e9">3.5.5. Brew and Nash Model</a></li>
+<li><a href="#orgc47af04">3.5.6. Graham-Denning Model</a></li>
+<li><a href="#org603ae76">3.5.7. Harrison-Ruzzo-Ullman Model</a></li>
+</ul>
+</li>
+<li><a href="#orgc0a4aca">3.6. Systems Evaluation</a>
+<ul>
+<li><a href="#orgf5fd4da">3.6.1. Common Criteria</a></li>
+<li><a href="#org9a2a996">3.6.2. Why Put a Product Through Evaluation?</a></li>
+</ul>
+</li>
+<li><a href="#orgc646967">3.7. Certification vs. Accreditation</a>
+<ul>
+<li><a href="#org9bbc869">3.7.1. Certification</a></li>
+<li><a href="#org8a63757">3.7.2. Accreditation</a></li>
+</ul>
+</li>
+<li><a href="#orgba774b7">3.8. Open vs. Closed Systems</a>
+<ul>
+<li><a href="#orgf5fb013">3.8.1. Open Systems</a></li>
+<li><a href="#org7e1dd4e">3.8.2. Closed Systems</a></li>
+</ul>
+</li>
+<li><a href="#org8e4e018">3.9. Distributed System Security</a>
+<ul>
+<li><a href="#org3171392">3.9.1. Cloud Computing</a></li>
+<li><a href="#org9b642af">3.9.2. Parallel Computing</a></li>
+<li><a href="#org3e92613">3.9.3. Databases</a></li>
+<li><a href="#orgc10b3b6">3.9.4. Web Applications</a></li>
+<li><a href="#org5996038">3.9.5. Mobile Devices</a></li>
+<li><a href="#org9478d0e">3.9.6. Cyber-Physical Systems</a></li>
+</ul>
+</li>
+<li><a href="#org1823dd9">3.10. A Few Threats to Review</a>
+<ul>
+<li><a href="#orgd53084e">3.10.1. Maintenance Hooks</a></li>
+<li><a href="#org8d8f77c">3.10.2. Time-of-Check/Time-of-Use Attacks</a></li>
+</ul>
+</li>
+<li><a href="#orgc303247">3.11. Cryptography in Context</a>
+<ul>
+<li><a href="#orgb247e4d">3.11.1. The History of Cryptography</a></li>
+</ul>
+</li>
+<li><a href="#org8855113">3.12. Cryptography Definitions and Concepts</a>
+<ul>
+<li><a href="#org8ce8dbb">3.12.1. Kerckhoffs' Principle</a></li>
+<li><a href="#orgc292bde">3.12.2. The Strength of the Cryptosystem</a></li>
+<li><a href="#org6b1e0b5">3.12.3. Services of Cryptosystems</a></li>
+<li><a href="#org1e186b3">3.12.4. One-Time Pad</a></li>
+<li><a href="#org124166c">3.12.5. Running and Concealment Ciphers</a></li>
+<li><a href="#org2d761c9">3.12.6. Steganography</a></li>
+</ul>
+</li>
+<li><a href="#orge58fc66">3.13. Types of Ciphers</a>
+<ul>
+<li><a href="#org877c519">3.13.1. Substitution Ciphers</a></li>
+<li><a href="#org8f460cc">3.13.2. Transposition Ciphers</a></li>
+</ul>
+</li>
+<li><a href="#org2dcf831">3.14. Methods of Encryption</a>
+<ul>
+<li><a href="#org44867de">3.14.1. Symmetric vs. Asymmetric Algorithms</a></li>
+<li><a href="#org21c0656">3.14.2. Symmetric Cryptography</a></li>
+<li><a href="#orgcfb8dcc">3.14.3. Asymmetric Cryptography</a></li>
+<li><a href="#orgc7e7f6b">3.14.4. Block and Stream Ciphers</a></li>
+<li><a href="#org9a62acb">3.14.5. Hybrid Encryption Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge6b671e" class="outline-2">
+<h2 id="orge6b671e"><span class="section-number-2">1</span> Chapter 1 - Security and Risk Management</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org39b20eb" class="outline-3">
+<h3 id="org39b20eb"><span class="section-number-3">1.1</span> Fundamental Principles of Security</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org83ea6a0" class="outline-4">
+<h4 id="org83ea6a0"><span class="section-number-4">1.1.1</span> AIC Triad:</h4>
+<div class="outline-text-4" id="text-1-1-1">
+</div><ol class="org-ol"><li><a id="orgae2e244"></a>Availability - reliable and timely access<br /><div class="outline-text-5" id="text-1-1-1-1">
+<p>
+Controls: eg. RAIDs, clustering, load balancing, redundancy, backups, secondary facilities, rollback, failover
+</p>
+</div></li>
+<li><a id="org1a45b29"></a>Integrity - assurance of accuracy and reliability<br /><div class="outline-text-5" id="text-1-1-1-2">
+<p>
+Controls: eg. Hashing, Configuration Mgmt., Change controls, Access controls, Software digital signing, CRC checks
+</p>
+</div></li>
+<li><a id="orge79b967"></a>Confidentiality - necessary level of secrecy<br /><div class="outline-text-5" id="text-1-1-1-3">
+<p>
+Controls: eg. Encryption, Access controls
+</p>
+</div></li></ol>
+</div>
+<div id="outline-container-org9fd4797" class="outline-4">
+<h4 id="org9fd4797"><span class="section-number-4">1.1.2</span> Risk Definitions:</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<dl class="org-dl">
+<dt>Vulnerability</dt><dd>weakness in a system</dd>
+<dt>threat</dt><dd>potential danger</dd>
+<dt>risk</dt><dd>likelihood of threat source exploiting a vulnerability X the business impact</dd>
+<dt>exposure</dt><dd>an instance of being exposed to losses</dd>
+<dt>control</dt><dd>countermeasure, safeguard, to mitigate risk</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org2d4fe08" class="outline-4">
+<h4 id="org2d4fe08"><span class="section-number-4">1.1.3</span> Control Types:</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<dl class="org-dl">
+<dt>Administrative</dt><dd>security documentation, risk management, training</dd>
+<dt>Technical</dt><dd>logical controls, software, hardware, firewalls, IDS, encryption</dd>
+<dt>Physical</dt><dd>guards, locks, fencing, lighting</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org01e3182" class="outline-4">
+<h4 id="org01e3182"><span class="section-number-4">1.1.4</span> Defense in Depth - layered</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<ul class="org-ul">
+<li>We use a slide to represent this concept across all control types</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9fc3941" class="outline-4">
+<h4 id="org9fc3941"><span class="section-number-4">1.1.5</span> Control Functionalities:</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<dl class="org-dl">
+<dt>Preventative</dt><dd>avoid incident</dd>
+<dt>Detective</dt><dd>Identify an incident</dd>
+<dt>Corrective</dt><dd>Fix</dd>
+<dt>Deterrent</dt><dd>Discourage an attack</dd>
+<dt>Recovery</dt><dd>Bring back to regular operations</dd>
+<dt>Compensating</dt><dd>Provide an alternative measure of control</dd>
+</dl>
+</div>
+<ol class="org-ol"><li><a id="org03d6d11"></a>Note that NIST CSF is closely organized along these lines, although slightly different<br /></li>
+<li><a id="org9e8fdfc"></a>There is significant argument as to where companies should focus: preventative, or detective and recovery?<br /><div class="outline-text-5" id="text-1-1-5-2">
+<ul class="org-ul">
+<li>You should be able to voice when one approach is better than another.</li>
+<li>See Table 1-1 for Control Types X Control Functionalities</li>
+</ul>
+</div></li></ol>
+</div>
+</div>
+<div id="outline-container-org56161a4" class="outline-3">
+<h3 id="org56161a4"><a id="sn0bk3g0wih0"></a><span class="section-number-3">1.2</span> Security Frameworks</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgfd038f6" class="outline-4">
+<h4 id="orgfd038f6"><span class="section-number-4">1.2.1</span> Security Program Development:</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>ISO/IEC 27000 series 
+&#x2013; Understand history and how series docs are related</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd803cb0" class="outline-4">
+<h4 id="orgd803cb0"><span class="section-number-4">1.2.2</span> Enterprise Architecture Development:</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>Zachman Framework - enterprise architecture</li>
+<li>TOGAF - Open Group - enterprise architecture - probably the most relevant to large corporations</li>
+<li>DoDAF - US military</li>
+<li>MODAF - British MoD</li>
+<li>SABSA - security architecture focus</li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="org33921fd"></a>An architecture is a set of different organizational views (Figure 1-4)<br /></li>
+<li><a id="org9dc2628"></a>An ISMS is implemented through a Security Architecture - it helps prevent the issues listed in this section<br /><div class="outline-text-5" id="text-1-2-2-2">
+<ul class="org-ul">
+<li>our risk framework is a version of a security architecture. Compared risk framework to Table 1-3.</li>
+<li>"The architecture is a tool used to ensure that what is outlined in security standards is implemented throughout the different layers of an organization" - this is where the applicability matrix start to come into play.</li>
+</ul>
+</div></li>
+<li><a id="orgf017a7b"></a>Successful security architecture requires:<br /><div class="outline-text-5" id="text-1-2-2-3">
+<dl class="org-dl">
+<dt>Strategic alignment</dt><dd>business drivers, regulatory and legal requirements are being meta</dd>
+<dt>Business enablement</dt><dd>security supports business, risk is necessary</dd>
+<dt>Process Enhancement</dt><dd>security tools can offer the opportunity to automate and streamline processes</dd>
+<dt>Security Effectiveness</dt><dd>metrics, SLA, ROI</dd>
+</dl>
+</div></li></ol>
+</div>
+<div id="outline-container-org9428c6f" class="outline-4">
+<h4 id="org9428c6f"><span class="section-number-4">1.2.3</span> Security Controls Development:</h4>
+<div class="outline-text-4" id="text-1-2-3">
+</div><ol class="org-ol"><li><a id="orged9d71a"></a>COBIT 5 - IT Management Framework - ISACA<br /><div class="outline-text-5" id="text-1-2-3-1">
+<ul class="org-ul">
+<li>Focuses on optimizing Value of IT - beyond just security</li>
+<li>Key feature is a separation of governance from management, and goal breakdown</li>
+<li>Goals: 17 enterprise and 17 IT-related goals (clearly very generic to apply to all companies)</li>
+<li>COBIT introduced the concept of "control objectives", "controls", and "control tests".</li>
+<li>COBIT 5 got rid of "controls objectives".</li>
+<li>The Audit industry is largely based off COBIT.</li>
+</ul>
+</div></li>
+<li><a id="orgd086901"></a>NIST SP 800-53 - NIST controls<br /><div class="outline-text-5" id="text-1-2-3-2">
+<ul class="org-ul">
+<li>NIST lives in the Dept. of Commerce</li>
+<li>FISMA (Federal Informatin Security Management Action) requires agencies to follow NIST</li>
+</ul>
+</div></li>
+<li><a id="org3af59d0"></a>COSO Internal Control-Integrated Framework - financial fraud focus<br /><div class="outline-text-5" id="text-1-2-3-3">
+<ul class="org-ul">
+<li>COBIT came from COSO</li>
+<li>Used for Corporate Governance (whereas COBIT is IT governance)</li>
+<li>SOX (2002) is based on COSO, thus following COSO can ensure compliance with SOX</li>
+</ul>
+</div></li></ol>
+</div>
+<div id="outline-container-org31f928c" class="outline-4">
+<h4 id="org31f928c"><span class="section-number-4">1.2.4</span> Process Management Development:</h4>
+<div class="outline-text-4" id="text-1-2-4">
+</div><ol class="org-ol"><li><a id="orgeefc998"></a>ITIL - IT processes - UK origin<br /><div class="outline-text-5" id="text-1-2-4-1">
+<ul class="org-ul">
+<li>IT service management</li>
+<li>Focused on internal SLAs between IT and the Business</li>
+</ul>
+</div></li>
+<li><a id="orgdb4475b"></a>Six Sigma<br /><div class="outline-text-5" id="text-1-2-4-2">
+<ul class="org-ul">
+<li>Based on Total Quality Management (TQM)</li>
+<li>All about operation efficiency, reducing variation, defects, waste (very manufacturing oriented)</li>
+</ul>
+</div></li>
+<li><a id="orgd5f66e5"></a>Capability Maturity Model Integration (CMMI)<br /><div class="outline-text-5" id="text-1-2-4-3">
+<ul class="org-ul">
+<li>Carnegie Mellon</li>
+<li>Started the idea of processes maturity levels (that are now starting to fade in popularity)</li>
+<li>This model is still heavily influential (FFIEC and NIST assessment tools both have resemblances to it)</li>
+<li>Also, it mimics how infosec is slowly improved each year</li>
+</ul>
+</div></li></ol>
+</div>
+<div id="outline-container-orgc593731" class="outline-4">
+<h4 id="orgc593731"><span class="section-number-4">1.2.5</span> Security Program Lifecycle</h4>
+<div class="outline-text-4" id="text-1-2-5">
+</div><ol class="org-ol"><li><a id="org92900ac"></a>Plan and Organized<br /></li>
+<li><a id="org50ca6fe"></a>Implement<br /></li>
+<li><a id="orge8f91f6"></a>Operate and Maintain<br /></li>
+<li><a id="orgb6dee44"></a>Monitor and Evaluate<br /><div class="outline-text-5" id="text-1-2-5-4">
+<ul class="org-ul">
+<li>Notice Figure 1-8 is closely aligned with our model</li>
+</ul>
+</div></li></ol>
+</div>
+<div id="outline-container-org0b8156f" class="outline-4">
+<h4 id="org0b8156f"><span class="section-number-4">1.2.6</span> Functionality vs. Security</h4>
+</div>
+</div>
+<div id="outline-container-orgf919526" class="outline-3">
+<h3 id="orgf919526"><span class="section-number-3">1.3</span> Crime Laws</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-orgdec218a" class="outline-4">
+<h4 id="orgdec218a"><span class="section-number-4">1.3.1</span> Computer-assisted - crime could take place even without a computer</h4>
+</div>
+<div id="outline-container-orga1c4f33" class="outline-4">
+<h4 id="orga1c4f33"><span class="section-number-4">1.3.2</span> Computer-targeted - crime could not take place</h4>
+</div>
+<div id="outline-container-org6bfac77" class="outline-4">
+<h4 id="org6bfac77"><span class="section-number-4">1.3.3</span> Computer is incidental - computer just happened to be involved</h4>
+</div>
+</div>
+<div id="outline-container-org15305cc" class="outline-3">
+<h3 id="org15305cc"><span class="section-number-3">1.4</span> Complexities:</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Hard to ID attackers</li>
+<li>Lack of reporting</li>
+</ul>
+</div>
+<div id="outline-container-org1f7537c" class="outline-4">
+<h4 id="org1f7537c"><span class="section-number-4">1.4.1</span> Evolution of attacks</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li>Today is much more profit driven</li>
+<li>See Verizon Breach report for 2016</li>
+<li>Types:
+<ul class="org-ul">
+<li>Script Kiddies</li>
+<li>APT - nation state</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgacd198f" class="outline-4">
+<h4 id="orgacd198f"><span class="section-number-4">1.4.2</span> International issues</h4>
+<div class="outline-text-4" id="text-1-4-2">
+</div><ol class="org-ol"><li><a id="org0b0ea1e"></a>Council of Europe Convention on CyberCrime<br /><div class="outline-text-5" id="text-1-4-2-1">
+<p>
+&#x2013; First attempt to create an international response standards
+</p>
+</div></li>
+<li><a id="org26c3fb4"></a>OECD - Guidelines on the Protection of Privacy and Transborder Flows of Personal Data<br /><div class="outline-text-5" id="text-1-4-2-2">
+<p>
+The are very similar to privacy principles
+</p>
+<ul class="org-ul">
+<li>Collection Limitation</li>
+<li>Data Quality</li>
+<li>Purpose Specification</li>
+<li>Use Limitation</li>
+<li>Openness</li>
+<li>Individual Participation</li>
+<li>Accountability</li>
+</ul>
+</div></li>
+<li><a id="org922bcae"></a>EU Data Protection Directive - strict EU rules on privacy<br /><div class="outline-text-5" id="text-1-4-2-3">
+<ul class="org-ul">
+<li>US-based companies used to use Safe Harbor Privacy Principles</li>
+<li>This has since been renegotiated</li>
+<li>Safe Harbor Principles:
+<ul class="org-ul">
+<li>Notice</li>
+<li>Choice</li>
+<li>Onward Transfer</li>
+<li>Security</li>
+<li>Data Integrity</li>
+<li>Access</li>
+<li>Enforcement</li>
+</ul></li>
+<li>Privacy shield Replaces Safe Harbor
+<a href="https://www.privacyshield.gov/Program-Overview">https://www.privacyshield.gov/Program-Overview</a></li>
+</ul>
+</div></li>
+<li><a id="org016f598"></a>Import Export Requirements<br /><div class="outline-text-5" id="text-1-4-2-4">
+<ul class="org-ul">
+<li>Wassenaar Arrangement - export controls restricting arms and dual-use goods exporting to certain controls
+<ul class="org-ul">
+<li>Cryptography can fall into a controlled export</li>
+</ul></li>
+<li>China, Russia, Iran, Iraq, etc. have crypto import controls to prevent citizen use</li>
+</ul>
+<p>
+<b><b>*</b></b>
+</p>
+</div></li></ol>
+</div>
+<div id="outline-container-org275b1a2" class="outline-4">
+<h4 id="org275b1a2"><span class="section-number-4">1.4.3</span> Types of Legal Systems</h4>
+<div class="outline-text-4" id="text-1-4-3">
+</div><ol class="org-ol"><li><a id="orgabb749d"></a>Civil (Code) Law System<br /><div class="outline-text-5" id="text-1-4-3-1">
+<ul class="org-ul">
+<li>France, Spain</li>
+<li>Rule based, non precedent based</li>
+<li>Most common around world and in Europe</li>
+<li>Lower courts not compelled to following decisions made by higher courts</li>
+</ul>
+</div></li>
+<li><a id="org45d32aa"></a>Common Law System<br /><div class="outline-text-5" id="text-1-4-3-2">
+<ul class="org-ul">
+<li>Developed in England, US uses</li>
+<li>Uses precedent</li>
+<li>Criminal, civil/tortued, administrative</li>
+<li>Civil - wrongs against individual or company resulting in damage or loss. Jury decides "liability", not innocence or guilt. Typically derrived from common law, case law.</li>
+<li>Criminal - conduct violates government laws. Jail, fines. Derrived from statutes.</li>
+<li>Administrative/regulatory law - deals with regulatory standards.</li>
+</ul>
+</div></li>
+<li><a id="orgce33a41"></a>Customary Law Systems<br /><div class="outline-text-5" id="text-1-4-3-3">
+<ul class="org-ul">
+<li>Personal conduct and behavior</li>
+<li>Based on traditions and customs</li>
+<li>Used in mixed legal systems (China, India)</li>
+</ul>
+</div></li>
+<li><a id="org136172f"></a>Religious Law Systems<br /></li></ol>
+</div>
+</div>
+<div id="outline-container-orgdb81750" class="outline-3">
+<h3 id="orgdb81750"><span class="section-number-3">1.5</span> Intellectual Property</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>Companies must implement safeguards to protect IP, show that it exercised due care.</li>
+<li>Trade Secret
+<ul class="org-ul">
+<li>Resource must provide the company with some type of competitive value or advantage</li>
+<li>Proprietary</li>
+<li>NDA - promise not to share trade secrets. This gives company right to fire, and bring charges.</li>
+</ul></li>
+<li>Copyright
+<ul class="org-ul">
+<li>Gives right to control distribution, reproduction display and adapation of original work.</li>
+<li>It protects the <span class="underline">expression</span> of a resource, not the resource itself</li>
+<li>Copyright is weaker than a patent</li>
+<li>Copyright is much longer (life plus 50 years)</li>
+</ul></li>
+<li>Trademark
+<ul class="org-ul">
+<li>Used to protect a word, name, symbol, sound, shape, color, or combination.</li>
+<li>Used to protect Brand.</li>
+<li>International trademark law overseen by World Intellectual Property Organization (WIPO), part of the UN</li>
+</ul></li>
+<li>Patent
+<ul class="org-ul">
+<li>Grants legal ownership and ability to exclude others from using or copying an invention</li>
+<li>Invention must be novel, useful and not obvious</li>
+<li>Usually a 20 year period</li>
+<li>Strongest form of protection</li>
+<li>Large amount of patent litigation - main reason is Nonpracticing Entities (NPEs) or patent trolls.</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orga0a033f" class="outline-4">
+<h4 id="orga0a033f"><span class="section-number-4">1.5.1</span> International Protection of Intellectual Property</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<ul class="org-ul">
+<li>Resources protected by law should be part of data classification scheme, and properly protected with access controls</li>
+<li>Failure to protect could mean the data is not protected by law because it failed to practice due care.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga233767" class="outline-4">
+<h4 id="orga233767"><span class="section-number-4">1.5.2</span> Software Piracy</h4>
+<div class="outline-text-4" id="text-1-5-2">
+</div><ol class="org-ol"><li><a id="org3a5a8f2"></a>Types of licencing<br /><div class="outline-text-5" id="text-1-5-2-1">
+<ul class="org-ul">
+<li>Freeware</li>
+<li>Shareware</li>
+<li>Commercial</li>
+<li>Academic</li>
+</ul>
+</div></li>
+<li><a id="org5abea17"></a>EULA<br /><div class="outline-text-5" id="text-1-5-2-2">
+<p>
+more granular that Master
+</p>
+</div></li>
+<li><a id="org6126bb9"></a>Master Agreement<br /></li>
+<li><a id="org27af67e"></a>International<br /><div class="outline-text-5" id="text-1-5-2-4">
+<ul class="org-ul">
+<li>Not a crime everywhere</li>
+<li>Federation Against Software Theft (FAST) and the Business Software Alliance promote enforcement of proprietary rights of software</li>
+</ul>
+</div></li>
+<li><a id="orgfe8893d"></a>Security Implictaions<br /><div class="outline-text-5" id="text-1-5-2-5">
+<ul class="org-ul">
+<li>Common offense is to reverse engineer code. But this is necessary for discover security flaws.</li>
+<li>Can be prosecuted for reverse engineering code under Digital Millennium Copyright Act (DMCA)</li>
+<li>DMCA - criminalizes production and dissemination of technology that circumvents access control measures.</li>
+<li>EU has similar law called Copyright Directive</li>
+</ul>
+</div></li></ol>
+</div>
+</div>
+<div id="outline-container-org48f52fa" class="outline-3">
+<h3 id="org48f52fa"><span class="section-number-3">1.6</span> Privacy</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-org14cf24c" class="outline-4">
+<h4 id="org14cf24c"><a id="s2j97wf0wih0"></a><span class="section-number-4">1.6.1</span> Definitions</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<dl class="org-dl">
+<dt>Personally Identifiable Information</dt><dd>data that can be used to uniquely identify, contact or locate a single person or can be used with other sources to uniquely identify a single individual. Commonly used in identity theft, financial crimes.
+<ul class="org-ul">
+<li>This commonly includes:
+<ul class="org-ul">
+<li>Full Name</li>
+<li>National Identification Number</li>
+<li>IP address (in some cases)</li>
+<li>Vehicle registration plate number</li>
+<li>Driver's license number</li>
+<li>Face, fingerprints, or handwriting</li>
+<li>Credit card numbers</li>
+<li>Digital identity</li>
+<li>Birthday</li>
+<li>Birthplace</li>
+<li>Genetic Information</li>
+</ul></li>
+<li>Less common - but can be PII as well
+<ul class="org-ul">
+<li>First or Last name, if common</li>
+<li>Country, state, or city of residence</li>
+<li>Age, especially if non-specific</li>
+<li>Gender or race</li>
+<li>Name of school, workplace</li>
+<li>Grades, salary, job position</li>
+<li>Criminal record</li>
+</ul></li>
+</ul></dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgb00fa0a" class="outline-4">
+<h4 id="orgb00fa0a"><span class="section-number-4">1.6.2</span> Increasing Need for Privacy Laws</h4>
+<div class="outline-text-4" id="text-1-6-2">
+<ul class="org-ul">
+<li>Data aggregation and retrieval technologies</li>
+<li>Loss of borders / business globalization</li>
+<li>Convergent technologies advancements</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org60f7fb0" class="outline-4">
+<h4 id="org60f7fb0"><span class="section-number-4">1.6.3</span> Laws, Directives and Regulations</h4>
+<div class="outline-text-4" id="text-1-6-3">
+</div><ol class="org-ol"><li><a id="org6adbb0b"></a>Federal Privacy Act of 1974<br /><div class="outline-text-5" id="text-1-6-3-1">
+<p>
+Restrictions on government maintenance and use of private records (relevant and necessary)
+</p>
+</div></li>
+<li><a id="orgb6b938d"></a>Federal Information Security Management Act of 2002 (FISMA)<br /><div class="outline-text-5" id="text-1-6-3-2">
+<ul class="org-ul">
+<li>Federal agencies must implement a risk-based program to secure agency data and systems</li>
+<li>Requires annual reviews and reports to Office of Management and Budget (OMB)</li>
+<li>Requirements of FISMA:
+<ul class="org-ul">
+<li>Inventory of assets</li>
+<li>Categorize by risk</li>
+<li>Security controls</li>
+<li>Risk assessment</li>
+<li>System security plan</li>
+<li>Certification and accreditation</li>
+<li>Continuous Monitoring</li>
+</ul></li>
+</ul>
+</div></li>
+<li><a id="org6778e2e"></a>Department of Veterans Affairs Information Security Protection Act<br /><div class="outline-text-5" id="text-1-6-3-3">
+<ul class="org-ul">
+<li>Only applies to the VA</li>
+<li>Was already required to comply with FISMA</li>
+<li>Required additional controls plus report compliance to Congress</li>
+</ul>
+</div></li>
+<li><a id="orgbfbb5ff"></a>Health Insurance Portability and Accountability Act (HIPAA)<br /><div class="outline-text-5" id="text-1-6-3-4">
+<ul class="org-ul">
+<li>Storage, use and transmission of medical information</li>
+</ul>
+</div></li>
+<li><a id="org466dd0b"></a>Health Information Technology for Economic and Clinical Health (HITECH) Act<br /><div class="outline-text-5" id="text-1-6-3-5">
+<ul class="org-ul">
+<li>2009</li>
+<li>Promotes adoption of healthcare technology</li>
+<li>Strengthen civil and criminal enforcement of HIPAA rules</li>
+</ul>
+</div></li>
+<li><a id="org5ab4fa8"></a>USA Patriot Act<br /><div class="outline-text-5" id="text-1-6-3-6">
+<ul class="org-ul">
+<li>Reduces restrictions on law enforcement searching records - big area for privacy debate here</li>
+<li>Eases restrictions on foreign intelligence gathering within US</li>
+<li>Expand ability to regulate financial transactions</li>
+<li>Expands ability to detain and deport immigrants</li>
+<li>Expands definition of terrorism</li>
+</ul>
+</div></li>
+<li><a id="org35ff1db"></a>Gramm-Leach-Bliley Act (GLBA)<br /><div class="outline-text-5" id="text-1-6-3-7">
+<ul class="org-ul">
+<li>Aka Financial Services Modernization Act (1999)</li>
+<li>Requires financial institutions to develop privacy notices, right to prohibit sharing, security responsibilities</li>
+<li>Board of Directors responsible, risk management required, employee training, testing, written security policy</li>
+<li>Financial Privacy Rule - customer privacy rights, requires a privacy notice, restrictions on sharing and protecting data</li>
+<li>Safeguards Rule - written security plan</li>
+<li>Pretexting Protection - social engineering safeguards</li>
+</ul>
+</div></li>
+<li><a id="orgead633a"></a>Personal Information Protection and Electronic Documents Act<br /><div class="outline-text-5" id="text-1-6-3-8">
+<ul class="org-ul">
+<li>PIPEDA</li>
+<li>Canadian Law</li>
+<li>Protection of personal information</li>
+<li>Ensures business protect privacy data</li>
+<li>Standard privacy requirements (Consent, collection, notice, etc.)</li>
+</ul>
+</div></li>
+<li><a id="orgef2875b"></a>Payment Card Industry Data Security Standard (PCI DSS)<br /><div class="outline-text-5" id="text-1-6-3-9">
+<ul class="org-ul">
+<li>All credit cards companys came together to develop</li>
+<li>Applies to any entity that processes, transmits, stores or accepts credit card data</li>
+<li>Minnesota actually enforces PCI via law</li>
+</ul>
+</div></li></ol>
+</div>
+<div id="outline-container-orge38b457" class="outline-4">
+<h4 id="orge38b457"><span class="section-number-4">1.6.4</span> Employee Privacy Issues</h4>
+<div class="outline-text-4" id="text-1-6-4">
+<ul class="org-ul">
+<li>Must make employees aware of monitoring</li>
+<li>Monitoring must be work related and consistent</li>
+<li>Notice typically needs to be signed: Waiver of reasonable expectation of privacy (REP)</li>
+<li>Typically cannot fire an employee if they did not violate written policy</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org965a42c" class="outline-4">
+<h4 id="org965a42c"><span class="section-number-4">1.6.5</span> Additional Material</h4>
+<div class="outline-text-4" id="text-1-6-5">
+<ul class="org-ul">
+<li>Great resource for Privacy background: <a href="https://my.iapp.org/NC__Product?id=a191a000000Pa8iAAC">https://my.iapp.org/NC__Product?id=a191a000000Pa8iAAC</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfe5817f" class="outline-3">
+<h3 id="orgfe5817f"><span class="section-number-3">1.7</span> Data Breaches</h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-org26ba41e" class="outline-4">
+<h4 id="org26ba41e"><span class="section-number-4">1.7.1</span> Verizon Data Breach Report: <a href="http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/">http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/</a></h4>
+</div>
+<div id="outline-container-org526c307" class="outline-4">
+<h4 id="org526c307"><span class="section-number-4">1.7.2</span> Reporting</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<ul class="org-ul">
+<li>Each state has breach reporting laws - in library</li>
+<li>So does FISMA</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4850ec8" class="outline-4">
+<h4 id="org4850ec8"><span class="section-number-4">1.7.3</span> US Laws pertaining to data breaches</h4>
+<div class="outline-text-4" id="text-1-7-3">
+<ul class="org-ul">
+<li>HIPAA - no reporting requirements (but corrected by HITECH)</li>
+<li>HITECH - HHS must publish annual guidance, companies that comply are not required to report. Otherwise a 60 day reporting requirement</li>
+<li>GLBA - only is misuse has occurred or reasonably likely to occur</li>
+<li>Economic Espionage Act of 1996 - Enables the FBI to investigate industrial and corporate espionage cases. This act focuses on IP.</li>
+<li>State Laws - 
+<ul class="org-ul">
+<li>PII definition: First and Last name with any of the following: SSN, DL Num, Credit/Debit Card Number with security code or PIN</li>
+<li>Significant variation - some just access requires notification, others use the misuse language of GLBA</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd7ae95e" class="outline-4">
+<h4 id="orgd7ae95e"><span class="section-number-4">1.7.4</span> Other Nation's Laws</h4>
+<div class="outline-text-4" id="text-1-7-4">
+</div><ol class="org-ol"><li><a id="orgf9fef8c"></a>EU<br /><div class="outline-text-5" id="text-1-7-4-1">
+<ul class="org-ul">
+<li>EU Data Protection Regulation - standardizes data breach laws</li>
+<li>Privacy very top down directed in EU</li>
+<li>24 hour notification requirement</li>
+</ul>
+</div></li>
+<li><a id="orgf1e21fe"></a>Other<br /><div class="outline-text-5" id="text-1-7-4-2">
+<ul class="org-ul">
+<li>12 countries have no notification requirements: Argentina, Brazil, Chile, China, Colombia, Hong Kong, India, Israel, Malaysia, Peru, Russia, Singapore</li>
+</ul>
+</div></li></ol>
+</div>
+</div>
+<div id="outline-container-orgd0ce29d" class="outline-3">
+<h3 id="orgd0ce29d"><span class="section-number-3">1.8</span> Policies, Standards, Baselines, Guidelines and Procedures</h3>
+<div class="outline-text-3" id="text-1-8">
+</div>
+<div id="outline-container-org6fa1c0f" class="outline-4">
+<h4 id="org6fa1c0f"><span class="section-number-4">1.8.1</span> Policy - high level of requirement - typically should have a 3-5 year life</h4>
+<div class="outline-text-4" id="text-1-8-1">
+<ul class="org-ul">
+<li>Advisory and Informative policies are rare - typically called Guidelines not Policy.</li>
+<li>Strategic</li>
+<li>Example: Confidential Information Must be Protected</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org580ceb6" class="outline-4">
+<h4 id="org580ceb6"><span class="section-number-4">1.8.2</span> Standards</h4>
+<div class="outline-text-4" id="text-1-8-2">
+<ul class="org-ul">
+<li>mandatory</li>
+<li>tactical</li>
+<li>lower level - typically revised yearly</li>
+<li>also typically approved at a lower level</li>
+<li>See Figure 1-13</li>
+<li>Example: Customer PII must be encrypted with AES while stored, IPSec with transmitted</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgccbb5b8" class="outline-4">
+<h4 id="orgccbb5b8"><span class="section-number-4">1.8.3</span> Baselines</h4>
+<div class="outline-text-4" id="text-1-8-3">
+<ul class="org-ul">
+<li>NIST and ISO typically define Baseline as system configuration standards (eg. Windows 10 desktop baseline)</li>
+<li>Be aware is can have a broader meaning to measure progress in an organization</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5c602c1" class="outline-4">
+<h4 id="org5c602c1"><span class="section-number-4">1.8.4</span> Guidelines</h4>
+<div class="outline-text-4" id="text-1-8-4">
+<ul class="org-ul">
+<li>non mandatory</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9c47d7b" class="outline-4">
+<h4 id="org9c47d7b"><span class="section-number-4">1.8.5</span> Procedures</h4>
+<div class="outline-text-4" id="text-1-8-5">
+<ul class="org-ul">
+<li>The Step-by-Step tasks (eg. How to install a desktop image for a new user)</li>
+<li>may or may not be mandatory</li>
+<li>Example: How to implement AES and IPSec Technologies</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd033ee1" class="outline-4">
+<h4 id="orgd033ee1"><span class="section-number-4">1.8.6</span> Implementation</h4>
+<div class="outline-text-4" id="text-1-8-6">
+<ul class="org-ul">
+<li>To be effective they must follow a life cycle</li>
+<li>Communicated and Trained, Tested, Reviewed and Updated</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org77c6937" class="outline-3">
+<h3 id="org77c6937"><a id="ny84hxf0wih0"></a><span class="section-number-3">1.9</span> Risk Management</h3>
+<div class="outline-text-3" id="text-1-9">
+</div>
+<div id="outline-container-org6ec3430" class="outline-4">
+<h4 id="org6ec3430"><span class="section-number-4">1.9.1</span> InfoSec risk types</h4>
+<div class="outline-text-4" id="text-1-9-1">
+<ul class="org-ul">
+<li>Physical damage</li>
+<li>Human interaction</li>
+<li>Equipment malfunction</li>
+<li>Inside and outside attacks</li>
+<li>Misuse of data</li>
+<li>Loss of data</li>
+<li>Application error</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org264600b" class="outline-4">
+<h4 id="org264600b"><span class="section-number-4">1.9.2</span> Risk Assessment Additional Readings:</h4>
+<div class="outline-text-4" id="text-1-9-2">
+<ul class="org-ul">
+<li>FFIEC Risk Assessment Approach (<a href="http://ithandbook.ffiec.gov/it-booklets/management/iii-it-risk-management.aspx">http://ithandbook.ffiec.gov/it-booklets/management/iii-it-risk-management.aspx</a>)</li>
+
+<li>NIST Risk Assessment Approach (<a href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf">http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf</a>)</li>
+
+<li>FAIR (<a href="https://en.wikipedia.org/wiki/Factor_analysis_of_information_risk">https://en.wikipedia.org/wiki/Factor_analysis_of_information_risk</a>)</li>
+
+<li>Octave Allegro (<a href="http://resources.sei.cmu.edu/asset_files/TechnicalReport/2007_005_001_14885.pdf">http://resources.sei.cmu.edu/asset_files/TechnicalReport/2007_005_001_14885.pdf</a>)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgad7c705" class="outline-4">
+<h4 id="orgad7c705"><a id="io1d8vf0wih0"></a><span class="section-number-4">1.9.3</span> Holistic</h4>
+<div class="outline-text-4" id="text-1-9-3">
+<ul class="org-ul">
+<li>Integrated Risk Management looks at all risk</li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="orgd7b34fd"></a>Integrated Risk Management<br /><div class="outline-text-5" id="text-1-9-3-1">
+<p>
+The Gartner reframe of Governance, Risk and Compliance
+</p>
+<ul class="org-ul">
+<li>Operational Risk Management (ORM)</li>
+<li>IT Risk Management (ITRM)</li>
+<li>IT Vendor Risk Management (VRM)</li>
+<li>Business Continuity Management Planning (BCMP)</li>
+<li>Audit Management (AM)</li>
+<li>Corporate Compliance and Oversight (CCO)</li>
+<li>Enterprise Legal Management (ELM)</li>
+</ul>
+</div></li>
+
+<li><a id="org86f262a"></a>From High Risk, Low Risk to Good Risk, Bad Risk<br /><div class="outline-text-5" id="text-1-9-3-2">
+
+<div class="figure">
+<p><img src="images/From High Risk, Low Risk to Good Risk, Bad Risk/Screen Shot 2017-01-13 at 9.24.56 AM_2017-01-13_09-58-25.png" alt="Screen Shot 2017-01-13 at 9.24.56 AM_2017-01-13_09-58-25.png" />
+</p>
+</div>
+</div></li>
+<li><a id="org244b516"></a>Gartner Articles<br /><div class="outline-text-5" id="text-1-9-3-3">
+<p>
+<a href="file:///Users/chris/Documents/Edgile/Library/Gartner%20Articles/market_guide_for_integrated__290464.pdf">file:///Users/chris/Documents/Edgile/Library/Gartner Articles/market_guide_for_integrated__290464.pdf</a>
+<a href="file:///Users/chris/Documents/Edgile/Library/Gartner%20Articles/2016_strategic_roadmap_for_r_301059.pdf">file:///Users/chris/Documents/Edgile/Library/Gartner Articles/2016_strategic_roadmap_for_r_301059.pdf</a>
+<a href="file:///Users/chris/Documents/Edgile/Library/Gartner%20Articles/transform_governance_risk_an_314880.pdf">file:///Users/chris/Documents/Edgile/Library/Gartner Articles/transform_governance_risk_an_314880.pdf</a>
+<a href="file:///Users/chris/Documents/Edgile/Library/Gartner%20Articles/magic_quadrant_for_operation_297941.pdf">file:///Users/chris/Documents/Edgile/Library/Gartner Articles/magic_quadrant_for_operation_297941.pdf</a>
+</p>
+</div></li>
+<li><a id="org79bf920"></a>Tiers:<br /><div class="outline-text-5" id="text-1-9-3-4">
+<ul class="org-ul">
+<li>Organizational - business as a whole</li>
+<li>Business process - risk to major functions</li>
+<li>Information systems - IT risk</li>
+</ul>
+</div></li></ol>
+</div>
+<div id="outline-container-org71f4268" class="outline-4">
+<h4 id="org71f4268"><span class="section-number-4">1.9.4</span> Information Systems Risk Management Policy</h4>
+<div class="outline-text-4" id="text-1-9-4">
+<ul class="org-ul">
+<li>Defines approach to IT risk - should be connected to Enterprise Risk approach</li>
+<li>Topics:
+<ul class="org-ul">
+<li>Objectives</li>
+<li>Acceptable level of risk</li>
+<li>Risk identification process</li>
+<li>Connected to strategic planning</li>
+<li>Roles and responsibilities** - key part as it leads to implementation</li>
+<li>Mapping of risk to controls</li>
+<li>resource allocation approach</li>
+<li>Mapping of risks to targets and budget</li>
+<li>Key indicators</li>
+</ul></li>
+</ul>
+
+<p>
+Note: those topics are typically to low detail to actually go in a policy. 
+</p>
+</div>
+</div>
+<div id="outline-container-org1926594" class="outline-4">
+<h4 id="org1926594"><span class="section-number-4">1.9.5</span> Process</h4>
+<div class="outline-text-4" id="text-1-9-5">
+<ul class="org-ul">
+<li>NIST 800-39</li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="orgbd903d7"></a>Frame risk - define the context<br /></li>
+<li><a id="org97604f9"></a>Assess risk - set the likelihood and impact scales for each risk identified<br /></li>
+<li><a id="orge35fd91"></a>Respond to risk - accept, mitigate, transfer - explicit decision required<br /></li>
+<li><a id="org7d0c871"></a>Monitor risk - monitor control effectiveness<br /></li></ol>
+</div>
+<div id="outline-container-orgf4ad7a7" class="outline-4">
+<h4 id="orgf4ad7a7"><span class="section-number-4">1.9.6</span> Threat Modeling</h4>
+<div class="outline-text-4" id="text-1-9-6">
+<ul class="org-ul">
+<li>See threat modeling spreadsheet as a simple approach</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org510f632" class="outline-4">
+<h4 id="org510f632"><span class="section-number-4">1.9.7</span> Vulnerabilities</h4>
+</div>
+<div id="outline-container-org073272a" class="outline-4">
+<h4 id="org073272a"><span class="section-number-4">1.9.8</span> Information</h4>
+<div class="outline-text-4" id="text-1-9-8">
+<ul class="org-ul">
+<li>Data at rest</li>
+<li>Data in motion</li>
+<li>Data in use - race conditions</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3594600" class="outline-4">
+<h4 id="org3594600"><span class="section-number-4">1.9.9</span> Processes</h4>
+</div>
+<div id="outline-container-org060222f" class="outline-4">
+<h4 id="org060222f"><span class="section-number-4">1.9.10</span> People</h4>
+<div class="outline-text-4" id="text-1-9-10">
+<ul class="org-ul">
+<li>Social Engineering</li>
+<li>Social networks</li>
+<li>Passwords!</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1abe416" class="outline-4">
+<h4 id="org1abe416"><span class="section-number-4">1.9.11</span> Threats</h4>
+</div>
+<div id="outline-container-org97a2b27" class="outline-4">
+<h4 id="org97a2b27"><span class="section-number-4">1.9.12</span> Attacks</h4>
+<div class="outline-text-4" id="text-1-9-12">
+<ul class="org-ul">
+<li>Attackers think in graphs, security personnel think in checklists</li>
+<li>Figure 1-14 - an attack tree</li>
+<li>Attack kill chain: <a href="https://en.wikipedia.org/wiki/Kill_chain">https://en.wikipedia.org/wiki/Kill_chain</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc1f75aa" class="outline-4">
+<h4 id="orgc1f75aa"><span class="section-number-4">1.9.13</span> Reduction Analysis</h4>
+<div class="outline-text-4" id="text-1-9-13">
+<ul class="org-ul">
+<li>Vulnerability - Threat - Attack triad can be risk assessed</li>
+<li>Ideally have a control for each node in the attack tree</li>
+<li>Controls at the root of the tree will defend against a broader array of attack triads</li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd92e51f" class="outline-3">
+<h3 id="orgd92e51f"><span class="section-number-3">1.10</span> Risk Assessment and Analysis</h3>
+<div class="outline-text-3" id="text-1-10">
+</div>
+<div id="outline-container-orgcbd2438" class="outline-4">
+<h4 id="orgcbd2438"><span class="section-number-4">1.10.1</span> Identifying risks</h4>
+<div class="outline-text-4" id="text-1-10-1">
+<ul class="org-ul">
+<li>simple approach: Asset at Risk X Threat Community X Threat Type X Effect</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org61e578a" class="outline-4">
+<h4 id="org61e578a"><span class="section-number-4">1.10.2</span> Generic process (NIST)</h4>
+<div class="outline-text-4" id="text-1-10-2">
+</div><ol class="org-ol"><li><a id="org5361886"></a>Prepare for the assessment<br /></li>
+<li><a id="org55556d5"></a>Conduct the assessment<br /><ol class="org-ol"><li><a id="orgb346084"></a>Identify threat sources and events<br /></li>
+<li><a id="org9f9935a"></a>Identify vulnerabilities and predisposing conditions<br /></li>
+<li><a id="orgdbb930c"></a>Determine likelihood of occurence<br /></li>
+<li><a id="org9c934e5"></a>Determine magnitude of impact<br /></li>
+<li><a id="orgf46c8b0"></a>Determine risk<br /></li></ol></li>
+<li><a id="org15ab894"></a>Communicate results<br /></li>
+<li><a id="orgf56d0e6"></a>Maintain assessment<br /></li></ol>
+</div>
+<div id="outline-container-orgacf53c3" class="outline-4">
+<h4 id="orgacf53c3"><span class="section-number-4">1.10.3</span> Facilitated Risk Analysis Process (FRAP)</h4>
+<div class="outline-text-4" id="text-1-10-3">
+<ul class="org-ul">
+<li>Qualitative, member experience driven</li>
+<li>No annual loss expectancy values or probability numbers</li>
+<li>Small scope - single system</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge775ec1" class="outline-4">
+<h4 id="orge775ec1"><span class="section-number-4">1.10.4</span> OCTAVE</h4>
+<div class="outline-text-4" id="text-1-10-4">
+<ul class="org-ul">
+<li>use facilitated workshops</li>
+<li>self-directed team approach</li>
+<li>Much wider scope of FRAP</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf0d91bb" class="outline-4">
+<h4 id="orgf0d91bb"><span class="section-number-4">1.10.5</span> AS/NZS 4360</h4>
+<div class="outline-text-4" id="text-1-10-5">
+<ul class="org-ul">
+<li>Australia and New Zealand</li>
+<li>Very broad risk appraoch</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org907026d" class="outline-4">
+<h4 id="org907026d"><span class="section-number-4">1.10.6</span> ISO/IEC 27005</h4>
+<div class="outline-text-4" id="text-1-10-6">
+<ul class="org-ul">
+<li>International risk management standard</li>
+<li>Deals with IT and softer security issues (documentation, personnel security, training, etc)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org88f7db9" class="outline-4">
+<h4 id="org88f7db9"><span class="section-number-4">1.10.7</span> Failure Modes and Effect Analysis (FMEA)</h4>
+<div class="outline-text-4" id="text-1-10-7">
+<ul class="org-ul">
+<li>product development</li>
+<li>Failure of products or software</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6f1231a" class="outline-4">
+<h4 id="org6f1231a"><span class="section-number-4">1.10.8</span> Fault tree analysis</h4>
+<div class="outline-text-4" id="text-1-10-8">
+<ul class="org-ul">
+<li>Figure 1-15</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba4483f" class="outline-4">
+<h4 id="orgba4483f"><span class="section-number-4">1.10.9</span> Central Computing and Teecmmunications Agency Risk Analysis and Management Method (CRAMM)</h4>
+<div class="outline-text-4" id="text-1-10-9">
+<ul class="org-ul">
+<li>UK</li>
+<li>basic risk methodology in an automated tools</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org667ce18" class="outline-4">
+<h4 id="org667ce18"><span class="section-number-4">1.10.10</span> Difference:</h4>
+<div class="outline-text-4" id="text-1-10-10">
+<ul class="org-ul">
+<li>Organization wide: ISO/IEC 27005 or Octave</li>
+<li>IT Risk: NIST SP 800-30</li>
+<li>Limited budget/focused assessment: FRAP</li>
+<li>Software engineering: FMEA, Fault Tree</li>
+<li>Business perspective: AS/NZS 4360</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d446e2" class="outline-4">
+<h4 id="org1d446e2"><span class="section-number-4">1.10.11</span> Approaches</h4>
+<div class="outline-text-4" id="text-1-10-11">
+<ul class="org-ul">
+<li>Qualitative</li>
+<li>Quantitative</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7ce2b67" class="outline-4">
+<h4 id="org7ce2b67"><span class="section-number-4">1.10.12</span> Quantitative</h4>
+<div class="outline-text-4" id="text-1-10-12">
+<ul class="org-ul">
+<li>Asset Value X Exposure Factor (EF) = Single Loss Expectancy</li>
+<li>Annual Loss Expectancy (ALE) = SLE x Annualized Rate of Occurrence (ARO)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6420f9c" class="outline-4">
+<h4 id="org6420f9c"><span class="section-number-4">1.10.13</span> Qualitative</h4>
+<div class="outline-text-4" id="text-1-10-13">
+<ul class="org-ul">
+<li>use the High Medium Low Matrices</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org50d7546" class="outline-4">
+<h4 id="org50d7546"><span class="section-number-4">1.10.14</span> Control Selection</h4>
+<div class="outline-text-4" id="text-1-10-14">
+<ul class="org-ul">
+<li>Risk analysis allows a cost-benefit analysis</li>
+<li>ROSI: ((Risk Exposure * % Mitigate) - Solution Cost) / Solution Cost</li>
+<li>ALE before controls - ALE after controls - annual cost = value of control</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3faa69c" class="outline-4">
+<h4 id="org3faa69c"><span class="section-number-4">1.10.15</span> Risk terms:</h4>
+<div class="outline-text-4" id="text-1-10-15">
+<ul class="org-ul">
+<li>Inherent risk - beginning risk</li>
+<li>Residual risk - remaining risk</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org88986d8" class="outline-4">
+<h4 id="org88986d8"><span class="section-number-4">1.10.16</span> Handling Risk:</h4>
+<div class="outline-text-4" id="text-1-10-16">
+<ul class="org-ul">
+<li>Avoid</li>
+<li>Accept</li>
+<li>Transfer</li>
+<li>Mitigate</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org59318e2" class="outline-4">
+<h4 id="org59318e2"><span class="section-number-4">1.10.17</span> Outsourcing</h4>
+<div class="outline-text-4" id="text-1-10-17">
+<ul class="org-ul">
+<li>You can't outsource risk responsibility</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd069126" class="outline-3">
+<h3 id="orgd069126"><span class="section-number-3">1.11</span> Risk Management Frameworks</h3>
+<div class="outline-text-3" id="text-1-11">
+<ul class="org-ul">
+<li>"a structured process that allows an organization to identify and assess risk, reduces it to an acceptable level, and ensure that it remains at that level."</li>
+<li>Commonly accepted Frameworks:
+<ul class="org-ul">
+<li>NIST RMF (SP 800-37r1) - Required for federal government agencies - focused on information systems.</li>
+<li>ISO 31000:2009 - international standard - not focused on Information systems, can be applied broadly in an organization.</li>
+<li>ISACA Risk IT - aims to bridge gap between generic framework like ISO 31000, and IT-centric ones likes NIST. Integrated with COBIT.</li>
+<li>COSO Enterprise Risk Management - Integrated Framework - 2004 - generic, top-down approach, can be thought of as a superset of the COSO Internal Control framework</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org648cddb" class="outline-4">
+<h4 id="org648cddb"><span class="section-number-4">1.11.1</span> Categorize Information Systems</h4>
+<div class="outline-text-4" id="text-1-11-1">
+<ul class="org-ul">
+<li>Identify systems, subsystems, and boundaries</li>
+<li>Related Business processes</li>
+<li>Integration with Enterprise architecture</li>
+<li>Types of information, it's criticality</li>
+<li>Regulatory and legal requirements applicable</li>
+<li>System interconnections</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga27878e" class="outline-4">
+<h4 id="orga27878e"><span class="section-number-4">1.11.2</span> Select Security Controls</h4>
+<div class="outline-text-4" id="text-1-11-2">
+<ul class="org-ul">
+<li>Assumes that you have performed a risk assessment and have identified a number of common controls across the organization</li>
+<li>For new systems, must determine if there any risks specific to the systems</li>
+<li>Can then either modify common controls (hybrid controls) or develop brand newer ones (system-specific controls)</li>
+<li>Baseline controls = common controls, Actual controls are the hybrid and systems-specific controls</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4fdaef7" class="outline-4">
+<h4 id="org4fdaef7"><span class="section-number-4">1.11.3</span> Implement Security Controls</h4>
+<div class="outline-text-4" id="text-1-11-3">
+<ul class="org-ul">
+<li>Implement the control</li>
+<li>Document the control</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2987396" class="outline-4">
+<h4 id="org2987396"><span class="section-number-4">1.11.4</span> Assess Security Controls</h4>
+<div class="outline-text-4" id="text-1-11-4">
+<ul class="org-ul">
+<li>Assessor must be competent and independent</li>
+<li>Asses whether controls are effective</li>
+<li>If not effective, document findings and remediation actions</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcb6e314" class="outline-4">
+<h4 id="orgcb6e314"><span class="section-number-4">1.11.5</span> Authorize Information Systems</h4>
+<div class="outline-text-4" id="text-1-11-5">
+<ul class="org-ul">
+<li>Person must determine whether the risk exposure is acceptable to the organization. For a new system this will authorize connecting it to the network. For an inplace system, this is accepting risk or the mitigation plans.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org81008e3" class="outline-4">
+<h4 id="org81008e3"><span class="section-number-4">1.11.6</span> Monitor Security Controls</h4>
+<div class="outline-text-4" id="text-1-11-6">
+<ul class="org-ul">
+<li>Ongoing monitoring and continuous improvement</li>
+<li>Look for new tactics, techniques and procedures of adversary, new vulnerabilities, system changes</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd54634f" class="outline-3">
+<h3 id="orgd54634f"><span class="section-number-3">1.12</span> Business Continuity and Disaster Recovery</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+Goal: minimize effects of a disaster or disruption
+Continuity planning - focused on the longer term procedures for dealing with outages and disasters, typically focused on Senior Management and Business Lines
+Disaster Recovery Plan - short-term, typically very IT focused, typically focused on Business Lines and Application Availability
+Business Continuity Management - the holistic process that covers both of the above terms, considers Availability, Reliability, and Recoverability
+Common issue is security not being considered:
+</p>
+<ul class="org-ul">
+<li>servers in backup data center not physically secured</li>
+<li>emergency remote access services with insufficient encryption</li>
+</ul>
+<p>
+Or - it's too secure and emergency actions cannot take place:
+</p>
+<ul class="org-ul">
+<li>admins cannot access servers because PAM system is inoperable, or manager approval cannot take place due to networking issues</li>
+<li>the term "break glass account" typically refer to providing the ability to bypass controls in case of an emergency situation</li>
+</ul>
+
+<p>
+Business Continuity Planning:
+</p>
+<ul class="org-ul">
+<li>Protect lives, safety</li>
+<li>Reduce business impact</li>
+<li>Resume critical functions</li>
+<li>Work with outside vendors and partners</li>
+<li>Reduce confusion</li>
+<li>Ensure suitability of business</li>
+<li>Get "up and running"</li>
+</ul>
+</div>
+
+<div id="outline-container-orga0dec8b" class="outline-4">
+<h4 id="orga0dec8b"><span class="section-number-4">1.12.1</span> Standards and Best Practices</h4>
+<div class="outline-text-4" id="text-1-12-1">
+<p>
+NIST SP 800-34 R1 "Continuity Planning Guide for Federal Information Systems"
+</p>
+
+<ol class="org-ol">
+<li>Develop the continuity planning policy statement
+Provides guidance and authority</li>
+<li>Conduct the business impact analysis (BIA)
+<ul class="org-ul">
+<li>Identify critical functions</li>
+<li>Identify vulnerabilities, threats, calculate risks</li>
+</ul></li>
+<li>Identify preventive controls
+<ul class="org-ul">
+<li>Identify and implement controls to reduce risk</li>
+</ul></li>
+<li>Create contingency strategies
+<ul class="org-ul">
+<li>Methods to brings systems online quickly</li>
+</ul></li>
+<li>Develop an information system contingency plan
+<ul class="org-ul">
+<li>How to stay functional in a crippled state</li>
+</ul></li>
+<li>Ensure plan testing, training, and exercises</li>
+<li>Ensure plan maintenance</li>
+</ol>
+
+<p>
+Others:
+</p>
+<ul class="org-ul">
+<li>ISO/IEC 27031:2011 - information and communication technology readiness</li>
+<li>ISO 22301:2012 - Business continuity management systems. Can be certified against this document.</li>
+<li>Business Continuity Institute's Good Practice Guidelines (GPG)
+<ul class="org-ul">
+<li>Management Practices</li>
+<li>Technical Practices</li>
+</ul></li>
+<li>DRI International Institute's Professional Practices for Business Continuity Planners</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8d106f3" class="outline-4">
+<h4 id="org8d106f3"><span class="section-number-4">1.12.2</span> Making BCM Part of teh Enterprise Security Program</h4>
+<div class="outline-text-4" id="text-1-12-2">
+<ul class="org-ul">
+<li>Zachman Business Enterprise Framework - used to understand a company's architecture and all the pieces and parts that make it up, looks at various requirements of business processes. Looks at: data, function, network, people, time and motivation components.</li>
+<li>Ideally, BCM should be part of the security program and business decisions and not carved off by itself</li>
+<li>Ideally report to a senior executive with strong management support</li>
+<li>Should understand the Why of the business. For most companies, it is to make money. Not so for government, non-profit.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3f32848" class="outline-4">
+<h4 id="org3f32848"><span class="section-number-4">1.12.3</span> BCP Project Components</h4>
+<div class="outline-text-4" id="text-1-12-3">
+<ul class="org-ul">
+<li>Identify a Business Continuity Coordinator - leader of the team, typically must be strong at horizontal leadership</li>
+<li>BCP Committee - must be familiar with each department (business units, senior management, IT, Security, Communications, Legal)</li>
+<li>Setting up budget and staff</li>
+<li>Assigning duties and responsibilities</li>
+<li>Senior management kick-off</li>
+<li>Awareness-raising activities</li>
+<li>Training</li>
+<li>Data collection to support continuity options</li>
+<li>Quick-wins</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgad74efe" class="outline-4">
+<h4 id="orgad74efe"><span class="section-number-4">1.12.4</span> Scope of the Project</h4>
+<div class="outline-text-4" id="text-1-12-4">
+<ul class="org-ul">
+<li>Typically scoped to larger threats with smaller threats convered by independent departmental contingency plans</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0f8ef08" class="outline-4">
+<h4 id="org0f8ef08"><span class="section-number-4">1.12.5</span> BCP Policy</h4>
+<div class="outline-text-4" id="text-1-12-5">
+<ul class="org-ul">
+<li>supplies the framework for and governance of designing and building the BCP effort</li>
+<li>Contents: Scope, mission statement, principles, guidelines and standards</li>
+<li>Steps to create:
+<ul class="org-ul">
+<li>Identify and document the components of the policy</li>
+<li>Identify and define policies of the organization that the BCP might affect</li>
+<li>Identify pertinent legislation, laws, regulations and standards</li>
+<li>Identify "good industry practice" guidelines</li>
+<li>Perform a gap analysis</li>
+<li>Compose a draft</li>
+<li>Review draft</li>
+<li>Incorporate feedback</li>
+<li>Get approval</li>
+<li>Publish</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgde20a20" class="outline-4">
+<h4 id="orgde20a20"><span class="section-number-4">1.12.6</span> Project Management</h4>
+<div class="outline-text-4" id="text-1-12-6">
+<ul class="org-ul">
+<li>Basically - execute a BCP project like any other good project</li>
+<li>SWOT - strengths, weaknesses, opportunities, threats</li>
+<li>Project Plan:
+<ul class="org-ul">
+<li>Objective-to-task mapping</li>
+<li>Resource to task mapping</li>
+<li>Workflows</li>
+<li>Milestones</li>
+<li>Deliverance  - Budget Estimates</li>
+<li>Success Factors</li>
+<li>Deadlines</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8874e08" class="outline-4">
+<h4 id="org8874e08"><span class="section-number-4">1.12.7</span> BCP Requirements</h4>
+<div class="outline-text-4" id="text-1-12-7">
+<ul class="org-ul">
+<li>Need management support to get necessary resources</li>
+<li>Executives must provide due diligence: doing everything within one's power to prevent a bad thing from happening</li>
+<li>Due care: taking the precautions that a reasonable and competent person would take in the same situation</li>
+<li>Regulations require customer data be protected even during a disaster</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbb4ec30" class="outline-4">
+<h4 id="orgbb4ec30"><span class="section-number-4">1.12.8</span> Business Impact Analysis</h4>
+<div class="outline-text-4" id="text-1-12-8">
+<ul class="org-ul">
+<li>a functional analysis - what are the functions of the business and what is their criticality. Point is to identify the areas that would suffer the greatest financial or operational loss.</li>
+<li>Must identify:
+<ul class="org-ul">
+<li>Max tolerable downtime</li>
+<li>Operational disruption and productivity</li>
+<li>Financial considerations</li>
+<li>Regulatory resposibilities</li>
+<li>Reputation</li>
+</ul></li>
+<li>This is gather through SME interviews, develop process flow diagrams</li>
+</ul>
+
+<p>
+BIA Steps:
+</p>
+<ul class="org-ul">
+<li>Select individuals to interview</li>
+<li>Create data-gathering techniques (surveys)</li>
+<li>Identify critical business functions</li>
+<li>Identify dependent resources</li>
+<li>Calculate how long functions can survive without the resources</li>
+<li>Identify vulnerabilities and threats to these functions</li>
+<li>Calculate risk for each function</li>
+<li>Document findigns</li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="orgfc70936"></a>Risk Assessment<br /><div class="outline-text-5" id="text-1-12-8-1">
+<ul class="org-ul">
+<li>A BCP focused assessment should be conducted</li>
+</ul>
+</div></li>
+<li><a id="org1c34bee"></a>Risk Assessment Evaluation and Process<br /><div class="outline-text-5" id="text-1-12-8-2">
+<ul class="org-ul">
+<li>Set the Likelihood and Impact for disruption threats</li>
+</ul>
+</div></li>
+<li><a id="orgeb443b1"></a>Assigning Values to Assets<br /><div class="outline-text-5" id="text-1-12-8-3">
+<ul class="org-ul">
+<li>Cost of a loss (impact)</li>
+<li>Maximum tolerable Downtime (MTD), Maximum Period Time of Disruption (MPTD). Examples:
+<ul class="org-ul">
+<li>Non-essential functions: 30 days</li>
+<li>Normal: 7 days</li>
+<li>Important: 72 hours</li>
+<li>Urgent: 24 hours</li>
+<li>Critical: Minutes to hours</li>
+</ul></li>
+</ul>
+</div></li></ol>
+</div>
+<div id="outline-container-org703df99" class="outline-4">
+<h4 id="org703df99"><span class="section-number-4">1.12.9</span> Interdependencies</h4>
+</div>
+</div>
+<div id="outline-container-org32a055e" class="outline-3">
+<h3 id="org32a055e"><span class="section-number-3">1.13</span> Personnel Security</h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+Separation of Duties :: make sure that one individual cannot complete a critical task by his/herself. Two variations:
+Split knowledge :: No one person knows all the details
+Dual control :: Two individuals are required to complete the task
+Rotation of duties :: used to uncover fraudulent activities, mandatory vacations
+</p>
+</div>
+<div id="outline-container-orgc94f072" class="outline-4">
+<h4 id="orgc94f072"><span class="section-number-4">1.13.1</span> Hiring Practices</h4>
+<div class="outline-text-4" id="text-1-13-1">
+<p>
+Nondisclosure Agreements (NDAs) :: should be required
+References should be checked
+</p>
+</div>
+</div>
+<div id="outline-container-org5d130a9" class="outline-4">
+<h4 id="org5d130a9"><span class="section-number-4">1.13.2</span> Termination</h4>
+<div class="outline-text-4" id="text-1-13-2">
+<p>
+Companies should have a set procedure
+Procedure should be connected to disabling account access
+</p>
+</div>
+</div>
+<div id="outline-container-org308bc9f" class="outline-4">
+<h4 id="org308bc9f"><span class="section-number-4">1.13.3</span> Security-Awareness Training</h4>
+<div class="outline-text-4" id="text-1-13-3">
+<p>
+Should be comprehensive, tailored and organization-wide
+Typically three audiences: Management, Staff, technical employees
+Typically should require employees to sign stating understanding of their security responsibilities 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f419fd" class="outline-4">
+<h4 id="org1f419fd"><span class="section-number-4">1.13.4</span> Degree or Certification?</h4>
+<div class="outline-text-4" id="text-1-13-4">
+<p>
+Awareness :: provide information, goal is recognition and retention
+Training :: provide knowledge, goal is providing a skill
+Education :: provide Insight, goal is Understanding
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3b9cb97" class="outline-3">
+<h3 id="org3b9cb97"><span class="section-number-3">1.14</span> Security Governance</h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+Security Governance :: A framework that allows for the security goals of an organization to be set and expressed by senior management
+Goal is to implement security throughout the organization
+</p>
+</div>
+<div id="outline-container-org425fdd5" class="outline-4">
+<h4 id="org425fdd5"><span class="section-number-4">1.14.1</span> Metrics</h4>
+<div class="outline-text-4" id="text-1-14-1">
+<p>
+The means to facilitate decision making, perofrmance improvement and accountability
+Must be quantitative, repeatable, reliable and meaningful
+Balanced score card - a standard business metrics framework (not too common within security though)
+</p>
+<ul class="org-ul">
+<li>Financial, Internal Business, Learning and Growth, Customer</li>
+</ul>
+
+<p>
+Note: Getting the right metrics is hard. Too common for business to default to measuring the data they have (# of IDS alerts) rather than those that express progress towards their security objectives. 
+</p>
+
+<p>
+Industry best practices:
+</p>
+<ul class="org-ul">
+<li>ISO/IEC 27004:2009 - base measures, derived measures, indicator values</li>
+<li>NIST SP 800-55 R1 - implementation, effectiveness/efficiency, impact values</li>
+</ul>
+
+<p>
+Metrics must mature as the program matures
+</p>
+
+<p>
+Time Entry -&gt; Compromise
+Time Compromise -&gt; Detection
+Time Detection -&gt; Recovery
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4a2420d" class="outline-3">
+<h3 id="org4a2420d"><span class="section-number-3">1.15</span> Ethics</h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+Overview:
+</p>
+<ul class="org-ul">
+<li>Protect society, the common good, necessary public trust and confidence and the infrastructure</li>
+<li>Act honorably, honestly, justly, responsibly, and legally</li>
+<li>Provide diligent and competent service to principals</li>
+<li>Advance and protect the profession</li>
+</ul>
+</div>
+
+<div id="outline-container-org97e3b39" class="outline-4">
+<h4 id="org97e3b39"><span class="section-number-4">1.15.1</span> The Computer Ethics Institute</h4>
+<div class="outline-text-4" id="text-1-15-1">
+<p>
+Ten Commandments:
+</p>
+<ul class="org-ul">
+<li>Do no harm (with a computer)</li>
+<li>Don't interfere with other's work</li>
+<li>Don't snoop</li>
+<li>Don't steal</li>
+<li>Don't bear false witness</li>
+<li>Don't steal software or violate copyright</li>
+<li>Use computers with authorization</li>
+<li>Don't steal IP</li>
+<li>Think about social consequences of programs</li>
+<li>Ensure consideration and respect for fellow humans</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7ac4a67" class="outline-4">
+<h4 id="org7ac4a67"><span class="section-number-4">1.15.2</span> The Internet Architecture Board</h4>
+<div class="outline-text-4" id="text-1-15-2">
+<p>
+Considers the following as unethical:
+</p>
+<ul class="org-ul">
+<li>Purposely seeking to gain unauthorized access</li>
+<li>Disrupting the Internet</li>
+<li>Wasting resources</li>
+<li>Destroying integrity of information</li>
+<li>Compromising privacy</li>
+<li>Conducting Internet-wide experiments negligently</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge3a7359" class="outline-4">
+<h4 id="orge3a7359"><span class="section-number-4">1.15.3</span> Corporate Ethics Programs</h4>
+<div class="outline-text-4" id="text-1-15-3">
+<p>
+Most companies have an ethical statement
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcdd64b1" class="outline-2">
+<h2 id="orgcdd64b1"><span class="section-number-2">2</span> Chapter 2 - Asset Security</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-org47bea52" class="outline-3">
+<h3 id="org47bea52"><span class="section-number-3">2.1</span> Information Life Cycle</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+
+<div id="outline-container-orgf96bcab" class="outline-4">
+<h4 id="orgf96bcab"><span class="section-number-4">2.1.1</span> Acquisition</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>Information is added to systems, metadata attached, business process metadata attached, information is indexed. Must meet policy controls such an encryption of PII</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdc26b08" class="outline-4">
+<h4 id="orgdc26b08"><span class="section-number-4">2.1.2</span> Used</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>Must maintain Integrity of data across replicated stores, resolving inconsistencies, applying classification rules</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org39f9b04" class="outline-4">
+<h4 id="org39f9b04"><span class="section-number-4">2.1.3</span> Archival</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>Business and legal requirements. Risks for discarding too soon, and for holding too long.</li>
+</ul>
+<p>
+Backup :: a copy of data currently in use, typically becomes less useful as it gets older
+Archive :: Copy of data that is no longer in use
+</p>
+</div>
+</div>
+<div id="outline-container-org1248ff6" class="outline-4">
+<h4 id="org1248ff6"><span class="section-number-4">2.1.4</span> Disposal</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<p>
+Usually this means data destruction, needs to be destroyed correctly
+Physically devies can be wiped, degaussed or shredded
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2b8888d" class="outline-3">
+<h3 id="org2b8888d"><span class="section-number-3">2.2</span> Information Classification</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Sensitivity of data should be commensurate with the impact to the organization upon loss of confidentiality (PII is sensitive)</li>
+<li>Criticality of data is an indicator of impact to the fundamental business processes (Product research could be critical)</li>
+<li>Be sure to consider: Confidentiality, Availability and Integrity</li>
+<li>Each classification should have associate rules/controls</li>
+</ul>
+</div>
+<div id="outline-container-orgaaf69c4" class="outline-4">
+<h4 id="orgaaf69c4"><span class="section-number-4">2.2.1</span> Classifications Levels</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+Common ones:
+</p>
+<ul class="org-ul">
+<li>Public</li>
+<li>Sensitive - financial information, details of projects</li>
+<li>Private - PII, personal releated</li>
+<li>Confidential - trade secrets, company related</li>
+</ul>
+
+<p>
+Government:
+</p>
+<ul class="org-ul">
+<li>Unclassified</li>
+<li>Sensitive but Unclassified</li>
+<li>Confidential</li>
+<li>Secret</li>
+<li>Top Secret</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org68bfe12" class="outline-4">
+<h4 id="org68bfe12"><span class="section-number-4">2.2.2</span> Classifications Controls</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+Some controls to consider:
+</p>
+<ul class="org-ul">
+<li>Fine-grained access controls</li>
+<li>Encryption at rest and in transmission</li>
+<li>Auditing and monitoring (logging)</li>
+<li>Separation of duties</li>
+<li>Periodic reviews</li>
+<li>Backup and recovery</li>
+<li>Change control procedures</li>
+<li>Physical security</li>
+<li>Information flow channels</li>
+<li>Proper disposal actions (shredding, degaussing)</li>
+<li>Marking, labeling and handling procedures</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ab0cea" class="outline-3">
+<h3 id="org6ab0cea"><span class="section-number-3">2.3</span> Layers of Responsibility</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org82c1336" class="outline-4">
+<h4 id="org82c1336"><span class="section-number-4">2.3.1</span> Executive Management</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+C-Suite
+ultimately responsible 
+CEO
+CFO
+CIO
+CPO
+CSO (Chief Security Officer) 
+</p>
+
+<p>
+CISO vs. CSO - CISO usually technology focused, CSO is broader to include Physical. 
+Privacy - related to the amount of control an individual should have to their personal data
+</p>
+</div>
+</div>
+<div id="outline-container-org20a0360" class="outline-4">
+<h4 id="org20a0360"><span class="section-number-4">2.3.2</span> Data Owner</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>member of management is charge of a business unit, ultimately responsible for a subset of information</li>
+<li>Decides data classification, responsible for security of data</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org60887f4" class="outline-4">
+<h4 id="org60887f4"><span class="section-number-4">2.3.3</span> Data Custodian</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<ul class="org-ul">
+<li>Maintains and protects data, usually IT</li>
+<li>Maintaining security controls, backing up data, validating integrity</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org765f62c" class="outline-4">
+<h4 id="org765f62c"><span class="section-number-4">2.3.4</span> System Owner</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<ul class="org-ul">
+<li>Owner of a system which may process data owned by different data owners</li>
+<li>Typically the business</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9692528" class="outline-4">
+<h4 id="org9692528"><span class="section-number-4">2.3.5</span> Security Administrator</h4>
+<div class="outline-text-4" id="text-2-3-5">
+<ul class="org-ul">
+<li>implementing and maintaining specific security devices</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org51e2889" class="outline-4">
+<h4 id="org51e2889"><span class="section-number-4">2.3.6</span> Supervisor</h4>
+<div class="outline-text-4" id="text-2-3-6">
+<ul class="org-ul">
+<li>user manager, responsible for user activity</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org54a7ef7" class="outline-4">
+<h4 id="org54a7ef7"><span class="section-number-4">2.3.7</span> Change Control Analyst</h4>
+<div class="outline-text-4" id="text-2-3-7">
+<ul class="org-ul">
+<li>approving or rejecting change requests</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbf0e785" class="outline-4">
+<h4 id="orgbf0e785"><span class="section-number-4">2.3.8</span> Data Analyst</h4>
+<div class="outline-text-4" id="text-2-3-8">
+<ul class="org-ul">
+<li>ensuring that data is stored in a way that makes sense</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf0086e2" class="outline-4">
+<h4 id="orgf0086e2"><span class="section-number-4">2.3.9</span> User</h4>
+<div class="outline-text-4" id="text-2-3-9">
+<ul class="org-ul">
+<li>uses the data</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org96ed72e" class="outline-4">
+<h4 id="org96ed72e"><span class="section-number-4">2.3.10</span> Auditor</h4>
+<div class="outline-text-4" id="text-2-3-10">
+<ul class="org-ul">
+<li>conducts checks to ensure policy and regulatory compliance</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0207af3" class="outline-4">
+<h4 id="org0207af3"><span class="section-number-4">2.3.11</span> Why so many roles?</h4>
+</div>
+</div>
+
+<div id="outline-container-org98f8da8" class="outline-3">
+<h3 id="org98f8da8"><span class="section-number-3">2.4</span> Retention Policies</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+
+<div id="outline-container-org7b6f76f" class="outline-4">
+<h4 id="org7b6f76f"><span class="section-number-4">2.4.1</span> Developing a Retention Policy</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+These can vary a lot between types of information, need to identify and document
+Taxonomy :: scheme to classify data types
+Classification :: sensitivity
+Normalization :: Large data sets must be normalized to allow searching
+Indexing :: Common approach to allow searching
+e-discovery :: Process of producing for a court or external attorney all electronically stored information (ESI) pertinent to a legal proceeding
+</p>
+
+<p>
+Electronic Discvoery Reference Model (EDRM) 
+</p>
+<ol class="org-ol">
+<li>Identification of data required under order</li>
+<li>Preservation - prevent from deletion, destruction</li>
+<li>Collection - from various stores</li>
+<li>Processing - put in correct format</li>
+<li>Review - ensure it is relevant</li>
+<li>Analysis - for proper context</li>
+<li>Production - give to those requesting it</li>
+<li>Presentation - show to external audiences to prove or disprove a claim</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org1885571" class="outline-3">
+<h3 id="org1885571"><span class="section-number-3">2.5</span> Protecting Privacy</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+
+<div id="outline-container-org8b95335" class="outline-4">
+<h4 id="org8b95335"><span class="section-number-4">2.5.1</span> Data Owners</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<ul class="org-ul">
+<li>Decide who gets access to data</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgffa5969" class="outline-4">
+<h4 id="orgffa5969"><span class="section-number-4">2.5.2</span> Data Processors</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<ul class="org-ul">
+<li>Those that handle the data</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf737a56" class="outline-4">
+<h4 id="orgf737a56"><span class="section-number-4">2.5.3</span> Data Remanence</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<ul class="org-ul">
+<li>What remains after a simple delete of data</li>
+<li>NIST 800-88 R1 - Guidelines for Media Sensitization</li>
+<li>Solutions: "secure delete", encryption, destruction</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdde7ecb" class="outline-4">
+<h4 id="orgdde7ecb"><span class="section-number-4">2.5.4</span> Limits on Collection</h4>
+<div class="outline-text-4" id="text-2-5-4">
+<ul class="org-ul">
+<li>Collection limitation - only collect the minimal PII necessary to perform job</li>
+</ul>
+
+<p>
+Privacy Policy:
+</p>
+<ul class="org-ul">
+<li>What is collected</li>
+<li>Why and how do we use</li>
+<li>With whom do we share</li>
+<li>Who owns</li>
+<li>What are the rights of the data subject</li>
+<li>When do we destroy</li>
+<li>Pertinent laws</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaabdb7e" class="outline-3">
+<h3 id="orgaabdb7e"><span class="section-number-3">2.6</span> Protecting Assets</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+Threats: theft, service interruptions, physical damage, compromised system and environment integrity, unauthorized access
+</p>
+</div>
+<div id="outline-container-org3bc2af8" class="outline-4">
+<h4 id="org3bc2af8"><span class="section-number-4">2.6.1</span> Data Security Controls</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<p>
+Data States: In Motion, In Use, At Rest
+</p>
+
+<p>
+At Rest:
+</p>
+<ul class="org-ul">
+<li>encryption (NIST 800-111, "Guide to Storage Encryption Technologies for End User Devices")</li>
+<li>Geographic boundaries - some countries require providing access to encrypted data</li>
+</ul>
+
+<p>
+In Motion:
+</p>
+<ul class="org-ul">
+<li>Encryption TLS, IPSec</li>
+<li>VPN</li>
+</ul>
+
+<p>
+Data in Use:
+</p>
+<ul class="org-ul">
+<li>Side-channel attacks</li>
+<li>Memory attacks</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgccf0935" class="outline-4">
+<h4 id="orgccf0935"><span class="section-number-4">2.6.2</span> Media Controls</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<ul class="org-ul">
+<li>Physically secure backup tapes</li>
+<li>Media libraries</li>
+<li>Managing media (such as backup tapes) - track inventory, track against retention, testing, destroying</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c803c5" class="outline-3">
+<h3 id="org9c803c5"><span class="section-number-3">2.7</span> Data Leakage</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li>Employee mishandling is the most common form of mis-use</li>
+</ul>
+<p>
+Technical controls:
+</p>
+<ul class="org-ul">
+<li>USB or external media controls</li>
+<li>email screening (DLP)</li>
+</ul>
+</div>
+
+<div id="outline-container-orgdd9fa35" class="outline-4">
+<h4 id="orgdd9fa35"><span class="section-number-4">2.7.1</span> Data Leakage Prevention</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<p>
+Prevent leakage to external parties
+Should be considered a program, not a technology (processes, policy, culture, people)
+</p>
+
+<p>
+Data Inventories: know where sensitive data lies
+Data Flows: should be mapped - there may be more locations to put sensors than just at the perimeter (ie. between dev and qa teams)
+Data Protection Strategy -
+  Steganography - hiding data in other data
+  Areas to consider:
+</p>
+<ul class="org-ul">
+<li>Backup and recovery</li>
+<li>Data life cycle - security of data as it transitions life cycles - such as going to an archival facility</li>
+<li>Physical security</li>
+<li>Security culture</li>
+<li>Privacy</li>
+<li>Organizational change</li>
+</ul>
+
+<p>
+Implementation, Testing, Tuning:
+</p>
+<ul class="org-ul">
+<li>Sensitive data awareness</li>
+<li>Policy engine</li>
+<li>Interoperability</li>
+<li>Accuracy</li>
+</ul>
+
+<p>
+Network DLP - sit on perimeter of network
+Endpoint DLP - software running on each endpoint
+Hybrid DLP - Both the above
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8b77d28" class="outline-3">
+<h3 id="org8b77d28"><span class="section-number-3">2.8</span> Protecting Other Assets</h3>
+<div class="outline-text-3" id="text-2-8">
+</div>
+
+<div id="outline-container-org47a5f7c" class="outline-4">
+<h4 id="org47a5f7c"><span class="section-number-4">2.8.1</span> Protecting Mobile Devices</h4>
+<div class="outline-text-4" id="text-2-8-1">
+<ul class="org-ul">
+<li>Theft is main threat</li>
+</ul>
+
+<p>
+Controls:
+</p>
+<ul class="org-ul">
+<li>Inventory</li>
+<li>Harden configurations</li>
+<li>Password protect BIOS on laptops</li>
+<li>Maintain in personal possession</li>
+<li>Encrypt</li>
+<li>Backup</li>
+<li>Remote wiping</li>
+<li>Tracing</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org02444ea" class="outline-4">
+<h4 id="org02444ea"><span class="section-number-4">2.8.2</span> Paper Records</h4>
+<div class="outline-text-4" id="text-2-8-2">
+<ul class="org-ul">
+<li>easily overlooked</li>
+<li>lock away when not in use</li>
+<li>Label with classification</li>
+<li>Destroy with a crosscut shredder</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb48230f" class="outline-4">
+<h4 id="orgb48230f"><span class="section-number-4">2.8.3</span> Safes</h4>
+<div class="outline-text-4" id="text-2-8-3">
+<ul class="org-ul">
+<li>Inventory - know where they are</li>
+<li>Ensure they are fit for purpose</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgda940cd" class="outline-2">
+<h2 id="orgda940cd"><span class="section-number-2">3</span> Chapter 3 - Security Engineering</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org91ad893" class="outline-3">
+<h3 id="org91ad893"><span class="section-number-3">3.1</span> System Architecture</h3>
+<div class="outline-text-3" id="text-3-1">
+<dl class="org-dl">
+<dt>Architecture</dt><dd>tool used to conceptually understand the structure and behavior of a complex entity through different views.</dd>
+<dt>Architecture description</dt><dd>formal description and representation of a system, the components that make it up, the interactions and interdependencies between those components, and the relationship to the environment.</dd>
+<dt>System Architecture</dt><dd>describes the major components of the system and how they interact with each other, with the users, and with other systems. Answers: "How is it going to be used?" "What environment?" "What type of security and protection?" "Communication needs?"</dd>
+<dt>Development</dt><dd>The entire life cycle of a system, including the planning, analysis, design, building testing, deployment, maintenance, and retirement phases.</dd>
+<dt>System</dt><dd>can be an individual computer, an application, a select set of subsystems, a set of computers, or a set of networks</dd>
+</dl>
+</div>
+<div id="outline-container-org66dd64c" class="outline-4">
+<h4 id="org66dd64c"><span class="section-number-4">3.1.1</span> ISO/IEC 42010:2011 - System Architecture Standard. Establishes a shared vocabulary</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>Architecture</li>
+<li>Architecture description</li>
+<li id="Stakeholder">Individual, team or organization with an interest in the system</li>
+<li id="View">Representation of a whole system from a perspective of a related set of concerns</li>
+<li id="Viewpoint">Specification of the conventions for constructing and using a view</li>
+<li>Security goals must be defined before the architecture of a system is created. Need a security view.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2274394" class="outline-3">
+<h3 id="org2274394"><span class="section-number-3">3.2</span> Computer Architecture</h3>
+<div class="outline-text-3" id="text-3-2">
+<dl class="org-dl">
+<dt>Computer Architecture</dt><dd>all the parts of a computer system that are necessary for it to function, including the central processing unit, memory chips, logic circuits, storage devices, input and output devices, security components, buses, and networking interfaces.</dd>
+</dl>
+</div>
+<div id="outline-container-org4125e4d" class="outline-4">
+<h4 id="org4125e4d"><span class="section-number-4">3.2.1</span> The Central Processing Unit</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<dl class="org-dl">
+<dt>CPU</dt><dd>brain of the computer</dd>
+<dt>register</dt><dd>temporary storage within CPU</dd>
+<dt>arithmetic logic unit</dt><dd>actual execution of instructions</dd>
+<dt>control unit</dt><dd>manages and synchronizes the system while different applications' code and OS instructions are being executed</dd>
+<dt>General registers</dt><dd>holds variables and temporary results as ALU works through execution steps</dd>
+<dt>special registers</dt><dd>special information such as program counters, stack pointer, program status work (PSW)</dd>
+<dt>program counter</dt><dd>memory address of the next instruction to be fetched</dd>
+<dt>program status word</dt><dd>holds different condition bits - user mode, privileged mode. Privileged mode has access to more functions.</dd>
+<dt>(no term)</dt><dd>memory has specific memory addresses.</dd>
+<dt>(no term)</dt><dd>Memory bus - can be 8, 16, 32 or 64 bits wide. Most today are 64. 2<sup>64</sup> address space.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgb6f5ab2" class="outline-4">
+<h4 id="orgb6f5ab2"><span class="section-number-4">3.2.2</span> Multiprocessing</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>More than one processor</li>
+<li>symmetric mode - like load-balancing</li>
+<li>asymmetric mode - processor dedicated to a task</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0a06a54" class="outline-4">
+<h4 id="org0a06a54"><span class="section-number-4">3.2.3</span> Memory Types</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<dl class="org-dl">
+<dt>Random Access Memory (RAM)</dt><dd>temporary storage. DRAM - must be refreshed, slower. Static RAM (SRAM) - does not require refresh, require more transistors, faster than DRAM
+<dl class="org-dl">
+<dt>Synchronous DRAM (SDRAM)</dt><dd>synchronizes with the system's CPU clock - increases speed</dd>
+<dt>Extended data out DRAM (EDO DRAM)</dt><dd>faster than DRAM can capture next block while first block is being sent to CPU (look ahead)</dd>
+<dt>Burst EDO DRAM (BEDO DRAM)</dt><dd>Can send more data at once</dd>
+<dt>Double data rate SDRAM (DDR SDRAM)</dt><dd>Carries out two operations per clock cycle, twice the throughput</dd>
+<dt>Hardware segmentation</dt><dd>physically segregating hardware between processes instead of just logically</dd>
+</dl></dd>
+<dt>Read-Only Memory</dt><dd>non-volatile memory
+<dl class="org-dl">
+<dt>Programmable read-only memory (PROM)</dt><dd>can be modified after manufacture
+<dl class="org-dl">
+<dt>Erasable programmable read-only memory (EPROM)</dt><dd>can be erased, modified and upgraded.</dd>
+<dt>Elecrically erasable programmable read-only memory (EEPROM)</dt><dd>can be erased and modified electrically (no UV light wand)</dd>
+<dt>Flash memory</dt><dd>was special type of memory used in digital cameras, BIOS chips, memory cards, video game consoles. Solid state. Now in computer hard drives.</dd>
+</dl></dd>
+</dl></dd>
+<dt>Cache Memory</dt><dd>used for high speed writing and reading activities - for caching data for easy access</dd>
+<dt>Memory mapping</dt><dd>software uses logical addresses, CPU uses physical addresses (absolute addresses). A security feature. Relative addresses: known address with an offset.</dd>
+<dt>Buffer Overflows :: when too much data is accepted as input to a specific process. Buffer</dt><dd>allocated segment of memory.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgdcea5a2" class="outline-4">
+<h4 id="orgdcea5a2"><span class="section-number-4">3.2.4</span> Buffer Overflow Resources</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<ul class="org-ul">
+<li><a href="http://">http://</a> opensecuritytraining.info/ IntroX86. html</li>
+<li><a href="http://">http://</a> www.reddit.com/ r/ hacking/ comments/ 1wy610/ exploit<sub>tutorial</sub><sub>buffer</sub><sub>overflow</sub>/</li>
+<li><a href="https://">https://</a> www.corelan.be/ index.php/ 2009/ 07/ 19/ exploit-writing-tutorial-part-1-stack-based-overflows/</li>
+<li><a href="http://">http://</a> www.lethalsecurity.com/ wiki</li>
+<li><a href="http://">http://</a> opensecuritytraining.info/ Exploits1. html</li>
+<li><a href="https://">https://</a> exploit-exercises.com/ protostar/</li>
+</ul>
+<p>
+Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
+</p>
+</div>
+</div>
+<div id="outline-container-org7dcd5d9" class="outline-4">
+<h4 id="org7dcd5d9"><span class="section-number-4">3.2.5</span> Memory Protection Techniques</h4>
+<div class="outline-text-4" id="text-3-2-5">
+<ul class="org-ul">
+<li>Address space layout randomization (ASLR) - changes address layout randomly</li>
+<li>Data Execution Prevention (DEP) - executable code does not function within memory segments that could be dangerous</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc36c2d6" class="outline-4">
+<h4 id="orgc36c2d6"><span class="section-number-4">3.2.6</span> Memory Leaks</h4>
+<div class="outline-text-4" id="text-3-2-6">
+<ul class="org-ul">
+<li>When applications to correctly release memory. Can open the door to a DoS attack.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org87a66aa" class="outline-3">
+<h3 id="org87a66aa"><span class="section-number-3">3.3</span> Operating Systems</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org92b8638" class="outline-4">
+<h4 id="org92b8638"><span class="section-number-4">3.3.1</span> Process Management</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<dl class="org-dl">
+<dt>Process</dt><dd>set of instructions that is actually running. A program loaded into memory. A process has computer resources (CPU, memory) assigned to it.</dd>
+<dt>Multiprogramming</dt><dd>More than one program can be loaded into memory at the same time. Legacy term.</dd>
+<dt>Multitasking</dt><dd>more than one application and the OS can handle requests from these applications simultaneously</dd>
+<dt>Cooperative multitasking</dt><dd>required the process to voluntarily release resources</dd>
+<dt>premptive multitasking</dt><dd>all modern OSes, the OS controls how long a process can use resources</dd>
+<dt>spawning</dt><dd>when a process creates a child process</dd>
+<dt>running state</dt><dd>CPU is executing its instructions</dd>
+<dt>blocked state</dt><dd>on hold</dd>
+<dt>process table</dt><dd>one entry per process - process state, stack pointer, memory allocation, program counter, status of open files</dd>
+<dt>interrupts</dt><dd>request for CPU time. Uses process priority levels.
+<dl class="org-dl">
+<dt>maskable interupt</dt><dd>low priority</dd>
+<dt>nonmaskable interupt</dt><dd>cannot be overridden by an application</dd>
+</dl></dd>
+<dt>stack</dt><dd>each process has its own memory setack (Last in First Out LIFO)</dd>
+<dt>thread</dt><dd>a sub-process effectively. Executed in parallel.</dd>
+<dt>process scheduling :: can be exploited to starve system of memory (DOS). Software deadlock</dt><dd>processes are waiting on each other.</dd>
+<dt>Process Activity</dt><dd>ensuring only one process is access resources (memory/files) at a time. Process isolation. Means to enforce: encapsulation of objects, time multiplexing of shared resources, naming distinctions, virtual memory mapping. Encapsulation provides data hiding, processes communicate through an API. Time multiplexing, means of sharing the CPU. Naming distinctions - unique PID values. Virtual address memory mapping - logical vs. physical. Each application usually starts with 0.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org5fdf51e" class="outline-4">
+<h4 id="org5fdf51e"><span class="section-number-4">3.3.2</span> Memory Management</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<dl class="org-dl">
+<dt>Abstraction</dt><dd>details are hidden to the applications.</dd>
+<dt>Memory manager</dt><dd>allocate and deallocate different memory segments.
+<ul class="org-ul">
+<li>Relocation - swap hard drive / RAM, provide pointers to appications</li>
+<li>Protection - limit processes to only access the memory assigned to them, provide access control to memory segments</li>
+<li>Sharing - provide integrity and confidentiality when processes share memory segments, allow users to share an application</li>
+<li>Logical organization - provide an abstracted addressing scheme, allow for sharing of software modules such as DLLs</li>
+<li>Physical organization - segment physical memory space</li>
+</ul></dd>
+<dt>Base register</dt><dd>beginning address assigned to a process</dd>
+<dt>Limit register</dt><dd>ending address - describes the bounds of the process.</dd>
+<dt>Virtual Memory</dt><dd>uses secondary storage. Swap space. Security issue is that data on disk could potentially be captured, especially if swap space is not appropriately wiped. Consider: an encrypted file is opened, and hence decrypted. The unencrpted file in memory is then written to swap space. An attacker could then find means to access the file within the swap space.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org8db1417" class="outline-4">
+<h4 id="org8db1417"><span class="section-number-4">3.3.3</span> Input/Output Device Management</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<dl class="org-dl">
+<dt>Interrupts</dt><dd>Request for CPU time</dd>
+<dt>Programmale I/O</dt><dd>sends data to I/O device and polls the device to see if it is ready to accept more data. Can waste the CPUs time.</dd>
+<dt>Interrupt-Driven I/O</dt><dd>Device sends an interrupt when its ready. Have to deal with a lot of interrupts.</dd>
+<dt>I/O using DMA</dt><dd>Direct Memory Access - can transfer data without using the CPU. Significant speed advantages.</dd>
+<dt>Premapped I/O</dt><dd>CPU sends physical memory address to I/O device, I/O device must be trusted to access memory correctly.</dd>
+<dt>Fully mapped I/O</dt><dd>OS does not trust device, uses logical addresses</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org0b3e202" class="outline-4">
+<h4 id="org0b3e202"><span class="section-number-4">3.3.4</span> CPU Architecture Integration</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<dl class="org-dl">
+<dt>instruction set</dt><dd>the language of the CPU - x86 is most common in use today.</dd>
+<dt>microarchitecture</dt><dd>makes up the CPU - registers, logic gates, ALU, cache, etc.</dd>
+<dt>Rings</dt><dd>protection system of the OS - levels of trust for processes - kernel runs in Ring 0, other OS components in Ring 1, Drivers/utilities in Ring 2, Applications in Ring 3. Lower level processes can access high level processes. Windows and OS X don't use Rings 1 adn 2.</dd>
+<dt>Application Programming Interface (API)</dt><dd>means for software to communicate with each other.</dd>
+<dt>CPU Operations Modes</dt><dd>Ring 0 is Kernel Mode, Ring 3 is User mode.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org91cd88b" class="outline-4">
+<h4 id="org91cd88b"><span class="section-number-4">3.3.5</span> Operating System Architectures</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<dl class="org-dl">
+<dt>Monolithic architecture</dt><dd>all the OS processes work in kernel mode. MS-DOS and early OSes like this.</dd>
+<dt>Layered operating system</dt><dd>all still work in kernel mode, functionality was laid out into layers that called on each other. Provides data hiding. Think kernel modules of DLLs in windows.</dd>
+<dt>Microkernel model</dt><dd>only a subset of critical kernel processes operating in kernel mode. Others in user mode. This introduced some performance issues.</dd>
+<dt>Hybrid microkernel</dt><dd>client server type architecture where applications are the clients. All of OS operates in kernel mode.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org7bb8bc6" class="outline-4">
+<h4 id="org7bb8bc6"><span class="section-number-4">3.3.6</span> Virtual Machines</h4>
+<div class="outline-text-4" id="text-3-3-6">
+<ul class="org-ul">
+<li>Enables a single hardware to run multiple operating systems</li>
+<li id="Hypervisor">manages the system resources between OSes</li>
+<li>Resource from CISSP book: www.kernelthread.com/publications/virtualization</li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0b4da7b" class="outline-3">
+<h3 id="org0b4da7b"><span class="section-number-3">3.4</span> System Security Architecture</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orga1a55b7" class="outline-4">
+<h4 id="orga1a55b7"><span class="section-number-4">3.4.1</span> Security Policy</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<dl class="org-dl">
+<dt>Security Policy</dt><dd>a strategic tool that dictates how sensitive information and resources are to be managed and protected.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orga9c5da3" class="outline-4">
+<h4 id="orga9c5da3"><span class="section-number-4">3.4.2</span> Security Architecture Requirements</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<dl class="org-dl">
+<dt>Trusted Computing Base (TCB)</dt><dd>Collection of hardware, software and firmware components that provides security and enforces policy.</dd>
+<dt>Trusted Path</dt><dd>communication channel between user, program and TCB</dd>
+<dt>Trusted shell</dt><dd>a user cannot "bust out of it"</dd>
+<dt>Security Perimeter</dt><dd>divides trusted from untested - requires an interface</dd>
+<dt>Reference Monitor</dt><dd>defines how access control within a system is carried out</dd>
+<dt>Security Kernel</dt><dd>all hardware, software and firmware that fall within the TCB, it implements and enforces the reference monitor concept. TCB contains the security kernel, which implements the reference monitor concept.</dd>
+<dt>Multilevel security policies</dt><dd>permit a subject to access an object only if the subject's security level is higher than or equal to the object's classification.</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd8abd22" class="outline-3">
+<h3 id="orgd8abd22"><span class="section-number-3">3.5</span> Security Models</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org8cc17b7" class="outline-4">
+<h4 id="org8cc17b7"><span class="section-number-4">3.5.1</span> Bell-LaPadula Model</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ul class="org-ul">
+<li>First mathematical model.</li>
+<li>enforces confidentiality only. Its about protecting secrets. One of the first models developed in the 70s. Is a multilevel security system.</li>
+<li id="Simple security rule">a subject at a given security level cannot read data that resides at a higher security level. No read up.</li>
+<li id="*-property rule">a subject in a given security level cannot write information to a lower security level. No write down.</li>
+<li id="Strong star property rule">a subject with both read and write capabilities can only perform both at the same security level.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeef7230" class="outline-4">
+<h4 id="orgeef7230"><span class="section-number-4">3.5.2</span> Biba Model</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<ul class="org-ul">
+<li>Addresses Integrity. Prevents data at any integrity level from flowing to a higher integrity level.</li>
+<li id="*-integrity axiom">a subject cannot write data to an object at a higher integrity level. No write up.</li>
+<li id="Simple integrity axiom">Cannot read from a lower integrity level. No read down.</li>
+<li id="Invocation property">Subject cannot request service (invoke) at a higher integrity.</li>
+<li>Memorization tip: "Simple" is about reading. * is about writing.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b3259d" class="outline-4">
+<h4 id="org0b3259d"><span class="section-number-4">3.5.3</span> Clark-Wilson Model</h4>
+<div class="outline-text-4" id="text-3-5-3">
+<ul class="org-ul">
+<li>Developed after Biba, different approach to protecting Integrity</li>
+<li>Three goals: subjects can access objects only through authorized programs, separation of duties enforced, auditing is required.</li>
+<li>Focuses on well-formed transactions and separation of duties.</li>
+<li id="Transformation Procedures (TPs)">programmed abstract operations (read, write, modify)</li>
+<li id="Constrained Data Items (CDIs)">can be manipulated only by TPs</li>
+<li id="Unconstrained Data Items (UDIs)">can be manipulated by users via primitive read/write operations</li>
+<li id="Integrity verification procedures (IVPs)">Check the consistency of CDIs with external reality - audits the work done and validates integrity</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf866238" class="outline-4">
+<h4 id="orgf866238"><span class="section-number-4">3.5.4</span> Noninterference Model</h4>
+<div class="outline-text-4" id="text-3-5-4">
+<ul class="org-ul">
+<li>Less concerned about the flow of data that what a subject knows about the state of the system.</li>
+<li>A lower level entity should not be able to detect that an operation took place at a higher level of security. That would be a form of information leakage.</li>
+<li id="Covert channel">a way to receive information in an unauthorized manner. Either storage or timing.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga1952e9" class="outline-4">
+<h4 id="orga1952e9"><span class="section-number-4">3.5.5</span> Brew and Nash Model</h4>
+<div class="outline-text-4" id="text-3-5-5">
+<ul class="org-ul">
+<li>Chinese wall model. A subject can write to an object if, and only if, the subject cannot read another object that is in a different dataset.</li>
+<li>Provides dynamic access control and separation of duty controls / conflicts of interests.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc47af04" class="outline-4">
+<h4 id="orgc47af04"><span class="section-number-4">3.5.6</span> Graham-Denning Model</h4>
+<div class="outline-text-4" id="text-3-5-6">
+<ul class="org-ul">
+<li>Shows how subjects and objeects should be created and deleted</li>
+<li>defines a set of basic rights in terms of commands that a specific subject can execute on an object. Eight primitive protection rights/rules.</li>
+<li>How to securely create/delete a object/subject</li>
+<li>How to securely provide read/grant/delete/transfer access rights</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org603ae76" class="outline-4">
+<h4 id="org603ae76"><span class="section-number-4">3.5.7</span> Harrison-Ruzzo-Ullman Model</h4>
+<div class="outline-text-4" id="text-3-5-7">
+<ul class="org-ul">
+<li>Shows how a finite set of procedures can be available to edit the access rights of a subject</li>
+<li>Access rights of subjects and the integrity of those rights.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc0a4aca" class="outline-3">
+<h3 id="orgc0a4aca"><span class="section-number-3">3.6</span> Systems Evaluation</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-orgf5fd4da" class="outline-4">
+<h4 id="orgf5fd4da"><span class="section-number-4">3.6.1</span> Common Criteria</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<ul class="org-ul">
+<li>Only framework of global significant</li>
+<li>ISO standard - 1993</li>
+<li>ISO/IEC 15408</li>
+<li>Seven assurance levels (Evaluation Assurance Level (EAL))</li>
+<li>EAL1 - Functionally tested</li>
+<li>EAL2 - Structurally tested</li>
+<li>EAL3 - Methodically tested and checked</li>
+<li>EAL4 - Methodically designed, tested and reviewed</li>
+<li>EAL5 - Semiformally designed and tested</li>
+<li>EAL6 - Semiformally verified design and tested</li>
+<li>EAL7 - Formally verified design and tested - based on a model that can be mathematically proven</li>
+<li id="protection profiles">contains the set of security requirements, their meanign and reasoning, and the corresponding EAL rating that the intended product will require
+<ul class="org-ul">
+<li>Security problem description</li>
+<li>Security objectives</li>
+<li>Securitiy requirements</li>
+</ul></li>
+<li id="Target of evaluation (TOE)">product being tested</li>
+<li id="Security target">what the product does and how it does it according to the vendor</li>
+<li id="Security functional requirements">security functions that must be provided by the product</li>
+<li id="Security assurance requirements">Measures taken to assure compliance with the claimed security functionality</li>
+<li id="Packages-EALs">functional and assurance requirements bundled into packages for reuse.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9a2a996" class="outline-4">
+<h4 id="org9a2a996"><span class="section-number-4">3.6.2</span> Why Put a Product Through Evaluation?</h4>
+<div class="outline-text-4" id="text-3-6-2">
+<ul class="org-ul">
+<li>DoD requires rating for some products</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc646967" class="outline-3">
+<h3 id="orgc646967"><span class="section-number-3">3.7</span> Certification vs. Accreditation</h3>
+<div class="outline-text-3" id="text-3-7">
+</div>
+<div id="outline-container-org9bbc869" class="outline-4">
+<h4 id="org9bbc869"><span class="section-number-4">3.7.1</span> Certification</h4>
+<div class="outline-text-4" id="text-3-7-1">
+<dl class="org-dl">
+<dt>Certification</dt><dd>comprehensive technical evaluation of the security components and their compliance for the purpose of accreditation. Certification process is: evalaution, risk analysis, verification, testing and auditing.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org8a63757" class="outline-4">
+<h4 id="org8a63757"><span class="section-number-4">3.7.2</span> Accreditation</h4>
+<div class="outline-text-4" id="text-3-7-2">
+<dl class="org-dl">
+<dt>Accreditation</dt><dd>formal acceptance of the adequacy of a system's overall security and functionality by management. <i>Management acceptance of risk.</i></dd>
+<dt>(no term)</dt><dd>C&amp;A came into focus with the passage of FISMA in 2002 - required it for federal agencies.</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba774b7" class="outline-3">
+<h3 id="orgba774b7"><span class="section-number-3">3.8</span> Open vs. Closed Systems</h3>
+<div class="outline-text-3" id="text-3-8">
+</div>
+<div id="outline-container-orgf5fb013" class="outline-4">
+<h4 id="orgf5fb013"><span class="section-number-4">3.8.1</span> Open Systems</h4>
+<div class="outline-text-4" id="text-3-8-1">
+<ul class="org-ul">
+<li>built on standards, protocols and interfaces that have published specifications. Windows, OS X and Unix are open.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e1dd4e" class="outline-4">
+<h4 id="org7e1dd4e"><span class="section-number-4">3.8.2</span> Closed Systems</h4>
+<div class="outline-text-4" id="text-3-8-2">
+<ul class="org-ul">
+<li>Architecture does not follow industry standards. Proprietary. Potentially more secure. Don't work well with other systems.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e4e018" class="outline-3">
+<h3 id="org8e4e018"><span class="section-number-3">3.9</span> Distributed System Security</h3>
+<div class="outline-text-3" id="text-3-9">
+</div>
+<div id="outline-container-org3171392" class="outline-4">
+<h4 id="org3171392"><span class="section-number-4">3.9.1</span> Cloud Computing</h4>
+<div class="outline-text-4" id="text-3-9-1">
+<ul class="org-ul">
+<li>use of shared, remote computing devices for the purpose of providing improved efficiencies, performance, reliability, scalability and security.
+<dl class="org-dl">
+<dt>Software as a Service (SaaS)</dt><dd>web based application</dd>
+<dt>Platform as a Service (Paas)</dt><dd>computing platform in the cloud. OS instance, or something like Salesforce Platform.</dd>
+<dt>Infrastructure as a Service (Iaas)</dt><dd>full system in the cloud. Full responsibility for managing and patching.</dd>
+</dl></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9b642af" class="outline-4">
+<h4 id="org9b642af"><span class="section-number-4">3.9.2</span> Parallel Computing</h4>
+<div class="outline-text-4" id="text-3-9-2">
+<ul class="org-ul">
+<li>use of multiple computers to solve a task. Bit level, instruction level or task level. Bit level is in every device these days. Instruction - requires two or more processors. Task - multiple threads.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e92613" class="outline-4">
+<h4 id="org3e92613"><span class="section-number-4">3.9.3</span> Databases</h4>
+<div class="outline-text-4" id="text-3-9-3">
+<dl class="org-dl">
+<dt>Aggregation</dt><dd>Ability to combine separate pieces of allowed information, to infer unallowed information. Think, multiple pieces of unclassified information can add up to secret information.</dd>
+<dt>Inference</dt><dd>result of aggregation. When a subject deduces the full story from the pieces.</dd>
+<dt>Content-dependent access control</dt><dd>based on the sensitivity of data. More sensitive = smaller subset of subjects have access.</dd>
+<dt>Context-dependent access control</dt><dd>software understand state and sequence of requests. eg. If you access A, you cannot access B. Time based, location based, etc.</dd>
+<dt>Cell suppression</dt><dd>hide certain cells</dd>
+<dt>Partitioning</dt><dd>dividing the database into different parts</dd>
+<dt>Noise and perturbation</dt><dd>inserting bogus information</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgc10b3b6" class="outline-4">
+<h4 id="orgc10b3b6"><span class="section-number-4">3.9.4</span> Web Applications</h4>
+<div class="outline-text-4" id="text-3-9-4">
+<ul class="org-ul">
+<li>Input sanitization - input should be assumed rogue</li>
+<li>Encryption to prevent interception</li>
+<li>Failing securely - errors that don't reveal system details</li>
+<li>Must be human friendly</li>
+<li>Web application firewalls (WAF) - inspect traffic</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5996038" class="outline-4">
+<h4 id="org5996038"><span class="section-number-4">3.9.5</span> Mobile Devices</h4>
+<div class="outline-text-4" id="text-3-9-5">
+<ul class="org-ul">
+<li>Threats: malware, theft, DOS, transmission of cellular networks (may be encrypted only over cellular network, not wired).</li>
+<li>Solutions: centrally managed devices, remote policies pushed each device, data encryption, idle timeout locks, screen-saver lockouts, authentication, remote wipe. Lock bluetooth capabilities. Endpoint security. App whitelist. 802.1x implemented on wireless VOID clients on mobile devices.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9478d0e" class="outline-4">
+<h4 id="org9478d0e"><span class="section-number-4">3.9.6</span> Cyber-Physical Systems</h4>
+<div class="outline-text-4" id="text-3-9-6">
+<ul class="org-ul">
+<li>where computer and physical devices collaborate. Internet of Things.</li>
+<li id="Embedded systems">digital thermometer. Cheap, small. Not always designed with security in mind. Hard to update.</li>
+<li>Internet of Things
+<ul class="org-ul">
+<li>Authentication - typically poor</li>
+<li>Encryption - require high processing power which devices may not have</li>
+<li>Updates - hard to do</li>
+</ul></li>
+<li id="Industrial Control Systems">specifically designed to control physical devices in industrial processes. Conveyor belts to robots.
+<ul class="org-ul">
+<li>NIST 800-82 - Guide to ICS Security</li>
+<li id="Programmable Logic Controller (PLC)">computers that control electromechanical systems.</li>
+<li id="Distributed Control System (DCS)">network of control devices. Manufacturing plants, oil refineries, power plants.</li>
+<li id="Supervisory Control and Data Acquisition (SCADA)">control large-scale physical processes across large distances. Power lines.</li>
+<li>ISC Security: increasing connectivity to traditional IT networks increases risk.
+<ul class="org-ul">
+<li>apply risk management processes</li>
+<li>segement</li>
+<li>disable unneeded ports and services</li>
+<li>least privileged</li>
+<li>encryption</li>
+<li>patch management</li>
+<li>audit trail monitoring</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1823dd9" class="outline-3">
+<h3 id="org1823dd9"><span class="section-number-3">3.10</span> A Few Threats to Review</h3>
+<div class="outline-text-3" id="text-3-10">
+</div>
+<div id="outline-container-orgd53084e" class="outline-4">
+<h4 id="orgd53084e"><span class="section-number-4">3.10.1</span> Maintenance Hooks</h4>
+<div class="outline-text-4" id="text-3-10-1">
+<ul class="org-ul">
+<li>a type of back door. Allow developer to view and edit the code bypassing access controls. Should be removed prior to going to production.</li>
+<li>Control: code reviews, host-based intrusion detection, file system encryption, auditing/logging</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8d8f77c" class="outline-4">
+<h4 id="org8d8f77c"><span class="section-number-4">3.10.2</span> Time-of-Check/Time-of-Use Attacks</h4>
+<div class="outline-text-4" id="text-3-10-2">
+<ul class="org-ul">
+<li>asynchronous attack. Switch out a file after authorization is validated. Race condition.</li>
+<li>Controls: atomic operations of critical tasks.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc303247" class="outline-3">
+<h3 id="orgc303247"><span class="section-number-3">3.11</span> Cryptography in Context</h3>
+<div class="outline-text-3" id="text-3-11">
+</div>
+<div id="outline-container-orgb247e4d" class="outline-4">
+<h4 id="orgb247e4d"><span class="section-number-4">3.11.1</span> The History of Cryptography</h4>
+<div class="outline-text-4" id="text-3-11-1">
+<ul class="org-ul">
+<li>Substitution cipher ROT13</li>
+<li>Enigma</li>
+<li>Data Encryption Standard (DES) - 1976 - now Triple DES</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8855113" class="outline-3">
+<h3 id="org8855113"><span class="section-number-3">3.12</span> Cryptography Definitions and Concepts</h3>
+<div class="outline-text-3" id="text-3-12">
+</div>
+<div id="outline-container-org8ce8dbb" class="outline-4">
+<h4 id="org8ce8dbb"><span class="section-number-4">3.12.1</span> Kerckhoffs' Principle</h4>
+<div class="outline-text-4" id="text-3-12-1">
+<ul class="org-ul">
+<li>Algorithm should be public, only key is secret</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc292bde" class="outline-4">
+<h4 id="orgc292bde"><span class="section-number-4">3.12.2</span> The Strength of the Cryptosystem</h4>
+<div class="outline-text-4" id="text-3-12-2">
+<ul class="org-ul">
+<li>amount of work necessary to break the cryptosystem</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6b1e0b5" class="outline-4">
+<h4 id="org6b1e0b5"><span class="section-number-4">3.12.3</span> Services of Cryptosystems</h4>
+<div class="outline-text-4" id="text-3-12-3">
+<ul class="org-ul">
+<li>confidentiality</li>
+<li>integrity</li>
+<li>authentication</li>
+<li>authorization</li>
+<li>nonrepudation</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1e186b3" class="outline-4">
+<h4 id="org1e186b3"><span class="section-number-4">3.12.4</span> One-Time Pad</h4>
+<div class="outline-text-4" id="text-3-12-4">
+<ul class="org-ul">
+<li>a perfect encryption scheme - unbreakable - if done properly
+<ul class="org-ul">
+<li>pad must be used only one time</li>
+<li>pad must be as long as the message</li>
+<li>pad must be securely distributed and protected at its destination</li>
+<li>pad must be made up of truly random values</li>
+</ul></li>
+<li>They are typically impractical</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org124166c" class="outline-4">
+<h4 id="org124166c"><span class="section-number-4">3.12.5</span> Running and Concealment Ciphers</h4>
+<div class="outline-text-4" id="text-3-12-5">
+<ul class="org-ul">
+<li>Running key - use every day objects such as books.</li>
+<li>Concealment - "every third word in a letter"</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2d761c9" class="outline-4">
+<h4 id="org2d761c9"><span class="section-number-4">3.12.6</span> Steganography</h4>
+<div class="outline-text-4" id="text-3-12-6">
+<ul class="org-ul">
+<li>method of hiding data in another media. Text hidden in a picture.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge58fc66" class="outline-3">
+<h3 id="orge58fc66"><span class="section-number-3">3.13</span> Types of Ciphers</h3>
+<div class="outline-text-3" id="text-3-13">
+</div>
+<div id="outline-container-org877c519" class="outline-4">
+<h4 id="org877c519"><span class="section-number-4">3.13.1</span> Substitution Ciphers</h4>
+<div class="outline-text-4" id="text-3-13-1">
+<ul class="org-ul">
+<li>uses a key to dictate how the substitution should be carried out</li>
+<li>Caesar cipher.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8f460cc" class="outline-4">
+<h4 id="org8f460cc"><span class="section-number-4">3.13.2</span> Transposition Ciphers</h4>
+<div class="outline-text-4" id="text-3-13-2">
+<ul class="org-ul">
+<li>values are scrambled or put into a different order.</li>
+<li id="frequency analysis">method of breaking a cipher using known non-randomness in english language</li>
+<li id="Key Derivation Functions (KDFs)">used to generate keys that are made up of random values.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2dcf831" class="outline-3">
+<h3 id="org2dcf831"><span class="section-number-3">3.14</span> Methods of Encryption</h3>
+<div class="outline-text-3" id="text-3-14">
+</div>
+<div id="outline-container-org44867de" class="outline-4">
+<h4 id="org44867de"><span class="section-number-4">3.14.1</span> Symmetric vs. Asymmetric Algorithms</h4>
+<div class="outline-text-4" id="text-3-14-1">
+<dl class="org-dl">
+<dt>Symmetric</dt><dd>use symmetric keys (secret keys)</dd>
+<dt>Asymmetric</dt><dd>use public/private keys</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org21c0656" class="outline-4">
+<h4 id="org21c0656"><span class="section-number-4">3.14.2</span> Symmetric Cryptography</h4>
+<div class="outline-text-4" id="text-3-14-2">
+<ul class="org-ul">
+<li>Sender and receiver must have same key. Distributing the keys is a problem. And large # of people requires 2<sup>n</sup> keys. But they are very fast and hard to break.</li>
+<li>Example algorithms:
+<ul class="org-ul">
+<li>Data Encryption Standard (DES)</li>
+<li>Triple-DES (3DES)</li>
+<li>Blowfish</li>
+<li>International Data Encryption Algorithm (IDEA)</li>
+<li>RC4, RC5, RC6</li>
+<li>Advanced Encryption Standard (AES)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcfb8dcc" class="outline-4">
+<h4 id="orgcfb8dcc"><span class="section-number-4">3.14.3</span> Asymmetric Cryptography</h4>
+<div class="outline-text-4" id="text-3-14-3">
+<ul class="org-ul">
+<li>Solves the key distribution problem, better scalable, can provide authentication and nonrepudiation</li>
+<li>Much slower, mathematically intensive.</li>
+<li>Examples:
+<ul class="org-ul">
+<li>RSA</li>
+<li>ECC</li>
+<li>El Gamal</li>
+<li>DSA</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc7e7f6b" class="outline-4">
+<h4 id="orgc7e7f6b"><span class="section-number-4">3.14.4</span> Block and Stream Ciphers</h4>
+<div class="outline-text-4" id="text-3-14-4">
+<ul class="org-ul">
+<li>Block cipher - message is divided into blocks</li>
+<li>Stream - stream of bits, operation performed on each bit individually</li>
+<li id="Initialization Vectors (IVs)">random values that are used with algorithms to ensure patterns are not created during the encryption process.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9a62acb" class="outline-4">
+<h4 id="org9a62acb"><span class="section-number-4">3.14.5</span> Hybrid Encryption Methods</h4>
+<div class="outline-text-4" id="text-3-14-5">
+<ul class="org-ul">
+<li>Asymmetric and Symmetric - both common. Use asymmetric to distribute symmetric keys.</li>
+<li>Session key - a single-use symmetric key used to encrypt messages between two users.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Chris Roberts</p>
+<p class="date">Created: 2017-04-14 Fri 16:53</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
