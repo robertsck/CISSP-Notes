@@ -1,5 +1,5 @@
 #+COLUMNS: %25ITEM %CISSP_MONTH(Month) %TAGS
-#+SETUPFILE:  setup/theme-bigblow-local.setup
+#+SETUPFILE:  setup/theme-readtheorg-local.setup
 
 
 * CISSP Forum :noexport:
@@ -1331,4 +1331,394 @@ Narnia Setup (http:// overthewire.org/ wargames/ narnia/)
     - Initialization Vectors (IVs) :: random values that are used with algorithms to ensure patterns are not created during the encryption process. 
 *** Hybrid Encryption Methods
     - Asymmetric and Symmetric - both common. Use asymmetric to distribute symmetric keys.
-    - Session key - a single-use symmetric key used to encrypt messages between two users. 
+    - Session key - a single-use symmetric key used to encrypt messages between two users.
+** Types of Symmetric Systems
+*** Data Encryption Standard
+    - Originally 64 bit, became ANSI standard in 1978
+    - AKA DEA
+    - Cracked in 1998
+    - Later replaced by the Rijndael algorithm as the Advanced Encryption Standard (AES)
+    - symmetric block encryption algorithm, 64 bit blocks, 64 bit key: 56 bit key + 8 bit parity
+    - Modes:
+      - Electronic Code Book (ECB)
+        - For a given block of plaintext and a given key, the same block of cipher text is always produced
+        - Lacks randomness
+        - Fast, can be run in parallel, good for encrypting small amounts of data 
+      - Cipher Block Chaining (CBC)
+        - Does not reveal a pattern, value of previous block is used to process next block
+        - Use of different IV results in different cipher text
+      - Cipher Feedback (CFB)
+        - Simulates a stream cipher
+      - Output Feedback (OFB)
+        - Values for encrypting next block come from Keystream instead of Ciphertext as in CFB. This eliminates possible chaining of an error.
+      - Counter (CTR)
+        - Similar to OFB, uses an IV counter, ensures IV is unique, no chaining involved, thus can be done in parallel, performance is main reason for using.
+    - Synchronous :: encrypt one bit at a time, key values are in sync with plaintext values
+    - Asynchronous :: use previously generated output as input 
+*** Triple-DES
+    - 48 rounds of computations
+    - Modes:
+      - DES-EE3 :: 3 different keys, triple encrypted
+      - DES-EDE3 :: 3 different keys, encrypted, decrypted, encrypted
+      - DES-EEE2 :: same as EEE3, but only two keys, first and third use same key
+      - DES-EDE2 :: same as EDE3, but only two keys, first and third use same key
+*** Advanced Encryption Standard
+    - 1997
+    - Block sizes: 128, 192, 256 bit
+    - 128 bits - 10 rounds
+    - 192 bits - 12 rounds
+    - 256 bits - 14
+*** International Data Encryption Algorithm
+    - Block cipher, 64 bit blocks divided into 16 smaller blocks, 8 rounds. Key is 128 bits.
+    - Is faster than DES in software
+    - Harder to break than DES due to its longer key size
+    - Used in PGP, patented
+*** Blowfish
+    - Block cipher
+    - 65 bit blocks
+    - Key: 32 bits up to 448 bits
+    - 16 rounds
+    - Public domain
+*** RC4
+    - Stream cipher
+    - Variable key size
+    - Used in SSL, 802.11 WEP
+    - Sometimes case ARC4 since RC4 is trademarked
+    - Vulnerable to modification attacks
+*** RC5
+    - block cipher
+    - Block sizes: 32, 64 or 128 bits
+    - Key size up to 2,048 bits
+    - Rounds up to 255
+*** RC6
+    - Block cipher, built on RC5
+    - Faster than RC5
+** Types of Asymmetric Systems
+*** Diffie-Hellman Algorithm
+    - key agreement algorithm
+    - Allows two systems to generate a symmetric key securely
+    - Vulnerable to man in the middle attacks if no authentication of users is done. RSA can be used to perform authentication.
+*** RSA
+    - Rivest, Shamir, Adleman
+    - Can be used for digital signatures, key exchange and encryption
+    - Provides authentication as well as encryption
+    - Can be used as a key exchange protocol
+*** El Gamal
+    - Can be used for digital signatures, encryption and key exchange
+    - Rather than factoring, based on calculating discrete logarithms in a finite field
+    - Extension of Diffie-Hellman
+    - Main drawback is performance
+*** Elliptic Curve Cryptosystems
+    - Digital signatures, secure key distribution, encryption
+    - ECC is more efficient than RSA and other asymmetric algorithm 
+*** Knapsack
+    - Encryption, digital signature
+    - Insecure, not in use 
+*** Zero Knowledge Proof
+    - when it's shown someone has the right private key, without making them present the private key 
+** Message Integrity
+*** The One-Way Hash
+    - Takes a variable length string -> fixed-length hash value 
+    - Value is the fact it is one-way
+    - Hashing :: Provides Integrity. Not confidentiality or authentication. Detects only unintentional modifications. 
+    - Message Authentication Code (MAC) :: an authentication scheme derived by applying a secret key to a message in some form
+    - HMAC :: symmetric key is concatenated with message creating a MAC value. Provides Integrity and data origin authentication; confidentiality not provided.
+    - CBC-MAC :: Cipher Block Chaining Message Authentication Code - message encrypted with a symmetric block cipher in CBC mode, output of final block of ciphertext is used as the MAC. Provides Integrity and data origin authentication; confidentiality is not provided. 
+                 Cipher-Based MAC - (CMAC) - more secure version of CBC-MAC. 
+*** Various Hashing Algorithms
+    - Strong hash functions:
+      - Compute over the entire message
+      - One-way function
+      - Given a message and its hash value, computing another message with the same hash value should be impossible
+      - Resistant to birthday attacks
+      - Collision free 
+*** MD4
+    - 128-bit hash value
+    - Not considered secure
+*** MD5
+    - 128 bit hash value, more complex than MD4
+    - Subject to collision attacks thus not suitable for SSL certs and digital signatures. Still used for file integrity checksums. 
+*** SHA
+    - 160-bit hash value, used with Digital Signature Algorithm (DSA)
+    - SHA1, SHA-256, SHA-384, SHA-512 - update versions of SHA. SHA-1 is 160 bit.
+    - SHA1 not considered secure, vulnerable to collisions. 
+    - Designed by NSA, published by NIST. 
+*** Attacks Against One-Way Hash Functions
+    - Birthday attack :: a forced collision. Protect against with longer hashing values. 
+*** Digital Signatures
+    - A hash value that has been encrypted with the sender's private key.
+    - Encryption provides confidentiality.
+    - Hashing provides integrity.
+    - Digital signature provides authentications, nonrepudiation and integrity
+*** Digital Signature Standard
+    - 1991, NIST
+    - SHA used for hashing
+    - DSA, RSA or ECDSA used for signing
+** Public Key Infrastructure
+   - An ISO authentication framework that uses public key cryptography and the X.509 standard.
+*** Certificate Authorities
+    - Credential containing the public key for that individual along with other identifying information.
+    - Created and signed by a trusted third party (Certificate Authority)
+    - Registration Authority :: verifies individuals identity
+    - Cross Certification :: when two CAs establish a trust relationship
+    - Certificate Revocation List (CRL) :: list of every revoked certificate. Lot of problems with this since applications do not always check them (such as browsers)
+    - Online Certificate Status Protocol (OCSP) :: Validates a certificate in the background, checks CRL.
+*** Certificates
+    - X.509 is the standard for creating a certificate. x.509v3 is most common (SSL uses this). 
+    - Includes: serial number, version number, identity information, algorithm information, lifetime dates, signature of issuing authority.
+*** The Registration Authority
+    - Confirms identity of an individual, initiates certification process with a CA, acts as broker between user and CA
+*** PKI Steps
+** Key Management
+*** Key Management Principles
+    - Keys should be kept encrypted
+    - Key distribution and maintenance should be automated
+    - Protected against being lost, destroyed or corrupted by being backed up
+    - May need key recovery services to allow administrators to access data encrypted by an individual
+*** Rules for Keys and Key Management
+    - Keys should be long enough to provide sufficient protection
+    - Stored and transmitted securely
+    - Should be extremely random, algorithm should use full spectrum of key space
+    - Lifetime should correspond with sensitivity of data - more sensitive data should have shorter key lifetime
+    - The more the key is used, the shorter its lifetime should be
+    - Backup and escrow for emergencies. Escrow allows key recovery. 
+    - Destroy at end of life 
+** Trusted Platform Module
+   - microchip installed on the motherboard, dedicated to storage and processing of keys, hashes and digital certs
+*** TPM Uses
+    - Most common is for encrypted hard disks
+    - Sealing system state to particular hardware
+    - TPM internal memory:
+      - Persistent memory:
+        - Endorsement Key (EK) :: public/private  key pair installed at time of manufacture, cannot be modified
+        - Storage Root Key (SRK) :: master wrapping key used to secure keys stored in the TPM
+      - Versatile Memory:
+        - Attestation Identity Key (AIK) :: used for attestation of TPM chip to service providers. Ensures integrity of the EK.
+        - Platform Configuration Registers (PCR) :: stores cryptographic hashes of data used for TPM sealing functionality
+        - Storage keys :: use to encrypt storage media
+** Attacks on Cryptography
+*** Ciphertext-Only Attacks
+    - hardest attack to execute 
+*** Known-Plaintext Attacks
+    - Attacker knows a portion o the plain text of the encrypted message 
+*** Chosen-Plaintext Attacks
+    - Attacker can choose the plaintext that gets encrypted to see corresponding cipher text 
+*** Chosen-Ciphertext Attacks
+    - Can choose the ciphertext to be decrypted and has access to the resulting decrypted plaintext 
+*** Differential Cryptanalysis
+    - Looks at cipher text pairs generated by plaintext pairs and analyzes the differences. Used to break DES. 
+*** Linear Cryptanalysis
+    - carries out a known-plaintext attack on several different messages encrypted with the same key. Raises probability of a specific key having been used.
+*** Side-Channel Attacks
+    - power consumption, radiation emissions, time (time analysis was used to pull private keys from RSA smartcards)
+*** Replay Attacks
+    - attacker resubmits data trying to fool receiving device
+    - Timestamps and sequence numbers are two countermeasures to this
+*** Algebraic Attacks
+    - analyze vulnerabilities in the mathematics (RSA encryption of "0" is "0")
+*** Analytic Attacks
+    - identify algorithm structural weaknesses or flaws (Double DES attack, RSA factoring attack)
+*** Statistical Attacks
+    - identify statistical weaknesses in algorithm design, such as a biased random number generator
+*** Social Engineering Attacks
+    - trick people into providing their keys 
+*** Meet-in-the-Middle Attacks
+    - encrypting from one end and decrypting from the other end 
+** Site and Facility Security
+   - Threats:
+     - Natural environmental threats
+     - Supply system threats
+     - Manmade threats
+     - Politically motivated threats
+   - Must be layered - moving from perimeter to asset
+     - For example: fence, building walls, access control card, guard, an IDS, locked computer cases, safes
+** The Site Planning Process
+   - Define the objectives of the program, design the program, develop performance metrics, evaluation process
+   - Should address the following goals:
+     - Crime and disruption prevention through deterrence: fences, security guards, warning signs, etc.
+     - Reduction of damage through delaying mechanisms: layers of defenses, locks, security personnel, barriers
+     - Crime or disruption detection: smoke detectors, motion detectors, CCTV, etc.
+     - Incident assessment: security guard response
+     - Response procedures: fire suppression mechanisms, emergency response processes, law enforcement notification, consultation with outside security professionals
+   - Possible performance metrics:
+     - number of successful crimes
+     - number of successful disruptions
+     - number of unsuccessful crimes
+     - number of unsuccessful disruptions
+     - Time between detection, assessment and recovery
+     - Business impact of disruptions
+     - Number of false-positive detection alerts
+     - Time it took for a criminal to defeat a control
+     - Time it took to restore operational environment
+     - Financial loss of a successful crime
+     - Financial loss of a successful disruption
+   - Basically - physically security requires a risk assessment process 
+*** Crime Prevention through Environmental Design
+    - Proper design of a physical environment can reduce crime by directly affecting human behavior
+    - Landscaping, entrances, layouts, lighting, road placement, traffic patterns, etc.
+    - The reason trees are removed from around a data center - removes hiding places.
+    - Natural access control - controlling flow by placement of devices such as lighted bollards
+    - Can create security zones
+    - Natural surveillance - make criminal feel uncomfortable by providing many ways observers could see them - ex. use of open areas
+    - Natural territorial reinforcement - use of walls, fences, landscaping lighting, flags, markings to create a sense of dedicated community 
+*** Designing a Physical Security Program
+    - Observe how facility is used
+    - Comply with regulations
+    - Legal issues known
+    - Should have a facility safety officer
+    - Create a plan
+    - Facility:
+      - consider visibility and noticablity
+      - Closeness to emergency services
+    - Construction:
+      - evaluate construction materials
+      - fire protection levels
+      - load of walls, floors and ceiling
+      - Windows: UV protection, shatterproof, opacity
+      - Consider:
+        - Walls - combustibility, fire rating, reinforcement
+        - Doors - combustibility, fire rating, reinforcement, markings, placement, locks, alarms, hinges, opening direction, electric locks, glass
+        - Ceiling - combustibility, fire rating, weight-bearing, drop ceiling
+        - Windows - Opacity, shatterproof, alarms, placement, accessibility
+        - Flooring - Weight-bearing, combustibility, fire rating, raised flooring, nonconducting
+        - Heating, ventilation, air conditioning - positive air pressure, protected intake vents, dedicated power lines, emergency shutoff valves, placement
+        - Electric power supplies - backup and alternative, clean and steady, dedicated feeders, placement
+        - Water and gas lines - shutoff valves, positive flow, placement
+        - Fire detection - placement of detectors, place of suppression systems, type of detectors and suppression systems
+      - Entry points - consider secondary entry points: secondary doors, windows, fire escapes
+      - Internal Compartments - can be circumvented through dropped ceilings
+      - Computer and equipment rooms - should be restricted to minimum necessary personnel
+        - Not located on high floors as inaccessible in case of fire. Not located in basements due to flooding, typically at core of building
+        - water detectors under raised floors and on dropped ceilings
+        - monitor humidity
+        - separate electricity if possible, UPS, generators
+** Protecting Assets
+*** Protecting Mobile Devices
+    - Inventory mobile devices to allow identification if recovered
+    - Harden the OS
+    - Password protect
+    - Don't check as luggage
+    - Don't leave unattended
+    - Engrave with identification
+    - Use a slot lock
+    - Back up the data
+    - use room safes in hotels
+    - Encrypt all data
+    - Tracing software
+*** Using Safes
+    - Types: wall, floor, chests, depositories, vaults
+    - Passive relocking - can detect when someone attempts to tamper with it, extra internal bolts fall into place
+    - Thermal relocking - when a certain temperature is met (such as from drilling) extra lock is implemented
+** Internal Support Systems
+*** Electric Power
+    - Protection: UPSs, power line conditioners, backup sources
+    - EMI and RFI can create power interference. Power lines should not run over lighting as it can create interference.
+    - Power excess: spike: momentary high voltage, surge: prolonged high voltage
+    - Power loss: fault: momentary power outage, blackout: prolonged loss
+    - Power degradation:
+      - Sag/dip - momentary low-voltage
+      - Brownout - prolonged low-voltage
+      - In-rush current - initial surge of current
+    - Voltage regulators and line conditioners can be used to ensure clean and smooth power distribution
+    - Use surge protectors, line monitors, regulators, access controls, shielding, do not run over lights, three-prong connectors
+*** Environmental Issues
+    - Positive drains - contents flow out instead of in
+    - Typical data center should have a separate HVAC
+    - Appropriate temperature, humidity
+*** Fire Prevention, Detection, and Suppression
+    - Training employees
+    - Right equipment
+    - Fire detection
+    - Fire suppression: sprinkler or CO2 discharge
+    - Types: smoke activated, heat activated
+    - Fire suppression
+      - Class A - common combustibles, wood, paper, laminates. Suppress with water, foam
+      - Class B - Liquid. petroleum products, coolants. Gas, CO2, foam, dry powders
+      - Class C - Electrical. Electrical equipment, wires. Gas, CO2, dry powders
+      - Class D - Combustible metals. Magnesium, sodium, potassium. Dry powder.
+    - Remove either fuel, oxygen or temperature
+    - Halon banned in 1992. FM-200 is most similar replacement.
+    - Ensure detectors are in plenum areas (drop spaces)
+    - Water sprinklers
+      - Wet pipe - always contain water. Can freeze in cold climates. Damage if nozzle breaks.
+      - Dry pipe - water not held in pipes. Pipes charged with a smoke alarm is activated. Best in cold climates.
+      - Preaction - Requires a head to melt before water is released.
+      - Deluge - water released in large volumes. 
+* Chapter 4 - Communication and Network Security
+** Telecommunications
+   - electromagnetic transmission whether analog, digital or wireless.
+   - Usually refers to telephone systems, service providers and carrier services.
+   - FCC regulated
+** Open Systems Interconnection Reference Model
+   "All People Seem to Need Data Processing"
+*** Protocol
+    - Actual protocol did not catch on as a standard, but the model is used as an abstract framework
+    - TCP/IP model (developed before OSI):
+      - Application
+      - Host-to-Host
+      - Internet
+      - Network Acess
+    - Uses encapsulation
+*** Application Layer
+    - Layer 7
+    - closest to user, file transmissions, message exchanges, terminal sessions
+    - SMTP, HTTP, DNS, IRC, LDP, FTP, TFTP, SNMP, Telnet
+*** Presentation Layer
+    - Layer 6
+    - Provides a common means of representing data, data compression, encryption
+    - MIME, ASCII, EBCDIC, TIFF, JPEG, MPEG, MIDI
+*** Session Layer
+    - Layer 5
+    - connection between applications
+    - Password Authentication Protocol (PAP), PPTP, NetBIOS, RPC
+    - three modes:
+      - Simplex - one direction
+      - Half-Duplex - both directions, only one can send at a time
+      - Full-Duplex - both directions, can send at same time 
+*** Transport Layer
+    - Layer 4
+    - connection between computers
+    - TCP, UDP, SPX
+*** Network Layer
+    - Layer 3
+    - Routing information to the proper destination
+    - IP, ICMP, RIP, OSPF, BGP, IGMP, IPX
+*** Data Link Layer
+    - Layer 2
+    - Transmission as appropriate for network: token ring, ethernet, ATM, FDDI, wireless, etc.
+    - Two sub-layers
+      - Logical link control - IEEE 802.2, communicates directly with network layer, flow control and error checking
+      - Media Access Control (MAC) -  Knows what type of network it is
+        - Ethernet - IEEE 802.3
+        - Token Ring - IEEE 802.5
+        - Wireless LAN - 802.11
+    - Examples: PPP, ATM, L2TP, FDDI, Ethernet, Token Ring , ARP, RARP, SLIP, 802.3, 802.5, 802.11
+*** Physical Layer
+    - Layer 1
+    - Converts bits into voltage for transmission
+    - Examples: RS/EIA/TIA-422, RS/EIA/TIA-423, RS/EIA/TIA-449, RS/TIA-485
+    - Example: 10Base-T, 10Base5, 100Base-TX, 100Base-FX, 100Base-T, 1000Base-T, 1000Base-SX
+    - Examples: ISDN, DSL, SONET
+*** Tying the Layers Together
+*** Multilayer Protocols
+    - SCADA uses Distributed Network Protocol 3 (DNP3) - roughly layer 2, 4 7 - security not built in
+    - Controller Area Network Bus - no security built in - allows microcontrollers to communicate with each other
+    - TCP/IP:
+      - TCP - connection oriented, requires a handshake
+      - UDP - connectionless
+*** TCP/IP Model (incomplete - for next month)
+    - IP Addressing
+      - IPv4 - 32 bit addresses
+        - Class A - From 0.0.0.0 
+        - Class B - From 128.0.0.0
+        - Class C - From 192.0.0.0
+        - Class D - From 224.0.0.0 - used for multicast
+        - Class E - From 240.0.0.0 - reserved for research
+      - IPv6 addresses shortage of addresses in IPv4 - 128 bits
+      - Subnet - logical network partition
+      - IPv6:
+        - larger address space
+        - allows for scoped addresses
+        - IPsec built in, encryption and authentication
+        - QoS
+        - Autoconfiguration, does not require NAT

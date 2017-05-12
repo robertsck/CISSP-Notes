@@ -1,0 +1,1986 @@
+% Created 2017-04-14 Fri 17:44
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Chris Roberts}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Chris Roberts},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+
+
+\section{Chapter 1 - Security and Risk Management}
+\label{sec:orgb4836a6}
+\subsection{Fundamental Principles of Security}
+\label{sec:org550102b}
+\subsubsection{AIC Triad:}
+\label{sec:orgcd94517}
+\begin{enumerate}
+\item Availability - reliable and timely access
+\label{sec:orgbf6d9a9}
+Controls: eg. RAIDs, clustering, load balancing, redundancy, backups, secondary facilities, rollback, failover
+\item Integrity - assurance of accuracy and reliability
+\label{sec:org2e28ef1}
+Controls: eg. Hashing, Configuration Mgmt., Change controls, Access controls, Software digital signing, CRC checks
+\item Confidentiality - necessary level of secrecy
+\label{sec:org4622e3a}
+Controls: eg. Encryption, Access controls
+\end{enumerate}
+\subsubsection{Risk Definitions:}
+\label{sec:org86fd8d2}
+\begin{description}
+\item[{Vulnerability}] weakness in a system
+\item[{threat}] potential danger
+\item[{risk}] likelihood of threat source exploiting a vulnerability X the business impact
+\item[{exposure}] an instance of being exposed to losses
+\item[{control}] countermeasure, safeguard, to mitigate risk
+\end{description}
+\subsubsection{Control Types:}
+\label{sec:org099054b}
+\begin{description}
+\item[{Administrative}] security documentation, risk management, training
+\item[{Technical}] logical controls, software, hardware, firewalls, IDS, encryption
+\item[{Physical}] guards, locks, fencing, lighting
+\end{description}
+\subsubsection{Defense in Depth - layered}
+\label{sec:orgc478878}
+\begin{itemize}
+\item We use a slide to represent this concept across all control types
+\end{itemize}
+\subsubsection{Control Functionalities:}
+\label{sec:org51b8f20}
+\begin{description}
+\item[{Preventative}] avoid incident
+\item[{Detective}] Identify an incident
+\item[{Corrective}] Fix
+\item[{Deterrent}] Discourage an attack
+\item[{Recovery}] Bring back to regular operations
+\item[{Compensating}] Provide an alternative measure of control
+\end{description}
+\begin{enumerate}
+\item Note that NIST CSF is closely organized along these lines, although slightly different
+\label{sec:org2292c58}
+\item There is significant argument as to where companies should focus: preventative, or detective and recovery?
+\label{sec:org4ab3d29}
+\begin{itemize}
+\item You should be able to voice when one approach is better than another.
+\item See Table 1-1 for Control Types X Control Functionalities
+\end{itemize}
+\end{enumerate}
+\subsection{Security Frameworks}
+\label{sec:orgc074579}
+\subsubsection{Security Program Development:}
+\label{sec:orgce4ada1}
+\begin{itemize}
+\item ISO/IEC 27000 series 
+-- Understand history and how series docs are related
+\end{itemize}
+\subsubsection{Enterprise Architecture Development:}
+\label{sec:org0262b72}
+\begin{itemize}
+\item Zachman Framework - enterprise architecture
+\item TOGAF - Open Group - enterprise architecture - probably the most relevant to large corporations
+\item DoDAF - US military
+\item MODAF - British MoD
+\item SABSA - security architecture focus
+\end{itemize}
+\begin{enumerate}
+\item An architecture is a set of different organizational views (Figure 1-4)
+\label{sec:org258f3f5}
+\item An ISMS is implemented through a Security Architecture - it helps prevent the issues listed in this section
+\label{sec:orgf8548cf}
+\begin{itemize}
+\item our risk framework is a version of a security architecture. Compared risk framework to Table 1-3.
+\item "The architecture is a tool used to ensure that what is outlined in security standards is implemented throughout the different layers of an organization" - this is where the applicability matrix start to come into play.
+\end{itemize}
+\item Successful security architecture requires:
+\label{sec:org88c5be1}
+\begin{description}
+\item[{Strategic alignment}] business drivers, regulatory and legal requirements are being meta
+\item[{Business enablement}] security supports business, risk is necessary
+\item[{Process Enhancement}] security tools can offer the opportunity to automate and streamline processes
+\item[{Security Effectiveness}] metrics, SLA, ROI
+\end{description}
+\end{enumerate}
+\subsubsection{Security Controls Development:}
+\label{sec:org5dbde96}
+\begin{enumerate}
+\item COBIT 5 - IT Management Framework - ISACA
+\label{sec:org292b5fc}
+\begin{itemize}
+\item Focuses on optimizing Value of IT - beyond just security
+\item Key feature is a separation of governance from management, and goal breakdown
+\item Goals: 17 enterprise and 17 IT-related goals (clearly very generic to apply to all companies)
+\item COBIT introduced the concept of "control objectives", "controls", and "control tests".
+\item COBIT 5 got rid of "controls objectives".
+\item The Audit industry is largely based off COBIT.
+\end{itemize}
+\item NIST SP 800-53 - NIST controls
+\label{sec:org5954a75}
+\begin{itemize}
+\item NIST lives in the Dept. of Commerce
+\item FISMA (Federal Informatin Security Management Action) requires agencies to follow NIST
+\end{itemize}
+\item COSO Internal Control-Integrated Framework - financial fraud focus
+\label{sec:orgeea25d5}
+\begin{itemize}
+\item COBIT came from COSO
+\item Used for Corporate Governance (whereas COBIT is IT governance)
+\item SOX (2002) is based on COSO, thus following COSO can ensure compliance with SOX
+\end{itemize}
+\end{enumerate}
+\subsubsection{Process Management Development:}
+\label{sec:org3da8dc0}
+\begin{enumerate}
+\item ITIL - IT processes - UK origin
+\label{sec:org368ba11}
+\begin{itemize}
+\item IT service management
+\item Focused on internal SLAs between IT and the Business
+\end{itemize}
+\item Six Sigma
+\label{sec:org299bf4b}
+\begin{itemize}
+\item Based on Total Quality Management (TQM)
+\item All about operation efficiency, reducing variation, defects, waste (very manufacturing oriented)
+\end{itemize}
+\item Capability Maturity Model Integration (CMMI)
+\label{sec:org8ddf8a1}
+\begin{itemize}
+\item Carnegie Mellon
+\item Started the idea of processes maturity levels (that are now starting to fade in popularity)
+\item This model is still heavily influential (FFIEC and NIST assessment tools both have resemblances to it)
+\item Also, it mimics how infosec is slowly improved each year
+\end{itemize}
+\end{enumerate}
+\subsubsection{Security Program Lifecycle}
+\label{sec:org5b6fab8}
+\begin{enumerate}
+\item Plan and Organized
+\label{sec:org4a9af5d}
+\item Implement
+\label{sec:org012fda7}
+\item Operate and Maintain
+\label{sec:orgab01677}
+\item Monitor and Evaluate
+\label{sec:org03bfeee}
+\begin{itemize}
+\item Notice Figure 1-8 is closely aligned with our model
+\end{itemize}
+\end{enumerate}
+\subsubsection{Functionality vs. Security}
+\label{sec:orgb1bc0a9}
+\subsection{Crime Laws}
+\label{sec:org0ee5781}
+\subsubsection{Computer-assisted - crime could take place even without a computer}
+\label{sec:org8d88751}
+\subsubsection{Computer-targeted - crime could not take place}
+\label{sec:org9b784ca}
+\subsubsection{Computer is incidental - computer just happened to be involved}
+\label{sec:orgb5f7fba}
+\subsection{Complexities:}
+\label{sec:org420413c}
+\begin{itemize}
+\item Hard to ID attackers
+\item Lack of reporting
+\end{itemize}
+\subsubsection{Evolution of attacks}
+\label{sec:org4fcadf2}
+\begin{itemize}
+\item Today is much more profit driven
+\item See Verizon Breach report for 2016
+\item Types:
+\begin{itemize}
+\item Script Kiddies
+\item APT - nation state
+\end{itemize}
+\end{itemize}
+\subsubsection{International issues}
+\label{sec:orgd24ebd7}
+\begin{enumerate}
+\item Council of Europe Convention on CyberCrime
+\label{sec:org7f73d17}
+-- First attempt to create an international response standards
+\item OECD - Guidelines on the Protection of Privacy and Transborder Flows of Personal Data
+\label{sec:orgf78f66e}
+The are very similar to privacy principles
+\begin{itemize}
+\item Collection Limitation
+\item Data Quality
+\item Purpose Specification
+\item Use Limitation
+\item Openness
+\item Individual Participation
+\item Accountability
+\end{itemize}
+\item EU Data Protection Directive - strict EU rules on privacy
+\label{sec:org886e4ac}
+\begin{itemize}
+\item US-based companies used to use Safe Harbor Privacy Principles
+\item This has since been renegotiated
+\item Safe Harbor Principles:
+\begin{itemize}
+\item Notice
+\item Choice
+\item Onward Transfer
+\item Security
+\item Data Integrity
+\item Access
+\item Enforcement
+\end{itemize}
+\item Privacy shield Replaces Safe Harbor
+\url{https://www.privacyshield.gov/Program-Overview}
+\end{itemize}
+\item Import Export Requirements
+\label{sec:org176c3f1}
+\begin{itemize}
+\item Wassenaar Arrangement - export controls restricting arms and dual-use goods exporting to certain controls
+\begin{itemize}
+\item Cryptography can fall into a controlled export
+\end{itemize}
+\item China, Russia, Iran, Iraq, etc. have crypto import controls to prevent citizen use
+\end{itemize}
+\textbf{\textbf{*}}
+\end{enumerate}
+\subsubsection{Types of Legal Systems}
+\label{sec:org632c839}
+\begin{enumerate}
+\item Civil (Code) Law System
+\label{sec:orgcb829b9}
+\begin{itemize}
+\item France, Spain
+\item Rule based, non precedent based
+\item Most common around world and in Europe
+\item Lower courts not compelled to following decisions made by higher courts
+\end{itemize}
+\item Common Law System
+\label{sec:org75e46cb}
+\begin{itemize}
+\item Developed in England, US uses
+\item Uses precedent
+\item Criminal, civil/tortued, administrative
+\item Civil - wrongs against individual or company resulting in damage or loss. Jury decides "liability", not innocence or guilt. Typically derrived from common law, case law.
+\item Criminal - conduct violates government laws. Jail, fines. Derrived from statutes.
+\item Administrative/regulatory law - deals with regulatory standards.
+\end{itemize}
+\item Customary Law Systems
+\label{sec:orga34eb1d}
+\begin{itemize}
+\item Personal conduct and behavior
+\item Based on traditions and customs
+\item Used in mixed legal systems (China, India)
+\end{itemize}
+\item Religious Law Systems
+\label{sec:org8205cd1}
+\end{enumerate}
+\subsection{Intellectual Property}
+\label{sec:orgf7715bc}
+\begin{itemize}
+\item Companies must implement safeguards to protect IP, show that it exercised due care.
+\item Trade Secret
+\begin{itemize}
+\item Resource must provide the company with some type of competitive value or advantage
+\item Proprietary
+\item NDA - promise not to share trade secrets. This gives company right to fire, and bring charges.
+\end{itemize}
+\item Copyright
+\begin{itemize}
+\item Gives right to control distribution, reproduction display and adapation of original work.
+\item It protects the \uline{expression} of a resource, not the resource itself
+\item Copyright is weaker than a patent
+\item Copyright is much longer (life plus 50 years)
+\end{itemize}
+\item Trademark
+\begin{itemize}
+\item Used to protect a word, name, symbol, sound, shape, color, or combination.
+\item Used to protect Brand.
+\item International trademark law overseen by World Intellectual Property Organization (WIPO), part of the UN
+\end{itemize}
+\item Patent
+\begin{itemize}
+\item Grants legal ownership and ability to exclude others from using or copying an invention
+\item Invention must be novel, useful and not obvious
+\item Usually a 20 year period
+\item Strongest form of protection
+\item Large amount of patent litigation - main reason is Nonpracticing Entities (NPEs) or patent trolls.
+\end{itemize}
+\end{itemize}
+\subsubsection{International Protection of Intellectual Property}
+\label{sec:org2a5de26}
+\begin{itemize}
+\item Resources protected by law should be part of data classification scheme, and properly protected with access controls
+\item Failure to protect could mean the data is not protected by law because it failed to practice due care.
+\end{itemize}
+\subsubsection{Software Piracy}
+\label{sec:org6508b95}
+\begin{enumerate}
+\item Types of licencing
+\label{sec:orgfd68c1f}
+\begin{itemize}
+\item Freeware
+\item Shareware
+\item Commercial
+\item Academic
+\end{itemize}
+\item EULA
+\label{sec:org76fbd7e}
+more granular that Master
+\item Master Agreement
+\label{sec:orgcbebfc1}
+\item International
+\label{sec:orgd5ea518}
+\begin{itemize}
+\item Not a crime everywhere
+\item Federation Against Software Theft (FAST) and the Business Software Alliance promote enforcement of proprietary rights of software
+\end{itemize}
+\item Security Implictaions
+\label{sec:orge8f5890}
+\begin{itemize}
+\item Common offense is to reverse engineer code. But this is necessary for discover security flaws.
+\item Can be prosecuted for reverse engineering code under Digital Millennium Copyright Act (DMCA)
+\item DMCA - criminalizes production and dissemination of technology that circumvents access control measures.
+\item EU has similar law called Copyright Directive
+\end{itemize}
+\end{enumerate}
+\subsection{Privacy}
+\label{sec:org91a46d1}
+\subsubsection{Definitions}
+\label{sec:orgf62de93}
+\begin{description}
+\item[{Personally Identifiable Information}] data that can be used to uniquely identify, contact or locate a single person or can be used with other sources to uniquely identify a single individual. Commonly used in identity theft, financial crimes.
+\begin{itemize}
+\item This commonly includes:
+\begin{itemize}
+\item Full Name
+\item National Identification Number
+\item IP address (in some cases)
+\item Vehicle registration plate number
+\item Driver's license number
+\item Face, fingerprints, or handwriting
+\item Credit card numbers
+\item Digital identity
+\item Birthday
+\item Birthplace
+\item Genetic Information
+\end{itemize}
+\item Less common - but can be PII as well
+\begin{itemize}
+\item First or Last name, if common
+\item Country, state, or city of residence
+\item Age, especially if non-specific
+\item Gender or race
+\item Name of school, workplace
+\item Grades, salary, job position
+\item Criminal record
+\end{itemize}
+\end{itemize}
+\end{description}
+\subsubsection{Increasing Need for Privacy Laws}
+\label{sec:org92ff59e}
+\begin{itemize}
+\item Data aggregation and retrieval technologies
+\item Loss of borders / business globalization
+\item Convergent technologies advancements
+\end{itemize}
+\subsubsection{Laws, Directives and Regulations}
+\label{sec:orgc8fb906}
+\begin{enumerate}
+\item Federal Privacy Act of 1974
+\label{sec:orgf7ed3f1}
+Restrictions on government maintenance and use of private records (relevant and necessary)
+\item Federal Information Security Management Act of 2002 (FISMA)
+\label{sec:orgc442d76}
+\begin{itemize}
+\item Federal agencies must implement a risk-based program to secure agency data and systems
+\item Requires annual reviews and reports to Office of Management and Budget (OMB)
+\item Requirements of FISMA:
+\begin{itemize}
+\item Inventory of assets
+\item Categorize by risk
+\item Security controls
+\item Risk assessment
+\item System security plan
+\item Certification and accreditation
+\item Continuous Monitoring
+\end{itemize}
+\end{itemize}
+\item Department of Veterans Affairs Information Security Protection Act
+\label{sec:orgc253680}
+\begin{itemize}
+\item Only applies to the VA
+\item Was already required to comply with FISMA
+\item Required additional controls plus report compliance to Congress
+\end{itemize}
+\item Health Insurance Portability and Accountability Act (HIPAA)
+\label{sec:orga30eda0}
+\begin{itemize}
+\item Storage, use and transmission of medical information
+\end{itemize}
+\item Health Information Technology for Economic and Clinical Health (HITECH) Act
+\label{sec:org982809d}
+\begin{itemize}
+\item 2009
+\item Promotes adoption of healthcare technology
+\item Strengthen civil and criminal enforcement of HIPAA rules
+\end{itemize}
+\item USA Patriot Act
+\label{sec:org09824a1}
+\begin{itemize}
+\item Reduces restrictions on law enforcement searching records - big area for privacy debate here
+\item Eases restrictions on foreign intelligence gathering within US
+\item Expand ability to regulate financial transactions
+\item Expands ability to detain and deport immigrants
+\item Expands definition of terrorism
+\end{itemize}
+\item Gramm-Leach-Bliley Act (GLBA)
+\label{sec:orga626e01}
+\begin{itemize}
+\item Aka Financial Services Modernization Act (1999)
+\item Requires financial institutions to develop privacy notices, right to prohibit sharing, security responsibilities
+\item Board of Directors responsible, risk management required, employee training, testing, written security policy
+\item Financial Privacy Rule - customer privacy rights, requires a privacy notice, restrictions on sharing and protecting data
+\item Safeguards Rule - written security plan
+\item Pretexting Protection - social engineering safeguards
+\end{itemize}
+\item Personal Information Protection and Electronic Documents Act
+\label{sec:org9816806}
+\begin{itemize}
+\item PIPEDA
+\item Canadian Law
+\item Protection of personal information
+\item Ensures business protect privacy data
+\item Standard privacy requirements (Consent, collection, notice, etc.)
+\end{itemize}
+\item Payment Card Industry Data Security Standard (PCI DSS)
+\label{sec:orgfd9a5ec}
+\begin{itemize}
+\item All credit cards companys came together to develop
+\item Applies to any entity that processes, transmits, stores or accepts credit card data
+\item Minnesota actually enforces PCI via law
+\end{itemize}
+\end{enumerate}
+\subsubsection{Employee Privacy Issues}
+\label{sec:org4f9258f}
+\begin{itemize}
+\item Must make employees aware of monitoring
+\item Monitoring must be work related and consistent
+\item Notice typically needs to be signed: Waiver of reasonable expectation of privacy (REP)
+\item Typically cannot fire an employee if they did not violate written policy
+\end{itemize}
+\subsubsection{Additional Material}
+\label{sec:org9a9b55c}
+\begin{itemize}
+\item Great resource for Privacy background: \url{https://my.iapp.org/NC\_\_Product?id=a191a000000Pa8iAAC}
+\end{itemize}
+\subsection{Data Breaches}
+\label{sec:org2c0ba31}
+\subsubsection{Verizon Data Breach Report: \url{http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/}}
+\label{sec:org08471ab}
+\subsubsection{Reporting}
+\label{sec:org28d7339}
+\begin{itemize}
+\item Each state has breach reporting laws - in library
+\item So does FISMA
+\end{itemize}
+\subsubsection{US Laws pertaining to data breaches}
+\label{sec:org1c30ce7}
+\begin{itemize}
+\item HIPAA - no reporting requirements (but corrected by HITECH)
+\item HITECH - HHS must publish annual guidance, companies that comply are not required to report. Otherwise a 60 day reporting requirement
+\item GLBA - only is misuse has occurred or reasonably likely to occur
+\item Economic Espionage Act of 1996 - Enables the FBI to investigate industrial and corporate espionage cases. This act focuses on IP.
+\item State Laws - 
+\begin{itemize}
+\item PII definition: First and Last name with any of the following: SSN, DL Num, Credit/Debit Card Number with security code or PIN
+\item Significant variation - some just access requires notification, others use the misuse language of GLBA
+\end{itemize}
+\end{itemize}
+\subsubsection{Other Nation's Laws}
+\label{sec:org16b02e1}
+\begin{enumerate}
+\item EU
+\label{sec:org41d19c8}
+\begin{itemize}
+\item EU Data Protection Regulation - standardizes data breach laws
+\item Privacy very top down directed in EU
+\item 24 hour notification requirement
+\end{itemize}
+\item Other
+\label{sec:org704546f}
+\begin{itemize}
+\item 12 countries have no notification requirements: Argentina, Brazil, Chile, China, Colombia, Hong Kong, India, Israel, Malaysia, Peru, Russia, Singapore
+\end{itemize}
+\end{enumerate}
+\subsection{Policies, Standards, Baselines, Guidelines and Procedures}
+\label{sec:orgb333a20}
+\subsubsection{Policy - high level of requirement - typically should have a 3-5 year life}
+\label{sec:orgf87eff0}
+\begin{itemize}
+\item Advisory and Informative policies are rare - typically called Guidelines not Policy.
+\item Strategic
+\item Example: Confidential Information Must be Protected
+\end{itemize}
+\subsubsection{Standards}
+\label{sec:org20877f9}
+\begin{itemize}
+\item mandatory
+\item tactical
+\item lower level - typically revised yearly
+\item also typically approved at a lower level
+\item See Figure 1-13
+\item Example: Customer PII must be encrypted with AES while stored, IPSec with transmitted
+\end{itemize}
+\subsubsection{Baselines}
+\label{sec:org14ae196}
+\begin{itemize}
+\item NIST and ISO typically define Baseline as system configuration standards (eg. Windows 10 desktop baseline)
+\item Be aware is can have a broader meaning to measure progress in an organization
+\end{itemize}
+\subsubsection{Guidelines}
+\label{sec:orgded50dd}
+\begin{itemize}
+\item non mandatory
+\end{itemize}
+\subsubsection{Procedures}
+\label{sec:org4f59726}
+\begin{itemize}
+\item The Step-by-Step tasks (eg. How to install a desktop image for a new user)
+\item may or may not be mandatory
+\item Example: How to implement AES and IPSec Technologies
+\end{itemize}
+\subsubsection{Implementation}
+\label{sec:org6f54bc0}
+\begin{itemize}
+\item To be effective they must follow a life cycle
+\item Communicated and Trained, Tested, Reviewed and Updated
+\end{itemize}
+\subsection{Risk Management}
+\label{sec:org87e951d}
+\subsubsection{InfoSec risk types}
+\label{sec:org2ba47b4}
+\begin{itemize}
+\item Physical damage
+\item Human interaction
+\item Equipment malfunction
+\item Inside and outside attacks
+\item Misuse of data
+\item Loss of data
+\item Application error
+\end{itemize}
+\subsubsection{Risk Assessment Additional Readings:}
+\label{sec:org3cea35d}
+\begin{itemize}
+\item FFIEC Risk Assessment Approach (\url{http://ithandbook.ffiec.gov/it-booklets/management/iii-it-risk-management.aspx})
+
+\item NIST Risk Assessment Approach (\url{http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf})
+
+\item FAIR (\url{https://en.wikipedia.org/wiki/Factor\_analysis\_of\_information\_risk})
+
+\item Octave Allegro (\url{http://resources.sei.cmu.edu/asset\_files/TechnicalReport/2007\_005\_001\_14885.pdf})
+\end{itemize}
+\subsubsection{Holistic}
+\label{sec:org65916e3}
+\begin{itemize}
+\item Integrated Risk Management looks at all risk
+\end{itemize}
+\begin{enumerate}
+\item Integrated Risk Management
+\label{sec:orge655830}
+The Gartner reframe of Governance, Risk and Compliance
+\begin{itemize}
+\item Operational Risk Management (ORM)
+\item IT Risk Management (ITRM)
+\item IT Vendor Risk Management (VRM)
+\item Business Continuity Management Planning (BCMP)
+\item Audit Management (AM)
+\item Corporate Compliance and Oversight (CCO)
+\item Enterprise Legal Management (ELM)
+\end{itemize}
+
+\item From High Risk, Low Risk to Good Risk, Bad Risk
+\label{sec:orga521353}
+
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{images/From High Risk, Low Risk to Good Risk, Bad Risk/Screen Shot 2017-01-13 at 9.24.56 AM_2017-01-13_09-58-25.png}
+\end{center}
+\item Gartner Articles
+\label{sec:org4755a14}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{/Users/chris/Documents/Edgile/Library/Gartner%20Articles/market_guide_for_integrated__290464.pdf}
+\end{center}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/Users/chris/Documents/Edgile/Library/Gartner%20Articles/2016_strategic_roadmap_for_r_301059.pdf}
+\end{center}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/Users/chris/Documents/Edgile/Library/Gartner%20Articles/transform_governance_risk_an_314880.pdf}
+\end{center}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/Users/chris/Documents/Edgile/Library/Gartner%20Articles/magic_quadrant_for_operation_297941.pdf}
+\end{center}
+\item Tiers:
+\label{sec:org8e6c7f3}
+\begin{itemize}
+\item Organizational - business as a whole
+\item Business process - risk to major functions
+\item Information systems - IT risk
+\end{itemize}
+\end{enumerate}
+\subsubsection{Information Systems Risk Management Policy}
+\label{sec:org01dbf15}
+\begin{itemize}
+\item Defines approach to IT risk - should be connected to Enterprise Risk approach
+\item Topics:
+\begin{itemize}
+\item Objectives
+\item Acceptable level of risk
+\item Risk identification process
+\item Connected to strategic planning
+\item Roles and responsibilities** - key part as it leads to implementation
+\item Mapping of risk to controls
+\item resource allocation approach
+\item Mapping of risks to targets and budget
+\item Key indicators
+\end{itemize}
+\end{itemize}
+
+Note: those topics are typically to low detail to actually go in a policy. 
+\subsubsection{Process}
+\label{sec:orga69a25f}
+\begin{itemize}
+\item NIST 800-39
+\end{itemize}
+\begin{enumerate}
+\item Frame risk - define the context
+\label{sec:org112c96d}
+\item Assess risk - set the likelihood and impact scales for each risk identified
+\label{sec:org6624622}
+\item Respond to risk - accept, mitigate, transfer - explicit decision required
+\label{sec:org57b4e5e}
+\item Monitor risk - monitor control effectiveness
+\label{sec:org9807c73}
+\end{enumerate}
+\subsubsection{Threat Modeling}
+\label{sec:org9ef178b}
+\begin{itemize}
+\item See threat modeling spreadsheet as a simple approach
+\end{itemize}
+\subsubsection{Vulnerabilities}
+\label{sec:org7918767}
+\subsubsection{Information}
+\label{sec:orgcfc8191}
+\begin{itemize}
+\item Data at rest
+\item Data in motion
+\item Data in use - race conditions
+\end{itemize}
+\subsubsection{Processes}
+\label{sec:org62cc31f}
+\subsubsection{People}
+\label{sec:org9ff7cac}
+\begin{itemize}
+\item Social Engineering
+\item Social networks
+\item Passwords!
+\end{itemize}
+\subsubsection{Threats}
+\label{sec:org6c7b7c7}
+\subsubsection{Attacks}
+\label{sec:orgb2612d4}
+\begin{itemize}
+\item Attackers think in graphs, security personnel think in checklists
+\item Figure 1-14 - an attack tree
+\item Attack kill chain: \url{https://en.wikipedia.org/wiki/Kill\_chain}
+\end{itemize}
+\subsubsection{Reduction Analysis}
+\label{sec:org036b001}
+\begin{itemize}
+\item Vulnerability - Threat - Attack triad can be risk assessed
+\item Ideally have a control for each node in the attack tree
+\item Controls at the root of the tree will defend against a broader array of attack triads
+\item 
+\end{itemize}
+\subsection{Risk Assessment and Analysis}
+\label{sec:orgcd160ce}
+\subsubsection{Identifying risks}
+\label{sec:org80ca5cd}
+\begin{itemize}
+\item simple approach: Asset at Risk X Threat Community X Threat Type X Effect
+\end{itemize}
+\subsubsection{Generic process (NIST)}
+\label{sec:org1575516}
+\begin{enumerate}
+\item Prepare for the assessment
+\label{sec:orga4dbb97}
+\item Conduct the assessment
+\label{sec:orgcb03344}
+\begin{enumerate}
+\item Identify threat sources and events
+\label{sec:orgdc1dad2}
+\item Identify vulnerabilities and predisposing conditions
+\label{sec:org80f3907}
+\item Determine likelihood of occurence
+\label{sec:org2f25025}
+\item Determine magnitude of impact
+\label{sec:orga34747c}
+\item Determine risk
+\label{sec:org7971c13}
+\end{enumerate}
+\item Communicate results
+\label{sec:orgb30ff27}
+\item Maintain assessment
+\label{sec:org9ce58fd}
+\end{enumerate}
+\subsubsection{Facilitated Risk Analysis Process (FRAP)}
+\label{sec:org5440f54}
+\begin{itemize}
+\item Qualitative, member experience driven
+\item No annual loss expectancy values or probability numbers
+\item Small scope - single system
+\end{itemize}
+\subsubsection{OCTAVE}
+\label{sec:org43f26cb}
+\begin{itemize}
+\item use facilitated workshops
+\item self-directed team approach
+\item Much wider scope of FRAP
+\end{itemize}
+\subsubsection{AS/NZS 4360}
+\label{sec:org14d1efb}
+\begin{itemize}
+\item Australia and New Zealand
+\item Very broad risk appraoch
+\end{itemize}
+\subsubsection{ISO/IEC 27005}
+\label{sec:orgff690fc}
+\begin{itemize}
+\item International risk management standard
+\item Deals with IT and softer security issues (documentation, personnel security, training, etc)
+\end{itemize}
+\subsubsection{Failure Modes and Effect Analysis (FMEA)}
+\label{sec:orgf8df01a}
+\begin{itemize}
+\item product development
+\item Failure of products or software
+\end{itemize}
+\subsubsection{Fault tree analysis}
+\label{sec:org097e181}
+\begin{itemize}
+\item Figure 1-15
+\end{itemize}
+\subsubsection{Central Computing and Teecmmunications Agency Risk Analysis and Management Method (CRAMM)}
+\label{sec:orgda2b0b6}
+\begin{itemize}
+\item UK
+\item basic risk methodology in an automated tools
+\end{itemize}
+\subsubsection{Difference:}
+\label{sec:org353df11}
+\begin{itemize}
+\item Organization wide: ISO/IEC 27005 or Octave
+\item IT Risk: NIST SP 800-30
+\item Limited budget/focused assessment: FRAP
+\item Software engineering: FMEA, Fault Tree
+\item Business perspective: AS/NZS 4360
+\end{itemize}
+\subsubsection{Approaches}
+\label{sec:org4171c0f}
+\begin{itemize}
+\item Qualitative
+\item Quantitative
+\end{itemize}
+\subsubsection{Quantitative}
+\label{sec:org714b648}
+\begin{itemize}
+\item Asset Value X Exposure Factor (EF) = Single Loss Expectancy
+\item Annual Loss Expectancy (ALE) = SLE x Annualized Rate of Occurrence (ARO)
+\end{itemize}
+\subsubsection{Qualitative}
+\label{sec:orgd251ae5}
+\begin{itemize}
+\item use the High Medium Low Matrices
+\end{itemize}
+\subsubsection{Control Selection}
+\label{sec:org10f4a39}
+\begin{itemize}
+\item Risk analysis allows a cost-benefit analysis
+\item ROSI: ((Risk Exposure * \% Mitigate) - Solution Cost) / Solution Cost
+\item ALE before controls - ALE after controls - annual cost = value of control
+\end{itemize}
+\subsubsection{Risk terms:}
+\label{sec:org0b527dd}
+\begin{itemize}
+\item Inherent risk - beginning risk
+\item Residual risk - remaining risk
+\end{itemize}
+\subsubsection{Handling Risk:}
+\label{sec:org1682dcc}
+\begin{itemize}
+\item Avoid
+\item Accept
+\item Transfer
+\item Mitigate
+\end{itemize}
+\subsubsection{Outsourcing}
+\label{sec:org59bc7ca}
+\begin{itemize}
+\item You can't outsource risk responsibility
+\end{itemize}
+\subsection{Risk Management Frameworks}
+\label{sec:org99a1314}
+\begin{itemize}
+\item "a structured process that allows an organization to identify and assess risk, reduces it to an acceptable level, and ensure that it remains at that level."
+\item Commonly accepted Frameworks:
+\begin{itemize}
+\item NIST RMF (SP 800-37r1) - Required for federal government agencies - focused on information systems.
+\item ISO 31000:2009 - international standard - not focused on Information systems, can be applied broadly in an organization.
+\item ISACA Risk IT - aims to bridge gap between generic framework like ISO 31000, and IT-centric ones likes NIST. Integrated with COBIT.
+\item COSO Enterprise Risk Management - Integrated Framework - 2004 - generic, top-down approach, can be thought of as a superset of the COSO Internal Control framework
+\end{itemize}
+\end{itemize}
+\subsubsection{Categorize Information Systems}
+\label{sec:orga0eefb3}
+\begin{itemize}
+\item Identify systems, subsystems, and boundaries
+\item Related Business processes
+\item Integration with Enterprise architecture
+\item Types of information, it's criticality
+\item Regulatory and legal requirements applicable
+\item System interconnections
+\end{itemize}
+\subsubsection{Select Security Controls}
+\label{sec:orgb05f886}
+\begin{itemize}
+\item Assumes that you have performed a risk assessment and have identified a number of common controls across the organization
+\item For new systems, must determine if there any risks specific to the systems
+\item Can then either modify common controls (hybrid controls) or develop brand newer ones (system-specific controls)
+\item Baseline controls = common controls, Actual controls are the hybrid and systems-specific controls
+\end{itemize}
+\subsubsection{Implement Security Controls}
+\label{sec:orgf70dcc7}
+\begin{itemize}
+\item Implement the control
+\item Document the control
+\end{itemize}
+\subsubsection{Assess Security Controls}
+\label{sec:org5779bd9}
+\begin{itemize}
+\item Assessor must be competent and independent
+\item Asses whether controls are effective
+\item If not effective, document findings and remediation actions
+\end{itemize}
+\subsubsection{Authorize Information Systems}
+\label{sec:orgaff7e0c}
+\begin{itemize}
+\item Person must determine whether the risk exposure is acceptable to the organization. For a new system this will authorize connecting it to the network. For an inplace system, this is accepting risk or the mitigation plans.
+\end{itemize}
+\subsubsection{Monitor Security Controls}
+\label{sec:org0a67a9b}
+\begin{itemize}
+\item Ongoing monitoring and continuous improvement
+\item Look for new tactics, techniques and procedures of adversary, new vulnerabilities, system changes
+\end{itemize}
+\subsection{Business Continuity and Disaster Recovery}
+\label{sec:org560a3e1}
+Goal: minimize effects of a disaster or disruption
+Continuity planning - focused on the longer term procedures for dealing with outages and disasters, typically focused on Senior Management and Business Lines
+Disaster Recovery Plan - short-term, typically very IT focused, typically focused on Business Lines and Application Availability
+Business Continuity Management - the holistic process that covers both of the above terms, considers Availability, Reliability, and Recoverability
+Common issue is security not being considered:
+\begin{itemize}
+\item servers in backup data center not physically secured
+\item emergency remote access services with insufficient encryption
+\end{itemize}
+Or - it's too secure and emergency actions cannot take place:
+\begin{itemize}
+\item admins cannot access servers because PAM system is inoperable, or manager approval cannot take place due to networking issues
+\item the term "break glass account" typically refer to providing the ability to bypass controls in case of an emergency situation
+\end{itemize}
+
+Business Continuity Planning:
+\begin{itemize}
+\item Protect lives, safety
+\item Reduce business impact
+\item Resume critical functions
+\item Work with outside vendors and partners
+\item Reduce confusion
+\item Ensure suitability of business
+\item Get "up and running"
+\end{itemize}
+
+\subsubsection{Standards and Best Practices}
+\label{sec:orgfa9a0a6}
+NIST SP 800-34 R1 "Continuity Planning Guide for Federal Information Systems"
+
+\begin{enumerate}
+\item Develop the continuity planning policy statement
+Provides guidance and authority
+\item Conduct the business impact analysis (BIA)
+\begin{itemize}
+\item Identify critical functions
+\item Identify vulnerabilities, threats, calculate risks
+\end{itemize}
+\item Identify preventive controls
+\begin{itemize}
+\item Identify and implement controls to reduce risk
+\end{itemize}
+\item Create contingency strategies
+\begin{itemize}
+\item Methods to brings systems online quickly
+\end{itemize}
+\item Develop an information system contingency plan
+\begin{itemize}
+\item How to stay functional in a crippled state
+\end{itemize}
+\item Ensure plan testing, training, and exercises
+\item Ensure plan maintenance
+\end{enumerate}
+
+Others:
+\begin{itemize}
+\item ISO/IEC 27031:2011 - information and communication technology readiness
+\item ISO 22301:2012 - Business continuity management systems. Can be certified against this document.
+\item Business Continuity Institute's Good Practice Guidelines (GPG)
+\begin{itemize}
+\item Management Practices
+\item Technical Practices
+\end{itemize}
+\item DRI International Institute's Professional Practices for Business Continuity Planners
+\end{itemize}
+
+\subsubsection{Making BCM Part of teh Enterprise Security Program}
+\label{sec:org78dec95}
+\begin{itemize}
+\item Zachman Business Enterprise Framework - used to understand a company's architecture and all the pieces and parts that make it up, looks at various requirements of business processes. Looks at: data, function, network, people, time and motivation components.
+\item Ideally, BCM should be part of the security program and business decisions and not carved off by itself
+\item Ideally report to a senior executive with strong management support
+\item Should understand the Why of the business. For most companies, it is to make money. Not so for government, non-profit.
+\end{itemize}
+\subsubsection{BCP Project Components}
+\label{sec:org9a0d6c7}
+\begin{itemize}
+\item Identify a Business Continuity Coordinator - leader of the team, typically must be strong at horizontal leadership
+\item BCP Committee - must be familiar with each department (business units, senior management, IT, Security, Communications, Legal)
+\item Setting up budget and staff
+\item Assigning duties and responsibilities
+\item Senior management kick-off
+\item Awareness-raising activities
+\item Training
+\item Data collection to support continuity options
+\item Quick-wins
+\end{itemize}
+\subsubsection{Scope of the Project}
+\label{sec:org9168802}
+\begin{itemize}
+\item Typically scoped to larger threats with smaller threats convered by independent departmental contingency plans
+\end{itemize}
+\subsubsection{BCP Policy}
+\label{sec:org9271dbe}
+\begin{itemize}
+\item supplies the framework for and governance of designing and building the BCP effort
+\item Contents: Scope, mission statement, principles, guidelines and standards
+\item Steps to create:
+\begin{itemize}
+\item Identify and document the components of the policy
+\item Identify and define policies of the organization that the BCP might affect
+\item Identify pertinent legislation, laws, regulations and standards
+\item Identify "good industry practice" guidelines
+\item Perform a gap analysis
+\item Compose a draft
+\item Review draft
+\item Incorporate feedback
+\item Get approval
+\item Publish
+\end{itemize}
+\end{itemize}
+\subsubsection{Project Management}
+\label{sec:org0833e8a}
+\begin{itemize}
+\item Basically - execute a BCP project like any other good project
+\item SWOT - strengths, weaknesses, opportunities, threats
+\item Project Plan:
+\begin{itemize}
+\item Objective-to-task mapping
+\item Resource to task mapping
+\item Workflows
+\item Milestones
+\item Deliverance  - Budget Estimates
+\item Success Factors
+\item Deadlines
+\end{itemize}
+\end{itemize}
+\subsubsection{BCP Requirements}
+\label{sec:org5168ac3}
+\begin{itemize}
+\item Need management support to get necessary resources
+\item Executives must provide due diligence: doing everything within one's power to prevent a bad thing from happening
+\item Due care: taking the precautions that a reasonable and competent person would take in the same situation
+\item Regulations require customer data be protected even during a disaster
+\end{itemize}
+\subsubsection{Business Impact Analysis}
+\label{sec:org2ab2ea0}
+\begin{itemize}
+\item a functional analysis - what are the functions of the business and what is their criticality. Point is to identify the areas that would suffer the greatest financial or operational loss.
+\item Must identify:
+\begin{itemize}
+\item Max tolerable downtime
+\item Operational disruption and productivity
+\item Financial considerations
+\item Regulatory resposibilities
+\item Reputation
+\end{itemize}
+\item This is gather through SME interviews, develop process flow diagrams
+\end{itemize}
+
+BIA Steps:
+\begin{itemize}
+\item Select individuals to interview
+\item Create data-gathering techniques (surveys)
+\item Identify critical business functions
+\item Identify dependent resources
+\item Calculate how long functions can survive without the resources
+\item Identify vulnerabilities and threats to these functions
+\item Calculate risk for each function
+\item Document findigns
+\end{itemize}
+\begin{enumerate}
+\item Risk Assessment
+\label{sec:orge406e2e}
+\begin{itemize}
+\item A BCP focused assessment should be conducted
+\end{itemize}
+\item Risk Assessment Evaluation and Process
+\label{sec:org196d9ca}
+\begin{itemize}
+\item Set the Likelihood and Impact for disruption threats
+\end{itemize}
+\item Assigning Values to Assets
+\label{sec:org686f995}
+\begin{itemize}
+\item Cost of a loss (impact)
+\item Maximum tolerable Downtime (MTD), Maximum Period Time of Disruption (MPTD). Examples:
+\begin{itemize}
+\item Non-essential functions: 30 days
+\item Normal: 7 days
+\item Important: 72 hours
+\item Urgent: 24 hours
+\item Critical: Minutes to hours
+\end{itemize}
+\end{itemize}
+\end{enumerate}
+\subsubsection{Interdependencies}
+\label{sec:org67c0a36}
+\subsection{Personnel Security}
+\label{sec:org50a2ca0}
+Separation of Duties :: make sure that one individual cannot complete a critical task by his/herself. Two variations:
+Split knowledge :: No one person knows all the details
+Dual control :: Two individuals are required to complete the task
+Rotation of duties :: used to uncover fraudulent activities, mandatory vacations
+\subsubsection{Hiring Practices}
+\label{sec:org69c5fb6}
+Nondisclosure Agreements (NDAs) :: should be required
+References should be checked
+\subsubsection{Termination}
+\label{sec:orgb204e6c}
+Companies should have a set procedure
+Procedure should be connected to disabling account access
+\subsubsection{Security-Awareness Training}
+\label{sec:orgd3c5d20}
+Should be comprehensive, tailored and organization-wide
+Typically three audiences: Management, Staff, technical employees
+Typically should require employees to sign stating understanding of their security responsibilities 
+
+\subsubsection{Degree or Certification?}
+\label{sec:orgebf7ce3}
+Awareness :: provide information, goal is recognition and retention
+Training :: provide knowledge, goal is providing a skill
+Education :: provide Insight, goal is Understanding
+\subsection{Security Governance}
+\label{sec:org2c49b57}
+Security Governance :: A framework that allows for the security goals of an organization to be set and expressed by senior management
+Goal is to implement security throughout the organization
+\subsubsection{Metrics}
+\label{sec:org9dc9967}
+The means to facilitate decision making, perofrmance improvement and accountability
+Must be quantitative, repeatable, reliable and meaningful
+Balanced score card - a standard business metrics framework (not too common within security though)
+\begin{itemize}
+\item Financial, Internal Business, Learning and Growth, Customer
+\end{itemize}
+
+Note: Getting the right metrics is hard. Too common for business to default to measuring the data they have (\# of IDS alerts) rather than those that express progress towards their security objectives. 
+
+Industry best practices:
+\begin{itemize}
+\item ISO/IEC 27004:2009 - base measures, derived measures, indicator values
+\item NIST SP 800-55 R1 - implementation, effectiveness/efficiency, impact values
+\end{itemize}
+
+Metrics must mature as the program matures
+
+Time Entry -> Compromise
+Time Compromise -> Detection
+Time Detection -> Recovery
+
+\subsection{Ethics}
+\label{sec:org9f8ccab}
+Overview:
+\begin{itemize}
+\item Protect society, the common good, necessary public trust and confidence and the infrastructure
+\item Act honorably, honestly, justly, responsibly, and legally
+\item Provide diligent and competent service to principals
+\item Advance and protect the profession
+\end{itemize}
+
+\subsubsection{The Computer Ethics Institute}
+\label{sec:org6e24862}
+Ten Commandments:
+\begin{itemize}
+\item Do no harm (with a computer)
+\item Don't interfere with other's work
+\item Don't snoop
+\item Don't steal
+\item Don't bear false witness
+\item Don't steal software or violate copyright
+\item Use computers with authorization
+\item Don't steal IP
+\item Think about social consequences of programs
+\item Ensure consideration and respect for fellow humans
+\end{itemize}
+\subsubsection{The Internet Architecture Board}
+\label{sec:orgad2f7c3}
+Considers the following as unethical:
+\begin{itemize}
+\item Purposely seeking to gain unauthorized access
+\item Disrupting the Internet
+\item Wasting resources
+\item Destroying integrity of information
+\item Compromising privacy
+\item Conducting Internet-wide experiments negligently
+\end{itemize}
+\subsubsection{Corporate Ethics Programs}
+\label{sec:org1d91dae}
+Most companies have an ethical statement
+
+\section{Chapter 2 - Asset Security}
+\label{sec:orgc4a7ee4}
+
+\subsection{Information Life Cycle}
+\label{sec:org224010b}
+\subsubsection{Acquisition}
+\label{sec:org8415ca4}
+\begin{itemize}
+\item Information is added to systems, metadata attached, business process metadata attached, information is indexed. Must meet policy controls such an encryption of PII
+\end{itemize}
+\subsubsection{Used}
+\label{sec:orgd45e940}
+\begin{itemize}
+\item Must maintain Integrity of data across replicated stores, resolving inconsistencies, applying classification rules
+\end{itemize}
+\subsubsection{Archival}
+\label{sec:org928a7fd}
+\begin{itemize}
+\item Business and legal requirements. Risks for discarding too soon, and for holding too long.
+\end{itemize}
+Backup :: a copy of data currently in use, typically becomes less useful as it gets older
+Archive :: Copy of data that is no longer in use
+\subsubsection{Disposal}
+\label{sec:org634b37b}
+Usually this means data destruction, needs to be destroyed correctly
+Physically devies can be wiped, degaussed or shredded
+\subsection{Information Classification}
+\label{sec:org08283b2}
+\begin{itemize}
+\item Sensitivity of data should be commensurate with the impact to the organization upon loss of confidentiality (PII is sensitive)
+\item Criticality of data is an indicator of impact to the fundamental business processes (Product research could be critical)
+\item Be sure to consider: Confidentiality, Availability and Integrity
+\item Each classification should have associate rules/controls
+\end{itemize}
+\subsubsection{Classifications Levels}
+\label{sec:org66dc0fc}
+Common ones:
+\begin{itemize}
+\item Public
+\item Sensitive - financial information, details of projects
+\item Private - PII, personal releated
+\item Confidential - trade secrets, company related
+\end{itemize}
+
+Government:
+\begin{itemize}
+\item Unclassified
+\item Sensitive but Unclassified
+\item Confidential
+\item Secret
+\item Top Secret
+\end{itemize}
+\subsubsection{Classifications Controls}
+\label{sec:org8f5df54}
+Some controls to consider:
+\begin{itemize}
+\item Fine-grained access controls
+\item Encryption at rest and in transmission
+\item Auditing and monitoring (logging)
+\item Separation of duties
+\item Periodic reviews
+\item Backup and recovery
+\item Change control procedures
+\item Physical security
+\item Information flow channels
+\item Proper disposal actions (shredding, degaussing)
+\item Marking, labeling and handling procedures
+\end{itemize}
+\subsection{Layers of Responsibility}
+\label{sec:org1858d83}
+\subsubsection{Executive Management}
+\label{sec:org63dc7df}
+C-Suite
+ultimately responsible 
+CEO
+CFO
+CIO
+CPO
+CSO (Chief Security Officer) 
+
+CISO vs. CSO - CISO usually technology focused, CSO is broader to include Physical. 
+Privacy - related to the amount of control an individual should have to their personal data
+\subsubsection{Data Owner}
+\label{sec:org95308bb}
+\begin{itemize}
+\item member of management is charge of a business unit, ultimately responsible for a subset of information
+\item Decides data classification, responsible for security of data
+\end{itemize}
+\subsubsection{Data Custodian}
+\label{sec:org63ba59b}
+\begin{itemize}
+\item Maintains and protects data, usually IT
+\item Maintaining security controls, backing up data, validating integrity
+\end{itemize}
+\subsubsection{System Owner}
+\label{sec:org337cff9}
+\begin{itemize}
+\item Owner of a system which may process data owned by different data owners
+\item Typically the business
+\end{itemize}
+\subsubsection{Security Administrator}
+\label{sec:orgd1f2ebf}
+\begin{itemize}
+\item implementing and maintaining specific security devices
+\end{itemize}
+\subsubsection{Supervisor}
+\label{sec:org2469a35}
+\begin{itemize}
+\item user manager, responsible for user activity
+\end{itemize}
+\subsubsection{Change Control Analyst}
+\label{sec:orgd0d2eda}
+\begin{itemize}
+\item approving or rejecting change requests
+\end{itemize}
+\subsubsection{Data Analyst}
+\label{sec:org010727b}
+\begin{itemize}
+\item ensuring that data is stored in a way that makes sense
+\end{itemize}
+\subsubsection{User}
+\label{sec:org2f29dd8}
+\begin{itemize}
+\item uses the data
+\end{itemize}
+\subsubsection{Auditor}
+\label{sec:org8d897aa}
+\begin{itemize}
+\item conducts checks to ensure policy and regulatory compliance
+\end{itemize}
+\subsubsection{Why so many roles?}
+\label{sec:orgabb5cbd}
+
+\subsection{Retention Policies}
+\label{sec:orge72fce3}
+\subsubsection{Developing a Retention Policy}
+\label{sec:org6e02c21}
+These can vary a lot between types of information, need to identify and document
+Taxonomy :: scheme to classify data types
+Classification :: sensitivity
+Normalization :: Large data sets must be normalized to allow searching
+Indexing :: Common approach to allow searching
+e-discovery :: Process of producing for a court or external attorney all electronically stored information (ESI) pertinent to a legal proceeding
+
+Electronic Discvoery Reference Model (EDRM) 
+\begin{enumerate}
+\item Identification of data required under order
+\item Preservation - prevent from deletion, destruction
+\item Collection - from various stores
+\item Processing - put in correct format
+\item Review - ensure it is relevant
+\item Analysis - for proper context
+\item Production - give to those requesting it
+\item Presentation - show to external audiences to prove or disprove a claim
+\end{enumerate}
+\subsection{Protecting Privacy}
+\label{sec:org70f279e}
+\subsubsection{Data Owners}
+\label{sec:org9aa18c6}
+\begin{itemize}
+\item Decide who gets access to data
+\end{itemize}
+\subsubsection{Data Processors}
+\label{sec:org1c1be3e}
+\begin{itemize}
+\item Those that handle the data
+\end{itemize}
+\subsubsection{Data Remanence}
+\label{sec:org5b062ef}
+\begin{itemize}
+\item What remains after a simple delete of data
+\item NIST 800-88 R1 - Guidelines for Media Sensitization
+\item Solutions: "secure delete", encryption, destruction
+\end{itemize}
+\subsubsection{Limits on Collection}
+\label{sec:org50d0bad}
+\begin{itemize}
+\item Collection limitation - only collect the minimal PII necessary to perform job
+\end{itemize}
+
+Privacy Policy:
+\begin{itemize}
+\item What is collected
+\item Why and how do we use
+\item With whom do we share
+\item Who owns
+\item What are the rights of the data subject
+\item When do we destroy
+\item Pertinent laws
+\end{itemize}
+\subsection{Protecting Assets}
+\label{sec:org6783434}
+Threats: theft, service interruptions, physical damage, compromised system and environment integrity, unauthorized access
+\subsubsection{Data Security Controls}
+\label{sec:org99007d8}
+Data States: In Motion, In Use, At Rest
+
+At Rest:
+\begin{itemize}
+\item encryption (NIST 800-111, "Guide to Storage Encryption Technologies for End User Devices")
+\item Geographic boundaries - some countries require providing access to encrypted data
+\end{itemize}
+
+In Motion:
+\begin{itemize}
+\item Encryption TLS, IPSec
+\item VPN
+\end{itemize}
+
+Data in Use:
+\begin{itemize}
+\item Side-channel attacks
+\item Memory attacks
+\end{itemize}
+\subsubsection{Media Controls}
+\label{sec:orgb148aa6}
+\begin{itemize}
+\item Physically secure backup tapes
+\item Media libraries
+\item Managing media (such as backup tapes) - track inventory, track against retention, testing, destroying
+\end{itemize}
+\subsection{Data Leakage}
+\label{sec:org7fd2653}
+\begin{itemize}
+\item Employee mishandling is the most common form of mis-use
+\end{itemize}
+Technical controls:
+\begin{itemize}
+\item USB or external media controls
+\item email screening (DLP)
+\end{itemize}
+
+\subsubsection{Data Leakage Prevention}
+\label{sec:orgcb30a01}
+Prevent leakage to external parties
+Should be considered a program, not a technology (processes, policy, culture, people)
+
+Data Inventories: know where sensitive data lies
+Data Flows: should be mapped - there may be more locations to put sensors than just at the perimeter (ie. between dev and qa teams)
+Data Protection Strategy -
+  Steganography - hiding data in other data
+  Areas to consider:
+\begin{itemize}
+\item Backup and recovery
+\item Data life cycle - security of data as it transitions life cycles - such as going to an archival facility
+\item Physical security
+\item Security culture
+\item Privacy
+\item Organizational change
+\end{itemize}
+
+Implementation, Testing, Tuning:
+\begin{itemize}
+\item Sensitive data awareness
+\item Policy engine
+\item Interoperability
+\item Accuracy
+\end{itemize}
+
+Network DLP - sit on perimeter of network
+Endpoint DLP - software running on each endpoint
+Hybrid DLP - Both the above
+\subsection{Protecting Other Assets}
+\label{sec:orgbd905f8}
+\subsubsection{Protecting Mobile Devices}
+\label{sec:orgba6993e}
+\begin{itemize}
+\item Theft is main threat
+\end{itemize}
+
+Controls:
+\begin{itemize}
+\item Inventory
+\item Harden configurations
+\item Password protect BIOS on laptops
+\item Maintain in personal possession
+\item Encrypt
+\item Backup
+\item Remote wiping
+\item Tracing
+\end{itemize}
+\subsubsection{Paper Records}
+\label{sec:orgf09e53f}
+\begin{itemize}
+\item easily overlooked
+\item lock away when not in use
+\item Label with classification
+\item Destroy with a crosscut shredder
+\end{itemize}
+\subsubsection{Safes}
+\label{sec:org0482a7f}
+\begin{itemize}
+\item Inventory - know where they are
+\item Ensure they are fit for purpose
+\end{itemize}
+\section{Chapter 3 - Security Engineering}
+\label{sec:orga3ef2af}
+\subsection{System Architecture}
+\label{sec:org1becbe9}
+\begin{description}
+\item[{Architecture}] tool used to conceptually understand the structure and behavior of a complex entity through different views.
+\item[{Architecture description}] formal description and representation of a system, the components that make it up, the interactions and interdependencies between those components, and the relationship to the environment.
+\item[{System Architecture}] describes the major components of the system and how they interact with each other, with the users, and with other systems. Answers: "How is it going to be used?" "What environment?" "What type of security and protection?" "Communication needs?"
+\item[{Development}] The entire life cycle of a system, including the planning, analysis, design, building testing, deployment, maintenance, and retirement phases.
+\item[{System}] can be an individual computer, an application, a select set of subsystems, a set of computers, or a set of networks
+\end{description}
+\subsubsection{ISO/IEC 42010:2011 - System Architecture Standard. Establishes a shared vocabulary}
+\label{sec:orgcbde969}
+\begin{itemize}
+\item Architecture
+\item Architecture description
+\item[{Stakeholder}] Individual, team or organization with an interest in the system
+\item[{View}] Representation of a whole system from a perspective of a related set of concerns
+\item[{Viewpoint}] Specification of the conventions for constructing and using a view
+\item Security goals must be defined before the architecture of a system is created. Need a security view.
+\end{itemize}
+\subsection{Computer Architecture}
+\label{sec:orgd7d7188}
+\begin{description}
+\item[{Computer Architecture}] all the parts of a computer system that are necessary for it to function, including the central processing unit, memory chips, logic circuits, storage devices, input and output devices, security components, buses, and networking interfaces.
+\end{description}
+\subsubsection{The Central Processing Unit}
+\label{sec:orgcdd9665}
+\begin{description}
+\item[{CPU}] brain of the computer
+\item[{register}] temporary storage within CPU
+\item[{arithmetic logic unit}] actual execution of instructions
+\item[{control unit}] manages and synchronizes the system while different applications' code and OS instructions are being executed
+\item[{General registers}] holds variables and temporary results as ALU works through execution steps
+\item[{special registers}] special information such as program counters, stack pointer, program status work (PSW)
+\item[{program counter}] memory address of the next instruction to be fetched
+\item[{program status word}] holds different condition bits - user mode, privileged mode. Privileged mode has access to more functions.
+\item memory has specific memory addresses.
+\item Memory bus - can be 8, 16, 32 or 64 bits wide. Most today are 64. 2\(^{\text{64}}\) address space.
+\end{description}
+\subsubsection{Multiprocessing}
+\label{sec:org36dd428}
+\begin{itemize}
+\item More than one processor
+\item symmetric mode - like load-balancing
+\item asymmetric mode - processor dedicated to a task
+\end{itemize}
+\subsubsection{Memory Types}
+\label{sec:org34de66a}
+\begin{description}
+\item[{Random Access Memory (RAM)}] temporary storage. DRAM - must be refreshed, slower. Static RAM (SRAM) - does not require refresh, require more transistors, faster than DRAM
+\begin{description}
+\item[{Synchronous DRAM (SDRAM)}] synchronizes with the system's CPU clock - increases speed
+\item[{Extended data out DRAM (EDO DRAM)}] faster than DRAM can capture next block while first block is being sent to CPU (look ahead)
+\item[{Burst EDO DRAM (BEDO DRAM)}] Can send more data at once
+\item[{Double data rate SDRAM (DDR SDRAM)}] Carries out two operations per clock cycle, twice the throughput
+\item[{Hardware segmentation}] physically segregating hardware between processes instead of just logically
+\end{description}
+\item[{Read-Only Memory}] non-volatile memory
+\begin{description}
+\item[{Programmable read-only memory (PROM)}] can be modified after manufacture
+\begin{description}
+\item[{Erasable programmable read-only memory (EPROM)}] can be erased, modified and upgraded.
+\item[{Elecrically erasable programmable read-only memory (EEPROM)}] can be erased and modified electrically (no UV light wand)
+\item[{Flash memory}] was special type of memory used in digital cameras, BIOS chips, memory cards, video game consoles. Solid state. Now in computer hard drives.
+\end{description}
+\end{description}
+\item[{Cache Memory}] used for high speed writing and reading activities - for caching data for easy access
+\item[{Memory mapping}] software uses logical addresses, CPU uses physical addresses (absolute addresses). A security feature. Relative addresses: known address with an offset.
+\item[{Buffer Overflows :: when too much data is accepted as input to a specific process. Buffer}] allocated segment of memory.
+\end{description}
+\subsubsection{Buffer Overflow Resources}
+\label{sec:orgc415206}
+\begin{itemize}
+\item \url{http://} opensecuritytraining.info/ IntroX86. html
+\item \url{http://} www.reddit.com/ r/ hacking/ comments/ 1wy610/ exploit\(_{\text{tutorial}}\)\(_{\text{buffer}}\)\(_{\text{overflow}}\)/
+\item \url{https://} www.corelan.be/ index.php/ 2009/ 07/ 19/ exploit-writing-tutorial-part-1-stack-based-overflows/
+\item \url{http://} www.lethalsecurity.com/ wiki
+\item \url{http://} opensecuritytraining.info/ Exploits1. html
+\item \url{https://} exploit-exercises.com/ protostar/
+\end{itemize}
+Narnia Setup (\url{http://} overthewire.org/ wargames/ narnia/)
+\subsubsection{Memory Protection Techniques}
+\label{sec:org5c855a9}
+\begin{itemize}
+\item Address space layout randomization (ASLR) - changes address layout randomly
+\item Data Execution Prevention (DEP) - executable code does not function within memory segments that could be dangerous
+\end{itemize}
+\subsubsection{Memory Leaks}
+\label{sec:org0a70d23}
+\begin{itemize}
+\item When applications to correctly release memory. Can open the door to a DoS attack.
+\end{itemize}
+\subsection{Operating Systems}
+\label{sec:org5969293}
+\subsubsection{Process Management}
+\label{sec:org8c85bba}
+\begin{description}
+\item[{Process}] set of instructions that is actually running. A program loaded into memory. A process has computer resources (CPU, memory) assigned to it.
+\item[{Multiprogramming}] More than one program can be loaded into memory at the same time. Legacy term.
+\item[{Multitasking}] more than one application and the OS can handle requests from these applications simultaneously
+\item[{Cooperative multitasking}] required the process to voluntarily release resources
+\item[{premptive multitasking}] all modern OSes, the OS controls how long a process can use resources
+\item[{spawning}] when a process creates a child process
+\item[{running state}] CPU is executing its instructions
+\item[{blocked state}] on hold
+\item[{process table}] one entry per process - process state, stack pointer, memory allocation, program counter, status of open files
+\item[{interrupts}] request for CPU time. Uses process priority levels.
+\begin{description}
+\item[{maskable interupt}] low priority
+\item[{nonmaskable interupt}] cannot be overridden by an application
+\end{description}
+\item[{stack}] each process has its own memory setack (Last in First Out LIFO)
+\item[{thread}] a sub-process effectively. Executed in parallel.
+\item[{process scheduling :: can be exploited to starve system of memory (DOS). Software deadlock}] processes are waiting on each other.
+\item[{Process Activity}] ensuring only one process is access resources (memory/files) at a time. Process isolation. Means to enforce: encapsulation of objects, time multiplexing of shared resources, naming distinctions, virtual memory mapping. Encapsulation provides data hiding, processes communicate through an API. Time multiplexing, means of sharing the CPU. Naming distinctions - unique PID values. Virtual address memory mapping - logical vs. physical. Each application usually starts with 0.
+\end{description}
+\subsubsection{Memory Management}
+\label{sec:org61b9c39}
+\begin{description}
+\item[{Abstraction}] details are hidden to the applications.
+\item[{Memory manager}] allocate and deallocate different memory segments.
+\begin{itemize}
+\item Relocation - swap hard drive / RAM, provide pointers to appications
+\item Protection - limit processes to only access the memory assigned to them, provide access control to memory segments
+\item Sharing - provide integrity and confidentiality when processes share memory segments, allow users to share an application
+\item Logical organization - provide an abstracted addressing scheme, allow for sharing of software modules such as DLLs
+\item Physical organization - segment physical memory space
+\end{itemize}
+\item[{Base register}] beginning address assigned to a process
+\item[{Limit register}] ending address - describes the bounds of the process.
+\item[{Virtual Memory}] uses secondary storage. Swap space. Security issue is that data on disk could potentially be captured, especially if swap space is not appropriately wiped. Consider: an encrypted file is opened, and hence decrypted. The unencrpted file in memory is then written to swap space. An attacker could then find means to access the file within the swap space.
+\end{description}
+\subsubsection{Input/Output Device Management}
+\label{sec:orgb158283}
+\begin{description}
+\item[{Interrupts}] Request for CPU time
+\item[{Programmale I/O}] sends data to I/O device and polls the device to see if it is ready to accept more data. Can waste the CPUs time.
+\item[{Interrupt-Driven I/O}] Device sends an interrupt when its ready. Have to deal with a lot of interrupts.
+\item[{I/O using DMA}] Direct Memory Access - can transfer data without using the CPU. Significant speed advantages.
+\item[{Premapped I/O}] CPU sends physical memory address to I/O device, I/O device must be trusted to access memory correctly.
+\item[{Fully mapped I/O}] OS does not trust device, uses logical addresses
+\end{description}
+\subsubsection{CPU Architecture Integration}
+\label{sec:orgf963580}
+\begin{description}
+\item[{instruction set}] the language of the CPU - x86 is most common in use today.
+\item[{microarchitecture}] makes up the CPU - registers, logic gates, ALU, cache, etc.
+\item[{Rings}] protection system of the OS - levels of trust for processes - kernel runs in Ring 0, other OS components in Ring 1, Drivers/utilities in Ring 2, Applications in Ring 3. Lower level processes can access high level processes. Windows and OS X don't use Rings 1 adn 2.
+\item[{Application Programming Interface (API)}] means for software to communicate with each other.
+\item[{CPU Operations Modes}] Ring 0 is Kernel Mode, Ring 3 is User mode.
+\end{description}
+\subsubsection{Operating System Architectures}
+\label{sec:orgdba5e8c}
+\begin{description}
+\item[{Monolithic architecture}] all the OS processes work in kernel mode. MS-DOS and early OSes like this.
+\item[{Layered operating system}] all still work in kernel mode, functionality was laid out into layers that called on each other. Provides data hiding. Think kernel modules of DLLs in windows.
+\item[{Microkernel model}] only a subset of critical kernel processes operating in kernel mode. Others in user mode. This introduced some performance issues.
+\item[{Hybrid microkernel}] client server type architecture where applications are the clients. All of OS operates in kernel mode.
+\end{description}
+\subsubsection{Virtual Machines}
+\label{sec:orga65aaad}
+\begin{itemize}
+\item Enables a single hardware to run multiple operating systems
+\item[{Hypervisor}] manages the system resources between OSes
+\item Resource from CISSP book: www.kernelthread.com/publications/virtualization
+\item 
+\end{itemize}
+\subsection{System Security Architecture}
+\label{sec:org300e186}
+\subsubsection{Security Policy}
+\label{sec:orga843729}
+\begin{description}
+\item[{Security Policy}] a strategic tool that dictates how sensitive information and resources are to be managed and protected.
+\end{description}
+\subsubsection{Security Architecture Requirements}
+\label{sec:org12b8bc3}
+\begin{description}
+\item[{Trusted Computing Base (TCB)}] Collection of hardware, software and firmware components that provides security and enforces policy.
+\item[{Trusted Path}] communication channel between user, program and TCB
+\item[{Trusted shell}] a user cannot "bust out of it"
+\item[{Security Perimeter}] divides trusted from untested - requires an interface
+\item[{Reference Monitor}] defines how access control within a system is carried out
+\item[{Security Kernel}] all hardware, software and firmware that fall within the TCB, it implements and enforces the reference monitor concept. TCB contains the security kernel, which implements the reference monitor concept.
+\item[{Multilevel security policies}] permit a subject to access an object only if the subject's security level is higher than or equal to the object's classification.
+\end{description}
+\subsection{Security Models}
+\label{sec:org901df2e}
+\subsubsection{Bell-LaPadula Model}
+\label{sec:org03037cc}
+\begin{itemize}
+\item First mathematical model.
+\item enforces confidentiality only. Its about protecting secrets. One of the first models developed in the 70s. Is a multilevel security system.
+\item[{Simple security rule}] a subject at a given security level cannot read data that resides at a higher security level. No read up.
+\item[{*-property rule}] a subject in a given security level cannot write information to a lower security level. No write down.
+\item[{Strong star property rule}] a subject with both read and write capabilities can only perform both at the same security level.
+\end{itemize}
+\subsubsection{Biba Model}
+\label{sec:org1970de3}
+\begin{itemize}
+\item Addresses Integrity. Prevents data at any integrity level from flowing to a higher integrity level.
+\item[{*-integrity axiom}] a subject cannot write data to an object at a higher integrity level. No write up.
+\item[{Simple integrity axiom}] Cannot read from a lower integrity level. No read down.
+\item[{Invocation property}] Subject cannot request service (invoke) at a higher integrity.
+\item Memorization tip: "Simple" is about reading. * is about writing.
+\end{itemize}
+\subsubsection{Clark-Wilson Model}
+\label{sec:orgc08e932}
+\begin{itemize}
+\item Developed after Biba, different approach to protecting Integrity
+\item Three goals: subjects can access objects only through authorized programs, separation of duties enforced, auditing is required.
+\item Focuses on well-formed transactions and separation of duties.
+\item[{Transformation Procedures (TPs)}] programmed abstract operations (read, write, modify)
+\item[{Constrained Data Items (CDIs)}] can be manipulated only by TPs
+\item[{Unconstrained Data Items (UDIs)}] can be manipulated by users via primitive read/write operations
+\item[{Integrity verification procedures (IVPs)}] Check the consistency of CDIs with external reality - audits the work done and validates integrity
+\end{itemize}
+\subsubsection{Noninterference Model}
+\label{sec:org7ca794d}
+\begin{itemize}
+\item Less concerned about the flow of data that what a subject knows about the state of the system.
+\item A lower level entity should not be able to detect that an operation took place at a higher level of security. That would be a form of information leakage.
+\item[{Covert channel}] a way to receive information in an unauthorized manner. Either storage or timing.
+\end{itemize}
+\subsubsection{Brew and Nash Model}
+\label{sec:org53bf7fa}
+\begin{itemize}
+\item Chinese wall model. A subject can write to an object if, and only if, the subject cannot read another object that is in a different dataset.
+\item Provides dynamic access control and separation of duty controls / conflicts of interests.
+\end{itemize}
+\subsubsection{Graham-Denning Model}
+\label{sec:org8a5fbf7}
+\begin{itemize}
+\item Shows how subjects and objeects should be created and deleted
+\item defines a set of basic rights in terms of commands that a specific subject can execute on an object. Eight primitive protection rights/rules.
+\item How to securely create/delete a object/subject
+\item How to securely provide read/grant/delete/transfer access rights
+\end{itemize}
+\subsubsection{Harrison-Ruzzo-Ullman Model}
+\label{sec:org48b5abd}
+\begin{itemize}
+\item Shows how a finite set of procedures can be available to edit the access rights of a subject
+\item Access rights of subjects and the integrity of those rights.
+\end{itemize}
+\subsection{Systems Evaluation}
+\label{sec:org5929924}
+\subsubsection{Common Criteria}
+\label{sec:orgd503436}
+\begin{itemize}
+\item Only framework of global significant
+\item ISO standard - 1993
+\item ISO/IEC 15408
+\item Seven assurance levels (Evaluation Assurance Level (EAL))
+\item EAL1 - Functionally tested
+\item EAL2 - Structurally tested
+\item EAL3 - Methodically tested and checked
+\item EAL4 - Methodically designed, tested and reviewed
+\item EAL5 - Semiformally designed and tested
+\item EAL6 - Semiformally verified design and tested
+\item EAL7 - Formally verified design and tested - based on a model that can be mathematically proven
+\item[{protection profiles}] contains the set of security requirements, their meanign and reasoning, and the corresponding EAL rating that the intended product will require
+\begin{itemize}
+\item Security problem description
+\item Security objectives
+\item Securitiy requirements
+\end{itemize}
+\item[{Target of evaluation (TOE)}] product being tested
+\item[{Security target}] what the product does and how it does it according to the vendor
+\item[{Security functional requirements}] security functions that must be provided by the product
+\item[{Security assurance requirements}] Measures taken to assure compliance with the claimed security functionality
+\item[{Packages-EALs}] functional and assurance requirements bundled into packages for reuse.
+\end{itemize}
+\subsubsection{Why Put a Product Through Evaluation?}
+\label{sec:orgb6fdc90}
+\begin{itemize}
+\item DoD requires rating for some products
+\end{itemize}
+\subsection{Certification vs. Accreditation}
+\label{sec:orgf1fb4ff}
+\subsubsection{Certification}
+\label{sec:org6258ad5}
+\begin{description}
+\item[{Certification}] comprehensive technical evaluation of the security components and their compliance for the purpose of accreditation. Certification process is: evalaution, risk analysis, verification, testing and auditing.
+\end{description}
+\subsubsection{Accreditation}
+\label{sec:org67d71a4}
+\begin{description}
+\item[{Accreditation}] formal acceptance of the adequacy of a system's overall security and functionality by management. \emph{Management acceptance of risk.}
+\item C\&A came into focus with the passage of FISMA in 2002 - required it for federal agencies.
+\end{description}
+\subsection{Open vs. Closed Systems}
+\label{sec:org47b7e7c}
+\subsubsection{Open Systems}
+\label{sec:org3f1e63c}
+\begin{itemize}
+\item built on standards, protocols and interfaces that have published specifications. Windows, OS X and Unix are open.
+\end{itemize}
+\subsubsection{Closed Systems}
+\label{sec:org1697553}
+\begin{itemize}
+\item Architecture does not follow industry standards. Proprietary. Potentially more secure. Don't work well with other systems.
+\end{itemize}
+\subsection{Distributed System Security}
+\label{sec:orge256111}
+\subsubsection{Cloud Computing}
+\label{sec:org913d7d6}
+\begin{itemize}
+\item use of shared, remote computing devices for the purpose of providing improved efficiencies, performance, reliability, scalability and security.
+\begin{description}
+\item[{Software as a Service (SaaS)}] web based application
+\item[{Platform as a Service (Paas)}] computing platform in the cloud. OS instance, or something like Salesforce Platform.
+\item[{Infrastructure as a Service (Iaas)}] full system in the cloud. Full responsibility for managing and patching.
+\end{description}
+\end{itemize}
+\subsubsection{Parallel Computing}
+\label{sec:org6410fdf}
+\begin{itemize}
+\item use of multiple computers to solve a task. Bit level, instruction level or task level. Bit level is in every device these days. Instruction - requires two or more processors. Task - multiple threads.
+\end{itemize}
+\subsubsection{Databases}
+\label{sec:orgda716d5}
+\begin{description}
+\item[{Aggregation}] Ability to combine separate pieces of allowed information, to infer unallowed information. Think, multiple pieces of unclassified information can add up to secret information.
+\item[{Inference}] result of aggregation. When a subject deduces the full story from the pieces.
+\item[{Content-dependent access control}] based on the sensitivity of data. More sensitive = smaller subset of subjects have access.
+\item[{Context-dependent access control}] software understand state and sequence of requests. eg. If you access A, you cannot access B. Time based, location based, etc.
+\item[{Cell suppression}] hide certain cells
+\item[{Partitioning}] dividing the database into different parts
+\item[{Noise and perturbation}] inserting bogus information
+\end{description}
+\subsubsection{Web Applications}
+\label{sec:orga54b3bc}
+\begin{itemize}
+\item Input sanitization - input should be assumed rogue
+\item Encryption to prevent interception
+\item Failing securely - errors that don't reveal system details
+\item Must be human friendly
+\item Web application firewalls (WAF) - inspect traffic
+\end{itemize}
+\subsubsection{Mobile Devices}
+\label{sec:org4d753ee}
+\begin{itemize}
+\item Threats: malware, theft, DOS, transmission of cellular networks (may be encrypted only over cellular network, not wired).
+\item Solutions: centrally managed devices, remote policies pushed each device, data encryption, idle timeout locks, screen-saver lockouts, authentication, remote wipe. Lock bluetooth capabilities. Endpoint security. App whitelist. 802.1x implemented on wireless VOID clients on mobile devices.
+\end{itemize}
+\subsubsection{Cyber-Physical Systems}
+\label{sec:orgd7fa085}
+\begin{itemize}
+\item where computer and physical devices collaborate. Internet of Things.
+\item[{Embedded systems}] digital thermometer. Cheap, small. Not always designed with security in mind. Hard to update.
+\item Internet of Things
+\begin{itemize}
+\item Authentication - typically poor
+\item Encryption - require high processing power which devices may not have
+\item Updates - hard to do
+\end{itemize}
+\item[{Industrial Control Systems}] specifically designed to control physical devices in industrial processes. Conveyor belts to robots.
+\begin{itemize}
+\item NIST 800-82 - Guide to ICS Security
+\item[{Programmable Logic Controller (PLC)}] computers that control electromechanical systems.
+\item[{Distributed Control System (DCS)}] network of control devices. Manufacturing plants, oil refineries, power plants.
+\item[{Supervisory Control and Data Acquisition (SCADA)}] control large-scale physical processes across large distances. Power lines.
+\item ISC Security: increasing connectivity to traditional IT networks increases risk.
+\begin{itemize}
+\item apply risk management processes
+\item segement
+\item disable unneeded ports and services
+\item least privileged
+\item encryption
+\item patch management
+\item audit trail monitoring
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\subsection{A Few Threats to Review}
+\label{sec:orgf1fa0cb}
+\subsubsection{Maintenance Hooks}
+\label{sec:org33a5090}
+\begin{itemize}
+\item a type of back door. Allow developer to view and edit the code bypassing access controls. Should be removed prior to going to production.
+\item Control: code reviews, host-based intrusion detection, file system encryption, auditing/logging
+\end{itemize}
+\subsubsection{Time-of-Check/Time-of-Use Attacks}
+\label{sec:org905565c}
+\begin{itemize}
+\item asynchronous attack. Switch out a file after authorization is validated. Race condition.
+\item Controls: atomic operations of critical tasks.
+\end{itemize}
+\subsection{Cryptography in Context}
+\label{sec:org644f663}
+\subsubsection{The History of Cryptography}
+\label{sec:org0c4755f}
+\begin{itemize}
+\item Substitution cipher ROT13
+\item Enigma
+\item Data Encryption Standard (DES) - 1976 - now Triple DES
+\end{itemize}
+\subsection{Cryptography Definitions and Concepts}
+\label{sec:org5f48831}
+\subsubsection{Kerckhoffs' Principle}
+\label{sec:org1ce9bd2}
+\begin{itemize}
+\item Algorithm should be public, only key is secret
+\end{itemize}
+\subsubsection{The Strength of the Cryptosystem}
+\label{sec:orgc4f2895}
+\begin{itemize}
+\item amount of work necessary to break the cryptosystem
+\end{itemize}
+\subsubsection{Services of Cryptosystems}
+\label{sec:orgf32dbf7}
+\begin{itemize}
+\item confidentiality
+\item integrity
+\item authentication
+\item authorization
+\item nonrepudation
+\end{itemize}
+\subsubsection{One-Time Pad}
+\label{sec:org182de15}
+\begin{itemize}
+\item a perfect encryption scheme - unbreakable - if done properly
+\begin{itemize}
+\item pad must be used only one time
+\item pad must be as long as the message
+\item pad must be securely distributed and protected at its destination
+\item pad must be made up of truly random values
+\end{itemize}
+\item They are typically impractical
+\end{itemize}
+\subsubsection{Running and Concealment Ciphers}
+\label{sec:org8693c19}
+\begin{itemize}
+\item Running key - use every day objects such as books.
+\item Concealment - "every third word in a letter"
+\end{itemize}
+\subsubsection{Steganography}
+\label{sec:org9bf32c8}
+\begin{itemize}
+\item method of hiding data in another media. Text hidden in a picture.
+\end{itemize}
+\subsection{Types of Ciphers}
+\label{sec:org3415f18}
+\subsubsection{Substitution Ciphers}
+\label{sec:orga116621}
+\begin{itemize}
+\item uses a key to dictate how the substitution should be carried out
+\item Caesar cipher.
+\end{itemize}
+\subsubsection{Transposition Ciphers}
+\label{sec:org65d7a8b}
+\begin{itemize}
+\item values are scrambled or put into a different order.
+\item[{frequency analysis}] method of breaking a cipher using known non-randomness in english language
+\item[{Key Derivation Functions (KDFs)}] used to generate keys that are made up of random values.
+\end{itemize}
+\subsection{Methods of Encryption}
+\label{sec:org3e071e2}
+\subsubsection{Symmetric vs. Asymmetric Algorithms}
+\label{sec:orgdc613ec}
+\begin{description}
+\item[{Symmetric}] use symmetric keys (secret keys)
+\item[{Asymmetric}] use public/private keys
+\end{description}
+\subsubsection{Symmetric Cryptography}
+\label{sec:orgb661d54}
+\begin{itemize}
+\item Sender and receiver must have same key. Distributing the keys is a problem. And large \# of people requires 2\(^{\text{n}}\) keys. But they are very fast and hard to break.
+\item Example algorithms:
+\begin{itemize}
+\item Data Encryption Standard (DES)
+\item Triple-DES (3DES)
+\item Blowfish
+\item International Data Encryption Algorithm (IDEA)
+\item RC4, RC5, RC6
+\item Advanced Encryption Standard (AES)
+\end{itemize}
+\end{itemize}
+\subsubsection{Asymmetric Cryptography}
+\label{sec:org127571c}
+\begin{itemize}
+\item Solves the key distribution problem, better scalable, can provide authentication and nonrepudiation
+\item Much slower, mathematically intensive.
+\item Examples:
+\begin{itemize}
+\item RSA
+\item ECC
+\item El Gamal
+\item DSA
+\end{itemize}
+\end{itemize}
+\subsubsection{Block and Stream Ciphers}
+\label{sec:orgc2307f1}
+\begin{itemize}
+\item Block cipher - message is divided into blocks
+\item Stream - stream of bits, operation performed on each bit individually
+\item[{Initialization Vectors (IVs)}] random values that are used with algorithms to ensure patterns are not created during the encryption process.
+\end{itemize}
+\subsubsection{Hybrid Encryption Methods}
+\label{sec:org6b07626}
+\begin{itemize}
+\item Asymmetric and Symmetric - both common. Use asymmetric to distribute symmetric keys.
+\item Session key - a single-use symmetric key used to encrypt messages between two users.
+\end{itemize}
+\end{document}

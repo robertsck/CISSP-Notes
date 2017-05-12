@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-04-14 Fri 17:42 -->
+<!-- 2017-05-12 Fri 10:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title></title>
@@ -190,7 +190,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -238,327 +238,437 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org43b0c8a">1. Chapter 1 - Security and Risk Management</a>
+<li><a href="#org6245ad6">1. Chapter 1 - Security and Risk Management</a>
 <ul>
-<li><a href="#orgb11b9f9">1.1. Fundamental Principles of Security</a>
+<li><a href="#org5f33d2f">1.1. Fundamental Principles of Security</a>
 <ul>
-<li><a href="#orgac46751">1.1.1. AIC Triad:</a></li>
-<li><a href="#orgd001f76">1.1.2. Risk Definitions:</a></li>
-<li><a href="#orgcfd8c0d">1.1.3. Control Types:</a></li>
-<li><a href="#orgcb83472">1.1.4. Defense in Depth - layered</a></li>
-<li><a href="#orgfc1d778">1.1.5. Control Functionalities:</a></li>
+<li><a href="#orgd9c9d53">1.1.1. AIC Triad:</a></li>
+<li><a href="#org23442fd">1.1.2. Risk Definitions:</a></li>
+<li><a href="#org1d67c84">1.1.3. Control Types:</a></li>
+<li><a href="#orgd3d5ffd">1.1.4. Defense in Depth - layered</a></li>
+<li><a href="#orge3d7db8">1.1.5. Control Functionalities:</a></li>
 </ul>
 </li>
-<li><a href="#org34564f4">1.2. Security Frameworks</a>
+<li><a href="#orgac58bec">1.2. Security Frameworks</a>
 <ul>
-<li><a href="#org4e76ada">1.2.1. Security Program Development:</a></li>
-<li><a href="#orgc4779ee">1.2.2. Enterprise Architecture Development:</a></li>
-<li><a href="#orgbb3813b">1.2.3. Security Controls Development:</a></li>
-<li><a href="#orga1f4e8b">1.2.4. Process Management Development:</a></li>
-<li><a href="#org209f9d4">1.2.5. Security Program Lifecycle</a></li>
-<li><a href="#org5ed57c8">1.2.6. Functionality vs. Security</a></li>
+<li><a href="#org54ff285">1.2.1. Security Program Development:</a></li>
+<li><a href="#orgea1999a">1.2.2. Enterprise Architecture Development:</a></li>
+<li><a href="#org7084763">1.2.3. Security Controls Development:</a></li>
+<li><a href="#orgfd1c320">1.2.4. Process Management Development:</a></li>
+<li><a href="#org0b4e53d">1.2.5. Security Program Lifecycle</a></li>
+<li><a href="#org6ad42bd">1.2.6. Functionality vs. Security</a></li>
 </ul>
 </li>
-<li><a href="#orgb1c067e">1.3. Crime Laws</a>
+<li><a href="#orgb6f6ed1">1.3. Crime Laws</a>
 <ul>
-<li><a href="#org9efe6ba">1.3.1. Computer-assisted - crime could take place even without a computer</a></li>
-<li><a href="#org913bae3">1.3.2. Computer-targeted - crime could not take place</a></li>
-<li><a href="#orgc27e920">1.3.3. Computer is incidental - computer just happened to be involved</a></li>
+<li><a href="#org20e907a">1.3.1. Computer-assisted - crime could take place even without a computer</a></li>
+<li><a href="#org75ca756">1.3.2. Computer-targeted - crime could not take place</a></li>
+<li><a href="#org3e6da3b">1.3.3. Computer is incidental - computer just happened to be involved</a></li>
 </ul>
 </li>
-<li><a href="#org286ab34">1.4. Complexities:</a>
+<li><a href="#org6df1b50">1.4. Complexities:</a>
 <ul>
-<li><a href="#orge02edd0">1.4.1. Evolution of attacks</a></li>
-<li><a href="#org7288ea7">1.4.2. International issues</a></li>
-<li><a href="#orgfadc81b">1.4.3. Types of Legal Systems</a></li>
+<li><a href="#org526a325">1.4.1. Evolution of attacks</a></li>
+<li><a href="#org1aac58d">1.4.2. International issues</a></li>
+<li><a href="#org0626db1">1.4.3. Types of Legal Systems</a></li>
 </ul>
 </li>
-<li><a href="#orgde3eaa0">1.5. Intellectual Property</a>
+<li><a href="#orge2bf29b">1.5. Intellectual Property</a>
 <ul>
-<li><a href="#org30b251a">1.5.1. International Protection of Intellectual Property</a></li>
-<li><a href="#org1c45b6f">1.5.2. Software Piracy</a></li>
+<li><a href="#orgc70abff">1.5.1. International Protection of Intellectual Property</a></li>
+<li><a href="#orgc687655">1.5.2. Software Piracy</a></li>
 </ul>
 </li>
-<li><a href="#org076ef01">1.6. Privacy</a>
+<li><a href="#orgdf0bd21">1.6. Privacy</a>
 <ul>
-<li><a href="#orge49cd65">1.6.1. Definitions</a></li>
-<li><a href="#org7e465fa">1.6.2. Increasing Need for Privacy Laws</a></li>
-<li><a href="#orgf47676c">1.6.3. Laws, Directives and Regulations</a></li>
-<li><a href="#org03d4528">1.6.4. Employee Privacy Issues</a></li>
-<li><a href="#org35a9945">1.6.5. Additional Material</a></li>
+<li><a href="#org5185a6a">1.6.1. Definitions</a></li>
+<li><a href="#orge6d1e32">1.6.2. Increasing Need for Privacy Laws</a></li>
+<li><a href="#org06beb4f">1.6.3. Laws, Directives and Regulations</a></li>
+<li><a href="#org0bf217a">1.6.4. Employee Privacy Issues</a></li>
+<li><a href="#org852449d">1.6.5. Additional Material</a></li>
 </ul>
 </li>
-<li><a href="#org535bc0c">1.7. Data Breaches</a>
+<li><a href="#orgdff6717">1.7. Data Breaches</a>
 <ul>
-<li><a href="#orga7039db">1.7.1. Verizon Data Breach Report: </a></li>
-<li><a href="#org669baa3">1.7.2. Reporting</a></li>
-<li><a href="#org1b367ed">1.7.3. US Laws pertaining to data breaches</a></li>
-<li><a href="#org014831d">1.7.4. Other Nation's Laws</a></li>
+<li><a href="#org78b1e07">1.7.1. Verizon Data Breach Report: </a></li>
+<li><a href="#org5996454">1.7.2. Reporting</a></li>
+<li><a href="#orgc8bc389">1.7.3. US Laws pertaining to data breaches</a></li>
+<li><a href="#orgec0fd0a">1.7.4. Other Nation's Laws</a></li>
 </ul>
 </li>
-<li><a href="#orgbf9cfd6">1.8. Policies, Standards, Baselines, Guidelines and Procedures</a>
+<li><a href="#org8f9fab6">1.8. Policies, Standards, Baselines, Guidelines and Procedures</a>
 <ul>
-<li><a href="#org106edda">1.8.1. Policy - high level of requirement - typically should have a 3-5 year life</a></li>
-<li><a href="#org0a1610a">1.8.2. Standards</a></li>
-<li><a href="#orged47f4f">1.8.3. Baselines</a></li>
-<li><a href="#orgddb624f">1.8.4. Guidelines</a></li>
-<li><a href="#org5695ae8">1.8.5. Procedures</a></li>
-<li><a href="#orga06b537">1.8.6. Implementation</a></li>
+<li><a href="#orge0ad380">1.8.1. Policy - high level of requirement - typically should have a 3-5 year life</a></li>
+<li><a href="#orgaf982e1">1.8.2. Standards</a></li>
+<li><a href="#orgf539942">1.8.3. Baselines</a></li>
+<li><a href="#org0131fde">1.8.4. Guidelines</a></li>
+<li><a href="#orgb7252e3">1.8.5. Procedures</a></li>
+<li><a href="#org6bb0208">1.8.6. Implementation</a></li>
 </ul>
 </li>
-<li><a href="#orgb32c53a">1.9. Risk Management</a>
+<li><a href="#org7854163">1.9. Risk Management</a>
 <ul>
-<li><a href="#orgd8d8bfe">1.9.1. InfoSec risk types</a></li>
-<li><a href="#orgcd0d84f">1.9.2. Risk Assessment Additional Readings:</a></li>
-<li><a href="#org4f724d5">1.9.3. Holistic</a></li>
-<li><a href="#orga13b30e">1.9.4. Information Systems Risk Management Policy</a></li>
-<li><a href="#org489266d">1.9.5. Process</a></li>
-<li><a href="#org29ff658">1.9.6. Threat Modeling</a></li>
-<li><a href="#orgea3246e">1.9.7. Vulnerabilities</a></li>
-<li><a href="#org55b9f46">1.9.8. Information</a></li>
-<li><a href="#org50476f6">1.9.9. Processes</a></li>
-<li><a href="#org7980075">1.9.10. People</a></li>
-<li><a href="#org6c3994d">1.9.11. Threats</a></li>
-<li><a href="#orga943706">1.9.12. Attacks</a></li>
-<li><a href="#org7bf332b">1.9.13. Reduction Analysis</a></li>
+<li><a href="#org08c4e46">1.9.1. InfoSec risk types</a></li>
+<li><a href="#org3a70dda">1.9.2. Risk Assessment Additional Readings:</a></li>
+<li><a href="#orgd97841d">1.9.3. Holistic</a></li>
+<li><a href="#orgedaa52a">1.9.4. Information Systems Risk Management Policy</a></li>
+<li><a href="#orgfbe3913">1.9.5. Process</a></li>
+<li><a href="#org2c05c0a">1.9.6. Threat Modeling</a></li>
+<li><a href="#org8b4eb4e">1.9.7. Vulnerabilities</a></li>
+<li><a href="#org4f2288c">1.9.8. Information</a></li>
+<li><a href="#org48e949e">1.9.9. Processes</a></li>
+<li><a href="#org75029cb">1.9.10. People</a></li>
+<li><a href="#orgbd97a7a">1.9.11. Threats</a></li>
+<li><a href="#org380ca9c">1.9.12. Attacks</a></li>
+<li><a href="#orgd2ca95e">1.9.13. Reduction Analysis</a></li>
 </ul>
 </li>
-<li><a href="#org81cfe24">1.10. Risk Assessment and Analysis</a>
+<li><a href="#orgacef94c">1.10. Risk Assessment and Analysis</a>
 <ul>
-<li><a href="#org90d1755">1.10.1. Identifying risks</a></li>
-<li><a href="#org459bc87">1.10.2. Generic process (NIST)</a></li>
-<li><a href="#org58bcb80">1.10.3. Facilitated Risk Analysis Process (FRAP)</a></li>
-<li><a href="#org3f1d7d7">1.10.4. OCTAVE</a></li>
-<li><a href="#org0ffac80">1.10.5. AS/NZS 4360</a></li>
-<li><a href="#org270c71f">1.10.6. ISO/IEC 27005</a></li>
-<li><a href="#orgd1256fa">1.10.7. Failure Modes and Effect Analysis (FMEA)</a></li>
-<li><a href="#org4c4f452">1.10.8. Fault tree analysis</a></li>
-<li><a href="#orgd7d16a2">1.10.9. Central Computing and Teecmmunications Agency Risk Analysis and Management Method (CRAMM)</a></li>
-<li><a href="#org35901c1">1.10.10. Difference:</a></li>
-<li><a href="#org61f77f9">1.10.11. Approaches</a></li>
-<li><a href="#orgaeec990">1.10.12. Quantitative</a></li>
-<li><a href="#org7590c4e">1.10.13. Qualitative</a></li>
-<li><a href="#org1f6a76b">1.10.14. Control Selection</a></li>
-<li><a href="#org262ffd6">1.10.15. Risk terms:</a></li>
-<li><a href="#org1829573">1.10.16. Handling Risk:</a></li>
-<li><a href="#org882ec9d">1.10.17. Outsourcing</a></li>
+<li><a href="#orgc42a5e0">1.10.1. Identifying risks</a></li>
+<li><a href="#org03bd396">1.10.2. Generic process (NIST)</a></li>
+<li><a href="#orgf3a9b2d">1.10.3. Facilitated Risk Analysis Process (FRAP)</a></li>
+<li><a href="#org4388826">1.10.4. OCTAVE</a></li>
+<li><a href="#org1b16a8b">1.10.5. AS/NZS 4360</a></li>
+<li><a href="#org43677a6">1.10.6. ISO/IEC 27005</a></li>
+<li><a href="#org8f5fbe7">1.10.7. Failure Modes and Effect Analysis (FMEA)</a></li>
+<li><a href="#org3d398d2">1.10.8. Fault tree analysis</a></li>
+<li><a href="#org8276961">1.10.9. Central Computing and Teecmmunications Agency Risk Analysis and Management Method (CRAMM)</a></li>
+<li><a href="#org0e0e56a">1.10.10. Difference:</a></li>
+<li><a href="#orge0691ec">1.10.11. Approaches</a></li>
+<li><a href="#orge7d9d3c">1.10.12. Quantitative</a></li>
+<li><a href="#org86eb85d">1.10.13. Qualitative</a></li>
+<li><a href="#org00b1536">1.10.14. Control Selection</a></li>
+<li><a href="#orge02e112">1.10.15. Risk terms:</a></li>
+<li><a href="#org56dde29">1.10.16. Handling Risk:</a></li>
+<li><a href="#orgec17551">1.10.17. Outsourcing</a></li>
 </ul>
 </li>
-<li><a href="#org634c866">1.11. Risk Management Frameworks</a>
+<li><a href="#org630cdd4">1.11. Risk Management Frameworks</a>
 <ul>
-<li><a href="#org219a51b">1.11.1. Categorize Information Systems</a></li>
-<li><a href="#org72e40b6">1.11.2. Select Security Controls</a></li>
-<li><a href="#org87bfca0">1.11.3. Implement Security Controls</a></li>
-<li><a href="#orgf612156">1.11.4. Assess Security Controls</a></li>
-<li><a href="#org2d15448">1.11.5. Authorize Information Systems</a></li>
-<li><a href="#org245238c">1.11.6. Monitor Security Controls</a></li>
+<li><a href="#orgc0aeb7a">1.11.1. Categorize Information Systems</a></li>
+<li><a href="#org2742c95">1.11.2. Select Security Controls</a></li>
+<li><a href="#org578b2fb">1.11.3. Implement Security Controls</a></li>
+<li><a href="#org7e62b38">1.11.4. Assess Security Controls</a></li>
+<li><a href="#orga36665b">1.11.5. Authorize Information Systems</a></li>
+<li><a href="#orgf4549ad">1.11.6. Monitor Security Controls</a></li>
 </ul>
 </li>
-<li><a href="#org0b64b9c">1.12. Business Continuity and Disaster Recovery</a>
+<li><a href="#org3f69256">1.12. Business Continuity and Disaster Recovery</a>
 <ul>
-<li><a href="#org074ce89">1.12.1. Standards and Best Practices</a></li>
-<li><a href="#org3fa756a">1.12.2. Making BCM Part of teh Enterprise Security Program</a></li>
-<li><a href="#orgd88f286">1.12.3. BCP Project Components</a></li>
-<li><a href="#orgc92c9db">1.12.4. Scope of the Project</a></li>
-<li><a href="#org40ca4f0">1.12.5. BCP Policy</a></li>
-<li><a href="#org89a2ce9">1.12.6. Project Management</a></li>
-<li><a href="#orgb8c8c39">1.12.7. BCP Requirements</a></li>
-<li><a href="#org5ee4861">1.12.8. Business Impact Analysis</a></li>
-<li><a href="#orga9b76a1">1.12.9. Interdependencies</a></li>
+<li><a href="#org4acd171">1.12.1. Standards and Best Practices</a></li>
+<li><a href="#org1aed250">1.12.2. Making BCM Part of teh Enterprise Security Program</a></li>
+<li><a href="#org6342be3">1.12.3. BCP Project Components</a></li>
+<li><a href="#org8e16fd9">1.12.4. Scope of the Project</a></li>
+<li><a href="#org9b16fcf">1.12.5. BCP Policy</a></li>
+<li><a href="#org36924c4">1.12.6. Project Management</a></li>
+<li><a href="#org3f4c1c6">1.12.7. BCP Requirements</a></li>
+<li><a href="#org8d4c121">1.12.8. Business Impact Analysis</a></li>
+<li><a href="#orgf6ae81e">1.12.9. Interdependencies</a></li>
 </ul>
 </li>
-<li><a href="#org6856cb3">1.13. Personnel Security</a>
+<li><a href="#orgaef2ce6">1.13. Personnel Security</a>
 <ul>
-<li><a href="#orge58feba">1.13.1. Hiring Practices</a></li>
-<li><a href="#orgc6c25f3">1.13.2. Termination</a></li>
-<li><a href="#orgb5e9a45">1.13.3. Security-Awareness Training</a></li>
-<li><a href="#org1f347f7">1.13.4. Degree or Certification?</a></li>
+<li><a href="#orgecea946">1.13.1. Hiring Practices</a></li>
+<li><a href="#org72e4dcd">1.13.2. Termination</a></li>
+<li><a href="#org3b169d6">1.13.3. Security-Awareness Training</a></li>
+<li><a href="#org3a7e6f1">1.13.4. Degree or Certification?</a></li>
 </ul>
 </li>
-<li><a href="#orge2bc1ad">1.14. Security Governance</a>
+<li><a href="#orgcc5e5e1">1.14. Security Governance</a>
 <ul>
-<li><a href="#org53a34ea">1.14.1. Metrics</a></li>
+<li><a href="#orgcde0cd0">1.14.1. Metrics</a></li>
 </ul>
 </li>
-<li><a href="#org10a4d96">1.15. Ethics</a>
+<li><a href="#org4cb957b">1.15. Ethics</a>
 <ul>
-<li><a href="#org80ef08c">1.15.1. The Computer Ethics Institute</a></li>
-<li><a href="#org4d3b26d">1.15.2. The Internet Architecture Board</a></li>
-<li><a href="#org2cc947c">1.15.3. Corporate Ethics Programs</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orga397830">2. Chapter 2 - Asset Security</a>
-<ul>
-<li><a href="#org54b6262">2.1. Information Life Cycle</a>
-<ul>
-<li><a href="#orgb3c1484">2.1.1. Acquisition</a></li>
-<li><a href="#org7befec2">2.1.2. Used</a></li>
-<li><a href="#orgf66b42c">2.1.3. Archival</a></li>
-<li><a href="#orgb2babbe">2.1.4. Disposal</a></li>
-</ul>
-</li>
-<li><a href="#org83a3955">2.2. Information Classification</a>
-<ul>
-<li><a href="#org5fdb8c2">2.2.1. Classifications Levels</a></li>
-<li><a href="#org39eaed4">2.2.2. Classifications Controls</a></li>
-</ul>
-</li>
-<li><a href="#org15a19f6">2.3. Layers of Responsibility</a>
-<ul>
-<li><a href="#org30515fb">2.3.1. Executive Management</a></li>
-<li><a href="#orgf2f1a43">2.3.2. Data Owner</a></li>
-<li><a href="#org3e74f70">2.3.3. Data Custodian</a></li>
-<li><a href="#org556e07c">2.3.4. System Owner</a></li>
-<li><a href="#org1bcad51">2.3.5. Security Administrator</a></li>
-<li><a href="#orgd3adde9">2.3.6. Supervisor</a></li>
-<li><a href="#org6f7554d">2.3.7. Change Control Analyst</a></li>
-<li><a href="#orgb8ca458">2.3.8. Data Analyst</a></li>
-<li><a href="#org0be0a44">2.3.9. User</a></li>
-<li><a href="#org3280862">2.3.10. Auditor</a></li>
-<li><a href="#org3525b70">2.3.11. Why so many roles?</a></li>
-</ul>
-</li>
-<li><a href="#org32aa91b">2.4. Retention Policies</a>
-<ul>
-<li><a href="#org6f370f9">2.4.1. Developing a Retention Policy</a></li>
-</ul>
-</li>
-<li><a href="#org89dd4e2">2.5. Protecting Privacy</a>
-<ul>
-<li><a href="#org88b8bb3">2.5.1. Data Owners</a></li>
-<li><a href="#org64c5063">2.5.2. Data Processors</a></li>
-<li><a href="#org4e4ec9b">2.5.3. Data Remanence</a></li>
-<li><a href="#org5eab17a">2.5.4. Limits on Collection</a></li>
-</ul>
-</li>
-<li><a href="#org9877eb6">2.6. Protecting Assets</a>
-<ul>
-<li><a href="#org7a9c0b5">2.6.1. Data Security Controls</a></li>
-<li><a href="#org1032502">2.6.2. Media Controls</a></li>
-</ul>
-</li>
-<li><a href="#org320dd11">2.7. Data Leakage</a>
-<ul>
-<li><a href="#orgf775f98">2.7.1. Data Leakage Prevention</a></li>
-</ul>
-</li>
-<li><a href="#org0d7d24e">2.8. Protecting Other Assets</a>
-<ul>
-<li><a href="#orgd102e84">2.8.1. Protecting Mobile Devices</a></li>
-<li><a href="#orgd7081e5">2.8.2. Paper Records</a></li>
-<li><a href="#org41863cd">2.8.3. Safes</a></li>
+<li><a href="#org7af3a47">1.15.1. The Computer Ethics Institute</a></li>
+<li><a href="#org0f8ed66">1.15.2. The Internet Architecture Board</a></li>
+<li><a href="#org7368ee9">1.15.3. Corporate Ethics Programs</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org2b99a97">3. Chapter 3 - Security Engineering</a>
+<li><a href="#org2136a60">2. Chapter 2 - Asset Security</a>
 <ul>
-<li><a href="#orgbb8b8cd">3.1. System Architecture</a>
+<li><a href="#orgbbfc70e">2.1. Information Life Cycle</a>
 <ul>
-<li><a href="#orgfd02c86">3.1.1. ISO/IEC 42010:2011 - System Architecture Standard. Establishes a shared vocabulary</a></li>
+<li><a href="#org6921637">2.1.1. Acquisition</a></li>
+<li><a href="#orgc47a80d">2.1.2. Used</a></li>
+<li><a href="#org7eefe1d">2.1.3. Archival</a></li>
+<li><a href="#org13aace3">2.1.4. Disposal</a></li>
 </ul>
 </li>
-<li><a href="#org6ad32b2">3.2. Computer Architecture</a>
+<li><a href="#orgdabc1ab">2.2. Information Classification</a>
 <ul>
-<li><a href="#orga2b2a5f">3.2.1. The Central Processing Unit</a></li>
-<li><a href="#org14db60f">3.2.2. Multiprocessing</a></li>
-<li><a href="#orgdfe1359">3.2.3. Memory Types</a></li>
-<li><a href="#orgefe3997">3.2.4. Buffer Overflow Resources</a></li>
-<li><a href="#org3a9e281">3.2.5. Memory Protection Techniques</a></li>
-<li><a href="#orgf675bdb">3.2.6. Memory Leaks</a></li>
+<li><a href="#orge5d6cc5">2.2.1. Classifications Levels</a></li>
+<li><a href="#org4aad888">2.2.2. Classifications Controls</a></li>
 </ul>
 </li>
-<li><a href="#org38ea364">3.3. Operating Systems</a>
+<li><a href="#orga74021c">2.3. Layers of Responsibility</a>
 <ul>
-<li><a href="#orga6e2587">3.3.1. Process Management</a></li>
-<li><a href="#org936a93b">3.3.2. Memory Management</a></li>
-<li><a href="#org59794f2">3.3.3. Input/Output Device Management</a></li>
-<li><a href="#org5ec3fbf">3.3.4. CPU Architecture Integration</a></li>
-<li><a href="#org7a1a707">3.3.5. Operating System Architectures</a></li>
-<li><a href="#org13887d2">3.3.6. Virtual Machines</a></li>
+<li><a href="#org17400c2">2.3.1. Executive Management</a></li>
+<li><a href="#org38cca3a">2.3.2. Data Owner</a></li>
+<li><a href="#orgdac0331">2.3.3. Data Custodian</a></li>
+<li><a href="#org42badce">2.3.4. System Owner</a></li>
+<li><a href="#org1166a33">2.3.5. Security Administrator</a></li>
+<li><a href="#org9a653ff">2.3.6. Supervisor</a></li>
+<li><a href="#org02a581e">2.3.7. Change Control Analyst</a></li>
+<li><a href="#orga682a23">2.3.8. Data Analyst</a></li>
+<li><a href="#orgb660376">2.3.9. User</a></li>
+<li><a href="#org67c6c0f">2.3.10. Auditor</a></li>
+<li><a href="#orgc9b4c24">2.3.11. Why so many roles?</a></li>
 </ul>
 </li>
-<li><a href="#orgbb6cb30">3.4. System Security Architecture</a>
+<li><a href="#org2aab554">2.4. Retention Policies</a>
 <ul>
-<li><a href="#orge582e52">3.4.1. Security Policy</a></li>
-<li><a href="#org1bd9eba">3.4.2. Security Architecture Requirements</a></li>
+<li><a href="#org33e479a">2.4.1. Developing a Retention Policy</a></li>
 </ul>
 </li>
-<li><a href="#orged9457b">3.5. Security Models</a>
+<li><a href="#org71a05f6">2.5. Protecting Privacy</a>
 <ul>
-<li><a href="#org62c0aa1">3.5.1. Bell-LaPadula Model</a></li>
-<li><a href="#org8e67d14">3.5.2. Biba Model</a></li>
-<li><a href="#org8687d31">3.5.3. Clark-Wilson Model</a></li>
-<li><a href="#org69b968d">3.5.4. Noninterference Model</a></li>
-<li><a href="#org3733eac">3.5.5. Brew and Nash Model</a></li>
-<li><a href="#org714954f">3.5.6. Graham-Denning Model</a></li>
-<li><a href="#org2979ee8">3.5.7. Harrison-Ruzzo-Ullman Model</a></li>
+<li><a href="#orgef93eae">2.5.1. Data Owners</a></li>
+<li><a href="#org5f67fc7">2.5.2. Data Processors</a></li>
+<li><a href="#org09f0ad7">2.5.3. Data Remanence</a></li>
+<li><a href="#org8b2f27f">2.5.4. Limits on Collection</a></li>
 </ul>
 </li>
-<li><a href="#org3ce3c43">3.6. Systems Evaluation</a>
+<li><a href="#orgc775afa">2.6. Protecting Assets</a>
 <ul>
-<li><a href="#orgc1225d8">3.6.1. Common Criteria</a></li>
-<li><a href="#org290d430">3.6.2. Why Put a Product Through Evaluation?</a></li>
+<li><a href="#org688a033">2.6.1. Data Security Controls</a></li>
+<li><a href="#org3a48db1">2.6.2. Media Controls</a></li>
 </ul>
 </li>
-<li><a href="#orgefa69b5">3.7. Certification vs. Accreditation</a>
+<li><a href="#orgf6203bd">2.7. Data Leakage</a>
 <ul>
-<li><a href="#org154d531">3.7.1. Certification</a></li>
-<li><a href="#orga17a450">3.7.2. Accreditation</a></li>
+<li><a href="#org3f8488a">2.7.1. Data Leakage Prevention</a></li>
 </ul>
 </li>
-<li><a href="#org14eeca5">3.8. Open vs. Closed Systems</a>
+<li><a href="#orga807f47">2.8. Protecting Other Assets</a>
 <ul>
-<li><a href="#orgfc11fcb">3.8.1. Open Systems</a></li>
-<li><a href="#orgabd0e99">3.8.2. Closed Systems</a></li>
+<li><a href="#orgb0416b0">2.8.1. Protecting Mobile Devices</a></li>
+<li><a href="#org8de0316">2.8.2. Paper Records</a></li>
+<li><a href="#org23dc2ba">2.8.3. Safes</a></li>
 </ul>
 </li>
-<li><a href="#org0fd51d1">3.9. Distributed System Security</a>
-<ul>
-<li><a href="#org82b46f4">3.9.1. Cloud Computing</a></li>
-<li><a href="#orged82922">3.9.2. Parallel Computing</a></li>
-<li><a href="#orgaf8a829">3.9.3. Databases</a></li>
-<li><a href="#org3a4d6f3">3.9.4. Web Applications</a></li>
-<li><a href="#org200c0f5">3.9.5. Mobile Devices</a></li>
-<li><a href="#org36c1a4b">3.9.6. Cyber-Physical Systems</a></li>
 </ul>
 </li>
-<li><a href="#org40c7b26">3.10. A Few Threats to Review</a>
+<li><a href="#org6717bc6">3. Chapter 3 - Security Engineering</a>
 <ul>
-<li><a href="#orgfa3e1bb">3.10.1. Maintenance Hooks</a></li>
-<li><a href="#org4510ccc">3.10.2. Time-of-Check/Time-of-Use Attacks</a></li>
+<li><a href="#org77cff3a">3.1. System Architecture</a>
+<ul>
+<li><a href="#orgc6f8cc4">3.1.1. ISO/IEC 42010:2011 - System Architecture Standard. Establishes a shared vocabulary</a></li>
 </ul>
 </li>
-<li><a href="#orgcb180b0">3.11. Cryptography in Context</a>
+<li><a href="#org1e38ded">3.2. Computer Architecture</a>
 <ul>
-<li><a href="#org89889e4">3.11.1. The History of Cryptography</a></li>
+<li><a href="#orgfd5bb0d">3.2.1. The Central Processing Unit</a></li>
+<li><a href="#orgb0f642f">3.2.2. Multiprocessing</a></li>
+<li><a href="#orgbee418e">3.2.3. Memory Types</a></li>
+<li><a href="#org03b4ffc">3.2.4. Buffer Overflow Resources</a></li>
+<li><a href="#org4514783">3.2.5. Memory Protection Techniques</a></li>
+<li><a href="#org757f16a">3.2.6. Memory Leaks</a></li>
 </ul>
 </li>
-<li><a href="#org9d103fa">3.12. Cryptography Definitions and Concepts</a>
+<li><a href="#orgc362583">3.3. Operating Systems</a>
 <ul>
-<li><a href="#org97d9537">3.12.1. Kerckhoffs' Principle</a></li>
-<li><a href="#orgd763ebf">3.12.2. The Strength of the Cryptosystem</a></li>
-<li><a href="#org6029ee6">3.12.3. Services of Cryptosystems</a></li>
-<li><a href="#orgffcb510">3.12.4. One-Time Pad</a></li>
-<li><a href="#org6f15e65">3.12.5. Running and Concealment Ciphers</a></li>
-<li><a href="#org0b7865e">3.12.6. Steganography</a></li>
+<li><a href="#org6b2bb3e">3.3.1. Process Management</a></li>
+<li><a href="#orgb3d471f">3.3.2. Memory Management</a></li>
+<li><a href="#org70a4d9a">3.3.3. Input/Output Device Management</a></li>
+<li><a href="#org95c705e">3.3.4. CPU Architecture Integration</a></li>
+<li><a href="#org0f54f71">3.3.5. Operating System Architectures</a></li>
+<li><a href="#orge041092">3.3.6. Virtual Machines</a></li>
 </ul>
 </li>
-<li><a href="#org9f64c88">3.13. Types of Ciphers</a>
+<li><a href="#orge28cec5">3.4. System Security Architecture</a>
 <ul>
-<li><a href="#org7d225bb">3.13.1. Substitution Ciphers</a></li>
-<li><a href="#orge81b001">3.13.2. Transposition Ciphers</a></li>
+<li><a href="#org6b9045e">3.4.1. Security Policy</a></li>
+<li><a href="#org2df6cc9">3.4.2. Security Architecture Requirements</a></li>
 </ul>
 </li>
-<li><a href="#org0ff96c0">3.14. Methods of Encryption</a>
+<li><a href="#org01338ac">3.5. Security Models</a>
 <ul>
-<li><a href="#orgd1834af">3.14.1. Symmetric vs. Asymmetric Algorithms</a></li>
-<li><a href="#org1be67b2">3.14.2. Symmetric Cryptography</a></li>
-<li><a href="#orgaa8bf7d">3.14.3. Asymmetric Cryptography</a></li>
-<li><a href="#orgc4b917e">3.14.4. Block and Stream Ciphers</a></li>
-<li><a href="#org380282b">3.14.5. Hybrid Encryption Methods</a></li>
+<li><a href="#orgcbc20b0">3.5.1. Bell-LaPadula Model</a></li>
+<li><a href="#orgdda1164">3.5.2. Biba Model</a></li>
+<li><a href="#orgcbc3af5">3.5.3. Clark-Wilson Model</a></li>
+<li><a href="#org47eed89">3.5.4. Noninterference Model</a></li>
+<li><a href="#orgaafd063">3.5.5. Brew and Nash Model</a></li>
+<li><a href="#org46a0555">3.5.6. Graham-Denning Model</a></li>
+<li><a href="#org3435654">3.5.7. Harrison-Ruzzo-Ullman Model</a></li>
+</ul>
+</li>
+<li><a href="#org82acdd5">3.6. Systems Evaluation</a>
+<ul>
+<li><a href="#orgfb98278">3.6.1. Common Criteria</a></li>
+<li><a href="#org9cee31a">3.6.2. Why Put a Product Through Evaluation?</a></li>
+</ul>
+</li>
+<li><a href="#org3e1a4d3">3.7. Certification vs. Accreditation</a>
+<ul>
+<li><a href="#org4dbe7fa">3.7.1. Certification</a></li>
+<li><a href="#org2ac4457">3.7.2. Accreditation</a></li>
+</ul>
+</li>
+<li><a href="#org3d1b8dd">3.8. Open vs. Closed Systems</a>
+<ul>
+<li><a href="#org27c6232">3.8.1. Open Systems</a></li>
+<li><a href="#org92042b9">3.8.2. Closed Systems</a></li>
+</ul>
+</li>
+<li><a href="#orgae7e710">3.9. Distributed System Security</a>
+<ul>
+<li><a href="#orgdbfa087">3.9.1. Cloud Computing</a></li>
+<li><a href="#org07ca4c7">3.9.2. Parallel Computing</a></li>
+<li><a href="#orgb55a75d">3.9.3. Databases</a></li>
+<li><a href="#org2d04a12">3.9.4. Web Applications</a></li>
+<li><a href="#org3c16732">3.9.5. Mobile Devices</a></li>
+<li><a href="#orgf2420e8">3.9.6. Cyber-Physical Systems</a></li>
+</ul>
+</li>
+<li><a href="#org6ec8fad">3.10. A Few Threats to Review</a>
+<ul>
+<li><a href="#org8eb7c48">3.10.1. Maintenance Hooks</a></li>
+<li><a href="#orgfbc3949">3.10.2. Time-of-Check/Time-of-Use Attacks</a></li>
+</ul>
+</li>
+<li><a href="#org0b072ca">3.11. Cryptography in Context</a>
+<ul>
+<li><a href="#org484a451">3.11.1. The History of Cryptography</a></li>
+</ul>
+</li>
+<li><a href="#org53bc3ca">3.12. Cryptography Definitions and Concepts</a>
+<ul>
+<li><a href="#org4624cb2">3.12.1. Kerckhoffs' Principle</a></li>
+<li><a href="#org5210ccc">3.12.2. The Strength of the Cryptosystem</a></li>
+<li><a href="#org8f44ee6">3.12.3. Services of Cryptosystems</a></li>
+<li><a href="#org46d5a25">3.12.4. One-Time Pad</a></li>
+<li><a href="#orgda43ffd">3.12.5. Running and Concealment Ciphers</a></li>
+<li><a href="#org0e17bd6">3.12.6. Steganography</a></li>
+</ul>
+</li>
+<li><a href="#org28803f0">3.13. Types of Ciphers</a>
+<ul>
+<li><a href="#orgd654be8">3.13.1. Substitution Ciphers</a></li>
+<li><a href="#orge02a167">3.13.2. Transposition Ciphers</a></li>
+</ul>
+</li>
+<li><a href="#org629e88e">3.14. Methods of Encryption</a>
+<ul>
+<li><a href="#org0a28870">3.14.1. Symmetric vs. Asymmetric Algorithms</a></li>
+<li><a href="#org59d8c53">3.14.2. Symmetric Cryptography</a></li>
+<li><a href="#orga311ebe">3.14.3. Asymmetric Cryptography</a></li>
+<li><a href="#orgab4c854">3.14.4. Block and Stream Ciphers</a></li>
+<li><a href="#org6a9cde8">3.14.5. Hybrid Encryption Methods</a></li>
+</ul>
+</li>
+<li><a href="#orge8beb60">3.15. Types of Symmetric Systems</a>
+<ul>
+<li><a href="#org680133a">3.15.1. Data Encryption Standard</a></li>
+<li><a href="#orgc54823e">3.15.2. Triple-DES</a></li>
+<li><a href="#orga8a49cc">3.15.3. Advanced Encryption Standard</a></li>
+<li><a href="#org4012864">3.15.4. International Data Encryption Algorithm</a></li>
+<li><a href="#org50a5e1c">3.15.5. Blowfish</a></li>
+<li><a href="#org8129e68">3.15.6. RC4</a></li>
+<li><a href="#org995951b">3.15.7. RC5</a></li>
+<li><a href="#org26a7ff8">3.15.8. RC6</a></li>
+</ul>
+</li>
+<li><a href="#org2fd1b91">3.16. Types of Asymmetric Systems</a>
+<ul>
+<li><a href="#orgcac3fa2">3.16.1. Diffie-Hellman Algorithm</a></li>
+<li><a href="#org3655b10">3.16.2. RSA</a></li>
+<li><a href="#org8607099">3.16.3. El Gamal</a></li>
+<li><a href="#org5c5a8b7">3.16.4. Elliptic Curve Cryptosystems</a></li>
+<li><a href="#org6c7ba6c">3.16.5. Knapsack</a></li>
+<li><a href="#orgd19f15b">3.16.6. Zero Knowledge Proof</a></li>
+</ul>
+</li>
+<li><a href="#org9de0e89">3.17. Message Integrity</a>
+<ul>
+<li><a href="#org3557cbf">3.17.1. The One-Way Hash</a></li>
+<li><a href="#org8946703">3.17.2. Various Hashing Algorithms</a></li>
+<li><a href="#orgfb97846">3.17.3. MD4</a></li>
+<li><a href="#orgabba753">3.17.4. MD5</a></li>
+<li><a href="#org071a409">3.17.5. SHA</a></li>
+<li><a href="#orgf96f289">3.17.6. Attacks Against One-Way Hash Functions</a></li>
+<li><a href="#org27b4c49">3.17.7. Digital Signatures</a></li>
+<li><a href="#org15e2ec1">3.17.8. Digital Signature Standard</a></li>
+</ul>
+</li>
+<li><a href="#org0b5bea9">3.18. Public Key Infrastructure</a>
+<ul>
+<li><a href="#org5e63a2a">3.18.1. Certificate Authorities</a></li>
+<li><a href="#orgd80e1d1">3.18.2. Certificates</a></li>
+<li><a href="#org271a629">3.18.3. The Registration Authority</a></li>
+<li><a href="#orgfd6d0ee">3.18.4. PKI Steps</a></li>
+</ul>
+</li>
+<li><a href="#org9637344">3.19. Key Management</a>
+<ul>
+<li><a href="#orgc8fa621">3.19.1. Key Management Principles</a></li>
+<li><a href="#orgb6fe09b">3.19.2. Rules for Keys and Key Management</a></li>
+</ul>
+</li>
+<li><a href="#orge45ca38">3.20. Trusted Platform Module</a>
+<ul>
+<li><a href="#org365b68d">3.20.1. TPM Uses</a></li>
+</ul>
+</li>
+<li><a href="#org66a336e">3.21. Attacks on Cryptography</a>
+<ul>
+<li><a href="#org2fb24b5">3.21.1. Ciphertext-Only Attacks</a></li>
+<li><a href="#orgb805640">3.21.2. Known-Plaintext Attacks</a></li>
+<li><a href="#org0bc2732">3.21.3. Chosen-Plaintext Attacks</a></li>
+<li><a href="#orge955e5b">3.21.4. Chosen-Ciphertext Attacks</a></li>
+<li><a href="#org1918ab2">3.21.5. Differential Cryptanalysis</a></li>
+<li><a href="#org5448450">3.21.6. Linear Cryptanalysis</a></li>
+<li><a href="#orgebc167d">3.21.7. Side-Channel Attacks</a></li>
+<li><a href="#org76d8535">3.21.8. Replay Attacks</a></li>
+<li><a href="#org70b5e01">3.21.9. Algebraic Attacks</a></li>
+<li><a href="#orgc38404f">3.21.10. Analytic Attacks</a></li>
+<li><a href="#org919f135">3.21.11. Statistical Attacks</a></li>
+<li><a href="#org07ab2c1">3.21.12. Social Engineering Attacks</a></li>
+<li><a href="#orgafda0ac">3.21.13. Meet-in-the-Middle Attacks</a></li>
+</ul>
+</li>
+<li><a href="#orgdf52c14">3.22. Site and Facility Security</a></li>
+<li><a href="#org797164b">3.23. The Site Planning Process</a>
+<ul>
+<li><a href="#orge88a171">3.23.1. Crime Prevention through Environmental Design</a></li>
+<li><a href="#org24362f6">3.23.2. Designing a Physical Security Program</a></li>
+</ul>
+</li>
+<li><a href="#orgaa3abb0">3.24. Protecting Assets</a>
+<ul>
+<li><a href="#orgacc8aff">3.24.1. Protecting Mobile Devices</a></li>
+<li><a href="#org2378d4f">3.24.2. Using Safes</a></li>
+</ul>
+</li>
+<li><a href="#org59ee0d7">3.25. Internal Support Systems</a>
+<ul>
+<li><a href="#org4829aa9">3.25.1. Electric Power</a></li>
+<li><a href="#org54c7c6d">3.25.2. Environmental Issues</a></li>
+<li><a href="#org44c35f3">3.25.3. Fire Prevention, Detection, and Suppression</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1c7b854">4. Chapter 4 - Communication and Network Security</a>
+<ul>
+<li><a href="#org1cf5781">4.1. Telecommunications</a></li>
+<li><a href="#org2433c85">4.2. Open Systems Interconnection Reference Model</a>
+<ul>
+<li><a href="#org6c8e20e">4.2.1. Protocol</a></li>
+<li><a href="#org2836204">4.2.2. Application Layer</a></li>
+<li><a href="#orga111e60">4.2.3. Presentation Layer</a></li>
+<li><a href="#org7b8d6ac">4.2.4. Session Layer</a></li>
+<li><a href="#org5dc32a9">4.2.5. Transport Layer</a></li>
+<li><a href="#org9800b82">4.2.6. Network Layer</a></li>
+<li><a href="#org3dad870">4.2.7. Data Link Layer</a></li>
+<li><a href="#org7aa9961">4.2.8. Physical Layer</a></li>
+<li><a href="#orgd9b92eb">4.2.9. Tying the Layers Together</a></li>
+<li><a href="#orga321234">4.2.10. Multilayer Protocols</a></li>
+<li><a href="#org4505f3f">4.2.11. TCP/IP Model (incomplete - for next month)</a></li>
 </ul>
 </li>
 </ul>
@@ -568,35 +678,35 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org43b0c8a" class="outline-2">
-<h2 id="org43b0c8a"><span class="section-number-2">1</span> Chapter 1 - Security and Risk Management</h2>
+<div id="outline-container-org6245ad6" class="outline-2">
+<h2 id="org6245ad6"><span class="section-number-2">1</span> Chapter 1 - Security and Risk Management</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgb11b9f9" class="outline-3">
-<h3 id="orgb11b9f9"><span class="section-number-3">1.1</span> Fundamental Principles of Security</h3>
+<div id="outline-container-org5f33d2f" class="outline-3">
+<h3 id="org5f33d2f"><span class="section-number-3">1.1</span> Fundamental Principles of Security</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgac46751" class="outline-4">
-<h4 id="orgac46751"><span class="section-number-4">1.1.1</span> AIC Triad:</h4>
+<div id="outline-container-orgd9c9d53" class="outline-4">
+<h4 id="orgd9c9d53"><span class="section-number-4">1.1.1</span> AIC Triad:</h4>
 <div class="outline-text-4" id="text-1-1-1">
-</div><ol class="org-ol"><li><a id="org2fecafa"></a>Availability - reliable and timely access<br /><div class="outline-text-5" id="text-1-1-1-1">
+</div><ol class="org-ol"><li><a id="org39209e3"></a>Availability - reliable and timely access<br /><div class="outline-text-5" id="text-1-1-1-1">
 <p>
 Controls: eg. RAIDs, clustering, load balancing, redundancy, backups, secondary facilities, rollback, failover
 </p>
 </div></li>
-<li><a id="orgc5e14f4"></a>Integrity - assurance of accuracy and reliability<br /><div class="outline-text-5" id="text-1-1-1-2">
+<li><a id="org0a6185d"></a>Integrity - assurance of accuracy and reliability<br /><div class="outline-text-5" id="text-1-1-1-2">
 <p>
 Controls: eg. Hashing, Configuration Mgmt., Change controls, Access controls, Software digital signing, CRC checks
 </p>
 </div></li>
-<li><a id="org210f3e7"></a>Confidentiality - necessary level of secrecy<br /><div class="outline-text-5" id="text-1-1-1-3">
+<li><a id="orgf608714"></a>Confidentiality - necessary level of secrecy<br /><div class="outline-text-5" id="text-1-1-1-3">
 <p>
 Controls: eg. Encryption, Access controls
 </p>
 </div></li></ol>
 </div>
-<div id="outline-container-orgd001f76" class="outline-4">
-<h4 id="orgd001f76"><span class="section-number-4">1.1.2</span> Risk Definitions:</h4>
+<div id="outline-container-org23442fd" class="outline-4">
+<h4 id="org23442fd"><span class="section-number-4">1.1.2</span> Risk Definitions:</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <dl class="org-dl">
 <dt>Vulnerability</dt><dd>weakness in a system</dd>
@@ -607,8 +717,8 @@ Controls: eg. Encryption, Access controls
 </dl>
 </div>
 </div>
-<div id="outline-container-orgcfd8c0d" class="outline-4">
-<h4 id="orgcfd8c0d"><span class="section-number-4">1.1.3</span> Control Types:</h4>
+<div id="outline-container-org1d67c84" class="outline-4">
+<h4 id="org1d67c84"><span class="section-number-4">1.1.3</span> Control Types:</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <dl class="org-dl">
 <dt>Administrative</dt><dd>security documentation, risk management, training</dd>
@@ -617,16 +727,16 @@ Controls: eg. Encryption, Access controls
 </dl>
 </div>
 </div>
-<div id="outline-container-orgcb83472" class="outline-4">
-<h4 id="orgcb83472"><span class="section-number-4">1.1.4</span> Defense in Depth - layered</h4>
+<div id="outline-container-orgd3d5ffd" class="outline-4">
+<h4 id="orgd3d5ffd"><span class="section-number-4">1.1.4</span> Defense in Depth - layered</h4>
 <div class="outline-text-4" id="text-1-1-4">
 <ul class="org-ul">
 <li>We use a slide to represent this concept across all control types</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc1d778" class="outline-4">
-<h4 id="orgfc1d778"><span class="section-number-4">1.1.5</span> Control Functionalities:</h4>
+<div id="outline-container-orge3d7db8" class="outline-4">
+<h4 id="orge3d7db8"><span class="section-number-4">1.1.5</span> Control Functionalities:</h4>
 <div class="outline-text-4" id="text-1-1-5">
 <dl class="org-dl">
 <dt>Preventative</dt><dd>avoid incident</dd>
@@ -637,8 +747,8 @@ Controls: eg. Encryption, Access controls
 <dt>Compensating</dt><dd>Provide an alternative measure of control</dd>
 </dl>
 </div>
-<ol class="org-ol"><li><a id="orgce2d1a3"></a>Note that NIST CSF is closely organized along these lines, although slightly different<br /></li>
-<li><a id="orgb4162d6"></a>There is significant argument as to where companies should focus: preventative, or detective and recovery?<br /><div class="outline-text-5" id="text-1-1-5-2">
+<ol class="org-ol"><li><a id="org636a624"></a>Note that NIST CSF is closely organized along these lines, although slightly different<br /></li>
+<li><a id="orgdf2dbd4"></a>There is significant argument as to where companies should focus: preventative, or detective and recovery?<br /><div class="outline-text-5" id="text-1-1-5-2">
 <ul class="org-ul">
 <li>You should be able to voice when one approach is better than another.</li>
 <li>See Table 1-1 for Control Types X Control Functionalities</li>
@@ -646,12 +756,12 @@ Controls: eg. Encryption, Access controls
 </div></li></ol>
 </div>
 </div>
-<div id="outline-container-org34564f4" class="outline-3">
-<h3 id="org34564f4"><a id="sn0bk3g0wih0"></a><span class="section-number-3">1.2</span> Security Frameworks</h3>
+<div id="outline-container-orgac58bec" class="outline-3">
+<h3 id="orgac58bec"><a id="sn0bk3g0wih0"></a><span class="section-number-3">1.2</span> Security Frameworks</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org4e76ada" class="outline-4">
-<h4 id="org4e76ada"><span class="section-number-4">1.2.1</span> Security Program Development:</h4>
+<div id="outline-container-org54ff285" class="outline-4">
+<h4 id="org54ff285"><span class="section-number-4">1.2.1</span> Security Program Development:</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <ul class="org-ul">
 <li>ISO/IEC 27000 series 
@@ -659,8 +769,8 @@ Controls: eg. Encryption, Access controls
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc4779ee" class="outline-4">
-<h4 id="orgc4779ee"><span class="section-number-4">1.2.2</span> Enterprise Architecture Development:</h4>
+<div id="outline-container-orgea1999a" class="outline-4">
+<h4 id="orgea1999a"><span class="section-number-4">1.2.2</span> Enterprise Architecture Development:</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <ul class="org-ul">
 <li>Zachman Framework - enterprise architecture</li>
@@ -670,14 +780,14 @@ Controls: eg. Encryption, Access controls
 <li>SABSA - security architecture focus</li>
 </ul>
 </div>
-<ol class="org-ol"><li><a id="orgaa34501"></a>An architecture is a set of different organizational views (Figure 1-4)<br /></li>
-<li><a id="org87c0f26"></a>An ISMS is implemented through a Security Architecture - it helps prevent the issues listed in this section<br /><div class="outline-text-5" id="text-1-2-2-2">
+<ol class="org-ol"><li><a id="orgcf30663"></a>An architecture is a set of different organizational views (Figure 1-4)<br /></li>
+<li><a id="org7244971"></a>An ISMS is implemented through a Security Architecture - it helps prevent the issues listed in this section<br /><div class="outline-text-5" id="text-1-2-2-2">
 <ul class="org-ul">
 <li>our risk framework is a version of a security architecture. Compared risk framework to Table 1-3.</li>
 <li>"The architecture is a tool used to ensure that what is outlined in security standards is implemented throughout the different layers of an organization" - this is where the applicability matrix start to come into play.</li>
 </ul>
 </div></li>
-<li><a id="orgc7e84f1"></a>Successful security architecture requires:<br /><div class="outline-text-5" id="text-1-2-2-3">
+<li><a id="org616a56f"></a>Successful security architecture requires:<br /><div class="outline-text-5" id="text-1-2-2-3">
 <dl class="org-dl">
 <dt>Strategic alignment</dt><dd>business drivers, regulatory and legal requirements are being meta</dd>
 <dt>Business enablement</dt><dd>security supports business, risk is necessary</dd>
@@ -686,10 +796,10 @@ Controls: eg. Encryption, Access controls
 </dl>
 </div></li></ol>
 </div>
-<div id="outline-container-orgbb3813b" class="outline-4">
-<h4 id="orgbb3813b"><span class="section-number-4">1.2.3</span> Security Controls Development:</h4>
+<div id="outline-container-org7084763" class="outline-4">
+<h4 id="org7084763"><span class="section-number-4">1.2.3</span> Security Controls Development:</h4>
 <div class="outline-text-4" id="text-1-2-3">
-</div><ol class="org-ol"><li><a id="orge868a58"></a>COBIT 5 - IT Management Framework - ISACA<br /><div class="outline-text-5" id="text-1-2-3-1">
+</div><ol class="org-ol"><li><a id="org8a5bb18"></a>COBIT 5 - IT Management Framework - ISACA<br /><div class="outline-text-5" id="text-1-2-3-1">
 <ul class="org-ul">
 <li>Focuses on optimizing Value of IT - beyond just security</li>
 <li>Key feature is a separation of governance from management, and goal breakdown</li>
@@ -699,13 +809,13 @@ Controls: eg. Encryption, Access controls
 <li>The Audit industry is largely based off COBIT.</li>
 </ul>
 </div></li>
-<li><a id="orgd168afa"></a>NIST SP 800-53 - NIST controls<br /><div class="outline-text-5" id="text-1-2-3-2">
+<li><a id="org8f1e0f6"></a>NIST SP 800-53 - NIST controls<br /><div class="outline-text-5" id="text-1-2-3-2">
 <ul class="org-ul">
 <li>NIST lives in the Dept. of Commerce</li>
 <li>FISMA (Federal Informatin Security Management Action) requires agencies to follow NIST</li>
 </ul>
 </div></li>
-<li><a id="org61b140c"></a>COSO Internal Control-Integrated Framework - financial fraud focus<br /><div class="outline-text-5" id="text-1-2-3-3">
+<li><a id="orgf2b9cc6"></a>COSO Internal Control-Integrated Framework - financial fraud focus<br /><div class="outline-text-5" id="text-1-2-3-3">
 <ul class="org-ul">
 <li>COBIT came from COSO</li>
 <li>Used for Corporate Governance (whereas COBIT is IT governance)</li>
@@ -713,22 +823,22 @@ Controls: eg. Encryption, Access controls
 </ul>
 </div></li></ol>
 </div>
-<div id="outline-container-orga1f4e8b" class="outline-4">
-<h4 id="orga1f4e8b"><span class="section-number-4">1.2.4</span> Process Management Development:</h4>
+<div id="outline-container-orgfd1c320" class="outline-4">
+<h4 id="orgfd1c320"><span class="section-number-4">1.2.4</span> Process Management Development:</h4>
 <div class="outline-text-4" id="text-1-2-4">
-</div><ol class="org-ol"><li><a id="org073c259"></a>ITIL - IT processes - UK origin<br /><div class="outline-text-5" id="text-1-2-4-1">
+</div><ol class="org-ol"><li><a id="org0e0a193"></a>ITIL - IT processes - UK origin<br /><div class="outline-text-5" id="text-1-2-4-1">
 <ul class="org-ul">
 <li>IT service management</li>
 <li>Focused on internal SLAs between IT and the Business</li>
 </ul>
 </div></li>
-<li><a id="org2b85b4c"></a>Six Sigma<br /><div class="outline-text-5" id="text-1-2-4-2">
+<li><a id="orgade39e8"></a>Six Sigma<br /><div class="outline-text-5" id="text-1-2-4-2">
 <ul class="org-ul">
 <li>Based on Total Quality Management (TQM)</li>
 <li>All about operation efficiency, reducing variation, defects, waste (very manufacturing oriented)</li>
 </ul>
 </div></li>
-<li><a id="org4e906d1"></a>Capability Maturity Model Integration (CMMI)<br /><div class="outline-text-5" id="text-1-2-4-3">
+<li><a id="orgc962026"></a>Capability Maturity Model Integration (CMMI)<br /><div class="outline-text-5" id="text-1-2-4-3">
 <ul class="org-ul">
 <li>Carnegie Mellon</li>
 <li>Started the idea of processes maturity levels (that are now starting to fade in popularity)</li>
@@ -737,46 +847,46 @@ Controls: eg. Encryption, Access controls
 </ul>
 </div></li></ol>
 </div>
-<div id="outline-container-org209f9d4" class="outline-4">
-<h4 id="org209f9d4"><span class="section-number-4">1.2.5</span> Security Program Lifecycle</h4>
+<div id="outline-container-org0b4e53d" class="outline-4">
+<h4 id="org0b4e53d"><span class="section-number-4">1.2.5</span> Security Program Lifecycle</h4>
 <div class="outline-text-4" id="text-1-2-5">
-</div><ol class="org-ol"><li><a id="org26f4d3f"></a>Plan and Organized<br /></li>
-<li><a id="orgf1f1fb8"></a>Implement<br /></li>
-<li><a id="org192d0f0"></a>Operate and Maintain<br /></li>
-<li><a id="orge2e7b11"></a>Monitor and Evaluate<br /><div class="outline-text-5" id="text-1-2-5-4">
+</div><ol class="org-ol"><li><a id="org18e1e24"></a>Plan and Organized<br /></li>
+<li><a id="orga4c7653"></a>Implement<br /></li>
+<li><a id="org072e75b"></a>Operate and Maintain<br /></li>
+<li><a id="org68e4a1f"></a>Monitor and Evaluate<br /><div class="outline-text-5" id="text-1-2-5-4">
 <ul class="org-ul">
 <li>Notice Figure 1-8 is closely aligned with our model</li>
 </ul>
 </div></li></ol>
 </div>
-<div id="outline-container-org5ed57c8" class="outline-4">
-<h4 id="org5ed57c8"><span class="section-number-4">1.2.6</span> Functionality vs. Security</h4>
+<div id="outline-container-org6ad42bd" class="outline-4">
+<h4 id="org6ad42bd"><span class="section-number-4">1.2.6</span> Functionality vs. Security</h4>
 </div>
 </div>
-<div id="outline-container-orgb1c067e" class="outline-3">
-<h3 id="orgb1c067e"><span class="section-number-3">1.3</span> Crime Laws</h3>
+<div id="outline-container-orgb6f6ed1" class="outline-3">
+<h3 id="orgb6f6ed1"><span class="section-number-3">1.3</span> Crime Laws</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org9efe6ba" class="outline-4">
-<h4 id="org9efe6ba"><span class="section-number-4">1.3.1</span> Computer-assisted - crime could take place even without a computer</h4>
+<div id="outline-container-org20e907a" class="outline-4">
+<h4 id="org20e907a"><span class="section-number-4">1.3.1</span> Computer-assisted - crime could take place even without a computer</h4>
 </div>
-<div id="outline-container-org913bae3" class="outline-4">
-<h4 id="org913bae3"><span class="section-number-4">1.3.2</span> Computer-targeted - crime could not take place</h4>
+<div id="outline-container-org75ca756" class="outline-4">
+<h4 id="org75ca756"><span class="section-number-4">1.3.2</span> Computer-targeted - crime could not take place</h4>
 </div>
-<div id="outline-container-orgc27e920" class="outline-4">
-<h4 id="orgc27e920"><span class="section-number-4">1.3.3</span> Computer is incidental - computer just happened to be involved</h4>
+<div id="outline-container-org3e6da3b" class="outline-4">
+<h4 id="org3e6da3b"><span class="section-number-4">1.3.3</span> Computer is incidental - computer just happened to be involved</h4>
 </div>
 </div>
-<div id="outline-container-org286ab34" class="outline-3">
-<h3 id="org286ab34"><span class="section-number-3">1.4</span> Complexities:</h3>
+<div id="outline-container-org6df1b50" class="outline-3">
+<h3 id="org6df1b50"><span class="section-number-3">1.4</span> Complexities:</h3>
 <div class="outline-text-3" id="text-1-4">
 <ul class="org-ul">
 <li>Hard to ID attackers</li>
 <li>Lack of reporting</li>
 </ul>
 </div>
-<div id="outline-container-orge02edd0" class="outline-4">
-<h4 id="orge02edd0"><span class="section-number-4">1.4.1</span> Evolution of attacks</h4>
+<div id="outline-container-org526a325" class="outline-4">
+<h4 id="org526a325"><span class="section-number-4">1.4.1</span> Evolution of attacks</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <ul class="org-ul">
 <li>Today is much more profit driven</li>
@@ -789,15 +899,15 @@ Controls: eg. Encryption, Access controls
 </ul>
 </div>
 </div>
-<div id="outline-container-org7288ea7" class="outline-4">
-<h4 id="org7288ea7"><span class="section-number-4">1.4.2</span> International issues</h4>
+<div id="outline-container-org1aac58d" class="outline-4">
+<h4 id="org1aac58d"><span class="section-number-4">1.4.2</span> International issues</h4>
 <div class="outline-text-4" id="text-1-4-2">
-</div><ol class="org-ol"><li><a id="org31d59f5"></a>Council of Europe Convention on CyberCrime<br /><div class="outline-text-5" id="text-1-4-2-1">
+</div><ol class="org-ol"><li><a id="org56165a8"></a>Council of Europe Convention on CyberCrime<br /><div class="outline-text-5" id="text-1-4-2-1">
 <p>
 &#x2013; First attempt to create an international response standards
 </p>
 </div></li>
-<li><a id="org22bda37"></a>OECD - Guidelines on the Protection of Privacy and Transborder Flows of Personal Data<br /><div class="outline-text-5" id="text-1-4-2-2">
+<li><a id="orga636314"></a>OECD - Guidelines on the Protection of Privacy and Transborder Flows of Personal Data<br /><div class="outline-text-5" id="text-1-4-2-2">
 <p>
 The are very similar to privacy principles
 </p>
@@ -811,7 +921,7 @@ The are very similar to privacy principles
 <li>Accountability</li>
 </ul>
 </div></li>
-<li><a id="orge10a25e"></a>EU Data Protection Directive - strict EU rules on privacy<br /><div class="outline-text-5" id="text-1-4-2-3">
+<li><a id="orgdd93d1a"></a>EU Data Protection Directive - strict EU rules on privacy<br /><div class="outline-text-5" id="text-1-4-2-3">
 <ul class="org-ul">
 <li>US-based companies used to use Safe Harbor Privacy Principles</li>
 <li>This has since been renegotiated</li>
@@ -829,7 +939,7 @@ The are very similar to privacy principles
 <a href="https://www.privacyshield.gov/Program-Overview">https://www.privacyshield.gov/Program-Overview</a></li>
 </ul>
 </div></li>
-<li><a id="org4958568"></a>Import Export Requirements<br /><div class="outline-text-5" id="text-1-4-2-4">
+<li><a id="org624f729"></a>Import Export Requirements<br /><div class="outline-text-5" id="text-1-4-2-4">
 <ul class="org-ul">
 <li>Wassenaar Arrangement - export controls restricting arms and dual-use goods exporting to certain controls
 <ul class="org-ul">
@@ -842,10 +952,10 @@ The are very similar to privacy principles
 </p>
 </div></li></ol>
 </div>
-<div id="outline-container-orgfadc81b" class="outline-4">
-<h4 id="orgfadc81b"><span class="section-number-4">1.4.3</span> Types of Legal Systems</h4>
+<div id="outline-container-org0626db1" class="outline-4">
+<h4 id="org0626db1"><span class="section-number-4">1.4.3</span> Types of Legal Systems</h4>
 <div class="outline-text-4" id="text-1-4-3">
-</div><ol class="org-ol"><li><a id="org455d1e3"></a>Civil (Code) Law System<br /><div class="outline-text-5" id="text-1-4-3-1">
+</div><ol class="org-ol"><li><a id="orgb7eb4bf"></a>Civil (Code) Law System<br /><div class="outline-text-5" id="text-1-4-3-1">
 <ul class="org-ul">
 <li>France, Spain</li>
 <li>Rule based, non precedent based</li>
@@ -853,7 +963,7 @@ The are very similar to privacy principles
 <li>Lower courts not compelled to following decisions made by higher courts</li>
 </ul>
 </div></li>
-<li><a id="org54b0ff6"></a>Common Law System<br /><div class="outline-text-5" id="text-1-4-3-2">
+<li><a id="orgbe81603"></a>Common Law System<br /><div class="outline-text-5" id="text-1-4-3-2">
 <ul class="org-ul">
 <li>Developed in England, US uses</li>
 <li>Uses precedent</li>
@@ -863,18 +973,18 @@ The are very similar to privacy principles
 <li>Administrative/regulatory law - deals with regulatory standards.</li>
 </ul>
 </div></li>
-<li><a id="orgce6211d"></a>Customary Law Systems<br /><div class="outline-text-5" id="text-1-4-3-3">
+<li><a id="orga2f3ef2"></a>Customary Law Systems<br /><div class="outline-text-5" id="text-1-4-3-3">
 <ul class="org-ul">
 <li>Personal conduct and behavior</li>
 <li>Based on traditions and customs</li>
 <li>Used in mixed legal systems (China, India)</li>
 </ul>
 </div></li>
-<li><a id="org835e42e"></a>Religious Law Systems<br /></li></ol>
+<li><a id="org9f2007a"></a>Religious Law Systems<br /></li></ol>
 </div>
 </div>
-<div id="outline-container-orgde3eaa0" class="outline-3">
-<h3 id="orgde3eaa0"><span class="section-number-3">1.5</span> Intellectual Property</h3>
+<div id="outline-container-orge2bf29b" class="outline-3">
+<h3 id="orge2bf29b"><span class="section-number-3">1.5</span> Intellectual Property</h3>
 <div class="outline-text-3" id="text-1-5">
 <ul class="org-ul">
 <li>Companies must implement safeguards to protect IP, show that it exercised due care.</li>
@@ -907,8 +1017,8 @@ The are very similar to privacy principles
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-org30b251a" class="outline-4">
-<h4 id="org30b251a"><span class="section-number-4">1.5.1</span> International Protection of Intellectual Property</h4>
+<div id="outline-container-orgc70abff" class="outline-4">
+<h4 id="orgc70abff"><span class="section-number-4">1.5.1</span> International Protection of Intellectual Property</h4>
 <div class="outline-text-4" id="text-1-5-1">
 <ul class="org-ul">
 <li>Resources protected by law should be part of data classification scheme, and properly protected with access controls</li>
@@ -916,10 +1026,10 @@ The are very similar to privacy principles
 </ul>
 </div>
 </div>
-<div id="outline-container-org1c45b6f" class="outline-4">
-<h4 id="org1c45b6f"><span class="section-number-4">1.5.2</span> Software Piracy</h4>
+<div id="outline-container-orgc687655" class="outline-4">
+<h4 id="orgc687655"><span class="section-number-4">1.5.2</span> Software Piracy</h4>
 <div class="outline-text-4" id="text-1-5-2">
-</div><ol class="org-ol"><li><a id="org6d7152a"></a>Types of licencing<br /><div class="outline-text-5" id="text-1-5-2-1">
+</div><ol class="org-ol"><li><a id="orgc48adb7"></a>Types of licencing<br /><div class="outline-text-5" id="text-1-5-2-1">
 <ul class="org-ul">
 <li>Freeware</li>
 <li>Shareware</li>
@@ -927,19 +1037,19 @@ The are very similar to privacy principles
 <li>Academic</li>
 </ul>
 </div></li>
-<li><a id="org1ab6c1f"></a>EULA<br /><div class="outline-text-5" id="text-1-5-2-2">
+<li><a id="org43acc86"></a>EULA<br /><div class="outline-text-5" id="text-1-5-2-2">
 <p>
 more granular that Master
 </p>
 </div></li>
-<li><a id="orgfaf2e5f"></a>Master Agreement<br /></li>
-<li><a id="orgd624579"></a>International<br /><div class="outline-text-5" id="text-1-5-2-4">
+<li><a id="org23c9fdb"></a>Master Agreement<br /></li>
+<li><a id="orga6c91af"></a>International<br /><div class="outline-text-5" id="text-1-5-2-4">
 <ul class="org-ul">
 <li>Not a crime everywhere</li>
 <li>Federation Against Software Theft (FAST) and the Business Software Alliance promote enforcement of proprietary rights of software</li>
 </ul>
 </div></li>
-<li><a id="orgcc0faf1"></a>Security Implictaions<br /><div class="outline-text-5" id="text-1-5-2-5">
+<li><a id="org808f3fb"></a>Security Implictaions<br /><div class="outline-text-5" id="text-1-5-2-5">
 <ul class="org-ul">
 <li>Common offense is to reverse engineer code. But this is necessary for discover security flaws.</li>
 <li>Can be prosecuted for reverse engineering code under Digital Millennium Copyright Act (DMCA)</li>
@@ -949,12 +1059,12 @@ more granular that Master
 </div></li></ol>
 </div>
 </div>
-<div id="outline-container-org076ef01" class="outline-3">
-<h3 id="org076ef01"><span class="section-number-3">1.6</span> Privacy</h3>
+<div id="outline-container-orgdf0bd21" class="outline-3">
+<h3 id="orgdf0bd21"><span class="section-number-3">1.6</span> Privacy</h3>
 <div class="outline-text-3" id="text-1-6">
 </div>
-<div id="outline-container-orge49cd65" class="outline-4">
-<h4 id="orge49cd65"><a id="s2j97wf0wih0"></a><span class="section-number-4">1.6.1</span> Definitions</h4>
+<div id="outline-container-org5185a6a" class="outline-4">
+<h4 id="org5185a6a"><a id="s2j97wf0wih0"></a><span class="section-number-4">1.6.1</span> Definitions</h4>
 <div class="outline-text-4" id="text-1-6-1">
 <dl class="org-dl">
 <dt>Personally Identifiable Information</dt><dd>data that can be used to uniquely identify, contact or locate a single person or can be used with other sources to uniquely identify a single individual. Commonly used in identity theft, financial crimes.
@@ -987,8 +1097,8 @@ more granular that Master
 </dl>
 </div>
 </div>
-<div id="outline-container-org7e465fa" class="outline-4">
-<h4 id="org7e465fa"><span class="section-number-4">1.6.2</span> Increasing Need for Privacy Laws</h4>
+<div id="outline-container-orge6d1e32" class="outline-4">
+<h4 id="orge6d1e32"><span class="section-number-4">1.6.2</span> Increasing Need for Privacy Laws</h4>
 <div class="outline-text-4" id="text-1-6-2">
 <ul class="org-ul">
 <li>Data aggregation and retrieval technologies</li>
@@ -997,15 +1107,15 @@ more granular that Master
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf47676c" class="outline-4">
-<h4 id="orgf47676c"><span class="section-number-4">1.6.3</span> Laws, Directives and Regulations</h4>
+<div id="outline-container-org06beb4f" class="outline-4">
+<h4 id="org06beb4f"><span class="section-number-4">1.6.3</span> Laws, Directives and Regulations</h4>
 <div class="outline-text-4" id="text-1-6-3">
-</div><ol class="org-ol"><li><a id="org62d671e"></a>Federal Privacy Act of 1974<br /><div class="outline-text-5" id="text-1-6-3-1">
+</div><ol class="org-ol"><li><a id="org70957db"></a>Federal Privacy Act of 1974<br /><div class="outline-text-5" id="text-1-6-3-1">
 <p>
 Restrictions on government maintenance and use of private records (relevant and necessary)
 </p>
 </div></li>
-<li><a id="org44ccddf"></a>Federal Information Security Management Act of 2002 (FISMA)<br /><div class="outline-text-5" id="text-1-6-3-2">
+<li><a id="org0fa5ca7"></a>Federal Information Security Management Act of 2002 (FISMA)<br /><div class="outline-text-5" id="text-1-6-3-2">
 <ul class="org-ul">
 <li>Federal agencies must implement a risk-based program to secure agency data and systems</li>
 <li>Requires annual reviews and reports to Office of Management and Budget (OMB)</li>
@@ -1021,26 +1131,26 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul></li>
 </ul>
 </div></li>
-<li><a id="orgf6f87be"></a>Department of Veterans Affairs Information Security Protection Act<br /><div class="outline-text-5" id="text-1-6-3-3">
+<li><a id="org2f91709"></a>Department of Veterans Affairs Information Security Protection Act<br /><div class="outline-text-5" id="text-1-6-3-3">
 <ul class="org-ul">
 <li>Only applies to the VA</li>
 <li>Was already required to comply with FISMA</li>
 <li>Required additional controls plus report compliance to Congress</li>
 </ul>
 </div></li>
-<li><a id="org20dfb4f"></a>Health Insurance Portability and Accountability Act (HIPAA)<br /><div class="outline-text-5" id="text-1-6-3-4">
+<li><a id="orgca212f4"></a>Health Insurance Portability and Accountability Act (HIPAA)<br /><div class="outline-text-5" id="text-1-6-3-4">
 <ul class="org-ul">
 <li>Storage, use and transmission of medical information</li>
 </ul>
 </div></li>
-<li><a id="orga6a60b5"></a>Health Information Technology for Economic and Clinical Health (HITECH) Act<br /><div class="outline-text-5" id="text-1-6-3-5">
+<li><a id="orgc1deda0"></a>Health Information Technology for Economic and Clinical Health (HITECH) Act<br /><div class="outline-text-5" id="text-1-6-3-5">
 <ul class="org-ul">
 <li>2009</li>
 <li>Promotes adoption of healthcare technology</li>
 <li>Strengthen civil and criminal enforcement of HIPAA rules</li>
 </ul>
 </div></li>
-<li><a id="org8424c3b"></a>USA Patriot Act<br /><div class="outline-text-5" id="text-1-6-3-6">
+<li><a id="org7826426"></a>USA Patriot Act<br /><div class="outline-text-5" id="text-1-6-3-6">
 <ul class="org-ul">
 <li>Reduces restrictions on law enforcement searching records - big area for privacy debate here</li>
 <li>Eases restrictions on foreign intelligence gathering within US</li>
@@ -1049,7 +1159,7 @@ Restrictions on government maintenance and use of private records (relevant and 
 <li>Expands definition of terrorism</li>
 </ul>
 </div></li>
-<li><a id="orga3b690a"></a>Gramm-Leach-Bliley Act (GLBA)<br /><div class="outline-text-5" id="text-1-6-3-7">
+<li><a id="orgd384d6a"></a>Gramm-Leach-Bliley Act (GLBA)<br /><div class="outline-text-5" id="text-1-6-3-7">
 <ul class="org-ul">
 <li>Aka Financial Services Modernization Act (1999)</li>
 <li>Requires financial institutions to develop privacy notices, right to prohibit sharing, security responsibilities</li>
@@ -1059,7 +1169,7 @@ Restrictions on government maintenance and use of private records (relevant and 
 <li>Pretexting Protection - social engineering safeguards</li>
 </ul>
 </div></li>
-<li><a id="org83a40de"></a>Personal Information Protection and Electronic Documents Act<br /><div class="outline-text-5" id="text-1-6-3-8">
+<li><a id="orgf1f6fc4"></a>Personal Information Protection and Electronic Documents Act<br /><div class="outline-text-5" id="text-1-6-3-8">
 <ul class="org-ul">
 <li>PIPEDA</li>
 <li>Canadian Law</li>
@@ -1068,7 +1178,7 @@ Restrictions on government maintenance and use of private records (relevant and 
 <li>Standard privacy requirements (Consent, collection, notice, etc.)</li>
 </ul>
 </div></li>
-<li><a id="orga58784f"></a>Payment Card Industry Data Security Standard (PCI DSS)<br /><div class="outline-text-5" id="text-1-6-3-9">
+<li><a id="org7a80ed6"></a>Payment Card Industry Data Security Standard (PCI DSS)<br /><div class="outline-text-5" id="text-1-6-3-9">
 <ul class="org-ul">
 <li>All credit cards companys came together to develop</li>
 <li>Applies to any entity that processes, transmits, stores or accepts credit card data</li>
@@ -1076,8 +1186,8 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div></li></ol>
 </div>
-<div id="outline-container-org03d4528" class="outline-4">
-<h4 id="org03d4528"><span class="section-number-4">1.6.4</span> Employee Privacy Issues</h4>
+<div id="outline-container-org0bf217a" class="outline-4">
+<h4 id="org0bf217a"><span class="section-number-4">1.6.4</span> Employee Privacy Issues</h4>
 <div class="outline-text-4" id="text-1-6-4">
 <ul class="org-ul">
 <li>Must make employees aware of monitoring</li>
@@ -1087,8 +1197,8 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-org35a9945" class="outline-4">
-<h4 id="org35a9945"><span class="section-number-4">1.6.5</span> Additional Material</h4>
+<div id="outline-container-org852449d" class="outline-4">
+<h4 id="org852449d"><span class="section-number-4">1.6.5</span> Additional Material</h4>
 <div class="outline-text-4" id="text-1-6-5">
 <ul class="org-ul">
 <li>Great resource for Privacy background: <a href="https://my.iapp.org/NC__Product?id=a191a000000Pa8iAAC">https://my.iapp.org/NC__Product?id=a191a000000Pa8iAAC</a></li>
@@ -1096,15 +1206,15 @@ Restrictions on government maintenance and use of private records (relevant and 
 </div>
 </div>
 </div>
-<div id="outline-container-org535bc0c" class="outline-3">
-<h3 id="org535bc0c"><span class="section-number-3">1.7</span> Data Breaches</h3>
+<div id="outline-container-orgdff6717" class="outline-3">
+<h3 id="orgdff6717"><span class="section-number-3">1.7</span> Data Breaches</h3>
 <div class="outline-text-3" id="text-1-7">
 </div>
-<div id="outline-container-orga7039db" class="outline-4">
-<h4 id="orga7039db"><span class="section-number-4">1.7.1</span> Verizon Data Breach Report: <a href="http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/">http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/</a></h4>
+<div id="outline-container-org78b1e07" class="outline-4">
+<h4 id="org78b1e07"><span class="section-number-4">1.7.1</span> Verizon Data Breach Report: <a href="http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/">http://www.verizonenterprise.com/verizon-insights-lab/dbir/2016/</a></h4>
 </div>
-<div id="outline-container-org669baa3" class="outline-4">
-<h4 id="org669baa3"><span class="section-number-4">1.7.2</span> Reporting</h4>
+<div id="outline-container-org5996454" class="outline-4">
+<h4 id="org5996454"><span class="section-number-4">1.7.2</span> Reporting</h4>
 <div class="outline-text-4" id="text-1-7-2">
 <ul class="org-ul">
 <li>Each state has breach reporting laws - in library</li>
@@ -1112,8 +1222,8 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-org1b367ed" class="outline-4">
-<h4 id="org1b367ed"><span class="section-number-4">1.7.3</span> US Laws pertaining to data breaches</h4>
+<div id="outline-container-orgc8bc389" class="outline-4">
+<h4 id="orgc8bc389"><span class="section-number-4">1.7.3</span> US Laws pertaining to data breaches</h4>
 <div class="outline-text-4" id="text-1-7-3">
 <ul class="org-ul">
 <li>HIPAA - no reporting requirements (but corrected by HITECH)</li>
@@ -1128,29 +1238,29 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-org014831d" class="outline-4">
-<h4 id="org014831d"><span class="section-number-4">1.7.4</span> Other Nation's Laws</h4>
+<div id="outline-container-orgec0fd0a" class="outline-4">
+<h4 id="orgec0fd0a"><span class="section-number-4">1.7.4</span> Other Nation's Laws</h4>
 <div class="outline-text-4" id="text-1-7-4">
-</div><ol class="org-ol"><li><a id="org9076128"></a>EU<br /><div class="outline-text-5" id="text-1-7-4-1">
+</div><ol class="org-ol"><li><a id="org08f21da"></a>EU<br /><div class="outline-text-5" id="text-1-7-4-1">
 <ul class="org-ul">
 <li>EU Data Protection Regulation - standardizes data breach laws</li>
 <li>Privacy very top down directed in EU</li>
 <li>24 hour notification requirement</li>
 </ul>
 </div></li>
-<li><a id="org7be37bc"></a>Other<br /><div class="outline-text-5" id="text-1-7-4-2">
+<li><a id="orge9b9518"></a>Other<br /><div class="outline-text-5" id="text-1-7-4-2">
 <ul class="org-ul">
 <li>12 countries have no notification requirements: Argentina, Brazil, Chile, China, Colombia, Hong Kong, India, Israel, Malaysia, Peru, Russia, Singapore</li>
 </ul>
 </div></li></ol>
 </div>
 </div>
-<div id="outline-container-orgbf9cfd6" class="outline-3">
-<h3 id="orgbf9cfd6"><span class="section-number-3">1.8</span> Policies, Standards, Baselines, Guidelines and Procedures</h3>
+<div id="outline-container-org8f9fab6" class="outline-3">
+<h3 id="org8f9fab6"><span class="section-number-3">1.8</span> Policies, Standards, Baselines, Guidelines and Procedures</h3>
 <div class="outline-text-3" id="text-1-8">
 </div>
-<div id="outline-container-org106edda" class="outline-4">
-<h4 id="org106edda"><span class="section-number-4">1.8.1</span> Policy - high level of requirement - typically should have a 3-5 year life</h4>
+<div id="outline-container-orge0ad380" class="outline-4">
+<h4 id="orge0ad380"><span class="section-number-4">1.8.1</span> Policy - high level of requirement - typically should have a 3-5 year life</h4>
 <div class="outline-text-4" id="text-1-8-1">
 <ul class="org-ul">
 <li>Advisory and Informative policies are rare - typically called Guidelines not Policy.</li>
@@ -1159,8 +1269,8 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-org0a1610a" class="outline-4">
-<h4 id="org0a1610a"><span class="section-number-4">1.8.2</span> Standards</h4>
+<div id="outline-container-orgaf982e1" class="outline-4">
+<h4 id="orgaf982e1"><span class="section-number-4">1.8.2</span> Standards</h4>
 <div class="outline-text-4" id="text-1-8-2">
 <ul class="org-ul">
 <li>mandatory</li>
@@ -1172,8 +1282,8 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-orged47f4f" class="outline-4">
-<h4 id="orged47f4f"><span class="section-number-4">1.8.3</span> Baselines</h4>
+<div id="outline-container-orgf539942" class="outline-4">
+<h4 id="orgf539942"><span class="section-number-4">1.8.3</span> Baselines</h4>
 <div class="outline-text-4" id="text-1-8-3">
 <ul class="org-ul">
 <li>NIST and ISO typically define Baseline as system configuration standards (eg. Windows 10 desktop baseline)</li>
@@ -1181,16 +1291,16 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgddb624f" class="outline-4">
-<h4 id="orgddb624f"><span class="section-number-4">1.8.4</span> Guidelines</h4>
+<div id="outline-container-org0131fde" class="outline-4">
+<h4 id="org0131fde"><span class="section-number-4">1.8.4</span> Guidelines</h4>
 <div class="outline-text-4" id="text-1-8-4">
 <ul class="org-ul">
 <li>non mandatory</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5695ae8" class="outline-4">
-<h4 id="org5695ae8"><span class="section-number-4">1.8.5</span> Procedures</h4>
+<div id="outline-container-orgb7252e3" class="outline-4">
+<h4 id="orgb7252e3"><span class="section-number-4">1.8.5</span> Procedures</h4>
 <div class="outline-text-4" id="text-1-8-5">
 <ul class="org-ul">
 <li>The Step-by-Step tasks (eg. How to install a desktop image for a new user)</li>
@@ -1199,8 +1309,8 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-orga06b537" class="outline-4">
-<h4 id="orga06b537"><span class="section-number-4">1.8.6</span> Implementation</h4>
+<div id="outline-container-org6bb0208" class="outline-4">
+<h4 id="org6bb0208"><span class="section-number-4">1.8.6</span> Implementation</h4>
 <div class="outline-text-4" id="text-1-8-6">
 <ul class="org-ul">
 <li>To be effective they must follow a life cycle</li>
@@ -1209,12 +1319,12 @@ Restrictions on government maintenance and use of private records (relevant and 
 </div>
 </div>
 </div>
-<div id="outline-container-orgb32c53a" class="outline-3">
-<h3 id="orgb32c53a"><a id="ny84hxf0wih0"></a><span class="section-number-3">1.9</span> Risk Management</h3>
+<div id="outline-container-org7854163" class="outline-3">
+<h3 id="org7854163"><a id="ny84hxf0wih0"></a><span class="section-number-3">1.9</span> Risk Management</h3>
 <div class="outline-text-3" id="text-1-9">
 </div>
-<div id="outline-container-orgd8d8bfe" class="outline-4">
-<h4 id="orgd8d8bfe"><span class="section-number-4">1.9.1</span> InfoSec risk types</h4>
+<div id="outline-container-org08c4e46" class="outline-4">
+<h4 id="org08c4e46"><span class="section-number-4">1.9.1</span> InfoSec risk types</h4>
 <div class="outline-text-4" id="text-1-9-1">
 <ul class="org-ul">
 <li>Physical damage</li>
@@ -1227,8 +1337,8 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcd0d84f" class="outline-4">
-<h4 id="orgcd0d84f"><span class="section-number-4">1.9.2</span> Risk Assessment Additional Readings:</h4>
+<div id="outline-container-org3a70dda" class="outline-4">
+<h4 id="org3a70dda"><span class="section-number-4">1.9.2</span> Risk Assessment Additional Readings:</h4>
 <div class="outline-text-4" id="text-1-9-2">
 <ul class="org-ul">
 <li>FFIEC Risk Assessment Approach (<a href="http://ithandbook.ffiec.gov/it-booklets/management/iii-it-risk-management.aspx">http://ithandbook.ffiec.gov/it-booklets/management/iii-it-risk-management.aspx</a>)</li>
@@ -1241,14 +1351,14 @@ Restrictions on government maintenance and use of private records (relevant and 
 </ul>
 </div>
 </div>
-<div id="outline-container-org4f724d5" class="outline-4">
-<h4 id="org4f724d5"><a id="io1d8vf0wih0"></a><span class="section-number-4">1.9.3</span> Holistic</h4>
+<div id="outline-container-orgd97841d" class="outline-4">
+<h4 id="orgd97841d"><a id="io1d8vf0wih0"></a><span class="section-number-4">1.9.3</span> Holistic</h4>
 <div class="outline-text-4" id="text-1-9-3">
 <ul class="org-ul">
 <li>Integrated Risk Management looks at all risk</li>
 </ul>
 </div>
-<ol class="org-ol"><li><a id="org4bdd398"></a>Integrated Risk Management<br /><div class="outline-text-5" id="text-1-9-3-1">
+<ol class="org-ol"><li><a id="orgdc7cec6"></a>Integrated Risk Management<br /><div class="outline-text-5" id="text-1-9-3-1">
 <p>
 The Gartner reframe of Governance, Risk and Compliance
 </p>
@@ -1263,14 +1373,14 @@ The Gartner reframe of Governance, Risk and Compliance
 </ul>
 </div></li>
 
-<li><a id="orgcb82930"></a>From High Risk, Low Risk to Good Risk, Bad Risk<br /><div class="outline-text-5" id="text-1-9-3-2">
+<li><a id="org34b50a2"></a>From High Risk, Low Risk to Good Risk, Bad Risk<br /><div class="outline-text-5" id="text-1-9-3-2">
 
 <div class="figure">
 <p><img src="images/From High Risk, Low Risk to Good Risk, Bad Risk/Screen Shot 2017-01-13 at 9.24.56 AM_2017-01-13_09-58-25.png" alt="Screen Shot 2017-01-13 at 9.24.56 AM_2017-01-13_09-58-25.png" />
 </p>
 </div>
 </div></li>
-<li><a id="org922d0b9"></a>Gartner Articles<br /><div class="outline-text-5" id="text-1-9-3-3">
+<li><a id="org13abd56"></a>Gartner Articles<br /><div class="outline-text-5" id="text-1-9-3-3">
 <p>
 <a href="file:///Users/chris/Documents/Edgile/Library/Gartner%20Articles/market_guide_for_integrated__290464.pdf">file:///Users/chris/Documents/Edgile/Library/Gartner Articles/market_guide_for_integrated__290464.pdf</a>
 <a href="file:///Users/chris/Documents/Edgile/Library/Gartner%20Articles/2016_strategic_roadmap_for_r_301059.pdf">file:///Users/chris/Documents/Edgile/Library/Gartner Articles/2016_strategic_roadmap_for_r_301059.pdf</a>
@@ -1278,7 +1388,7 @@ The Gartner reframe of Governance, Risk and Compliance
 <a href="file:///Users/chris/Documents/Edgile/Library/Gartner%20Articles/magic_quadrant_for_operation_297941.pdf">file:///Users/chris/Documents/Edgile/Library/Gartner Articles/magic_quadrant_for_operation_297941.pdf</a>
 </p>
 </div></li>
-<li><a id="org2d7d192"></a>Tiers:<br /><div class="outline-text-5" id="text-1-9-3-4">
+<li><a id="org200a959"></a>Tiers:<br /><div class="outline-text-5" id="text-1-9-3-4">
 <ul class="org-ul">
 <li>Organizational - business as a whole</li>
 <li>Business process - risk to major functions</li>
@@ -1286,8 +1396,8 @@ The Gartner reframe of Governance, Risk and Compliance
 </ul>
 </div></li></ol>
 </div>
-<div id="outline-container-orga13b30e" class="outline-4">
-<h4 id="orga13b30e"><span class="section-number-4">1.9.4</span> Information Systems Risk Management Policy</h4>
+<div id="outline-container-orgedaa52a" class="outline-4">
+<h4 id="orgedaa52a"><span class="section-number-4">1.9.4</span> Information Systems Risk Management Policy</h4>
 <div class="outline-text-4" id="text-1-9-4">
 <ul class="org-ul">
 <li>Defines approach to IT risk - should be connected to Enterprise Risk approach</li>
@@ -1310,31 +1420,31 @@ Note: those topics are typically to low detail to actually go in a policy.
 </p>
 </div>
 </div>
-<div id="outline-container-org489266d" class="outline-4">
-<h4 id="org489266d"><span class="section-number-4">1.9.5</span> Process</h4>
+<div id="outline-container-orgfbe3913" class="outline-4">
+<h4 id="orgfbe3913"><span class="section-number-4">1.9.5</span> Process</h4>
 <div class="outline-text-4" id="text-1-9-5">
 <ul class="org-ul">
 <li>NIST 800-39</li>
 </ul>
 </div>
-<ol class="org-ol"><li><a id="org8932ee7"></a>Frame risk - define the context<br /></li>
-<li><a id="org6d9a0bc"></a>Assess risk - set the likelihood and impact scales for each risk identified<br /></li>
-<li><a id="org63e8168"></a>Respond to risk - accept, mitigate, transfer - explicit decision required<br /></li>
-<li><a id="org10c742d"></a>Monitor risk - monitor control effectiveness<br /></li></ol>
+<ol class="org-ol"><li><a id="orgdf3424c"></a>Frame risk - define the context<br /></li>
+<li><a id="org5c32ee4"></a>Assess risk - set the likelihood and impact scales for each risk identified<br /></li>
+<li><a id="org1fd4ec1"></a>Respond to risk - accept, mitigate, transfer - explicit decision required<br /></li>
+<li><a id="org2efa242"></a>Monitor risk - monitor control effectiveness<br /></li></ol>
 </div>
-<div id="outline-container-org29ff658" class="outline-4">
-<h4 id="org29ff658"><span class="section-number-4">1.9.6</span> Threat Modeling</h4>
+<div id="outline-container-org2c05c0a" class="outline-4">
+<h4 id="org2c05c0a"><span class="section-number-4">1.9.6</span> Threat Modeling</h4>
 <div class="outline-text-4" id="text-1-9-6">
 <ul class="org-ul">
 <li>See threat modeling spreadsheet as a simple approach</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgea3246e" class="outline-4">
-<h4 id="orgea3246e"><span class="section-number-4">1.9.7</span> Vulnerabilities</h4>
+<div id="outline-container-org8b4eb4e" class="outline-4">
+<h4 id="org8b4eb4e"><span class="section-number-4">1.9.7</span> Vulnerabilities</h4>
 </div>
-<div id="outline-container-org55b9f46" class="outline-4">
-<h4 id="org55b9f46"><span class="section-number-4">1.9.8</span> Information</h4>
+<div id="outline-container-org4f2288c" class="outline-4">
+<h4 id="org4f2288c"><span class="section-number-4">1.9.8</span> Information</h4>
 <div class="outline-text-4" id="text-1-9-8">
 <ul class="org-ul">
 <li>Data at rest</li>
@@ -1343,11 +1453,11 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org50476f6" class="outline-4">
-<h4 id="org50476f6"><span class="section-number-4">1.9.9</span> Processes</h4>
+<div id="outline-container-org48e949e" class="outline-4">
+<h4 id="org48e949e"><span class="section-number-4">1.9.9</span> Processes</h4>
 </div>
-<div id="outline-container-org7980075" class="outline-4">
-<h4 id="org7980075"><span class="section-number-4">1.9.10</span> People</h4>
+<div id="outline-container-org75029cb" class="outline-4">
+<h4 id="org75029cb"><span class="section-number-4">1.9.10</span> People</h4>
 <div class="outline-text-4" id="text-1-9-10">
 <ul class="org-ul">
 <li>Social Engineering</li>
@@ -1356,11 +1466,11 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org6c3994d" class="outline-4">
-<h4 id="org6c3994d"><span class="section-number-4">1.9.11</span> Threats</h4>
+<div id="outline-container-orgbd97a7a" class="outline-4">
+<h4 id="orgbd97a7a"><span class="section-number-4">1.9.11</span> Threats</h4>
 </div>
-<div id="outline-container-orga943706" class="outline-4">
-<h4 id="orga943706"><span class="section-number-4">1.9.12</span> Attacks</h4>
+<div id="outline-container-org380ca9c" class="outline-4">
+<h4 id="org380ca9c"><span class="section-number-4">1.9.12</span> Attacks</h4>
 <div class="outline-text-4" id="text-1-9-12">
 <ul class="org-ul">
 <li>Attackers think in graphs, security personnel think in checklists</li>
@@ -1369,8 +1479,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org7bf332b" class="outline-4">
-<h4 id="org7bf332b"><span class="section-number-4">1.9.13</span> Reduction Analysis</h4>
+<div id="outline-container-orgd2ca95e" class="outline-4">
+<h4 id="orgd2ca95e"><span class="section-number-4">1.9.13</span> Reduction Analysis</h4>
 <div class="outline-text-4" id="text-1-9-13">
 <ul class="org-ul">
 <li>Vulnerability - Threat - Attack triad can be risk assessed</li>
@@ -1381,32 +1491,32 @@ Note: those topics are typically to low detail to actually go in a policy.
 </div>
 </div>
 </div>
-<div id="outline-container-org81cfe24" class="outline-3">
-<h3 id="org81cfe24"><span class="section-number-3">1.10</span> Risk Assessment and Analysis</h3>
+<div id="outline-container-orgacef94c" class="outline-3">
+<h3 id="orgacef94c"><span class="section-number-3">1.10</span> Risk Assessment and Analysis</h3>
 <div class="outline-text-3" id="text-1-10">
 </div>
-<div id="outline-container-org90d1755" class="outline-4">
-<h4 id="org90d1755"><span class="section-number-4">1.10.1</span> Identifying risks</h4>
+<div id="outline-container-orgc42a5e0" class="outline-4">
+<h4 id="orgc42a5e0"><span class="section-number-4">1.10.1</span> Identifying risks</h4>
 <div class="outline-text-4" id="text-1-10-1">
 <ul class="org-ul">
 <li>simple approach: Asset at Risk X Threat Community X Threat Type X Effect</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org459bc87" class="outline-4">
-<h4 id="org459bc87"><span class="section-number-4">1.10.2</span> Generic process (NIST)</h4>
+<div id="outline-container-org03bd396" class="outline-4">
+<h4 id="org03bd396"><span class="section-number-4">1.10.2</span> Generic process (NIST)</h4>
 <div class="outline-text-4" id="text-1-10-2">
-</div><ol class="org-ol"><li><a id="org01678c1"></a>Prepare for the assessment<br /></li>
-<li><a id="org948123a"></a>Conduct the assessment<br /><ol class="org-ol"><li><a id="org41283f0"></a>Identify threat sources and events<br /></li>
-<li><a id="org859aa85"></a>Identify vulnerabilities and predisposing conditions<br /></li>
-<li><a id="orgefdb026"></a>Determine likelihood of occurence<br /></li>
-<li><a id="org782e37a"></a>Determine magnitude of impact<br /></li>
-<li><a id="org92f9707"></a>Determine risk<br /></li></ol></li>
-<li><a id="org53ede94"></a>Communicate results<br /></li>
-<li><a id="org969ff61"></a>Maintain assessment<br /></li></ol>
+</div><ol class="org-ol"><li><a id="orgbfe7430"></a>Prepare for the assessment<br /></li>
+<li><a id="org8931d12"></a>Conduct the assessment<br /><ol class="org-ol"><li><a id="orga0fdf30"></a>Identify threat sources and events<br /></li>
+<li><a id="org6046739"></a>Identify vulnerabilities and predisposing conditions<br /></li>
+<li><a id="orgf2be718"></a>Determine likelihood of occurence<br /></li>
+<li><a id="org8aa1c5e"></a>Determine magnitude of impact<br /></li>
+<li><a id="org0bcfcd0"></a>Determine risk<br /></li></ol></li>
+<li><a id="org52eda54"></a>Communicate results<br /></li>
+<li><a id="org112581e"></a>Maintain assessment<br /></li></ol>
 </div>
-<div id="outline-container-org58bcb80" class="outline-4">
-<h4 id="org58bcb80"><span class="section-number-4">1.10.3</span> Facilitated Risk Analysis Process (FRAP)</h4>
+<div id="outline-container-orgf3a9b2d" class="outline-4">
+<h4 id="orgf3a9b2d"><span class="section-number-4">1.10.3</span> Facilitated Risk Analysis Process (FRAP)</h4>
 <div class="outline-text-4" id="text-1-10-3">
 <ul class="org-ul">
 <li>Qualitative, member experience driven</li>
@@ -1415,8 +1525,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org3f1d7d7" class="outline-4">
-<h4 id="org3f1d7d7"><span class="section-number-4">1.10.4</span> OCTAVE</h4>
+<div id="outline-container-org4388826" class="outline-4">
+<h4 id="org4388826"><span class="section-number-4">1.10.4</span> OCTAVE</h4>
 <div class="outline-text-4" id="text-1-10-4">
 <ul class="org-ul">
 <li>use facilitated workshops</li>
@@ -1425,8 +1535,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org0ffac80" class="outline-4">
-<h4 id="org0ffac80"><span class="section-number-4">1.10.5</span> AS/NZS 4360</h4>
+<div id="outline-container-org1b16a8b" class="outline-4">
+<h4 id="org1b16a8b"><span class="section-number-4">1.10.5</span> AS/NZS 4360</h4>
 <div class="outline-text-4" id="text-1-10-5">
 <ul class="org-ul">
 <li>Australia and New Zealand</li>
@@ -1434,8 +1544,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org270c71f" class="outline-4">
-<h4 id="org270c71f"><span class="section-number-4">1.10.6</span> ISO/IEC 27005</h4>
+<div id="outline-container-org43677a6" class="outline-4">
+<h4 id="org43677a6"><span class="section-number-4">1.10.6</span> ISO/IEC 27005</h4>
 <div class="outline-text-4" id="text-1-10-6">
 <ul class="org-ul">
 <li>International risk management standard</li>
@@ -1443,8 +1553,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd1256fa" class="outline-4">
-<h4 id="orgd1256fa"><span class="section-number-4">1.10.7</span> Failure Modes and Effect Analysis (FMEA)</h4>
+<div id="outline-container-org8f5fbe7" class="outline-4">
+<h4 id="org8f5fbe7"><span class="section-number-4">1.10.7</span> Failure Modes and Effect Analysis (FMEA)</h4>
 <div class="outline-text-4" id="text-1-10-7">
 <ul class="org-ul">
 <li>product development</li>
@@ -1452,16 +1562,16 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org4c4f452" class="outline-4">
-<h4 id="org4c4f452"><span class="section-number-4">1.10.8</span> Fault tree analysis</h4>
+<div id="outline-container-org3d398d2" class="outline-4">
+<h4 id="org3d398d2"><span class="section-number-4">1.10.8</span> Fault tree analysis</h4>
 <div class="outline-text-4" id="text-1-10-8">
 <ul class="org-ul">
 <li>Figure 1-15</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd7d16a2" class="outline-4">
-<h4 id="orgd7d16a2"><span class="section-number-4">1.10.9</span> Central Computing and Teecmmunications Agency Risk Analysis and Management Method (CRAMM)</h4>
+<div id="outline-container-org8276961" class="outline-4">
+<h4 id="org8276961"><span class="section-number-4">1.10.9</span> Central Computing and Teecmmunications Agency Risk Analysis and Management Method (CRAMM)</h4>
 <div class="outline-text-4" id="text-1-10-9">
 <ul class="org-ul">
 <li>UK</li>
@@ -1469,8 +1579,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org35901c1" class="outline-4">
-<h4 id="org35901c1"><span class="section-number-4">1.10.10</span> Difference:</h4>
+<div id="outline-container-org0e0e56a" class="outline-4">
+<h4 id="org0e0e56a"><span class="section-number-4">1.10.10</span> Difference:</h4>
 <div class="outline-text-4" id="text-1-10-10">
 <ul class="org-ul">
 <li>Organization wide: ISO/IEC 27005 or Octave</li>
@@ -1481,8 +1591,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org61f77f9" class="outline-4">
-<h4 id="org61f77f9"><span class="section-number-4">1.10.11</span> Approaches</h4>
+<div id="outline-container-orge0691ec" class="outline-4">
+<h4 id="orge0691ec"><span class="section-number-4">1.10.11</span> Approaches</h4>
 <div class="outline-text-4" id="text-1-10-11">
 <ul class="org-ul">
 <li>Qualitative</li>
@@ -1490,8 +1600,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaeec990" class="outline-4">
-<h4 id="orgaeec990"><span class="section-number-4">1.10.12</span> Quantitative</h4>
+<div id="outline-container-orge7d9d3c" class="outline-4">
+<h4 id="orge7d9d3c"><span class="section-number-4">1.10.12</span> Quantitative</h4>
 <div class="outline-text-4" id="text-1-10-12">
 <ul class="org-ul">
 <li>Asset Value X Exposure Factor (EF) = Single Loss Expectancy</li>
@@ -1499,16 +1609,16 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org7590c4e" class="outline-4">
-<h4 id="org7590c4e"><span class="section-number-4">1.10.13</span> Qualitative</h4>
+<div id="outline-container-org86eb85d" class="outline-4">
+<h4 id="org86eb85d"><span class="section-number-4">1.10.13</span> Qualitative</h4>
 <div class="outline-text-4" id="text-1-10-13">
 <ul class="org-ul">
 <li>use the High Medium Low Matrices</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1f6a76b" class="outline-4">
-<h4 id="org1f6a76b"><span class="section-number-4">1.10.14</span> Control Selection</h4>
+<div id="outline-container-org00b1536" class="outline-4">
+<h4 id="org00b1536"><span class="section-number-4">1.10.14</span> Control Selection</h4>
 <div class="outline-text-4" id="text-1-10-14">
 <ul class="org-ul">
 <li>Risk analysis allows a cost-benefit analysis</li>
@@ -1517,8 +1627,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org262ffd6" class="outline-4">
-<h4 id="org262ffd6"><span class="section-number-4">1.10.15</span> Risk terms:</h4>
+<div id="outline-container-orge02e112" class="outline-4">
+<h4 id="orge02e112"><span class="section-number-4">1.10.15</span> Risk terms:</h4>
 <div class="outline-text-4" id="text-1-10-15">
 <ul class="org-ul">
 <li>Inherent risk - beginning risk</li>
@@ -1526,8 +1636,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org1829573" class="outline-4">
-<h4 id="org1829573"><span class="section-number-4">1.10.16</span> Handling Risk:</h4>
+<div id="outline-container-org56dde29" class="outline-4">
+<h4 id="org56dde29"><span class="section-number-4">1.10.16</span> Handling Risk:</h4>
 <div class="outline-text-4" id="text-1-10-16">
 <ul class="org-ul">
 <li>Avoid</li>
@@ -1537,8 +1647,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org882ec9d" class="outline-4">
-<h4 id="org882ec9d"><span class="section-number-4">1.10.17</span> Outsourcing</h4>
+<div id="outline-container-orgec17551" class="outline-4">
+<h4 id="orgec17551"><span class="section-number-4">1.10.17</span> Outsourcing</h4>
 <div class="outline-text-4" id="text-1-10-17">
 <ul class="org-ul">
 <li>You can't outsource risk responsibility</li>
@@ -1546,8 +1656,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </div>
 </div>
 </div>
-<div id="outline-container-org634c866" class="outline-3">
-<h3 id="org634c866"><span class="section-number-3">1.11</span> Risk Management Frameworks</h3>
+<div id="outline-container-org630cdd4" class="outline-3">
+<h3 id="org630cdd4"><span class="section-number-3">1.11</span> Risk Management Frameworks</h3>
 <div class="outline-text-3" id="text-1-11">
 <ul class="org-ul">
 <li>"a structured process that allows an organization to identify and assess risk, reduces it to an acceptable level, and ensure that it remains at that level."</li>
@@ -1560,8 +1670,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-org219a51b" class="outline-4">
-<h4 id="org219a51b"><span class="section-number-4">1.11.1</span> Categorize Information Systems</h4>
+<div id="outline-container-orgc0aeb7a" class="outline-4">
+<h4 id="orgc0aeb7a"><span class="section-number-4">1.11.1</span> Categorize Information Systems</h4>
 <div class="outline-text-4" id="text-1-11-1">
 <ul class="org-ul">
 <li>Identify systems, subsystems, and boundaries</li>
@@ -1573,8 +1683,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org72e40b6" class="outline-4">
-<h4 id="org72e40b6"><span class="section-number-4">1.11.2</span> Select Security Controls</h4>
+<div id="outline-container-org2742c95" class="outline-4">
+<h4 id="org2742c95"><span class="section-number-4">1.11.2</span> Select Security Controls</h4>
 <div class="outline-text-4" id="text-1-11-2">
 <ul class="org-ul">
 <li>Assumes that you have performed a risk assessment and have identified a number of common controls across the organization</li>
@@ -1584,8 +1694,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org87bfca0" class="outline-4">
-<h4 id="org87bfca0"><span class="section-number-4">1.11.3</span> Implement Security Controls</h4>
+<div id="outline-container-org578b2fb" class="outline-4">
+<h4 id="org578b2fb"><span class="section-number-4">1.11.3</span> Implement Security Controls</h4>
 <div class="outline-text-4" id="text-1-11-3">
 <ul class="org-ul">
 <li>Implement the control</li>
@@ -1593,8 +1703,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf612156" class="outline-4">
-<h4 id="orgf612156"><span class="section-number-4">1.11.4</span> Assess Security Controls</h4>
+<div id="outline-container-org7e62b38" class="outline-4">
+<h4 id="org7e62b38"><span class="section-number-4">1.11.4</span> Assess Security Controls</h4>
 <div class="outline-text-4" id="text-1-11-4">
 <ul class="org-ul">
 <li>Assessor must be competent and independent</li>
@@ -1603,16 +1713,16 @@ Note: those topics are typically to low detail to actually go in a policy.
 </ul>
 </div>
 </div>
-<div id="outline-container-org2d15448" class="outline-4">
-<h4 id="org2d15448"><span class="section-number-4">1.11.5</span> Authorize Information Systems</h4>
+<div id="outline-container-orga36665b" class="outline-4">
+<h4 id="orga36665b"><span class="section-number-4">1.11.5</span> Authorize Information Systems</h4>
 <div class="outline-text-4" id="text-1-11-5">
 <ul class="org-ul">
 <li>Person must determine whether the risk exposure is acceptable to the organization. For a new system this will authorize connecting it to the network. For an inplace system, this is accepting risk or the mitigation plans.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org245238c" class="outline-4">
-<h4 id="org245238c"><span class="section-number-4">1.11.6</span> Monitor Security Controls</h4>
+<div id="outline-container-orgf4549ad" class="outline-4">
+<h4 id="orgf4549ad"><span class="section-number-4">1.11.6</span> Monitor Security Controls</h4>
 <div class="outline-text-4" id="text-1-11-6">
 <ul class="org-ul">
 <li>Ongoing monitoring and continuous improvement</li>
@@ -1621,8 +1731,8 @@ Note: those topics are typically to low detail to actually go in a policy.
 </div>
 </div>
 </div>
-<div id="outline-container-org0b64b9c" class="outline-3">
-<h3 id="org0b64b9c"><span class="section-number-3">1.12</span> Business Continuity and Disaster Recovery</h3>
+<div id="outline-container-org3f69256" class="outline-3">
+<h3 id="org3f69256"><span class="section-number-3">1.12</span> Business Continuity and Disaster Recovery</h3>
 <div class="outline-text-3" id="text-1-12">
 <p>
 Goal: minimize effects of a disaster or disruption
@@ -1657,8 +1767,8 @@ Business Continuity Planning:
 </ul>
 </div>
 
-<div id="outline-container-org074ce89" class="outline-4">
-<h4 id="org074ce89"><span class="section-number-4">1.12.1</span> Standards and Best Practices</h4>
+<div id="outline-container-org4acd171" class="outline-4">
+<h4 id="org4acd171"><span class="section-number-4">1.12.1</span> Standards and Best Practices</h4>
 <div class="outline-text-4" id="text-1-12-1">
 <p>
 NIST SP 800-34 R1 "Continuity Planning Guide for Federal Information Systems"
@@ -1704,8 +1814,8 @@ Others:
 </div>
 </div>
 
-<div id="outline-container-org3fa756a" class="outline-4">
-<h4 id="org3fa756a"><span class="section-number-4">1.12.2</span> Making BCM Part of teh Enterprise Security Program</h4>
+<div id="outline-container-org1aed250" class="outline-4">
+<h4 id="org1aed250"><span class="section-number-4">1.12.2</span> Making BCM Part of teh Enterprise Security Program</h4>
 <div class="outline-text-4" id="text-1-12-2">
 <ul class="org-ul">
 <li>Zachman Business Enterprise Framework - used to understand a company's architecture and all the pieces and parts that make it up, looks at various requirements of business processes. Looks at: data, function, network, people, time and motivation components.</li>
@@ -1715,8 +1825,8 @@ Others:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd88f286" class="outline-4">
-<h4 id="orgd88f286"><span class="section-number-4">1.12.3</span> BCP Project Components</h4>
+<div id="outline-container-org6342be3" class="outline-4">
+<h4 id="org6342be3"><span class="section-number-4">1.12.3</span> BCP Project Components</h4>
 <div class="outline-text-4" id="text-1-12-3">
 <ul class="org-ul">
 <li>Identify a Business Continuity Coordinator - leader of the team, typically must be strong at horizontal leadership</li>
@@ -1731,16 +1841,16 @@ Others:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc92c9db" class="outline-4">
-<h4 id="orgc92c9db"><span class="section-number-4">1.12.4</span> Scope of the Project</h4>
+<div id="outline-container-org8e16fd9" class="outline-4">
+<h4 id="org8e16fd9"><span class="section-number-4">1.12.4</span> Scope of the Project</h4>
 <div class="outline-text-4" id="text-1-12-4">
 <ul class="org-ul">
 <li>Typically scoped to larger threats with smaller threats convered by independent departmental contingency plans</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org40ca4f0" class="outline-4">
-<h4 id="org40ca4f0"><span class="section-number-4">1.12.5</span> BCP Policy</h4>
+<div id="outline-container-org9b16fcf" class="outline-4">
+<h4 id="org9b16fcf"><span class="section-number-4">1.12.5</span> BCP Policy</h4>
 <div class="outline-text-4" id="text-1-12-5">
 <ul class="org-ul">
 <li>supplies the framework for and governance of designing and building the BCP effort</li>
@@ -1761,8 +1871,8 @@ Others:
 </ul>
 </div>
 </div>
-<div id="outline-container-org89a2ce9" class="outline-4">
-<h4 id="org89a2ce9"><span class="section-number-4">1.12.6</span> Project Management</h4>
+<div id="outline-container-org36924c4" class="outline-4">
+<h4 id="org36924c4"><span class="section-number-4">1.12.6</span> Project Management</h4>
 <div class="outline-text-4" id="text-1-12-6">
 <ul class="org-ul">
 <li>Basically - execute a BCP project like any other good project</li>
@@ -1780,8 +1890,8 @@ Others:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb8c8c39" class="outline-4">
-<h4 id="orgb8c8c39"><span class="section-number-4">1.12.7</span> BCP Requirements</h4>
+<div id="outline-container-org3f4c1c6" class="outline-4">
+<h4 id="org3f4c1c6"><span class="section-number-4">1.12.7</span> BCP Requirements</h4>
 <div class="outline-text-4" id="text-1-12-7">
 <ul class="org-ul">
 <li>Need management support to get necessary resources</li>
@@ -1791,8 +1901,8 @@ Others:
 </ul>
 </div>
 </div>
-<div id="outline-container-org5ee4861" class="outline-4">
-<h4 id="org5ee4861"><span class="section-number-4">1.12.8</span> Business Impact Analysis</h4>
+<div id="outline-container-org8d4c121" class="outline-4">
+<h4 id="org8d4c121"><span class="section-number-4">1.12.8</span> Business Impact Analysis</h4>
 <div class="outline-text-4" id="text-1-12-8">
 <ul class="org-ul">
 <li>a functional analysis - what are the functions of the business and what is their criticality. Point is to identify the areas that would suffer the greatest financial or operational loss.</li>
@@ -1821,17 +1931,17 @@ BIA Steps:
 <li>Document findigns</li>
 </ul>
 </div>
-<ol class="org-ol"><li><a id="org35026be"></a>Risk Assessment<br /><div class="outline-text-5" id="text-1-12-8-1">
+<ol class="org-ol"><li><a id="org1512d0a"></a>Risk Assessment<br /><div class="outline-text-5" id="text-1-12-8-1">
 <ul class="org-ul">
 <li>A BCP focused assessment should be conducted</li>
 </ul>
 </div></li>
-<li><a id="org77f1dd1"></a>Risk Assessment Evaluation and Process<br /><div class="outline-text-5" id="text-1-12-8-2">
+<li><a id="orgab4f593"></a>Risk Assessment Evaluation and Process<br /><div class="outline-text-5" id="text-1-12-8-2">
 <ul class="org-ul">
 <li>Set the Likelihood and Impact for disruption threats</li>
 </ul>
 </div></li>
-<li><a id="orge3b559a"></a>Assigning Values to Assets<br /><div class="outline-text-5" id="text-1-12-8-3">
+<li><a id="org1e96a46"></a>Assigning Values to Assets<br /><div class="outline-text-5" id="text-1-12-8-3">
 <ul class="org-ul">
 <li>Cost of a loss (impact)</li>
 <li>Maximum tolerable Downtime (MTD), Maximum Period Time of Disruption (MPTD). Examples:
@@ -1845,12 +1955,12 @@ BIA Steps:
 </ul>
 </div></li></ol>
 </div>
-<div id="outline-container-orga9b76a1" class="outline-4">
-<h4 id="orga9b76a1"><span class="section-number-4">1.12.9</span> Interdependencies</h4>
+<div id="outline-container-orgf6ae81e" class="outline-4">
+<h4 id="orgf6ae81e"><span class="section-number-4">1.12.9</span> Interdependencies</h4>
 </div>
 </div>
-<div id="outline-container-org6856cb3" class="outline-3">
-<h3 id="org6856cb3"><span class="section-number-3">1.13</span> Personnel Security</h3>
+<div id="outline-container-orgaef2ce6" class="outline-3">
+<h3 id="orgaef2ce6"><span class="section-number-3">1.13</span> Personnel Security</h3>
 <div class="outline-text-3" id="text-1-13">
 <p>
 Separation of Duties :: make sure that one individual cannot complete a critical task by his/herself. Two variations:
@@ -1859,8 +1969,8 @@ Dual control :: Two individuals are required to complete the task
 Rotation of duties :: used to uncover fraudulent activities, mandatory vacations
 </p>
 </div>
-<div id="outline-container-orge58feba" class="outline-4">
-<h4 id="orge58feba"><span class="section-number-4">1.13.1</span> Hiring Practices</h4>
+<div id="outline-container-orgecea946" class="outline-4">
+<h4 id="orgecea946"><span class="section-number-4">1.13.1</span> Hiring Practices</h4>
 <div class="outline-text-4" id="text-1-13-1">
 <p>
 Nondisclosure Agreements (NDAs) :: should be required
@@ -1868,8 +1978,8 @@ References should be checked
 </p>
 </div>
 </div>
-<div id="outline-container-orgc6c25f3" class="outline-4">
-<h4 id="orgc6c25f3"><span class="section-number-4">1.13.2</span> Termination</h4>
+<div id="outline-container-org72e4dcd" class="outline-4">
+<h4 id="org72e4dcd"><span class="section-number-4">1.13.2</span> Termination</h4>
 <div class="outline-text-4" id="text-1-13-2">
 <p>
 Companies should have a set procedure
@@ -1877,8 +1987,8 @@ Procedure should be connected to disabling account access
 </p>
 </div>
 </div>
-<div id="outline-container-orgb5e9a45" class="outline-4">
-<h4 id="orgb5e9a45"><span class="section-number-4">1.13.3</span> Security-Awareness Training</h4>
+<div id="outline-container-org3b169d6" class="outline-4">
+<h4 id="org3b169d6"><span class="section-number-4">1.13.3</span> Security-Awareness Training</h4>
 <div class="outline-text-4" id="text-1-13-3">
 <p>
 Should be comprehensive, tailored and organization-wide
@@ -1888,8 +1998,8 @@ Typically should require employees to sign stating understanding of their securi
 </div>
 </div>
 
-<div id="outline-container-org1f347f7" class="outline-4">
-<h4 id="org1f347f7"><span class="section-number-4">1.13.4</span> Degree or Certification?</h4>
+<div id="outline-container-org3a7e6f1" class="outline-4">
+<h4 id="org3a7e6f1"><span class="section-number-4">1.13.4</span> Degree or Certification?</h4>
 <div class="outline-text-4" id="text-1-13-4">
 <p>
 Awareness :: provide information, goal is recognition and retention
@@ -1899,16 +2009,16 @@ Education :: provide Insight, goal is Understanding
 </div>
 </div>
 </div>
-<div id="outline-container-orge2bc1ad" class="outline-3">
-<h3 id="orge2bc1ad"><span class="section-number-3">1.14</span> Security Governance</h3>
+<div id="outline-container-orgcc5e5e1" class="outline-3">
+<h3 id="orgcc5e5e1"><span class="section-number-3">1.14</span> Security Governance</h3>
 <div class="outline-text-3" id="text-1-14">
 <p>
 Security Governance :: A framework that allows for the security goals of an organization to be set and expressed by senior management
 Goal is to implement security throughout the organization
 </p>
 </div>
-<div id="outline-container-org53a34ea" class="outline-4">
-<h4 id="org53a34ea"><span class="section-number-4">1.14.1</span> Metrics</h4>
+<div id="outline-container-orgcde0cd0" class="outline-4">
+<h4 id="orgcde0cd0"><span class="section-number-4">1.14.1</span> Metrics</h4>
 <div class="outline-text-4" id="text-1-14-1">
 <p>
 The means to facilitate decision making, perofrmance improvement and accountability
@@ -1944,8 +2054,8 @@ Time Detection -&gt; Recovery
 </div>
 </div>
 
-<div id="outline-container-org10a4d96" class="outline-3">
-<h3 id="org10a4d96"><span class="section-number-3">1.15</span> Ethics</h3>
+<div id="outline-container-org4cb957b" class="outline-3">
+<h3 id="org4cb957b"><span class="section-number-3">1.15</span> Ethics</h3>
 <div class="outline-text-3" id="text-1-15">
 <p>
 Overview:
@@ -1958,8 +2068,8 @@ Overview:
 </ul>
 </div>
 
-<div id="outline-container-org80ef08c" class="outline-4">
-<h4 id="org80ef08c"><span class="section-number-4">1.15.1</span> The Computer Ethics Institute</h4>
+<div id="outline-container-org7af3a47" class="outline-4">
+<h4 id="org7af3a47"><span class="section-number-4">1.15.1</span> The Computer Ethics Institute</h4>
 <div class="outline-text-4" id="text-1-15-1">
 <p>
 Ten Commandments:
@@ -1978,8 +2088,8 @@ Ten Commandments:
 </ul>
 </div>
 </div>
-<div id="outline-container-org4d3b26d" class="outline-4">
-<h4 id="org4d3b26d"><span class="section-number-4">1.15.2</span> The Internet Architecture Board</h4>
+<div id="outline-container-org0f8ed66" class="outline-4">
+<h4 id="org0f8ed66"><span class="section-number-4">1.15.2</span> The Internet Architecture Board</h4>
 <div class="outline-text-4" id="text-1-15-2">
 <p>
 Considers the following as unethical:
@@ -1994,8 +2104,8 @@ Considers the following as unethical:
 </ul>
 </div>
 </div>
-<div id="outline-container-org2cc947c" class="outline-4">
-<h4 id="org2cc947c"><span class="section-number-4">1.15.3</span> Corporate Ethics Programs</h4>
+<div id="outline-container-org7368ee9" class="outline-4">
+<h4 id="org7368ee9"><span class="section-number-4">1.15.3</span> Corporate Ethics Programs</h4>
 <div class="outline-text-4" id="text-1-15-3">
 <p>
 Most companies have an ethical statement
@@ -2005,32 +2115,32 @@ Most companies have an ethical statement
 </div>
 </div>
 
-<div id="outline-container-orga397830" class="outline-2">
-<h2 id="orga397830"><span class="section-number-2">2</span> Chapter 2 - Asset Security</h2>
+<div id="outline-container-org2136a60" class="outline-2">
+<h2 id="org2136a60"><span class="section-number-2">2</span> Chapter 2 - Asset Security</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-org54b6262" class="outline-3">
-<h3 id="org54b6262"><span class="section-number-3">2.1</span> Information Life Cycle</h3>
+</div><div id="outline-container-orgbbfc70e" class="outline-3">
+<h3 id="orgbbfc70e"><span class="section-number-3">2.1</span> Information Life Cycle</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
 
-<div id="outline-container-orgb3c1484" class="outline-4">
-<h4 id="orgb3c1484"><span class="section-number-4">2.1.1</span> Acquisition</h4>
+<div id="outline-container-org6921637" class="outline-4">
+<h4 id="org6921637"><span class="section-number-4">2.1.1</span> Acquisition</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <ul class="org-ul">
 <li>Information is added to systems, metadata attached, business process metadata attached, information is indexed. Must meet policy controls such an encryption of PII</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7befec2" class="outline-4">
-<h4 id="org7befec2"><span class="section-number-4">2.1.2</span> Used</h4>
+<div id="outline-container-orgc47a80d" class="outline-4">
+<h4 id="orgc47a80d"><span class="section-number-4">2.1.2</span> Used</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <ul class="org-ul">
 <li>Must maintain Integrity of data across replicated stores, resolving inconsistencies, applying classification rules</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf66b42c" class="outline-4">
-<h4 id="orgf66b42c"><span class="section-number-4">2.1.3</span> Archival</h4>
+<div id="outline-container-org7eefe1d" class="outline-4">
+<h4 id="org7eefe1d"><span class="section-number-4">2.1.3</span> Archival</h4>
 <div class="outline-text-4" id="text-2-1-3">
 <ul class="org-ul">
 <li>Business and legal requirements. Risks for discarding too soon, and for holding too long.</li>
@@ -2041,8 +2151,8 @@ Archive :: Copy of data that is no longer in use
 </p>
 </div>
 </div>
-<div id="outline-container-orgb2babbe" class="outline-4">
-<h4 id="orgb2babbe"><span class="section-number-4">2.1.4</span> Disposal</h4>
+<div id="outline-container-org13aace3" class="outline-4">
+<h4 id="org13aace3"><span class="section-number-4">2.1.4</span> Disposal</h4>
 <div class="outline-text-4" id="text-2-1-4">
 <p>
 Usually this means data destruction, needs to be destroyed correctly
@@ -2051,8 +2161,8 @@ Physically devies can be wiped, degaussed or shredded
 </div>
 </div>
 </div>
-<div id="outline-container-org83a3955" class="outline-3">
-<h3 id="org83a3955"><span class="section-number-3">2.2</span> Information Classification</h3>
+<div id="outline-container-orgdabc1ab" class="outline-3">
+<h3 id="orgdabc1ab"><span class="section-number-3">2.2</span> Information Classification</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>Sensitivity of data should be commensurate with the impact to the organization upon loss of confidentiality (PII is sensitive)</li>
@@ -2061,8 +2171,8 @@ Physically devies can be wiped, degaussed or shredded
 <li>Each classification should have associate rules/controls</li>
 </ul>
 </div>
-<div id="outline-container-org5fdb8c2" class="outline-4">
-<h4 id="org5fdb8c2"><span class="section-number-4">2.2.1</span> Classifications Levels</h4>
+<div id="outline-container-orge5d6cc5" class="outline-4">
+<h4 id="orge5d6cc5"><span class="section-number-4">2.2.1</span> Classifications Levels</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 Common ones:
@@ -2086,8 +2196,8 @@ Government:
 </ul>
 </div>
 </div>
-<div id="outline-container-org39eaed4" class="outline-4">
-<h4 id="org39eaed4"><span class="section-number-4">2.2.2</span> Classifications Controls</h4>
+<div id="outline-container-org4aad888" class="outline-4">
+<h4 id="org4aad888"><span class="section-number-4">2.2.2</span> Classifications Controls</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <p>
 Some controls to consider:
@@ -2108,12 +2218,12 @@ Some controls to consider:
 </div>
 </div>
 </div>
-<div id="outline-container-org15a19f6" class="outline-3">
-<h3 id="org15a19f6"><span class="section-number-3">2.3</span> Layers of Responsibility</h3>
+<div id="outline-container-orga74021c" class="outline-3">
+<h3 id="orga74021c"><span class="section-number-3">2.3</span> Layers of Responsibility</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-org30515fb" class="outline-4">
-<h4 id="org30515fb"><span class="section-number-4">2.3.1</span> Executive Management</h4>
+<div id="outline-container-org17400c2" class="outline-4">
+<h4 id="org17400c2"><span class="section-number-4">2.3.1</span> Executive Management</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <p>
 C-Suite
@@ -2131,8 +2241,8 @@ Privacy - related to the amount of control an individual should have to their pe
 </p>
 </div>
 </div>
-<div id="outline-container-orgf2f1a43" class="outline-4">
-<h4 id="orgf2f1a43"><span class="section-number-4">2.3.2</span> Data Owner</h4>
+<div id="outline-container-org38cca3a" class="outline-4">
+<h4 id="org38cca3a"><span class="section-number-4">2.3.2</span> Data Owner</h4>
 <div class="outline-text-4" id="text-2-3-2">
 <ul class="org-ul">
 <li>member of management is charge of a business unit, ultimately responsible for a subset of information</li>
@@ -2140,8 +2250,8 @@ Privacy - related to the amount of control an individual should have to their pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org3e74f70" class="outline-4">
-<h4 id="org3e74f70"><span class="section-number-4">2.3.3</span> Data Custodian</h4>
+<div id="outline-container-orgdac0331" class="outline-4">
+<h4 id="orgdac0331"><span class="section-number-4">2.3.3</span> Data Custodian</h4>
 <div class="outline-text-4" id="text-2-3-3">
 <ul class="org-ul">
 <li>Maintains and protects data, usually IT</li>
@@ -2149,8 +2259,8 @@ Privacy - related to the amount of control an individual should have to their pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org556e07c" class="outline-4">
-<h4 id="org556e07c"><span class="section-number-4">2.3.4</span> System Owner</h4>
+<div id="outline-container-org42badce" class="outline-4">
+<h4 id="org42badce"><span class="section-number-4">2.3.4</span> System Owner</h4>
 <div class="outline-text-4" id="text-2-3-4">
 <ul class="org-ul">
 <li>Owner of a system which may process data owned by different data owners</li>
@@ -2158,66 +2268,66 @@ Privacy - related to the amount of control an individual should have to their pe
 </ul>
 </div>
 </div>
-<div id="outline-container-org1bcad51" class="outline-4">
-<h4 id="org1bcad51"><span class="section-number-4">2.3.5</span> Security Administrator</h4>
+<div id="outline-container-org1166a33" class="outline-4">
+<h4 id="org1166a33"><span class="section-number-4">2.3.5</span> Security Administrator</h4>
 <div class="outline-text-4" id="text-2-3-5">
 <ul class="org-ul">
 <li>implementing and maintaining specific security devices</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd3adde9" class="outline-4">
-<h4 id="orgd3adde9"><span class="section-number-4">2.3.6</span> Supervisor</h4>
+<div id="outline-container-org9a653ff" class="outline-4">
+<h4 id="org9a653ff"><span class="section-number-4">2.3.6</span> Supervisor</h4>
 <div class="outline-text-4" id="text-2-3-6">
 <ul class="org-ul">
 <li>user manager, responsible for user activity</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6f7554d" class="outline-4">
-<h4 id="org6f7554d"><span class="section-number-4">2.3.7</span> Change Control Analyst</h4>
+<div id="outline-container-org02a581e" class="outline-4">
+<h4 id="org02a581e"><span class="section-number-4">2.3.7</span> Change Control Analyst</h4>
 <div class="outline-text-4" id="text-2-3-7">
 <ul class="org-ul">
 <li>approving or rejecting change requests</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb8ca458" class="outline-4">
-<h4 id="orgb8ca458"><span class="section-number-4">2.3.8</span> Data Analyst</h4>
+<div id="outline-container-orga682a23" class="outline-4">
+<h4 id="orga682a23"><span class="section-number-4">2.3.8</span> Data Analyst</h4>
 <div class="outline-text-4" id="text-2-3-8">
 <ul class="org-ul">
 <li>ensuring that data is stored in a way that makes sense</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0be0a44" class="outline-4">
-<h4 id="org0be0a44"><span class="section-number-4">2.3.9</span> User</h4>
+<div id="outline-container-orgb660376" class="outline-4">
+<h4 id="orgb660376"><span class="section-number-4">2.3.9</span> User</h4>
 <div class="outline-text-4" id="text-2-3-9">
 <ul class="org-ul">
 <li>uses the data</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3280862" class="outline-4">
-<h4 id="org3280862"><span class="section-number-4">2.3.10</span> Auditor</h4>
+<div id="outline-container-org67c6c0f" class="outline-4">
+<h4 id="org67c6c0f"><span class="section-number-4">2.3.10</span> Auditor</h4>
 <div class="outline-text-4" id="text-2-3-10">
 <ul class="org-ul">
 <li>conducts checks to ensure policy and regulatory compliance</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3525b70" class="outline-4">
-<h4 id="org3525b70"><span class="section-number-4">2.3.11</span> Why so many roles?</h4>
+<div id="outline-container-orgc9b4c24" class="outline-4">
+<h4 id="orgc9b4c24"><span class="section-number-4">2.3.11</span> Why so many roles?</h4>
 </div>
 </div>
 
-<div id="outline-container-org32aa91b" class="outline-3">
-<h3 id="org32aa91b"><span class="section-number-3">2.4</span> Retention Policies</h3>
+<div id="outline-container-org2aab554" class="outline-3">
+<h3 id="org2aab554"><span class="section-number-3">2.4</span> Retention Policies</h3>
 <div class="outline-text-3" id="text-2-4">
 </div>
 
-<div id="outline-container-org6f370f9" class="outline-4">
-<h4 id="org6f370f9"><span class="section-number-4">2.4.1</span> Developing a Retention Policy</h4>
+<div id="outline-container-org33e479a" class="outline-4">
+<h4 id="org33e479a"><span class="section-number-4">2.4.1</span> Developing a Retention Policy</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <p>
 These can vary a lot between types of information, need to identify and document
@@ -2244,29 +2354,29 @@ Electronic Discvoery Reference Model (EDRM)
 </div>
 </div>
 </div>
-<div id="outline-container-org89dd4e2" class="outline-3">
-<h3 id="org89dd4e2"><span class="section-number-3">2.5</span> Protecting Privacy</h3>
+<div id="outline-container-org71a05f6" class="outline-3">
+<h3 id="org71a05f6"><span class="section-number-3">2.5</span> Protecting Privacy</h3>
 <div class="outline-text-3" id="text-2-5">
 </div>
 
-<div id="outline-container-org88b8bb3" class="outline-4">
-<h4 id="org88b8bb3"><span class="section-number-4">2.5.1</span> Data Owners</h4>
+<div id="outline-container-orgef93eae" class="outline-4">
+<h4 id="orgef93eae"><span class="section-number-4">2.5.1</span> Data Owners</h4>
 <div class="outline-text-4" id="text-2-5-1">
 <ul class="org-ul">
 <li>Decide who gets access to data</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org64c5063" class="outline-4">
-<h4 id="org64c5063"><span class="section-number-4">2.5.2</span> Data Processors</h4>
+<div id="outline-container-org5f67fc7" class="outline-4">
+<h4 id="org5f67fc7"><span class="section-number-4">2.5.2</span> Data Processors</h4>
 <div class="outline-text-4" id="text-2-5-2">
 <ul class="org-ul">
 <li>Those that handle the data</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4e4ec9b" class="outline-4">
-<h4 id="org4e4ec9b"><span class="section-number-4">2.5.3</span> Data Remanence</h4>
+<div id="outline-container-org09f0ad7" class="outline-4">
+<h4 id="org09f0ad7"><span class="section-number-4">2.5.3</span> Data Remanence</h4>
 <div class="outline-text-4" id="text-2-5-3">
 <ul class="org-ul">
 <li>What remains after a simple delete of data</li>
@@ -2275,8 +2385,8 @@ Electronic Discvoery Reference Model (EDRM)
 </ul>
 </div>
 </div>
-<div id="outline-container-org5eab17a" class="outline-4">
-<h4 id="org5eab17a"><span class="section-number-4">2.5.4</span> Limits on Collection</h4>
+<div id="outline-container-org8b2f27f" class="outline-4">
+<h4 id="org8b2f27f"><span class="section-number-4">2.5.4</span> Limits on Collection</h4>
 <div class="outline-text-4" id="text-2-5-4">
 <ul class="org-ul">
 <li>Collection limitation - only collect the minimal PII necessary to perform job</li>
@@ -2297,15 +2407,15 @@ Privacy Policy:
 </div>
 </div>
 </div>
-<div id="outline-container-org9877eb6" class="outline-3">
-<h3 id="org9877eb6"><span class="section-number-3">2.6</span> Protecting Assets</h3>
+<div id="outline-container-orgc775afa" class="outline-3">
+<h3 id="orgc775afa"><span class="section-number-3">2.6</span> Protecting Assets</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 Threats: theft, service interruptions, physical damage, compromised system and environment integrity, unauthorized access
 </p>
 </div>
-<div id="outline-container-org7a9c0b5" class="outline-4">
-<h4 id="org7a9c0b5"><span class="section-number-4">2.6.1</span> Data Security Controls</h4>
+<div id="outline-container-org688a033" class="outline-4">
+<h4 id="org688a033"><span class="section-number-4">2.6.1</span> Data Security Controls</h4>
 <div class="outline-text-4" id="text-2-6-1">
 <p>
 Data States: In Motion, In Use, At Rest
@@ -2336,8 +2446,8 @@ Data in Use:
 </ul>
 </div>
 </div>
-<div id="outline-container-org1032502" class="outline-4">
-<h4 id="org1032502"><span class="section-number-4">2.6.2</span> Media Controls</h4>
+<div id="outline-container-org3a48db1" class="outline-4">
+<h4 id="org3a48db1"><span class="section-number-4">2.6.2</span> Media Controls</h4>
 <div class="outline-text-4" id="text-2-6-2">
 <ul class="org-ul">
 <li>Physically secure backup tapes</li>
@@ -2347,8 +2457,8 @@ Data in Use:
 </div>
 </div>
 </div>
-<div id="outline-container-org320dd11" class="outline-3">
-<h3 id="org320dd11"><span class="section-number-3">2.7</span> Data Leakage</h3>
+<div id="outline-container-orgf6203bd" class="outline-3">
+<h3 id="orgf6203bd"><span class="section-number-3">2.7</span> Data Leakage</h3>
 <div class="outline-text-3" id="text-2-7">
 <ul class="org-ul">
 <li>Employee mishandling is the most common form of mis-use</li>
@@ -2362,8 +2472,8 @@ Technical controls:
 </ul>
 </div>
 
-<div id="outline-container-orgf775f98" class="outline-4">
-<h4 id="orgf775f98"><span class="section-number-4">2.7.1</span> Data Leakage Prevention</h4>
+<div id="outline-container-org3f8488a" class="outline-4">
+<h4 id="org3f8488a"><span class="section-number-4">2.7.1</span> Data Leakage Prevention</h4>
 <div class="outline-text-4" id="text-2-7-1">
 <p>
 Prevent leakage to external parties
@@ -2404,13 +2514,13 @@ Hybrid DLP - Both the above
 </div>
 </div>
 </div>
-<div id="outline-container-org0d7d24e" class="outline-3">
-<h3 id="org0d7d24e"><span class="section-number-3">2.8</span> Protecting Other Assets</h3>
+<div id="outline-container-orga807f47" class="outline-3">
+<h3 id="orga807f47"><span class="section-number-3">2.8</span> Protecting Other Assets</h3>
 <div class="outline-text-3" id="text-2-8">
 </div>
 
-<div id="outline-container-orgd102e84" class="outline-4">
-<h4 id="orgd102e84"><span class="section-number-4">2.8.1</span> Protecting Mobile Devices</h4>
+<div id="outline-container-orgb0416b0" class="outline-4">
+<h4 id="orgb0416b0"><span class="section-number-4">2.8.1</span> Protecting Mobile Devices</h4>
 <div class="outline-text-4" id="text-2-8-1">
 <ul class="org-ul">
 <li>Theft is main threat</li>
@@ -2431,8 +2541,8 @@ Controls:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd7081e5" class="outline-4">
-<h4 id="orgd7081e5"><span class="section-number-4">2.8.2</span> Paper Records</h4>
+<div id="outline-container-org8de0316" class="outline-4">
+<h4 id="org8de0316"><span class="section-number-4">2.8.2</span> Paper Records</h4>
 <div class="outline-text-4" id="text-2-8-2">
 <ul class="org-ul">
 <li>easily overlooked</li>
@@ -2442,8 +2552,8 @@ Controls:
 </ul>
 </div>
 </div>
-<div id="outline-container-org41863cd" class="outline-4">
-<h4 id="org41863cd"><span class="section-number-4">2.8.3</span> Safes</h4>
+<div id="outline-container-org23dc2ba" class="outline-4">
+<h4 id="org23dc2ba"><span class="section-number-4">2.8.3</span> Safes</h4>
 <div class="outline-text-4" id="text-2-8-3">
 <ul class="org-ul">
 <li>Inventory - know where they are</li>
@@ -2453,12 +2563,12 @@ Controls:
 </div>
 </div>
 </div>
-<div id="outline-container-org2b99a97" class="outline-2">
-<h2 id="org2b99a97"><span class="section-number-2">3</span> Chapter 3 - Security Engineering</h2>
+<div id="outline-container-org6717bc6" class="outline-2">
+<h2 id="org6717bc6"><span class="section-number-2">3</span> Chapter 3 - Security Engineering</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgbb8b8cd" class="outline-3">
-<h3 id="orgbb8b8cd"><span class="section-number-3">3.1</span> System Architecture</h3>
+<div id="outline-container-org77cff3a" class="outline-3">
+<h3 id="org77cff3a"><span class="section-number-3">3.1</span> System Architecture</h3>
 <div class="outline-text-3" id="text-3-1">
 <dl class="org-dl">
 <dt>Architecture</dt><dd>tool used to conceptually understand the structure and behavior of a complex entity through different views.</dd>
@@ -2468,8 +2578,8 @@ Controls:
 <dt>System</dt><dd>can be an individual computer, an application, a select set of subsystems, a set of computers, or a set of networks</dd>
 </dl>
 </div>
-<div id="outline-container-orgfd02c86" class="outline-4">
-<h4 id="orgfd02c86"><span class="section-number-4">3.1.1</span> ISO/IEC 42010:2011 - System Architecture Standard. Establishes a shared vocabulary</h4>
+<div id="outline-container-orgc6f8cc4" class="outline-4">
+<h4 id="orgc6f8cc4"><span class="section-number-4">3.1.1</span> ISO/IEC 42010:2011 - System Architecture Standard. Establishes a shared vocabulary</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <ul class="org-ul">
 <li>Architecture</li>
@@ -2482,15 +2592,15 @@ Controls:
 </div>
 </div>
 </div>
-<div id="outline-container-org6ad32b2" class="outline-3">
-<h3 id="org6ad32b2"><span class="section-number-3">3.2</span> Computer Architecture</h3>
+<div id="outline-container-org1e38ded" class="outline-3">
+<h3 id="org1e38ded"><span class="section-number-3">3.2</span> Computer Architecture</h3>
 <div class="outline-text-3" id="text-3-2">
 <dl class="org-dl">
 <dt>Computer Architecture</dt><dd>all the parts of a computer system that are necessary for it to function, including the central processing unit, memory chips, logic circuits, storage devices, input and output devices, security components, buses, and networking interfaces.</dd>
 </dl>
 </div>
-<div id="outline-container-orga2b2a5f" class="outline-4">
-<h4 id="orga2b2a5f"><span class="section-number-4">3.2.1</span> The Central Processing Unit</h4>
+<div id="outline-container-orgfd5bb0d" class="outline-4">
+<h4 id="orgfd5bb0d"><span class="section-number-4">3.2.1</span> The Central Processing Unit</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <dl class="org-dl">
 <dt>CPU</dt><dd>brain of the computer</dd>
@@ -2506,8 +2616,8 @@ Controls:
 </dl>
 </div>
 </div>
-<div id="outline-container-org14db60f" class="outline-4">
-<h4 id="org14db60f"><span class="section-number-4">3.2.2</span> Multiprocessing</h4>
+<div id="outline-container-orgb0f642f" class="outline-4">
+<h4 id="orgb0f642f"><span class="section-number-4">3.2.2</span> Multiprocessing</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <ul class="org-ul">
 <li>More than one processor</li>
@@ -2516,8 +2626,8 @@ Controls:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdfe1359" class="outline-4">
-<h4 id="orgdfe1359"><span class="section-number-4">3.2.3</span> Memory Types</h4>
+<div id="outline-container-orgbee418e" class="outline-4">
+<h4 id="orgbee418e"><span class="section-number-4">3.2.3</span> Memory Types</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <dl class="org-dl">
 <dt>Random Access Memory (RAM)</dt><dd>temporary storage. DRAM - must be refreshed, slower. Static RAM (SRAM) - does not require refresh, require more transistors, faster than DRAM
@@ -2543,8 +2653,8 @@ Controls:
 </dl>
 </div>
 </div>
-<div id="outline-container-orgefe3997" class="outline-4">
-<h4 id="orgefe3997"><span class="section-number-4">3.2.4</span> Buffer Overflow Resources</h4>
+<div id="outline-container-org03b4ffc" class="outline-4">
+<h4 id="org03b4ffc"><span class="section-number-4">3.2.4</span> Buffer Overflow Resources</h4>
 <div class="outline-text-4" id="text-3-2-4">
 <ul class="org-ul">
 <li><a href="http://">http://</a> opensecuritytraining.info/ IntroX86. html</li>
@@ -2559,8 +2669,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </p>
 </div>
 </div>
-<div id="outline-container-org3a9e281" class="outline-4">
-<h4 id="org3a9e281"><span class="section-number-4">3.2.5</span> Memory Protection Techniques</h4>
+<div id="outline-container-org4514783" class="outline-4">
+<h4 id="org4514783"><span class="section-number-4">3.2.5</span> Memory Protection Techniques</h4>
 <div class="outline-text-4" id="text-3-2-5">
 <ul class="org-ul">
 <li>Address space layout randomization (ASLR) - changes address layout randomly</li>
@@ -2568,8 +2678,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf675bdb" class="outline-4">
-<h4 id="orgf675bdb"><span class="section-number-4">3.2.6</span> Memory Leaks</h4>
+<div id="outline-container-org757f16a" class="outline-4">
+<h4 id="org757f16a"><span class="section-number-4">3.2.6</span> Memory Leaks</h4>
 <div class="outline-text-4" id="text-3-2-6">
 <ul class="org-ul">
 <li>When applications to correctly release memory. Can open the door to a DoS attack.</li>
@@ -2577,12 +2687,12 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-org38ea364" class="outline-3">
-<h3 id="org38ea364"><span class="section-number-3">3.3</span> Operating Systems</h3>
+<div id="outline-container-orgc362583" class="outline-3">
+<h3 id="orgc362583"><span class="section-number-3">3.3</span> Operating Systems</h3>
 <div class="outline-text-3" id="text-3-3">
 </div>
-<div id="outline-container-orga6e2587" class="outline-4">
-<h4 id="orga6e2587"><span class="section-number-4">3.3.1</span> Process Management</h4>
+<div id="outline-container-org6b2bb3e" class="outline-4">
+<h4 id="org6b2bb3e"><span class="section-number-4">3.3.1</span> Process Management</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <dl class="org-dl">
 <dt>Process</dt><dd>set of instructions that is actually running. A program loaded into memory. A process has computer resources (CPU, memory) assigned to it.</dd>
@@ -2606,8 +2716,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </dl>
 </div>
 </div>
-<div id="outline-container-org936a93b" class="outline-4">
-<h4 id="org936a93b"><span class="section-number-4">3.3.2</span> Memory Management</h4>
+<div id="outline-container-orgb3d471f" class="outline-4">
+<h4 id="orgb3d471f"><span class="section-number-4">3.3.2</span> Memory Management</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <dl class="org-dl">
 <dt>Abstraction</dt><dd>details are hidden to the applications.</dd>
@@ -2625,8 +2735,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </dl>
 </div>
 </div>
-<div id="outline-container-org59794f2" class="outline-4">
-<h4 id="org59794f2"><span class="section-number-4">3.3.3</span> Input/Output Device Management</h4>
+<div id="outline-container-org70a4d9a" class="outline-4">
+<h4 id="org70a4d9a"><span class="section-number-4">3.3.3</span> Input/Output Device Management</h4>
 <div class="outline-text-4" id="text-3-3-3">
 <dl class="org-dl">
 <dt>Interrupts</dt><dd>Request for CPU time</dd>
@@ -2638,8 +2748,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </dl>
 </div>
 </div>
-<div id="outline-container-org5ec3fbf" class="outline-4">
-<h4 id="org5ec3fbf"><span class="section-number-4">3.3.4</span> CPU Architecture Integration</h4>
+<div id="outline-container-org95c705e" class="outline-4">
+<h4 id="org95c705e"><span class="section-number-4">3.3.4</span> CPU Architecture Integration</h4>
 <div class="outline-text-4" id="text-3-3-4">
 <dl class="org-dl">
 <dt>instruction set</dt><dd>the language of the CPU - x86 is most common in use today.</dd>
@@ -2650,8 +2760,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </dl>
 </div>
 </div>
-<div id="outline-container-org7a1a707" class="outline-4">
-<h4 id="org7a1a707"><span class="section-number-4">3.3.5</span> Operating System Architectures</h4>
+<div id="outline-container-org0f54f71" class="outline-4">
+<h4 id="org0f54f71"><span class="section-number-4">3.3.5</span> Operating System Architectures</h4>
 <div class="outline-text-4" id="text-3-3-5">
 <dl class="org-dl">
 <dt>Monolithic architecture</dt><dd>all the OS processes work in kernel mode. MS-DOS and early OSes like this.</dd>
@@ -2661,8 +2771,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </dl>
 </div>
 </div>
-<div id="outline-container-org13887d2" class="outline-4">
-<h4 id="org13887d2"><span class="section-number-4">3.3.6</span> Virtual Machines</h4>
+<div id="outline-container-orge041092" class="outline-4">
+<h4 id="orge041092"><span class="section-number-4">3.3.6</span> Virtual Machines</h4>
 <div class="outline-text-4" id="text-3-3-6">
 <ul class="org-ul">
 <li>Enables a single hardware to run multiple operating systems</li>
@@ -2673,20 +2783,20 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-orgbb6cb30" class="outline-3">
-<h3 id="orgbb6cb30"><span class="section-number-3">3.4</span> System Security Architecture</h3>
+<div id="outline-container-orge28cec5" class="outline-3">
+<h3 id="orge28cec5"><span class="section-number-3">3.4</span> System Security Architecture</h3>
 <div class="outline-text-3" id="text-3-4">
 </div>
-<div id="outline-container-orge582e52" class="outline-4">
-<h4 id="orge582e52"><span class="section-number-4">3.4.1</span> Security Policy</h4>
+<div id="outline-container-org6b9045e" class="outline-4">
+<h4 id="org6b9045e"><span class="section-number-4">3.4.1</span> Security Policy</h4>
 <div class="outline-text-4" id="text-3-4-1">
 <dl class="org-dl">
 <dt>Security Policy</dt><dd>a strategic tool that dictates how sensitive information and resources are to be managed and protected.</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org1bd9eba" class="outline-4">
-<h4 id="org1bd9eba"><span class="section-number-4">3.4.2</span> Security Architecture Requirements</h4>
+<div id="outline-container-org2df6cc9" class="outline-4">
+<h4 id="org2df6cc9"><span class="section-number-4">3.4.2</span> Security Architecture Requirements</h4>
 <div class="outline-text-4" id="text-3-4-2">
 <dl class="org-dl">
 <dt>Trusted Computing Base (TCB)</dt><dd>Collection of hardware, software and firmware components that provides security and enforces policy.</dd>
@@ -2700,12 +2810,12 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-orged9457b" class="outline-3">
-<h3 id="orged9457b"><span class="section-number-3">3.5</span> Security Models</h3>
+<div id="outline-container-org01338ac" class="outline-3">
+<h3 id="org01338ac"><span class="section-number-3">3.5</span> Security Models</h3>
 <div class="outline-text-3" id="text-3-5">
 </div>
-<div id="outline-container-org62c0aa1" class="outline-4">
-<h4 id="org62c0aa1"><span class="section-number-4">3.5.1</span> Bell-LaPadula Model</h4>
+<div id="outline-container-orgcbc20b0" class="outline-4">
+<h4 id="orgcbc20b0"><span class="section-number-4">3.5.1</span> Bell-LaPadula Model</h4>
 <div class="outline-text-4" id="text-3-5-1">
 <ul class="org-ul">
 <li>First mathematical model.</li>
@@ -2716,8 +2826,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org8e67d14" class="outline-4">
-<h4 id="org8e67d14"><span class="section-number-4">3.5.2</span> Biba Model</h4>
+<div id="outline-container-orgdda1164" class="outline-4">
+<h4 id="orgdda1164"><span class="section-number-4">3.5.2</span> Biba Model</h4>
 <div class="outline-text-4" id="text-3-5-2">
 <ul class="org-ul">
 <li>Addresses Integrity. Prevents data at any integrity level from flowing to a higher integrity level.</li>
@@ -2728,8 +2838,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org8687d31" class="outline-4">
-<h4 id="org8687d31"><span class="section-number-4">3.5.3</span> Clark-Wilson Model</h4>
+<div id="outline-container-orgcbc3af5" class="outline-4">
+<h4 id="orgcbc3af5"><span class="section-number-4">3.5.3</span> Clark-Wilson Model</h4>
 <div class="outline-text-4" id="text-3-5-3">
 <ul class="org-ul">
 <li>Developed after Biba, different approach to protecting Integrity</li>
@@ -2742,8 +2852,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org69b968d" class="outline-4">
-<h4 id="org69b968d"><span class="section-number-4">3.5.4</span> Noninterference Model</h4>
+<div id="outline-container-org47eed89" class="outline-4">
+<h4 id="org47eed89"><span class="section-number-4">3.5.4</span> Noninterference Model</h4>
 <div class="outline-text-4" id="text-3-5-4">
 <ul class="org-ul">
 <li>Less concerned about the flow of data that what a subject knows about the state of the system.</li>
@@ -2752,8 +2862,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org3733eac" class="outline-4">
-<h4 id="org3733eac"><span class="section-number-4">3.5.5</span> Brew and Nash Model</h4>
+<div id="outline-container-orgaafd063" class="outline-4">
+<h4 id="orgaafd063"><span class="section-number-4">3.5.5</span> Brew and Nash Model</h4>
 <div class="outline-text-4" id="text-3-5-5">
 <ul class="org-ul">
 <li>Chinese wall model. A subject can write to an object if, and only if, the subject cannot read another object that is in a different dataset.</li>
@@ -2761,8 +2871,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org714954f" class="outline-4">
-<h4 id="org714954f"><span class="section-number-4">3.5.6</span> Graham-Denning Model</h4>
+<div id="outline-container-org46a0555" class="outline-4">
+<h4 id="org46a0555"><span class="section-number-4">3.5.6</span> Graham-Denning Model</h4>
 <div class="outline-text-4" id="text-3-5-6">
 <ul class="org-ul">
 <li>Shows how subjects and objeects should be created and deleted</li>
@@ -2772,8 +2882,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org2979ee8" class="outline-4">
-<h4 id="org2979ee8"><span class="section-number-4">3.5.7</span> Harrison-Ruzzo-Ullman Model</h4>
+<div id="outline-container-org3435654" class="outline-4">
+<h4 id="org3435654"><span class="section-number-4">3.5.7</span> Harrison-Ruzzo-Ullman Model</h4>
 <div class="outline-text-4" id="text-3-5-7">
 <ul class="org-ul">
 <li>Shows how a finite set of procedures can be available to edit the access rights of a subject</li>
@@ -2782,12 +2892,12 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-org3ce3c43" class="outline-3">
-<h3 id="org3ce3c43"><span class="section-number-3">3.6</span> Systems Evaluation</h3>
+<div id="outline-container-org82acdd5" class="outline-3">
+<h3 id="org82acdd5"><span class="section-number-3">3.6</span> Systems Evaluation</h3>
 <div class="outline-text-3" id="text-3-6">
 </div>
-<div id="outline-container-orgc1225d8" class="outline-4">
-<h4 id="orgc1225d8"><span class="section-number-4">3.6.1</span> Common Criteria</h4>
+<div id="outline-container-orgfb98278" class="outline-4">
+<h4 id="orgfb98278"><span class="section-number-4">3.6.1</span> Common Criteria</h4>
 <div class="outline-text-4" id="text-3-6-1">
 <ul class="org-ul">
 <li>Only framework of global significant</li>
@@ -2815,8 +2925,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org290d430" class="outline-4">
-<h4 id="org290d430"><span class="section-number-4">3.6.2</span> Why Put a Product Through Evaluation?</h4>
+<div id="outline-container-org9cee31a" class="outline-4">
+<h4 id="org9cee31a"><span class="section-number-4">3.6.2</span> Why Put a Product Through Evaluation?</h4>
 <div class="outline-text-4" id="text-3-6-2">
 <ul class="org-ul">
 <li>DoD requires rating for some products</li>
@@ -2824,20 +2934,20 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-orgefa69b5" class="outline-3">
-<h3 id="orgefa69b5"><span class="section-number-3">3.7</span> Certification vs. Accreditation</h3>
+<div id="outline-container-org3e1a4d3" class="outline-3">
+<h3 id="org3e1a4d3"><span class="section-number-3">3.7</span> Certification vs. Accreditation</h3>
 <div class="outline-text-3" id="text-3-7">
 </div>
-<div id="outline-container-org154d531" class="outline-4">
-<h4 id="org154d531"><span class="section-number-4">3.7.1</span> Certification</h4>
+<div id="outline-container-org4dbe7fa" class="outline-4">
+<h4 id="org4dbe7fa"><span class="section-number-4">3.7.1</span> Certification</h4>
 <div class="outline-text-4" id="text-3-7-1">
 <dl class="org-dl">
 <dt>Certification</dt><dd>comprehensive technical evaluation of the security components and their compliance for the purpose of accreditation. Certification process is: evalaution, risk analysis, verification, testing and auditing.</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orga17a450" class="outline-4">
-<h4 id="orga17a450"><span class="section-number-4">3.7.2</span> Accreditation</h4>
+<div id="outline-container-org2ac4457" class="outline-4">
+<h4 id="org2ac4457"><span class="section-number-4">3.7.2</span> Accreditation</h4>
 <div class="outline-text-4" id="text-3-7-2">
 <dl class="org-dl">
 <dt>Accreditation</dt><dd>formal acceptance of the adequacy of a system's overall security and functionality by management. <i>Management acceptance of risk.</i></dd>
@@ -2846,20 +2956,20 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-org14eeca5" class="outline-3">
-<h3 id="org14eeca5"><span class="section-number-3">3.8</span> Open vs. Closed Systems</h3>
+<div id="outline-container-org3d1b8dd" class="outline-3">
+<h3 id="org3d1b8dd"><span class="section-number-3">3.8</span> Open vs. Closed Systems</h3>
 <div class="outline-text-3" id="text-3-8">
 </div>
-<div id="outline-container-orgfc11fcb" class="outline-4">
-<h4 id="orgfc11fcb"><span class="section-number-4">3.8.1</span> Open Systems</h4>
+<div id="outline-container-org27c6232" class="outline-4">
+<h4 id="org27c6232"><span class="section-number-4">3.8.1</span> Open Systems</h4>
 <div class="outline-text-4" id="text-3-8-1">
 <ul class="org-ul">
 <li>built on standards, protocols and interfaces that have published specifications. Windows, OS X and Unix are open.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgabd0e99" class="outline-4">
-<h4 id="orgabd0e99"><span class="section-number-4">3.8.2</span> Closed Systems</h4>
+<div id="outline-container-org92042b9" class="outline-4">
+<h4 id="org92042b9"><span class="section-number-4">3.8.2</span> Closed Systems</h4>
 <div class="outline-text-4" id="text-3-8-2">
 <ul class="org-ul">
 <li>Architecture does not follow industry standards. Proprietary. Potentially more secure. Don't work well with other systems.</li>
@@ -2867,12 +2977,12 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-org0fd51d1" class="outline-3">
-<h3 id="org0fd51d1"><span class="section-number-3">3.9</span> Distributed System Security</h3>
+<div id="outline-container-orgae7e710" class="outline-3">
+<h3 id="orgae7e710"><span class="section-number-3">3.9</span> Distributed System Security</h3>
 <div class="outline-text-3" id="text-3-9">
 </div>
-<div id="outline-container-org82b46f4" class="outline-4">
-<h4 id="org82b46f4"><span class="section-number-4">3.9.1</span> Cloud Computing</h4>
+<div id="outline-container-orgdbfa087" class="outline-4">
+<h4 id="orgdbfa087"><span class="section-number-4">3.9.1</span> Cloud Computing</h4>
 <div class="outline-text-4" id="text-3-9-1">
 <ul class="org-ul">
 <li>use of shared, remote computing devices for the purpose of providing improved efficiencies, performance, reliability, scalability and security.
@@ -2884,16 +2994,16 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-orged82922" class="outline-4">
-<h4 id="orged82922"><span class="section-number-4">3.9.2</span> Parallel Computing</h4>
+<div id="outline-container-org07ca4c7" class="outline-4">
+<h4 id="org07ca4c7"><span class="section-number-4">3.9.2</span> Parallel Computing</h4>
 <div class="outline-text-4" id="text-3-9-2">
 <ul class="org-ul">
 <li>use of multiple computers to solve a task. Bit level, instruction level or task level. Bit level is in every device these days. Instruction - requires two or more processors. Task - multiple threads.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaf8a829" class="outline-4">
-<h4 id="orgaf8a829"><span class="section-number-4">3.9.3</span> Databases</h4>
+<div id="outline-container-orgb55a75d" class="outline-4">
+<h4 id="orgb55a75d"><span class="section-number-4">3.9.3</span> Databases</h4>
 <div class="outline-text-4" id="text-3-9-3">
 <dl class="org-dl">
 <dt>Aggregation</dt><dd>Ability to combine separate pieces of allowed information, to infer unallowed information. Think, multiple pieces of unclassified information can add up to secret information.</dd>
@@ -2906,8 +3016,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </dl>
 </div>
 </div>
-<div id="outline-container-org3a4d6f3" class="outline-4">
-<h4 id="org3a4d6f3"><span class="section-number-4">3.9.4</span> Web Applications</h4>
+<div id="outline-container-org2d04a12" class="outline-4">
+<h4 id="org2d04a12"><span class="section-number-4">3.9.4</span> Web Applications</h4>
 <div class="outline-text-4" id="text-3-9-4">
 <ul class="org-ul">
 <li>Input sanitization - input should be assumed rogue</li>
@@ -2918,8 +3028,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org200c0f5" class="outline-4">
-<h4 id="org200c0f5"><span class="section-number-4">3.9.5</span> Mobile Devices</h4>
+<div id="outline-container-org3c16732" class="outline-4">
+<h4 id="org3c16732"><span class="section-number-4">3.9.5</span> Mobile Devices</h4>
 <div class="outline-text-4" id="text-3-9-5">
 <ul class="org-ul">
 <li>Threats: malware, theft, DOS, transmission of cellular networks (may be encrypted only over cellular network, not wired).</li>
@@ -2927,8 +3037,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org36c1a4b" class="outline-4">
-<h4 id="org36c1a4b"><span class="section-number-4">3.9.6</span> Cyber-Physical Systems</h4>
+<div id="outline-container-orgf2420e8" class="outline-4">
+<h4 id="orgf2420e8"><span class="section-number-4">3.9.6</span> Cyber-Physical Systems</h4>
 <div class="outline-text-4" id="text-3-9-6">
 <ul class="org-ul">
 <li>where computer and physical devices collaborate. Internet of Things.</li>
@@ -2960,12 +3070,12 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-org40c7b26" class="outline-3">
-<h3 id="org40c7b26"><span class="section-number-3">3.10</span> A Few Threats to Review</h3>
+<div id="outline-container-org6ec8fad" class="outline-3">
+<h3 id="org6ec8fad"><span class="section-number-3">3.10</span> A Few Threats to Review</h3>
 <div class="outline-text-3" id="text-3-10">
 </div>
-<div id="outline-container-orgfa3e1bb" class="outline-4">
-<h4 id="orgfa3e1bb"><span class="section-number-4">3.10.1</span> Maintenance Hooks</h4>
+<div id="outline-container-org8eb7c48" class="outline-4">
+<h4 id="org8eb7c48"><span class="section-number-4">3.10.1</span> Maintenance Hooks</h4>
 <div class="outline-text-4" id="text-3-10-1">
 <ul class="org-ul">
 <li>a type of back door. Allow developer to view and edit the code bypassing access controls. Should be removed prior to going to production.</li>
@@ -2973,8 +3083,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org4510ccc" class="outline-4">
-<h4 id="org4510ccc"><span class="section-number-4">3.10.2</span> Time-of-Check/Time-of-Use Attacks</h4>
+<div id="outline-container-orgfbc3949" class="outline-4">
+<h4 id="orgfbc3949"><span class="section-number-4">3.10.2</span> Time-of-Check/Time-of-Use Attacks</h4>
 <div class="outline-text-4" id="text-3-10-2">
 <ul class="org-ul">
 <li>asynchronous attack. Switch out a file after authorization is validated. Race condition.</li>
@@ -2983,12 +3093,12 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-orgcb180b0" class="outline-3">
-<h3 id="orgcb180b0"><span class="section-number-3">3.11</span> Cryptography in Context</h3>
+<div id="outline-container-org0b072ca" class="outline-3">
+<h3 id="org0b072ca"><span class="section-number-3">3.11</span> Cryptography in Context</h3>
 <div class="outline-text-3" id="text-3-11">
 </div>
-<div id="outline-container-org89889e4" class="outline-4">
-<h4 id="org89889e4"><span class="section-number-4">3.11.1</span> The History of Cryptography</h4>
+<div id="outline-container-org484a451" class="outline-4">
+<h4 id="org484a451"><span class="section-number-4">3.11.1</span> The History of Cryptography</h4>
 <div class="outline-text-4" id="text-3-11-1">
 <ul class="org-ul">
 <li>Substitution cipher ROT13</li>
@@ -2998,28 +3108,28 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-org9d103fa" class="outline-3">
-<h3 id="org9d103fa"><span class="section-number-3">3.12</span> Cryptography Definitions and Concepts</h3>
+<div id="outline-container-org53bc3ca" class="outline-3">
+<h3 id="org53bc3ca"><span class="section-number-3">3.12</span> Cryptography Definitions and Concepts</h3>
 <div class="outline-text-3" id="text-3-12">
 </div>
-<div id="outline-container-org97d9537" class="outline-4">
-<h4 id="org97d9537"><span class="section-number-4">3.12.1</span> Kerckhoffs' Principle</h4>
+<div id="outline-container-org4624cb2" class="outline-4">
+<h4 id="org4624cb2"><span class="section-number-4">3.12.1</span> Kerckhoffs' Principle</h4>
 <div class="outline-text-4" id="text-3-12-1">
 <ul class="org-ul">
 <li>Algorithm should be public, only key is secret</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd763ebf" class="outline-4">
-<h4 id="orgd763ebf"><span class="section-number-4">3.12.2</span> The Strength of the Cryptosystem</h4>
+<div id="outline-container-org5210ccc" class="outline-4">
+<h4 id="org5210ccc"><span class="section-number-4">3.12.2</span> The Strength of the Cryptosystem</h4>
 <div class="outline-text-4" id="text-3-12-2">
 <ul class="org-ul">
 <li>amount of work necessary to break the cryptosystem</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6029ee6" class="outline-4">
-<h4 id="org6029ee6"><span class="section-number-4">3.12.3</span> Services of Cryptosystems</h4>
+<div id="outline-container-org8f44ee6" class="outline-4">
+<h4 id="org8f44ee6"><span class="section-number-4">3.12.3</span> Services of Cryptosystems</h4>
 <div class="outline-text-4" id="text-3-12-3">
 <ul class="org-ul">
 <li>confidentiality</li>
@@ -3030,8 +3140,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-orgffcb510" class="outline-4">
-<h4 id="orgffcb510"><span class="section-number-4">3.12.4</span> One-Time Pad</h4>
+<div id="outline-container-org46d5a25" class="outline-4">
+<h4 id="org46d5a25"><span class="section-number-4">3.12.4</span> One-Time Pad</h4>
 <div class="outline-text-4" id="text-3-12-4">
 <ul class="org-ul">
 <li>a perfect encryption scheme - unbreakable - if done properly
@@ -3045,8 +3155,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org6f15e65" class="outline-4">
-<h4 id="org6f15e65"><span class="section-number-4">3.12.5</span> Running and Concealment Ciphers</h4>
+<div id="outline-container-orgda43ffd" class="outline-4">
+<h4 id="orgda43ffd"><span class="section-number-4">3.12.5</span> Running and Concealment Ciphers</h4>
 <div class="outline-text-4" id="text-3-12-5">
 <ul class="org-ul">
 <li>Running key - use every day objects such as books.</li>
@@ -3054,8 +3164,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org0b7865e" class="outline-4">
-<h4 id="org0b7865e"><span class="section-number-4">3.12.6</span> Steganography</h4>
+<div id="outline-container-org0e17bd6" class="outline-4">
+<h4 id="org0e17bd6"><span class="section-number-4">3.12.6</span> Steganography</h4>
 <div class="outline-text-4" id="text-3-12-6">
 <ul class="org-ul">
 <li>method of hiding data in another media. Text hidden in a picture.</li>
@@ -3063,12 +3173,12 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-org9f64c88" class="outline-3">
-<h3 id="org9f64c88"><span class="section-number-3">3.13</span> Types of Ciphers</h3>
+<div id="outline-container-org28803f0" class="outline-3">
+<h3 id="org28803f0"><span class="section-number-3">3.13</span> Types of Ciphers</h3>
 <div class="outline-text-3" id="text-3-13">
 </div>
-<div id="outline-container-org7d225bb" class="outline-4">
-<h4 id="org7d225bb"><span class="section-number-4">3.13.1</span> Substitution Ciphers</h4>
+<div id="outline-container-orgd654be8" class="outline-4">
+<h4 id="orgd654be8"><span class="section-number-4">3.13.1</span> Substitution Ciphers</h4>
 <div class="outline-text-4" id="text-3-13-1">
 <ul class="org-ul">
 <li>uses a key to dictate how the substitution should be carried out</li>
@@ -3076,8 +3186,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-orge81b001" class="outline-4">
-<h4 id="orge81b001"><span class="section-number-4">3.13.2</span> Transposition Ciphers</h4>
+<div id="outline-container-orge02a167" class="outline-4">
+<h4 id="orge02a167"><span class="section-number-4">3.13.2</span> Transposition Ciphers</h4>
 <div class="outline-text-4" id="text-3-13-2">
 <ul class="org-ul">
 <li>values are scrambled or put into a different order.</li>
@@ -3087,12 +3197,12 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
-<div id="outline-container-org0ff96c0" class="outline-3">
-<h3 id="org0ff96c0"><span class="section-number-3">3.14</span> Methods of Encryption</h3>
+<div id="outline-container-org629e88e" class="outline-3">
+<h3 id="org629e88e"><span class="section-number-3">3.14</span> Methods of Encryption</h3>
 <div class="outline-text-3" id="text-3-14">
 </div>
-<div id="outline-container-orgd1834af" class="outline-4">
-<h4 id="orgd1834af"><span class="section-number-4">3.14.1</span> Symmetric vs. Asymmetric Algorithms</h4>
+<div id="outline-container-org0a28870" class="outline-4">
+<h4 id="org0a28870"><span class="section-number-4">3.14.1</span> Symmetric vs. Asymmetric Algorithms</h4>
 <div class="outline-text-4" id="text-3-14-1">
 <dl class="org-dl">
 <dt>Symmetric</dt><dd>use symmetric keys (secret keys)</dd>
@@ -3100,8 +3210,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </dl>
 </div>
 </div>
-<div id="outline-container-org1be67b2" class="outline-4">
-<h4 id="org1be67b2"><span class="section-number-4">3.14.2</span> Symmetric Cryptography</h4>
+<div id="outline-container-org59d8c53" class="outline-4">
+<h4 id="org59d8c53"><span class="section-number-4">3.14.2</span> Symmetric Cryptography</h4>
 <div class="outline-text-4" id="text-3-14-2">
 <ul class="org-ul">
 <li>Sender and receiver must have same key. Distributing the keys is a problem. And large # of people requires 2<sup>n</sup> keys. But they are very fast and hard to break.</li>
@@ -3117,8 +3227,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaa8bf7d" class="outline-4">
-<h4 id="orgaa8bf7d"><span class="section-number-4">3.14.3</span> Asymmetric Cryptography</h4>
+<div id="outline-container-orga311ebe" class="outline-4">
+<h4 id="orga311ebe"><span class="section-number-4">3.14.3</span> Asymmetric Cryptography</h4>
 <div class="outline-text-4" id="text-3-14-3">
 <ul class="org-ul">
 <li>Solves the key distribution problem, better scalable, can provide authentication and nonrepudiation</li>
@@ -3133,8 +3243,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc4b917e" class="outline-4">
-<h4 id="orgc4b917e"><span class="section-number-4">3.14.4</span> Block and Stream Ciphers</h4>
+<div id="outline-container-orgab4c854" class="outline-4">
+<h4 id="orgab4c854"><span class="section-number-4">3.14.4</span> Block and Stream Ciphers</h4>
 <div class="outline-text-4" id="text-3-14-4">
 <ul class="org-ul">
 <li>Block cipher - message is divided into blocks</li>
@@ -3143,8 +3253,8 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </ul>
 </div>
 </div>
-<div id="outline-container-org380282b" class="outline-4">
-<h4 id="org380282b"><span class="section-number-4">3.14.5</span> Hybrid Encryption Methods</h4>
+<div id="outline-container-org6a9cde8" class="outline-4">
+<h4 id="org6a9cde8"><span class="section-number-4">3.14.5</span> Hybrid Encryption Methods</h4>
 <div class="outline-text-4" id="text-3-14-5">
 <ul class="org-ul">
 <li>Asymmetric and Symmetric - both common. Use asymmetric to distribute symmetric keys.</li>
@@ -3153,11 +3263,873 @@ Narnia Setup (<a href="http://">http://</a> overthewire.org/ wargames/ narnia/)
 </div>
 </div>
 </div>
+<div id="outline-container-orge8beb60" class="outline-3">
+<h3 id="orge8beb60"><span class="section-number-3">3.15</span> Types of Symmetric Systems</h3>
+<div class="outline-text-3" id="text-3-15">
+</div><div id="outline-container-org680133a" class="outline-4">
+<h4 id="org680133a"><span class="section-number-4">3.15.1</span> Data Encryption Standard</h4>
+<div class="outline-text-4" id="text-3-15-1">
+<ul class="org-ul">
+<li>Originally 64 bit, became ANSI standard in 1978</li>
+<li>AKA DEA</li>
+<li>Cracked in 1998</li>
+<li>Later replaced by the Rijndael algorithm as the Advanced Encryption Standard (AES)</li>
+<li>symmetric block encryption algorithm, 64 bit blocks, 64 bit key: 56 bit key + 8 bit parity</li>
+<li>Modes:
+<ul class="org-ul">
+<li>Electronic Code Book (ECB)
+<ul class="org-ul">
+<li>For a given block of plaintext and a given key, the same block of cipher text is always produced</li>
+<li>Lacks randomness</li>
+<li>Fast, can be run in parallel, good for encrypting small amounts of data</li>
+</ul></li>
+<li>Cipher Block Chaining (CBC)
+<ul class="org-ul">
+<li>Does not reveal a pattern, value of previous block is used to process next block</li>
+<li>Use of different IV results in different cipher text</li>
+</ul></li>
+<li>Cipher Feedback (CFB)
+<ul class="org-ul">
+<li>Simulates a stream cipher</li>
+</ul></li>
+<li>Output Feedback (OFB)
+<ul class="org-ul">
+<li>Values for encrypting next block come from Keystream instead of Ciphertext as in CFB. This eliminates possible chaining of an error.</li>
+</ul></li>
+<li>Counter (CTR)
+<ul class="org-ul">
+<li>Similar to OFB, uses an IV counter, ensures IV is unique, no chaining involved, thus can be done in parallel, performance is main reason for using.</li>
+</ul></li>
+</ul></li>
+<li id="Synchronous">encrypt one bit at a time, key values are in sync with plaintext values</li>
+<li id="Asynchronous">use previously generated output as input</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc54823e" class="outline-4">
+<h4 id="orgc54823e"><span class="section-number-4">3.15.2</span> Triple-DES</h4>
+<div class="outline-text-4" id="text-3-15-2">
+<ul class="org-ul">
+<li>48 rounds of computations</li>
+<li>Modes:
+<dl class="org-dl">
+<dt>DES-EE3</dt><dd>3 different keys, triple encrypted</dd>
+<dt>DES-EDE3</dt><dd>3 different keys, encrypted, decrypted, encrypted</dd>
+<dt>DES-EEE2</dt><dd>same as EEE3, but only two keys, first and third use same key</dd>
+<dt>DES-EDE2</dt><dd>same as EDE3, but only two keys, first and third use same key</dd>
+</dl></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga8a49cc" class="outline-4">
+<h4 id="orga8a49cc"><span class="section-number-4">3.15.3</span> Advanced Encryption Standard</h4>
+<div class="outline-text-4" id="text-3-15-3">
+<ul class="org-ul">
+<li>1997</li>
+<li>Block sizes: 128, 192, 256 bit</li>
+<li>128 bits - 10 rounds</li>
+<li>192 bits - 12 rounds</li>
+<li>256 bits - 14</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4012864" class="outline-4">
+<h4 id="org4012864"><span class="section-number-4">3.15.4</span> International Data Encryption Algorithm</h4>
+<div class="outline-text-4" id="text-3-15-4">
+<ul class="org-ul">
+<li>Block cipher, 64 bit blocks divided into 16 smaller blocks, 8 rounds. Key is 128 bits.</li>
+<li>Is faster than DES in software</li>
+<li>Harder to break than DES due to its longer key size</li>
+<li>Used in PGP, patented</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org50a5e1c" class="outline-4">
+<h4 id="org50a5e1c"><span class="section-number-4">3.15.5</span> Blowfish</h4>
+<div class="outline-text-4" id="text-3-15-5">
+<ul class="org-ul">
+<li>Block cipher</li>
+<li>65 bit blocks</li>
+<li>Key: 32 bits up to 448 bits</li>
+<li>16 rounds</li>
+<li>Public domain</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8129e68" class="outline-4">
+<h4 id="org8129e68"><span class="section-number-4">3.15.6</span> RC4</h4>
+<div class="outline-text-4" id="text-3-15-6">
+<ul class="org-ul">
+<li>Stream cipher</li>
+<li>Variable key size</li>
+<li>Used in SSL, 802.11 WEP</li>
+<li>Sometimes case ARC4 since RC4 is trademarked</li>
+<li>Vulnerable to modification attacks</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org995951b" class="outline-4">
+<h4 id="org995951b"><span class="section-number-4">3.15.7</span> RC5</h4>
+<div class="outline-text-4" id="text-3-15-7">
+<ul class="org-ul">
+<li>block cipher</li>
+<li>Block sizes: 32, 64 or 128 bits</li>
+<li>Key size up to 2,048 bits</li>
+<li>Rounds up to 255</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org26a7ff8" class="outline-4">
+<h4 id="org26a7ff8"><span class="section-number-4">3.15.8</span> RC6</h4>
+<div class="outline-text-4" id="text-3-15-8">
+<ul class="org-ul">
+<li>Block cipher, built on RC5</li>
+<li>Faster than RC5</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2fd1b91" class="outline-3">
+<h3 id="org2fd1b91"><span class="section-number-3">3.16</span> Types of Asymmetric Systems</h3>
+<div class="outline-text-3" id="text-3-16">
+</div><div id="outline-container-orgcac3fa2" class="outline-4">
+<h4 id="orgcac3fa2"><span class="section-number-4">3.16.1</span> Diffie-Hellman Algorithm</h4>
+<div class="outline-text-4" id="text-3-16-1">
+<ul class="org-ul">
+<li>key agreement algorithm</li>
+<li>Allows two systems to generate a symmetric key securely</li>
+<li>Vulnerable to man in the middle attacks if no authentication of users is done. RSA can be used to perform authentication.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3655b10" class="outline-4">
+<h4 id="org3655b10"><span class="section-number-4">3.16.2</span> RSA</h4>
+<div class="outline-text-4" id="text-3-16-2">
+<ul class="org-ul">
+<li>Rivest, Shamir, Adleman</li>
+<li>Can be used for digital signatures, key exchange and encryption</li>
+<li>Provides authentication as well as encryption</li>
+<li>Can be used as a key exchange protocol</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8607099" class="outline-4">
+<h4 id="org8607099"><span class="section-number-4">3.16.3</span> El Gamal</h4>
+<div class="outline-text-4" id="text-3-16-3">
+<ul class="org-ul">
+<li>Can be used for digital signatures, encryption and key exchange</li>
+<li>Rather than factoring, based on calculating discrete logarithms in a finite field</li>
+<li>Extension of Diffie-Hellman</li>
+<li>Main drawback is performance</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5c5a8b7" class="outline-4">
+<h4 id="org5c5a8b7"><span class="section-number-4">3.16.4</span> Elliptic Curve Cryptosystems</h4>
+<div class="outline-text-4" id="text-3-16-4">
+<ul class="org-ul">
+<li>Digital signatures, secure key distribution, encryption</li>
+<li>ECC is more efficient than RSA and other asymmetric algorithm</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6c7ba6c" class="outline-4">
+<h4 id="org6c7ba6c"><span class="section-number-4">3.16.5</span> Knapsack</h4>
+<div class="outline-text-4" id="text-3-16-5">
+<ul class="org-ul">
+<li>Encryption, digital signature</li>
+<li>Insecure, not in use</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd19f15b" class="outline-4">
+<h4 id="orgd19f15b"><span class="section-number-4">3.16.6</span> Zero Knowledge Proof</h4>
+<div class="outline-text-4" id="text-3-16-6">
+<ul class="org-ul">
+<li>when it's shown someone has the right private key, without making them present the private key</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9de0e89" class="outline-3">
+<h3 id="org9de0e89"><span class="section-number-3">3.17</span> Message Integrity</h3>
+<div class="outline-text-3" id="text-3-17">
+</div><div id="outline-container-org3557cbf" class="outline-4">
+<h4 id="org3557cbf"><span class="section-number-4">3.17.1</span> The One-Way Hash</h4>
+<div class="outline-text-4" id="text-3-17-1">
+<ul class="org-ul">
+<li>Takes a variable length string -&gt; fixed-length hash value</li>
+<li>Value is the fact it is one-way</li>
+<li id="Hashing">Provides Integrity. Not confidentiality or authentication. Detects only unintentional modifications.</li>
+<li id="Message Authentication Code (MAC)">an authentication scheme derived by applying a secret key to a message in some form</li>
+<li id="HMAC">symmetric key is concatenated with message creating a MAC value. Provides Integrity and data origin authentication; confidentiality not provided.</li>
+<li id="CBC-MAC">Cipher Block Chaining Message Authentication Code - message encrypted with a symmetric block cipher in CBC mode, output of final block of ciphertext is used as the MAC. Provides Integrity and data origin authentication; confidentiality is not provided. 
+Cipher-Based MAC - (CMAC) - more secure version of CBC-MAC.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8946703" class="outline-4">
+<h4 id="org8946703"><span class="section-number-4">3.17.2</span> Various Hashing Algorithms</h4>
+<div class="outline-text-4" id="text-3-17-2">
+<ul class="org-ul">
+<li>Strong hash functions:
+<ul class="org-ul">
+<li>Compute over the entire message</li>
+<li>One-way function</li>
+<li>Given a message and its hash value, computing another message with the same hash value should be impossible</li>
+<li>Resistant to birthday attacks</li>
+<li>Collision free</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfb97846" class="outline-4">
+<h4 id="orgfb97846"><span class="section-number-4">3.17.3</span> MD4</h4>
+<div class="outline-text-4" id="text-3-17-3">
+<ul class="org-ul">
+<li>128-bit hash value</li>
+<li>Not considered secure</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgabba753" class="outline-4">
+<h4 id="orgabba753"><span class="section-number-4">3.17.4</span> MD5</h4>
+<div class="outline-text-4" id="text-3-17-4">
+<ul class="org-ul">
+<li>128 bit hash value, more complex than MD4</li>
+<li>Subject to collision attacks thus not suitable for SSL certs and digital signatures. Still used for file integrity checksums.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org071a409" class="outline-4">
+<h4 id="org071a409"><span class="section-number-4">3.17.5</span> SHA</h4>
+<div class="outline-text-4" id="text-3-17-5">
+<ul class="org-ul">
+<li>160-bit hash value, used with Digital Signature Algorithm (DSA)</li>
+<li>SHA1, SHA-256, SHA-384, SHA-512 - update versions of SHA. SHA-1 is 160 bit.</li>
+<li>SHA1 not considered secure, vulnerable to collisions.</li>
+<li>Designed by NSA, published by NIST.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf96f289" class="outline-4">
+<h4 id="orgf96f289"><span class="section-number-4">3.17.6</span> Attacks Against One-Way Hash Functions</h4>
+<div class="outline-text-4" id="text-3-17-6">
+<dl class="org-dl">
+<dt>Birthday attack</dt><dd>a forced collision. Protect against with longer hashing values.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org27b4c49" class="outline-4">
+<h4 id="org27b4c49"><span class="section-number-4">3.17.7</span> Digital Signatures</h4>
+<div class="outline-text-4" id="text-3-17-7">
+<ul class="org-ul">
+<li>A hash value that has been encrypted with the sender's private key.</li>
+<li>Encryption provides confidentiality.</li>
+<li>Hashing provides integrity.</li>
+<li>Digital signature provides authentications, nonrepudiation and integrity</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org15e2ec1" class="outline-4">
+<h4 id="org15e2ec1"><span class="section-number-4">3.17.8</span> Digital Signature Standard</h4>
+<div class="outline-text-4" id="text-3-17-8">
+<ul class="org-ul">
+<li>1991, NIST</li>
+<li>SHA used for hashing</li>
+<li>DSA, RSA or ECDSA used for signing</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0b5bea9" class="outline-3">
+<h3 id="org0b5bea9"><span class="section-number-3">3.18</span> Public Key Infrastructure</h3>
+<div class="outline-text-3" id="text-3-18">
+<ul class="org-ul">
+<li>An ISO authentication framework that uses public key cryptography and the X.509 standard.</li>
+</ul>
+</div>
+<div id="outline-container-org5e63a2a" class="outline-4">
+<h4 id="org5e63a2a"><span class="section-number-4">3.18.1</span> Certificate Authorities</h4>
+<div class="outline-text-4" id="text-3-18-1">
+<ul class="org-ul">
+<li>Credential containing the public key for that individual along with other identifying information.</li>
+<li>Created and signed by a trusted third party (Certificate Authority)</li>
+<li id="Registration Authority">verifies individuals identity</li>
+<li id="Cross Certification">when two CAs establish a trust relationship</li>
+<li id="Certificate Revocation List (CRL)">list of every revoked certificate. Lot of problems with this since applications do not always check them (such as browsers)</li>
+<li id="Online Certificate Status Protocol (OCSP)">Validates a certificate in the background, checks CRL.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd80e1d1" class="outline-4">
+<h4 id="orgd80e1d1"><span class="section-number-4">3.18.2</span> Certificates</h4>
+<div class="outline-text-4" id="text-3-18-2">
+<ul class="org-ul">
+<li>X.509 is the standard for creating a certificate. x.509v3 is most common (SSL uses this).</li>
+<li>Includes: serial number, version number, identity information, algorithm information, lifetime dates, signature of issuing authority.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org271a629" class="outline-4">
+<h4 id="org271a629"><span class="section-number-4">3.18.3</span> The Registration Authority</h4>
+<div class="outline-text-4" id="text-3-18-3">
+<ul class="org-ul">
+<li>Confirms identity of an individual, initiates certification process with a CA, acts as broker between user and CA</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfd6d0ee" class="outline-4">
+<h4 id="orgfd6d0ee"><span class="section-number-4">3.18.4</span> PKI Steps</h4>
+</div>
+</div>
+<div id="outline-container-org9637344" class="outline-3">
+<h3 id="org9637344"><span class="section-number-3">3.19</span> Key Management</h3>
+<div class="outline-text-3" id="text-3-19">
+</div><div id="outline-container-orgc8fa621" class="outline-4">
+<h4 id="orgc8fa621"><span class="section-number-4">3.19.1</span> Key Management Principles</h4>
+<div class="outline-text-4" id="text-3-19-1">
+<ul class="org-ul">
+<li>Keys should be kept encrypted</li>
+<li>Key distribution and maintenance should be automated</li>
+<li>Protected against being lost, destroyed or corrupted by being backed up</li>
+<li>May need key recovery services to allow administrators to access data encrypted by an individual</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb6fe09b" class="outline-4">
+<h4 id="orgb6fe09b"><span class="section-number-4">3.19.2</span> Rules for Keys and Key Management</h4>
+<div class="outline-text-4" id="text-3-19-2">
+<ul class="org-ul">
+<li>Keys should be long enough to provide sufficient protection</li>
+<li>Stored and transmitted securely</li>
+<li>Should be extremely random, algorithm should use full spectrum of key space</li>
+<li>Lifetime should correspond with sensitivity of data - more sensitive data should have shorter key lifetime</li>
+<li>The more the key is used, the shorter its lifetime should be</li>
+<li>Backup and escrow for emergencies. Escrow allows key recovery.</li>
+<li>Destroy at end of life</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge45ca38" class="outline-3">
+<h3 id="orge45ca38"><span class="section-number-3">3.20</span> Trusted Platform Module</h3>
+<div class="outline-text-3" id="text-3-20">
+<ul class="org-ul">
+<li>microchip installed on the motherboard, dedicated to storage and processing of keys, hashes and digital certs</li>
+</ul>
+</div>
+<div id="outline-container-org365b68d" class="outline-4">
+<h4 id="org365b68d"><span class="section-number-4">3.20.1</span> TPM Uses</h4>
+<div class="outline-text-4" id="text-3-20-1">
+<ul class="org-ul">
+<li>Most common is for encrypted hard disks</li>
+<li>Sealing system state to particular hardware</li>
+<li>TPM internal memory:
+<ul class="org-ul">
+<li>Persistent memory:
+<dl class="org-dl">
+<dt>Endorsement Key (EK)</dt><dd>public/private  key pair installed at time of manufacture, cannot be modified</dd>
+<dt>Storage Root Key (SRK)</dt><dd>master wrapping key used to secure keys stored in the TPM</dd>
+</dl></li>
+<li>Versatile Memory:
+<dl class="org-dl">
+<dt>Attestation Identity Key (AIK)</dt><dd>used for attestation of TPM chip to service providers. Ensures integrity of the EK.</dd>
+<dt>Platform Configuration Registers (PCR)</dt><dd>stores cryptographic hashes of data used for TPM sealing functionality</dd>
+<dt>Storage keys</dt><dd>use to encrypt storage media</dd>
+</dl></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org66a336e" class="outline-3">
+<h3 id="org66a336e"><span class="section-number-3">3.21</span> Attacks on Cryptography</h3>
+<div class="outline-text-3" id="text-3-21">
+</div><div id="outline-container-org2fb24b5" class="outline-4">
+<h4 id="org2fb24b5"><span class="section-number-4">3.21.1</span> Ciphertext-Only Attacks</h4>
+<div class="outline-text-4" id="text-3-21-1">
+<ul class="org-ul">
+<li>hardest attack to execute</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb805640" class="outline-4">
+<h4 id="orgb805640"><span class="section-number-4">3.21.2</span> Known-Plaintext Attacks</h4>
+<div class="outline-text-4" id="text-3-21-2">
+<ul class="org-ul">
+<li>Attacker knows a portion o the plain text of the encrypted message</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0bc2732" class="outline-4">
+<h4 id="org0bc2732"><span class="section-number-4">3.21.3</span> Chosen-Plaintext Attacks</h4>
+<div class="outline-text-4" id="text-3-21-3">
+<ul class="org-ul">
+<li>Attacker can choose the plaintext that gets encrypted to see corresponding cipher text</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge955e5b" class="outline-4">
+<h4 id="orge955e5b"><span class="section-number-4">3.21.4</span> Chosen-Ciphertext Attacks</h4>
+<div class="outline-text-4" id="text-3-21-4">
+<ul class="org-ul">
+<li>Can choose the ciphertext to be decrypted and has access to the resulting decrypted plaintext</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1918ab2" class="outline-4">
+<h4 id="org1918ab2"><span class="section-number-4">3.21.5</span> Differential Cryptanalysis</h4>
+<div class="outline-text-4" id="text-3-21-5">
+<ul class="org-ul">
+<li>Looks at cipher text pairs generated by plaintext pairs and analyzes the differences. Used to break DES.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5448450" class="outline-4">
+<h4 id="org5448450"><span class="section-number-4">3.21.6</span> Linear Cryptanalysis</h4>
+<div class="outline-text-4" id="text-3-21-6">
+<ul class="org-ul">
+<li>carries out a known-plaintext attack on several different messages encrypted with the same key. Raises probability of a specific key having been used.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgebc167d" class="outline-4">
+<h4 id="orgebc167d"><span class="section-number-4">3.21.7</span> Side-Channel Attacks</h4>
+<div class="outline-text-4" id="text-3-21-7">
+<ul class="org-ul">
+<li>power consumption, radiation emissions, time (time analysis was used to pull private keys from RSA smartcards)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76d8535" class="outline-4">
+<h4 id="org76d8535"><span class="section-number-4">3.21.8</span> Replay Attacks</h4>
+<div class="outline-text-4" id="text-3-21-8">
+<ul class="org-ul">
+<li>attacker resubmits data trying to fool receiving device</li>
+<li>Timestamps and sequence numbers are two countermeasures to this</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org70b5e01" class="outline-4">
+<h4 id="org70b5e01"><span class="section-number-4">3.21.9</span> Algebraic Attacks</h4>
+<div class="outline-text-4" id="text-3-21-9">
+<ul class="org-ul">
+<li>analyze vulnerabilities in the mathematics (RSA encryption of "0" is "0")</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc38404f" class="outline-4">
+<h4 id="orgc38404f"><span class="section-number-4">3.21.10</span> Analytic Attacks</h4>
+<div class="outline-text-4" id="text-3-21-10">
+<ul class="org-ul">
+<li>identify algorithm structural weaknesses or flaws (Double DES attack, RSA factoring attack)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org919f135" class="outline-4">
+<h4 id="org919f135"><span class="section-number-4">3.21.11</span> Statistical Attacks</h4>
+<div class="outline-text-4" id="text-3-21-11">
+<ul class="org-ul">
+<li>identify statistical weaknesses in algorithm design, such as a biased random number generator</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org07ab2c1" class="outline-4">
+<h4 id="org07ab2c1"><span class="section-number-4">3.21.12</span> Social Engineering Attacks</h4>
+<div class="outline-text-4" id="text-3-21-12">
+<ul class="org-ul">
+<li>trick people into providing their keys</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgafda0ac" class="outline-4">
+<h4 id="orgafda0ac"><span class="section-number-4">3.21.13</span> Meet-in-the-Middle Attacks</h4>
+<div class="outline-text-4" id="text-3-21-13">
+<ul class="org-ul">
+<li>encrypting from one end and decrypting from the other end</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdf52c14" class="outline-3">
+<h3 id="orgdf52c14"><span class="section-number-3">3.22</span> Site and Facility Security</h3>
+<div class="outline-text-3" id="text-3-22">
+<ul class="org-ul">
+<li>Threats:
+<ul class="org-ul">
+<li>Natural environmental threats</li>
+<li>Supply system threats</li>
+<li>Manmade threats</li>
+<li>Politically motivated threats</li>
+</ul></li>
+<li>Must be layered - moving from perimeter to asset
+<ul class="org-ul">
+<li>For example: fence, building walls, access control card, guard, an IDS, locked computer cases, safes</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org797164b" class="outline-3">
+<h3 id="org797164b"><span class="section-number-3">3.23</span> The Site Planning Process</h3>
+<div class="outline-text-3" id="text-3-23">
+<ul class="org-ul">
+<li>Define the objectives of the program, design the program, develop performance metrics, evaluation process</li>
+<li>Should address the following goals:
+<ul class="org-ul">
+<li>Crime and disruption prevention through deterrence: fences, security guards, warning signs, etc.</li>
+<li>Reduction of damage through delaying mechanisms: layers of defenses, locks, security personnel, barriers</li>
+<li>Crime or disruption detection: smoke detectors, motion detectors, CCTV, etc.</li>
+<li>Incident assessment: security guard response</li>
+<li>Response procedures: fire suppression mechanisms, emergency response processes, law enforcement notification, consultation with outside security professionals</li>
+</ul></li>
+<li>Possible performance metrics:
+<ul class="org-ul">
+<li>number of successful crimes</li>
+<li>number of successful disruptions</li>
+<li>number of unsuccessful crimes</li>
+<li>number of unsuccessful disruptions</li>
+<li>Time between detection, assessment and recovery</li>
+<li>Business impact of disruptions</li>
+<li>Number of false-positive detection alerts</li>
+<li>Time it took for a criminal to defeat a control</li>
+<li>Time it took to restore operational environment</li>
+<li>Financial loss of a successful crime</li>
+<li>Financial loss of a successful disruption</li>
+</ul></li>
+<li>Basically - physically security requires a risk assessment process</li>
+</ul>
+</div>
+<div id="outline-container-orge88a171" class="outline-4">
+<h4 id="orge88a171"><span class="section-number-4">3.23.1</span> Crime Prevention through Environmental Design</h4>
+<div class="outline-text-4" id="text-3-23-1">
+<ul class="org-ul">
+<li>Proper design of a physical environment can reduce crime by directly affecting human behavior</li>
+<li>Landscaping, entrances, layouts, lighting, road placement, traffic patterns, etc.</li>
+<li>The reason trees are removed from around a data center - removes hiding places.</li>
+<li>Natural access control - controlling flow by placement of devices such as lighted bollards</li>
+<li>Can create security zones</li>
+<li>Natural surveillance - make criminal feel uncomfortable by providing many ways observers could see them - ex. use of open areas</li>
+<li>Natural territorial reinforcement - use of walls, fences, landscaping lighting, flags, markings to create a sense of dedicated community</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org24362f6" class="outline-4">
+<h4 id="org24362f6"><span class="section-number-4">3.23.2</span> Designing a Physical Security Program</h4>
+<div class="outline-text-4" id="text-3-23-2">
+<ul class="org-ul">
+<li>Observe how facility is used</li>
+<li>Comply with regulations</li>
+<li>Legal issues known</li>
+<li>Should have a facility safety officer</li>
+<li>Create a plan</li>
+<li>Facility:
+<ul class="org-ul">
+<li>consider visibility and noticablity</li>
+<li>Closeness to emergency services</li>
+</ul></li>
+<li>Construction:
+<ul class="org-ul">
+<li>evaluate construction materials</li>
+<li>fire protection levels</li>
+<li>load of walls, floors and ceiling</li>
+<li>Windows: UV protection, shatterproof, opacity</li>
+<li>Consider:
+<ul class="org-ul">
+<li>Walls - combustibility, fire rating, reinforcement</li>
+<li>Doors - combustibility, fire rating, reinforcement, markings, placement, locks, alarms, hinges, opening direction, electric locks, glass</li>
+<li>Ceiling - combustibility, fire rating, weight-bearing, drop ceiling</li>
+<li>Windows - Opacity, shatterproof, alarms, placement, accessibility</li>
+<li>Flooring - Weight-bearing, combustibility, fire rating, raised flooring, nonconducting</li>
+<li>Heating, ventilation, air conditioning - positive air pressure, protected intake vents, dedicated power lines, emergency shutoff valves, placement</li>
+<li>Electric power supplies - backup and alternative, clean and steady, dedicated feeders, placement</li>
+<li>Water and gas lines - shutoff valves, positive flow, placement</li>
+<li>Fire detection - placement of detectors, place of suppression systems, type of detectors and suppression systems</li>
+</ul></li>
+<li>Entry points - consider secondary entry points: secondary doors, windows, fire escapes</li>
+<li>Internal Compartments - can be circumvented through dropped ceilings</li>
+<li>Computer and equipment rooms - should be restricted to minimum necessary personnel
+<ul class="org-ul">
+<li>Not located on high floors as inaccessible in case of fire. Not located in basements due to flooding, typically at core of building</li>
+<li>water detectors under raised floors and on dropped ceilings</li>
+<li>monitor humidity</li>
+<li>separate electricity if possible, UPS, generators</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa3abb0" class="outline-3">
+<h3 id="orgaa3abb0"><span class="section-number-3">3.24</span> Protecting Assets</h3>
+<div class="outline-text-3" id="text-3-24">
+</div><div id="outline-container-orgacc8aff" class="outline-4">
+<h4 id="orgacc8aff"><span class="section-number-4">3.24.1</span> Protecting Mobile Devices</h4>
+<div class="outline-text-4" id="text-3-24-1">
+<ul class="org-ul">
+<li>Inventory mobile devices to allow identification if recovered</li>
+<li>Harden the OS</li>
+<li>Password protect</li>
+<li>Don't check as luggage</li>
+<li>Don't leave unattended</li>
+<li>Engrave with identification</li>
+<li>Use a slot lock</li>
+<li>Back up the data</li>
+<li>use room safes in hotels</li>
+<li>Encrypt all data</li>
+<li>Tracing software</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2378d4f" class="outline-4">
+<h4 id="org2378d4f"><span class="section-number-4">3.24.2</span> Using Safes</h4>
+<div class="outline-text-4" id="text-3-24-2">
+<ul class="org-ul">
+<li>Types: wall, floor, chests, depositories, vaults</li>
+<li>Passive relocking - can detect when someone attempts to tamper with it, extra internal bolts fall into place</li>
+<li>Thermal relocking - when a certain temperature is met (such as from drilling) extra lock is implemented</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org59ee0d7" class="outline-3">
+<h3 id="org59ee0d7"><span class="section-number-3">3.25</span> Internal Support Systems</h3>
+<div class="outline-text-3" id="text-3-25">
+</div><div id="outline-container-org4829aa9" class="outline-4">
+<h4 id="org4829aa9"><span class="section-number-4">3.25.1</span> Electric Power</h4>
+<div class="outline-text-4" id="text-3-25-1">
+<ul class="org-ul">
+<li>Protection: UPSs, power line conditioners, backup sources</li>
+<li>EMI and RFI can create power interference. Power lines should not run over lighting as it can create interference.</li>
+<li>Power excess: spike: momentary high voltage, surge: prolonged high voltage</li>
+<li>Power loss: fault: momentary power outage, blackout: prolonged loss</li>
+<li>Power degradation:
+<ul class="org-ul">
+<li>Sag/dip - momentary low-voltage</li>
+<li>Brownout - prolonged low-voltage</li>
+<li>In-rush current - initial surge of current</li>
+</ul></li>
+<li>Voltage regulators and line conditioners can be used to ensure clean and smooth power distribution</li>
+<li>Use surge protectors, line monitors, regulators, access controls, shielding, do not run over lights, three-prong connectors</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org54c7c6d" class="outline-4">
+<h4 id="org54c7c6d"><span class="section-number-4">3.25.2</span> Environmental Issues</h4>
+<div class="outline-text-4" id="text-3-25-2">
+<ul class="org-ul">
+<li>Positive drains - contents flow out instead of in</li>
+<li>Typical data center should have a separate HVAC</li>
+<li>Appropriate temperature, humidity</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org44c35f3" class="outline-4">
+<h4 id="org44c35f3"><span class="section-number-4">3.25.3</span> Fire Prevention, Detection, and Suppression</h4>
+<div class="outline-text-4" id="text-3-25-3">
+<ul class="org-ul">
+<li>Training employees</li>
+<li>Right equipment</li>
+<li>Fire detection</li>
+<li>Fire suppression: sprinkler or CO2 discharge</li>
+<li>Types: smoke activated, heat activated</li>
+<li>Fire suppression
+<ul class="org-ul">
+<li>Class A - common combustibles, wood, paper, laminates. Suppress with water, foam</li>
+<li>Class B - Liquid. petroleum products, coolants. Gas, CO2, foam, dry powders</li>
+<li>Class C - Electrical. Electrical equipment, wires. Gas, CO2, dry powders</li>
+<li>Class D - Combustible metals. Magnesium, sodium, potassium. Dry powder.</li>
+</ul></li>
+<li>Remove either fuel, oxygen or temperature</li>
+<li>Halon banned in 1992. FM-200 is most similar replacement.</li>
+<li>Ensure detectors are in plenum areas (drop spaces)</li>
+<li>Water sprinklers
+<ul class="org-ul">
+<li>Wet pipe - always contain water. Can freeze in cold climates. Damage if nozzle breaks.</li>
+<li>Dry pipe - water not held in pipes. Pipes charged with a smoke alarm is activated. Best in cold climates.</li>
+<li>Preaction - Requires a head to melt before water is released.</li>
+<li>Deluge - water released in large volumes.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1c7b854" class="outline-2">
+<h2 id="org1c7b854"><span class="section-number-2">4</span> Chapter 4 - Communication and Network Security</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-org1cf5781" class="outline-3">
+<h3 id="org1cf5781"><span class="section-number-3">4.1</span> Telecommunications</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>electromagnetic transmission whether analog, digital or wireless.</li>
+<li>Usually refers to telephone systems, service providers and carrier services.</li>
+<li>FCC regulated</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2433c85" class="outline-3">
+<h3 id="org2433c85"><span class="section-number-3">4.2</span> Open Systems Interconnection Reference Model</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+"All People Seem to Need Data Processing"
+</p>
+</div>
+<div id="outline-container-org6c8e20e" class="outline-4">
+<h4 id="org6c8e20e"><span class="section-number-4">4.2.1</span> Protocol</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>Actual protocol did not catch on as a standard, but the model is used as an abstract framework</li>
+<li>TCP/IP model (developed before OSI):
+<ul class="org-ul">
+<li>Application</li>
+<li>Host-to-Host</li>
+<li>Internet</li>
+<li>Network Acess</li>
+</ul></li>
+<li>Uses encapsulation</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2836204" class="outline-4">
+<h4 id="org2836204"><span class="section-number-4">4.2.2</span> Application Layer</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>Layer 7</li>
+<li>closest to user, file transmissions, message exchanges, terminal sessions</li>
+<li>SMTP, HTTP, DNS, IRC, LDP, FTP, TFTP, SNMP, Telnet</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga111e60" class="outline-4">
+<h4 id="orga111e60"><span class="section-number-4">4.2.3</span> Presentation Layer</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>Layer 6</li>
+<li>Provides a common means of representing data, data compression, encryption</li>
+<li>MIME, ASCII, EBCDIC, TIFF, JPEG, MPEG, MIDI</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b8d6ac" class="outline-4">
+<h4 id="org7b8d6ac"><span class="section-number-4">4.2.4</span> Session Layer</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<ul class="org-ul">
+<li>Layer 5</li>
+<li>connection between applications</li>
+<li>Password Authentication Protocol (PAP), PPTP, NetBIOS, RPC</li>
+<li>three modes:
+<ul class="org-ul">
+<li>Simplex - one direction</li>
+<li>Half-Duplex - both directions, only one can send at a time</li>
+<li>Full-Duplex - both directions, can send at same time</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5dc32a9" class="outline-4">
+<h4 id="org5dc32a9"><span class="section-number-4">4.2.5</span> Transport Layer</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<ul class="org-ul">
+<li>Layer 4</li>
+<li>connection between computers</li>
+<li>TCP, UDP, SPX</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9800b82" class="outline-4">
+<h4 id="org9800b82"><span class="section-number-4">4.2.6</span> Network Layer</h4>
+<div class="outline-text-4" id="text-4-2-6">
+<ul class="org-ul">
+<li>Layer 3</li>
+<li>Routing information to the proper destination</li>
+<li>IP, ICMP, RIP, OSPF, BGP, IGMP, IPX</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3dad870" class="outline-4">
+<h4 id="org3dad870"><span class="section-number-4">4.2.7</span> Data Link Layer</h4>
+<div class="outline-text-4" id="text-4-2-7">
+<ul class="org-ul">
+<li>Layer 2</li>
+<li>Transmission as appropriate for network: token ring, ethernet, ATM, FDDI, wireless, etc.</li>
+<li>Two sub-layers
+<ul class="org-ul">
+<li>Logical link control - IEEE 802.2, communicates directly with network layer, flow control and error checking</li>
+<li>Media Access Control (MAC) -  Knows what type of network it is
+<ul class="org-ul">
+<li>Ethernet - IEEE 802.3</li>
+<li>Token Ring - IEEE 802.5</li>
+<li>Wireless LAN - 802.11</li>
+</ul></li>
+</ul></li>
+<li>Examples: PPP, ATM, L2TP, FDDI, Ethernet, Token Ring , ARP, RARP, SLIP, 802.3, 802.5, 802.11</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7aa9961" class="outline-4">
+<h4 id="org7aa9961"><span class="section-number-4">4.2.8</span> Physical Layer</h4>
+<div class="outline-text-4" id="text-4-2-8">
+<ul class="org-ul">
+<li>Layer 1</li>
+<li>Converts bits into voltage for transmission</li>
+<li>Examples: RS/EIA/TIA-422, RS/EIA/TIA-423, RS/EIA/TIA-449, RS/TIA-485</li>
+<li>Example: 10Base-T, 10Base5, 100Base-TX, 100Base-FX, 100Base-T, 1000Base-T, 1000Base-SX</li>
+<li>Examples: ISDN, DSL, SONET</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd9b92eb" class="outline-4">
+<h4 id="orgd9b92eb"><span class="section-number-4">4.2.9</span> Tying the Layers Together</h4>
+</div>
+<div id="outline-container-orga321234" class="outline-4">
+<h4 id="orga321234"><span class="section-number-4">4.2.10</span> Multilayer Protocols</h4>
+<div class="outline-text-4" id="text-4-2-10">
+<ul class="org-ul">
+<li>SCADA uses Distributed Network Protocol 3 (DNP3) - roughly layer 2, 4 7 - security not built in</li>
+<li>Controller Area Network Bus - no security built in - allows microcontrollers to communicate with each other</li>
+<li>TCP/IP:
+<ul class="org-ul">
+<li>TCP - connection oriented, requires a handshake</li>
+<li>UDP - connectionless</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4505f3f" class="outline-4">
+<h4 id="org4505f3f"><span class="section-number-4">4.2.11</span> TCP/IP Model (incomplete - for next month)</h4>
+<div class="outline-text-4" id="text-4-2-11">
+<ul class="org-ul">
+<li>IP Addressing
+<ul class="org-ul">
+<li>IPv4 - 32 bit addresses
+<ul class="org-ul">
+<li>Class A - From 0.0.0.0</li>
+<li>Class B - From 128.0.0.0</li>
+<li>Class C - From 192.0.0.0</li>
+<li>Class D - From 224.0.0.0 - used for multicast</li>
+<li>Class E - From 240.0.0.0 - reserved for research</li>
+</ul></li>
+<li>IPv6 addresses shortage of addresses in IPv4 - 128 bits</li>
+<li>Subnet - logical network partition</li>
+<li>IPv6:
+<ul class="org-ul">
+<li>larger address space</li>
+<li>allows for scoped addresses</li>
+<li>IPsec built in, encryption and authentication</li>
+<li>QoS</li>
+<li>Autoconfiguration, does not require NAT</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Chris Roberts</p>
-<p class="date">Created: 2017-04-14 Fri 17:42</p>
+<p class="date">Created: 2017-05-12 Fri 10:44</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
